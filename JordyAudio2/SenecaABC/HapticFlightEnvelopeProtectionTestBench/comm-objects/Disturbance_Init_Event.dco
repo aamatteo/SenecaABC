@@ -1,0 +1,81 @@
+(Type float)
+(Type int)
+(Type vstring "#include <stringoptions.h>")
+(Type bool)
+
+(Event Disturbance_Init_Event
+		;; path where are the disturbance files are located
+		(vstring disturbance_path (Default "./run-data/disturbances/") )
+		
+		;; when this variable is true the input forces for the force disturbance is set to Newtons
+		(bool force_disturbance_in_Newtons (Default false) )
+
+		;; name of the force disturbance file
+		(vstring force_disturbance_file (Default "") )
+		
+		;; name of the reduced power force disturbance file
+		(vstring force_reduced_power_file (Default "") )
+		
+		;; name of the force disturbance ratio file
+		(vstring disturbance_ratio_file (Default "") )
+		
+		;; gain of the main force disturbance
+		(float force_dist_gain (Default 1.0) )
+			
+		;; lowest gain of the disturbance task when using a disturbance ratio file or calibrated task
+		(float force_dist_low_gain (Default 0.0) )
+		
+		;; highest gain of the disturbance task when using a disturbance ratio file or calibrated task
+		(float force_dist_high_gain (Default 0.0) )
+		
+		;; setting of the calibration task. none when not calibrating, relax when calibrating the relax task, force when calibrating the force task, position when calibrating the position task 
+		(vstring calibration_task (Default "none") )
+		
+		;; tell the disturbance generator to use the calibrated values for the force disturbance gains
+		(bool use_calibrated_gains (Default false) )
+		
+		;; the step size we want to use for the calibration PEST algorithm
+		(float calibration_step_size (Default 0.0) )
+		
+		;; the step accuracy we want to reach with the calibration
+		(float calibration_step_accuracy (Default 0.0) )
+		
+		;; the target value of the standard deviation of the control device position we're aiming at
+		(float calibration_target_value (Default 0.0) )
+		
+		;; gain of the reduced power
+		(float reduced_power_gain (Default 0.0) )
+					
+		;; name of a disturbance file for disturbing system dynamics
+		(vstring system_disturbance_file (Default "") )
+		
+		;; name of the reduced power file for disturbing system dynamics
+		(vstring system_reduced_power_file (Default "") )
+		
+		;; gain of the system dynamics disturbance
+		(float system_dist_gain (Default 1.0) )
+					
+		;; name of the visual disturbance file
+		(vstring visual_disturbance_file (Default "") )
+		
+		;; name of the reduced power visual disturbance file
+		(vstring visual_reduced_power_file (Default "") )
+		
+		;; gain of the visual disturbance
+		(float visual_dist_gain (Default 1.0) )
+		
+		;; flag to tell the sim to go to Hold upon reaching the end of a disturbance file
+		(bool hold_on_request (Default false) )
+
+		;; flag to tell the sim to keep looping the disturbance.
+		(bool loop_force_disturbance (Default false) )
+
+		;; counter to tell the sim how many times to loop the disturbance. If <0 then loops until infinity
+		(int force_disturbance_loop_count (Default 1) )
+
+		;; time (seconds) over which to fade-in the force disturbance, so as no to get a force-jump at the beginning
+		(float force_disturbance_fade_in (Default 0.0) )
+
+		;; time (seconds) over which to fade-out the force disturbance, so as not to get a force-jump at the end 
+		(float force_disturbance_fade_out (Default 0.0) )
+)

@@ -1,0 +1,64 @@
+(Type bool)
+(Type float)
+
+(Event SideStickConfiguration
+	; ignore this channel's pitch data
+	(bool use_pitch_defaults)
+	; ignore this channel's roll data
+	(bool use_roll_defaults)
+
+	; pitch channel configuration
+	(float pitch_pos_trim_stop)
+	(float pitch_neg_trim_stop)
+	(float pitch_spring_slope1)
+	(float pitch_spring_slope2)
+	(float pitch_spring_slope3)
+	(float pitch_spring_slope4)
+	(float pitch_spring_slope5)
+	(float pitch_spring_break1)
+	(float pitch_spring_break2)
+	(float pitch_spring_break3)
+	(float pitch_spring_break4)
+	(float pitch_breakout_level)
+	(float pitch_breakout_grad)
+
+	; pitch channel default inputs
+	(float default_pitch_friction)
+	(float default_pitch_jam_pos)
+	(float default_pitch_pos_stop)
+	(float default_pitch_neg_stop)
+	(float default_pitch_mass)
+	(float default_pitch_damping)
+	(float default_pitch_force)
+	(float default_pitch_switch)
+	(float default_pitch_trim_vel)
+	(float default_pitch_init_trim_pos)
+
+	; roll channel configuration
+	(float roll_pos_trim_stop)
+	(float roll_neg_trim_stop)
+	(float roll_spring_slope1)
+	(float roll_spring_slope2)
+	(float roll_spring_slope3)
+	(float roll_spring_slope4)
+	(float roll_spring_slope5)
+	(float roll_spring_break1)
+	(float roll_spring_break2)
+	(float roll_spring_break3)
+	(float roll_spring_break4)
+	(float roll_breakout_level)
+	(float roll_breakout_grad)
+
+	; roll channel default inputs
+	(float default_roll_friction)
+	(float default_roll_jam_pos)
+	(float default_roll_pos_stop)
+	(float default_roll_neg_stop)
+	(float default_roll_mass)
+	(float default_roll_damping)
+	(float default_roll_force)
+	(float default_roll_switch)
+	(float default_roll_trim_vel)
+	(float default_roll_init_trim_pos)
+
+)

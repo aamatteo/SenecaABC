@@ -1,0 +1,4 @@
+(Type int)
+
+(ComponentInterface ButtonBarData_MFD
+  (int example_var))

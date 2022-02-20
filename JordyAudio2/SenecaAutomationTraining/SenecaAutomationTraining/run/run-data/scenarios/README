@@ -1,0 +1,118 @@
+# README on scenario files
+
+A scenario file defines one or more events that take place during the simulation
+
+The ECI looks for all files ending with .sce and lists them in the file selection list.
+
+When selected and after pressing the "Send" button, the first event of the scenario is loaded from file.
+
+After sending out an event, the next event is loaded.
+
+The ECI GUI gives the parameters loaded from file at that specific time, waiting to be send.
+
+Comments can be added by starting the line with a #.
+
+Do not starts lines with spaces of tabs, these lines will be ignored too.
+
+
+
+### HEADER ###
+
+At the top of the sce-file, two items have to be defined, in this order:
+
+id			integer marking the scenario, for keeping them apart (logging)
+inco		full name of the inco file (incofile.inco)
+
+
+Numbering used for the scenario id
+Familiarization 10x
+Pre-test		20x
+Training 1		30x
+Training 2		41x
+Training 3		42x
+Distraction		501
+Post-test		60x
+
+
+
+### EVENTS ###
+
+Next, and separated by at least one empty line, follow the events. Events end with at least one empty line, also the last event! Don't use empty lines
+
+The first line of the event defines the event type(s), after that the order of items does not matter.
+
+Syntax of the settings/parameters lines
+parameter name <space/tab> value <space/tab> optional comments
+
+
+## Event types
+
+Can be one, or multiple, of the following:
+
+controlEvent,massEvent,engineEvent,windEvent,displayEvent
+
+
+## Event trigger
+
+These triggers are defined:
+
+eventtime				event at time from start [s] (float)
+eventtime_after			event at time after previous event [s] float
+eventspeed				event at or above this speed [kts] (float)
+eventaltitude			event at or above this altitude [ft] (float)
+eventgear				event at or below this gear position, when retracting (float)
+
+each event needs to at least define a trigger, or else nothing will happen
+
+Testing with manual trigger @button_press
+
+
+## Event parameters
+
+Also see the example scenarios
+The listed numbers are the default (nominal) values in the ECI
+
+# settings for an engineEvent (all floats)
+power_left			1.0		0=none 1=full
+power_right			1.0		0=none 1=full
+max_rpm_left		2800	rpm limit, nominal is 2800
+max_rpm_right		2800	rpm limit, nominal is 2800
+engine_time_left	0.0		time in seconds for power change
+engine_time_right	0.0		time in seconds for power change
+
+# settings for a massEvent (all floats)
+shift_x				0.0		meters to the front (if positive)
+shift_y				0.0		meters over the right wing (if positive)
+shift_z				0.0		meters down (positive) or up (negative)
+shift_mass			0.0		kg
+shift_time			0.0		seconds
+
+# settings for a windEvent (due to additions, a better name would be weatherEvent)
+enable_turb			0		(bool) 0=false 1=true
+turb_int			0.0		(float) 0 to 1.5
+wind_vel			0.0		(float) wind velocity in m/s (not exact)
+wind_dir			0.0		(float) direction where the wind comes from in degrees; 0=north
+enable_windshear	0		(bool) 0=false 1=true
+fg_visibility		100000	(int) visibility in meters
+#TODO clouds if needed
+
+# settings for a controlEvent (all floats)
+aileron_power		1.0		effectiveness [0-1]
+rudder_power		1.0		effectiveness [0-1]
+rudder_bias			0.0		fixed angle in degrees; -15 to 15 (hardcoded max from -35 to 35)
+ARI					0.0		aileron-rudder-interconnect; aileron input added to rudder output [0-1]
+
+# settings for a displayEvent
+frozen_v			0		0=false 1=true
+offset_v_value		0.0		offset in knots
+offset_v_time		0.0		time in seconds
+frozen_h			0		0=false 1=true
+offset_h_value		0.0		offset in ft
+offset_h_time		0.0		time in seconds
+
+
+
+### NOTES ###
+
+Only parameters which are part of the listed event will be send out. So it is possible to load all parameters at the top, and then send events one by one. The ECI GUI displays the currently loaded values, the Malfunctions GUI displays the implemented settings.
+

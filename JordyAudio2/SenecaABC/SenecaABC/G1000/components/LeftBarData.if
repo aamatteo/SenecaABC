@@ -1,0 +1,12 @@
+(Type float)
+(Type int)
+(Type bool)
+
+(ComponentInterface LeftBarData
+		(bool mouse_left)
+		(int mouse_x)
+		(int mouse_y)
+		(int GFC_msg)
+		(bool dme_animation)
+		(bool sync_animation)
+)

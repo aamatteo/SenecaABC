@@ -1,0 +1,34 @@
+; -*-scheme-*-
+(Header "
+        item            : VSControl.dco
+        made by         : Rene' van Paassen
+        date            : 1612xx
+        description     : Control parameters for variable stability
+                          simulation
+        copyright       : (c) 2016 TUDelft-AE-C&S")
+
+;; double
+(Type float "#include <vector>")
+
+;; Variable stability control parameters
+(Event VSControl
+       (IncludeFile VSControlExtra)
+       ;; qdot equation, pitch damping
+       (float Delta_Cmq (Default 0.0f))
+       ;; qdot equation, Cmu
+       (float Delta_Cmu (Default 0.0f))
+       ;; qdot equation, Cmalpha
+       (float Delta_Cmalpha (Default 0.0f))
+       ;; input gain delta_e
+       (float K_de_Sy (Default 1.0f))
+       ;; p equation, Clp
+       (float Delta_Clp (Default 0.0f))
+       ;; p equation, Clr
+       (float Delta_Clr (Default 0.0f))
+       ;; p equation, Clbeta
+       (float Delta_Clbeta (Default 0.0f))
+       ;; input gain delta_a
+       (float K_da_Sx (Default 1.0f))
+       ;; trim tweak, for initial condition in sim
+       (float de_trim (Default 0.0f))
+       )

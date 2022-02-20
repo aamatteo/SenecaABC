@@ -1,0 +1,6 @@
+(Type double)
+
+; Controller output
+(EventAndStream ControllerOutput
+	(double CmdPhi (Default 0.0))
+)

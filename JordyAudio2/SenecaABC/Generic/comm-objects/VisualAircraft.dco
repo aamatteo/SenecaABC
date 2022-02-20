@@ -1,0 +1,14 @@
+(Type double)
+(Type int)
+
+; data for a single aircraft (traffic) in the visual
+(EventAndStream VisualAircraft
+	(int id) ;must be unique!
+	(int actype)
+	(double x)
+	(double y)
+	(double z)
+	(double phi)
+	(double theta)
+	(double psi)
+)

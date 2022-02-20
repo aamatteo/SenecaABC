@@ -1,0 +1,10 @@
+; -*-scheme-*-
+
+(Type vstring "#include <stringoptions.h>")
+
+;; Event object defining a test for the control loading system
+(Event CLTestResult
+       ;; string for a message
+       (vstring result)
+       )
+       

@@ -1,0 +1,25 @@
+; -*-scheme-*-
+
+(Header "
+        item            : HMIGearLights.dco
+        made by         : Rene' van Paassen
+        date            : 180111
+        description     : Lights for the HMI lab gear
+        copyright       : (c) 2018 TUDelft-AE-C&S")
+
+(Type bool)
+
+(Stream HMIGearLights
+
+        ;; nose gear
+        (bool nose_green)
+        ;; left main gear
+        (bool left_green)
+        ;; right main gear
+        (bool right_green)
+        ;; transitioning up amber
+        (bool trans_up)
+        ;; stransitioning down amber
+        (bool trans_down)
+        )
+        

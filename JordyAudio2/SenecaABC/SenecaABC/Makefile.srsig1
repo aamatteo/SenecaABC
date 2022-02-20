@@ -1,0 +1,25 @@
+# ============================================================================
+#       item            : template Makefile dueca executable
+#       made by         : Ren�van Paassen
+#       date            : 010320
+# ============================================================================
+
+# =========================================================================
+#
+# EDIT THIS SECTION TO CHOOSE DIFFERENT DUECA COMPONENTS OR ADD EXTRA 
+# LIBRARIES TO LINK IN WITH YOUR PROGRAM
+#
+# =========================================================================
+
+# enter a component choice for DUECA (check dueca-config for possible values) 
+DCOMPONENTS =	--dusime --extra --glut --ip
+
+# specify which extra libs need to be included in the app
+# all dueca's stuff is already handled by the DCOMPONENTS and 
+# dueca-config
+EXTRALIBS = `pkg-config openscenegraph --libs`
+
+TAILFILE =	$(shell dueca-config --path-datafiles)/data/MakefileTail.app
+include $(TAILFILE)
+
+

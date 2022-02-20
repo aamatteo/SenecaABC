@@ -1,0 +1,53 @@
+;; -*-scheme-*-
+
+(Header "
+        item            : QFeel.dco
+        made by         : Rene' van Paassen
+        date            : ??
+        description     : Describes position and speed of object in 3d space
+        copyright       : (c) 2018 TUDelft-AE-C&S")
+
+
+(Type float)
+
+; This communicatable object transmits the effects of aerodynamic and
+; other forces on the controls back to the control loading simulation
+(Stream QFeel
+	(Option hdf5)
+	
+	; Additional moment on the stick or column in x (roll) axis
+	(float mom_offset_x (Default 0.0f))
+
+	; Additional position on the stick or column in x (roll) axis
+	(float pos_offset_x (Default 0.0f))
+
+	; Additional spring constant in x (roll) axis
+	(float extra_spring_x (Default 0.0f))
+
+	; Additional damping constant in x (roll) axis
+	(float extra_damping_x (Default 0.0f))
+
+	; Additional moment on the stick or column in x (roll) axis
+	(float mom_offset_y (Default 0.0f))
+
+	; Additional position on the stick or column in x (roll) axis
+	(float pos_offset_y (Default 0.0f))
+
+	; Additional spring constant in x (roll) axis
+	(float extra_spring_y (Default 0.0f))
+
+	; Additional damping constant in x (roll) axis
+	(float extra_damping_y (Default 0.0f))
+
+	; Additional force on the pedals (yaw) axis
+	(float mom_offset_z (Default 0.0f))
+
+	; Additional position on the pedals (yaw) axis
+	(float pos_offset_z (Default 0.0f))
+
+	; Additional spring constant (yaw) axis
+	(float extra_spring_z (Default 0.0f))
+
+	; Additional damping constant (yaw) axis
+	(float extra_damping_z (Default 0.0f))
+)

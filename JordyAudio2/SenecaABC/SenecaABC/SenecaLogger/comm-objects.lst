@@ -1,0 +1,10 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+# specify these with the .dco extension, examples:
+# SenecaABC/comm-objects/MyDataObject.dco
+# Generic/comm-objects/PrimaryControls.dco
+
+CitationExample/comm-objects/CitationOutput.dco
+SenecaABC/comm-objects/AutopilotChannel.dco
+SenecaABC/comm-objects/GFC700Event.dco
+SenecaABC/comm-objects/AP2G1000Channel.dco

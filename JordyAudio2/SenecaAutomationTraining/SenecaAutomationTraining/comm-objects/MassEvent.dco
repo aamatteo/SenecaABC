@@ -1,0 +1,14 @@
+(Type int)
+(Type float)
+
+(Event MassEvent
+	(int id (Default 0))
+	;; location [m]
+	(float x (Default 0.0f))
+	(float y (Default 0.0f))
+	(float z (Default 0.0f))
+	;; mass [kg]
+	(float mass (Default 0.0f))
+	;; adjustment time [s]
+	(float time (Default 0.0f))
+)

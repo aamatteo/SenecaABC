@@ -1,0 +1,13 @@
+(Type int)
+(Type float)
+(Type bool)
+(Type std::string "#include <iostream>")
+
+(ComponentInterface ButtonBarData
+	(float x)
+	(float y)
+	(float dme_status)
+	(std::string fp_name)
+	(float altitude)
+	(bool ADC_failure)
+)

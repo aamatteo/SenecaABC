@@ -1,0 +1,15 @@
+(Type int)
+(Type string16 "#include <stringoptions.h>")
+(Type bool)
+(Type vstring)
+
+;; NOTE: you need at least DUECA 0.10.30 for this to work
+(Event SimulationSettings
+  (vstring scenarioname)
+  (int displaytype)
+  (int scenarionr)
+  (int scenariopart)
+  (string16 subject)
+  (int groupnr)
+  (bool enablelog)
+)

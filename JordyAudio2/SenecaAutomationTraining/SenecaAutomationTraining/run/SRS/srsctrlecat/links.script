@@ -1,0 +1,13 @@
+# this file creates all links to files in the data directory needed for
+# running the application is a specific machine. 
+#
+# example
+# ln -sf $DATADIR/*.cnf .
+DATADIR=../../run-data
+
+ln -sf ../../../../CSControlLoading/CLConfigurations/srs-left-rudder.xml .
+ln -sf ../../../../CSControlLoading/CLConfigurations/srs-right-rudder.xml .
+ln -sf ../../../../CSControlLoading/CLConfigurations/srs-left-yoke-pitch.xml .
+ln -sf ../../../../CSControlLoading/CLConfigurations/srs-left-yoke-roll.xml .
+#ln -sf $DATADIR/srs*.xml .
+ln -sf ../../../../CSControlLoading/CLTools/energylog.m .

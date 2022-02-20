@@ -1,0 +1,16 @@
+(Type bool)
+(Type double)
+
+(EventAndStream TurbulenceConfiguration
+	(bool turb_enabled)
+;; gains
+	(double k)
+	(double k_u)
+	(double k_alpha)
+	(double k_beta)
+	(double k_udot)
+	(double k_alphadot)
+	(double k_betadot)
+	(double k_u_asym)
+	(double k_alpha_asym)
+)

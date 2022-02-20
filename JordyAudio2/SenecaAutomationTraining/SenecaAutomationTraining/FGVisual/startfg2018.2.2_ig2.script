@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# NVIDIA
+export __GL_FSAA_MODE=5
+export __GL_LOG_MAX_ANISO=4
+
+/usr/bin/fgfs \
+--fg-root=/usr/share/flightgear  \
+--generic=socket,in,100,127.0.0.1,5500,udp,duecavisbinary \
+--fdm=external \
+--aircraft=ufo \
+--disable-real-weather-fetch \
+--disable-clouds3d \
+--lat=52.312148 \
+--lon=4.807458 \
+--heading=310 \
+--altitude=1 \
+--start-date-lat=2017:08:22:14:00:00 \
+--prop:bool:/sim/menubar/visibility=false \
+--disable-splash-screen \
+--config=/usr/share/flightgear/ig2_camera_new.xml \
+--disable-terrasync \
+--disable-random-objects \
+--disable-random-buildings \
+--enable-random-vegetation \
+--disable-ai-traffic \
+--disable-clock-freeze \
+--disable-sound \
+--disable-rembrandt \
+--enable-distance-attenuation \
+--fog-nicest \
+--enable-specular-highlight \
+--prop:double:/local-weather/config/max-vis-range-m=100000 \
+--metar="EHAM 231200Z AUTO 00000KT 9999 SKC Q1013 NOSIG" \
+--prop:string:/environment/weather-scenario="Manual input" \
+--visibility=40000 \
+--prop:/sim/terrasync/svn-server=http://scenery.lr.tudelft.nl/pub/terrascenery/trunk/data/Scenery &
+
+if [ "$1" == "1" ];
+then
+echo also starting DUECA
+../../../dueca_run.x
+
+killall fgfs
+else
+echo no starting DUECA
+fi
+
+# --enable-enhanced-lighting \
+#--airport=EHAM \
+#--altitude=1000 \

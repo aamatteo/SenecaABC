@@ -1,0 +1,26 @@
+;; -*-scheme-*-
+
+(Type double)
+(Type bool)
+
+;; Command input to the flight control servos
+(EventAndStream
+ FlightControlInput
+ ;; elevator input angle, radians
+ (double de (Default 0.0f))
+ ;; aileron input angle, radians
+ (double da (Default 0.0f))
+ ;; rudder input angle, radians
+ (double dr (Default 0.0f))
+ ;; flap selection angle, radians
+ (double df (Default 0.0f))
+ ;; gear extension, scaled 0 to 1??
+ (double gear (Default 0.0f))
+ ;; power lever 1 angle
+ (double pla1 (Default 0.0f))
+ ;; power lever 2 angle
+ (double pla2 (Default 0.0f))
+ ;; request for experimental control mode, enables above inputs according to
+ ;; configuration in control module
+ (bool ecrequest (Default true))
+)

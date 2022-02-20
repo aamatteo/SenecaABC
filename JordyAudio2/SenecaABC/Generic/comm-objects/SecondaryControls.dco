@@ -1,0 +1,16 @@
+;; float as the basic type for data
+(Type float)
+
+;; Aircraft-oriented "secondary" control inputs, pedestal controls
+(EventAndStream SecondaryControls
+		(Option hdf5)
+		;; throttle left engine
+		(float throttle_left (Default 0.0f))
+		;; throttle right engine
+		(float throttle_right (Default 0.0f))
+		;; flaps
+		(float flap_setting (Default 0.0f))
+		;; speedbrake setting
+		(float speedbrake (Default 0.0f))
+		)
+

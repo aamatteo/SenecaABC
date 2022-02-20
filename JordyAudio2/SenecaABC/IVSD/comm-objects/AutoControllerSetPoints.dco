@@ -1,0 +1,7 @@
+(Type double)
+
+;; NOTE: you need at least DUECA 0.10.30 for this to work
+(Stream AutoControllerSetPoints
+      (double track_cmd)
+      (double elev_cmd)
+)

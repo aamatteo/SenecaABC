@@ -1,0 +1,13 @@
+;; -*-scheme-*-
+
+(Type vstring "#include <stringoptions.h>")
+
+(Enum motion_position uint8_t NEUTRAL DOWN)
+
+;request to position the cabin in the neutral position
+;FROM ... (motion test modules)
+;TO MotionLimiter
+(Event MotionRequest
+	(vstring sender )
+	(motion_position position )
+)

@@ -1,0 +1,21 @@
+(Type bool)
+(Type double)
+(Type vstring "#include <stringoptions.h>")
+
+(Event ATCChatterSettings
+	(Option hdf5)
+	;; The ATCChatter module can generate random messages
+	;;	This channel provides an interface to the settings
+
+	;; Do we want to generate random messages at all?
+	(bool do_random_messages (Default false))
+
+	;; For the moment we send them with a normally distributed time
+	(double random_time_mean (Default 10.0))
+	(double random_time_standard_deviation (Default 2.5))
+
+	;; Do you want to load a specific list and which one?
+	;; Note that if you send an event with an empty name, we will only load it if the trigger (do_list) is true. Otherwise the previous list is just kept
+	(bool    do_list   (Default false))
+	(vstring list_name (Default ""))
+)

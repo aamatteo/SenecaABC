@@ -1,0 +1,24 @@
+(Type double)
+
+;internal motion state in sim inertial (except p/q/r)
+;FROM MotionLimiter
+;TO GenericMotionFilter
+(EventAndStream SimulatorMotionState
+	(double x)
+	(double y)
+	(double z)
+	(double q0)
+	(double q1)
+	(double q2)
+	(double q3)
+	(double xdot)
+	(double ydot)
+	(double zdot)
+	(double p)
+	(double q)
+	(double r)
+	(double phi)
+	(double theta)
+	(double psi)
+)
+

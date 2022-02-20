@@ -1,0 +1,15 @@
+(Type double)
+
+(Stream WeatherInput
+	( Option hdf5 )
+	;; The position (rad/meters)
+	(double position_lat    ( Default 0 ))
+	(double position_lon    ( Default 0 ))
+	(double position_height ( Default 0 ))
+
+	;; The heading (radials)
+	(double heading         ( Default 0 ))
+
+	;; The vertical speed (meters/sec)
+	(double vertical_speed  ( Default 0 ))
+)

@@ -1,0 +1,9 @@
+(Type float)
+
+(Stream Brake_Pedal_Command_Channel
+  	;; prerecorded position of the brake pedal in % of total (max 100%)
+	(float playback_position (Default 0.0) )
+	
+	;; commanded position of the brake pedal for automatic control purposes in % of total (max 100%); negative to disable
+  	(float commanded_position (Default -1.0) )
+)

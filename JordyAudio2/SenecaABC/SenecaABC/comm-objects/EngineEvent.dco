@@ -1,0 +1,19 @@
+(Type int)
+(Type float)
+
+(Event EngineEvent
+	(int id)
+	;; limit available engine power
+	(float power_left)
+	(float power_right)
+	;; limit max rpm
+	(float max_rpm_left)
+	(float max_rpm_right)
+	;; adjustment time
+	(float time_left)
+	(float time_right)
+)
+
+;; power: true=OK, false=idle
+;; max_rpm uses floats because that is how they go into the model
+;;TODO float rpm_time_left -- time to move to new

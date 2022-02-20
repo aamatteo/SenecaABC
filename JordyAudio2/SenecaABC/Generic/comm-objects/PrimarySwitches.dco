@@ -1,0 +1,15 @@
+;; on-off indication
+(Type bool)
+
+;; typical switches on the primary control inputs
+(EventAndStream PrimarySwitches
+		(Option hdf5)
+		;; radio transmit switch
+		(bool xmit (Default false))
+		;; pitch trim up
+		(bool trim_up (Default false))
+		;; pitch trim down
+		(bool trim_down (Default false))
+		;; autopilot disconnect switch
+		(bool AP_disconnect (Default false)))
+

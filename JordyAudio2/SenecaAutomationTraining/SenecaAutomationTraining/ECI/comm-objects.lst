@@ -1,0 +1,28 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+# specify these with the .dco extension, examples:
+# SenecaAutomationTraining/comm-objects/MyDataObject.dco
+# Generic/comm-objects/PrimaryControls.dco
+#
+# Asym1/comm-objects/MalfunctionsChannel.dco
+# Asym1/comm-objects/AsymmetryChannel.dco
+# CitationExample/comm-objects/TurbulenceConfiguration.dco
+# HapticFlightEnvelopeProtectionTestBench/comm-objects/FGWeatherInput.dco
+
+# Write
+SenecaAutomationTraining/comm-objects/INCOSelect.dco
+SenecaAutomationTraining/comm-objects/MassEvent.dco
+SenecaAutomationTraining/comm-objects/ControlEvent.dco
+SenecaAutomationTraining/comm-objects/EngineEvent.dco
+SenecaAutomationTraining/comm-objects/DisplayEvent.dco
+SenecaAutomationTraining/comm-objects/WindEvent.dco
+SenecaAutomationTraining/comm-objects/FailureEvent.dco
+SenecaAutomationTraining/comm-objects/APIncoEvent.dco
+SenecaAutomationTraining/comm-objects/FGIncoEvent.dco
+
+# Read
+CitationExample/comm-objects/CitationOutput.dco
+
+#Communication
+SenecaAutomationTraining/comm-objects/CommEvent.dco
+

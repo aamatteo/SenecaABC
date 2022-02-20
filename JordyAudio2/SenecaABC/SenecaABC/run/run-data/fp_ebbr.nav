@@ -1,0 +1,13 @@
+nav1active	112.050	FLO
+nav1stby	108.000		
+nav2active	114.600	BUB	
+nav2stby	108.000		
+use_vors	1	1	
+vor1	42907.2	-2478.4	
+vor2	1038.0	378.7	
+nr_wps	5		
+D	40907.2	-6478.4	-1
+FLO	42907.2	-2478.4	6000
+DIKBO	24772.1	9061.6	3000
+GIKNU	18728.4	6850.7	2000
+EBBR	0	0	-1

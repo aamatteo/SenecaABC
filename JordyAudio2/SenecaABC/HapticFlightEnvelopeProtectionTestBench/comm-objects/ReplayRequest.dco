@@ -1,0 +1,20 @@
+(Type vstring "#include <stringoptions.h>")
+(Type bool)
+(Type double)
+
+(Event ReplayRequest
+
+  ;; The trigger (put to true if you want to use this)
+  ( bool    replay_trigger   ( Default false ) )
+
+  ;; The file name
+  ( vstring replay_file_name ( Default ""    ) )
+
+  ;; The trigger and value for the time multiplier
+  ( bool    replay_time_trigger     ( Default false ) )
+  ( double  replay_time_multiplier  ( Default 1     ) )
+  ( bool    replay_time_load_double ( Default false ) )
+  ( double  replay_repeat_wait_time_before ( Default 2     ) )
+  ( double  replay_repeat_wait_time_after  ( Default 2     ) )
+  ( bool    replay_repeat_trigger   ( Default false ) )
+)

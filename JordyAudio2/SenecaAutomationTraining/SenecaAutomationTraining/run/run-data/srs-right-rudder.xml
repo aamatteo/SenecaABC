@@ -1,0 +1,50 @@
+<!-- Initial configuration for the SRS laboratory, rudder axis.
+     RvP, 20160311
+-->
+<device>
+  <devidx>5</devidx>
+  <param name="device-t-del">0.001</param>
+  <param name="device-t-lag">0.001</param>
+  <param name="device-Ks">100000.0</param>
+  <param name="device-inertia-min">4.0</param>
+  <param name="device-safe-dither-amp">0.0</param>
+  <param name="device-dither-dp-level">0.0</param>
+  <param name="device-dither-adjust-gain">0.001</param>
+  <param name="device-offset-adjust-gain">0.0</param>
+  <param name="device-valve-offset-max">0.0001</param>
+  <param name="device-dither-amp-max">0.0</param>
+  <param name="device-safe-dither-amp">0.0</param>
+  <param name="device-dither-band">1.1</param>
+  <param name="device-n-dither-cycle-max">0</param>
+  <param name="device-n-dither-wanted">1</param>
+  <param name="device-trans-duration">2.0</param>
+  <param name="device-kx-aux">1.0</param>
+  <param name="device-kdp-aux">0.0</param>
+  <param name="device-x-tolerance">0.01</param>
+  <param name="device-deltap-tolerance">2500.0</param>
+  <param name="device-force-tolerance">30.0</param>
+  <param name="device-phys-min">-0.1</param>
+  <param name="device-phys-max">0.1</param>
+  <param name="device-sim-min">-0.08</param>
+  <param name="device-sim-max">0.08</param>
+  <param name="device-force-init">20.0</param>
+  <param name="device-dp-init">1000.0</param>
+  <param name="device-init-close-enough">-100</param>
+  <param name="device-k-safe-init">1.0</param>
+  <!-- attainable value is around 0.005, which is too critical
+       RvP 130111 -->
+  <param name="device-pos-init">0.00002</param>
+  <param name="device-valve-max-f">1.0</param>
+  <param name="device-valve-max-t">1.0</param>
+  <!-- was 500.0 OS 20170328 -->
+  <param name="device-force-max">1000.0</param>
+  <param name="device-dp-max">2500.0</param>
+  <param name="device-v-max">1.0</param>
+  <param name="device-power-max">600.0</param>
+  <param name="device-valve-max">1.0</param>
+  <param name="device-kx-move">4.0</param>
+  <param name="device-kdp-move">0.0</param>
+  <param name="device-accel-max">200.0</param>
+  <param name="device-model-err-max">0.02</param>
+  <param name="device-autotune-pads">true</param>
+</device>

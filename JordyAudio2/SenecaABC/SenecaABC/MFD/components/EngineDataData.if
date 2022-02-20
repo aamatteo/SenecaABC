@@ -1,0 +1,20 @@
+;; -*-mode: scheme-*-
+(Type float)
+(Type bool)
+
+(ComponentInterface EngineDataData
+		    (float n1_left   (Default 0.0))
+		    (float n1_right  (Default 0.0))
+		    (float n2_left   (Default 0.0))
+		    (float n2_right  (Default 0.0))
+		    (float itt_left  (Default 0.0))
+		    (float itt_right (Default 0.0))
+		    (float rpm_left (Default 0.0))
+		    (float rpm_right (Default 0.0))
+		    (float tl_left (Default 0.0))
+		    (float tl_right (Default 0.0))
+		    (float altitude (Default 0.0))
+		    (float map_left (Default 0.0))
+		    (float map_right (Default 0.0))
+		    (float dt (Default 0.0))
+)

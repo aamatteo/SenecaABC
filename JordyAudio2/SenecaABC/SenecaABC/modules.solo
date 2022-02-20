@@ -1,0 +1,75 @@
+# this file contains a list of all modules needed for your application
+# on a specific machine
+# note that the comm-objects directories should not be listed here
+# example:
+# SenecaABC/some-module
+#
+# Removed:
+#MotionFiltersRTW50/motion-filters-classical-03r13 HEAD
+#MotionFiltersRTW50/motion-filters-classical06r13 HEAD
+#MotionFiltersRTW50/motion-filter-classical-03r13 HEAD
+#MotionFiltersRTW50/motion-filter-classical-06r13 HEAD
+#SenecaABC/ConventionalDisplay 
+#SenecaABC/Malfunction 
+#MotionFiltersRTW70/motion-filter-classical-12 HEAD
+
+# Add?
+#SRSMotion/motion-configurater HEAD
+#MotionFiltersRTW70/motion-filter-tuner HEAD
+#MotionFiltersRTW70/motion-filter-tuner-gui HEAD
+#CitationApproach/FlapSelector HEAD
+
+### Used & owned:
+SenecaABC/B747DisplaysCommonFiles 
+SenecaABC/B747PFD 
+SenecaABC/CitationIncoSelector 
+SenecaABC/CitationLogger 
+SenecaABC/CitationModelInclude 
+SenecaABC/CitationNavigator 
+SenecaABC/ECI 
+SenecaABC/FCSAdapter 
+SenecaABC/Malfunctions 
+SenecaABC/PA34 
+SenecaABC/WAVPlayer 
+SenecaABC/WeatherProxy 
+
+# script for visualizing comms
+SenecaABC/CommsVisualize 
+
+### Used & borrowed:
+MCP737/MCP737GUI HEAD
+MotionFiltersRTW70/motion-filter-classical-16 HEAD
+SRSMotion/motion-common HEAD
+SRSMotion/motion-limiter HEAD
+SRSMotion/motion-viewer HEAD
+SRSMotion/simple-motion-logger HEAD
+SRSToolbox/GearSelector HEAD
+#CitationDemo/FGVisual
+HapticFlightEnvelopeProtectionTestBench/FGWeather
+
+# GUI stick, to test without having a joystick
+VarStabCitation/GUIStick HEAD
+
+# not used in experiment, added and updated for Herman
+SenecaABC/CvCalculation 
+
+WorldListener/WorldListener HEAD
+WorldListener/OpenALListener HEAD
+WorldView/SpecificationBase HEAD
+SenecaABC/Enginesound 
+
+# Generic/joystick HEAD
+
+SenecaABC/multi-stick 
+SenecaABC/Autopilot 
+SenecaABC/dusime 
+SenecaABC/GFC700GUI 
+SenecaABC/G1000 
+SenecaABC/MFD 
+SenecaABC/Logger 
+SenecaABC/SenecaLogger 
+SenecaABC/Components 
+SenecaABC/include 
+SenecaABC/FGVisual 
+
+Generic/multi-stick HEAD

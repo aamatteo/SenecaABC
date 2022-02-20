@@ -1,0 +1,26 @@
+# this file contains a list of all modules needed for your application
+# on a specific machine
+# note that the comm-objects directories should not be listed here
+# example:
+# SenecaABC/some-module
+
+# model
+SenecaABC/CitationModelInclude 
+SenecaABC/PA34 
+SenecaABC/Autopilot 
+SenecaABC/include 
+
+# motion
+SRSMotion/motion-common HEAD
+SRSMotion/motion-limiter HEAD
+MotionFiltersRTW70/motion-filter-classical-16 HEAD
+MotionFiltersRTW70/motion-filter-tuner HEAD
+
+# control loading
+Generic/SideStickController
+SenecaABC/FCSAdapter
+
+
+# not used in experiment, added and updated for Herman
+SenecaABC/CvCalculation 
+

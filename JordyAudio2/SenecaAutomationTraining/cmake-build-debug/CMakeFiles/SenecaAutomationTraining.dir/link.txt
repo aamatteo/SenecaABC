@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/SenecaAutomationTraining.dir/main.cpp.o -o SenecaAutomationTraining 

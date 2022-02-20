@@ -1,0 +1,53 @@
+(Type double)
+
+(Stream HapticDisplayStateInput
+	( Option hdf5 )
+
+	;; The total velocity (TAS)
+	(double velocity             ( Default 0 ) )
+
+	;; The calibrate velocity (CAS)
+	(double velocity_calibrated  ( Default 0 ) )
+
+	;; The altitude
+	(double altitude             ( Default 0 ) )
+
+	;; The load factor
+	(double load_factor          ( Default 0 ) )
+
+	;; The angle of attack
+	(double angle_of_attack      ( Default 0 ) )
+
+	;; The roll angle
+	(double roll_angle           ( Default 0 ) )
+
+	;; The pitch angle
+	(double pitch_angle          ( Default 0 ) )
+
+	;; The flight path angle
+	(double flight_path_angle    ( Default 0 ) )
+
+	;; The yaw angle
+	(double yaw_angle            ( Default 0 ) )
+
+	;; The side slip angle
+	(double side_slip_angle      ( Default 0 ) )
+
+	;; The power by the engine
+	(double thrust               ( Default 0 ) )
+
+	;; State of the high lift devices (in rad)
+	(double flaps                ( Default 0 ) )
+	(double slats                ( Default 0 ) )
+
+	;; Acceleration required for calculation of stick center shift
+	(double acceleration_x       ( Default 0 ) )
+	(double acceleration_y       ( Default 0 ) )
+	(double acceleration_z       ( Default 0 ) )
+
+	;; More information on the derivatives of the stuff
+	(double derivative_angle_of_attack ( Default 0 ) )
+	(double derivative_roll_angle      ( Default 0 ) )
+	(double derivative_load_factor     ( Default 0 ) )
+	(double derivative_velocity        ( Default 0 ) )
+)

@@ -1,0 +1,9 @@
+# this file contains a list of all modules needed for your application
+# on a specific machine
+# note that the comm-objects directories should not be listed here
+# example:
+# SenecaABC/some-module
+SenecaABC/include 
+SenecaABC/CitationModelInclude 
+SenecaABC/B747DisplaysCommonFiles 
+SenecaABC/B747PFD 

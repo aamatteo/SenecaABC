@@ -1,0 +1,43 @@
+; -*-scheme-*-
+
+(Type double "#include <vector>\n
+#include \"CLException.hxx\"")
+(Type vstring "#include <stringoptions.h>")
+(Type unsigned "#include <LinearSystem.hxx>")
+
+;; Enum defining the different types of command
+(Enum TestType uint8_t
+      ;; sawtooth pattern
+      TestSawtooth
+      ;; sine pattern
+      TestSine
+      ;; file pattern
+      TestFile
+      ;; no movement
+      TestStill)
+
+;; Event object defining a test for the control loading system
+(Event CLTestCommand
+       (IncludeFile CLTestCommandExtra)
+       ;; type of command
+       (TestType test (Default TestStill))
+       ;; control loading channel this should be applied to
+       (unsigned channel (Default 0))
+       ;; position amplitude
+       (double amplitude (Default 0.0))
+       ;; position offset
+       (double offset (Default 0.0))
+       ;; maximum acceleration
+       (double max_accel (Default 0.0))
+       ;; maximum velocity
+       (double max_vel (Default 0.0))
+       ;; movement time to initial
+       (double move_time (Default 1.0))
+       ;; period of repeating patterns
+       (double period (Default 1.0))
+       ;; number of repetitions
+       (unsigned repetitions (Default 0))
+       ;; file name, for file patterns
+       (vstring file)
+       )
+       

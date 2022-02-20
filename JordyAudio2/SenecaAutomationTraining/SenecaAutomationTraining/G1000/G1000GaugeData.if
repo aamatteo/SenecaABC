@@ -1,0 +1,136 @@
+;; -*-mode: scheme-*-
+(Type int)
+(Type float)
+(Type bool)
+(Type std::string "#include <iostream>")
+
+(GaugeInterface G1000GaugeData
+		;; The pitch angle in radians
+		(float pitch   (Default 0.0))
+		;; The roll angle in radians
+		(float roll    (Default 0.0))
+		;; The heading angle in radians
+		(float heading (Default 0.0))
+		;; The flight path angle in radians
+		(float gamma   (Default 0.0))
+		;; The track angle in radians
+		(float chi     (Default 0.0))
+		;; The altitude in m
+		(float altitude (Default 0.0))
+		;; The rate of climb in m/s
+		(float hdot     (Default 0.0))
+		;; The indicated airspeed in m/s
+		(float Vias     (Default 0.0))
+		;; The true airspeed in m/s
+		(float Vtas     (Default 0.0))
+		(float Y_fycg (Default 0.0))
+		(float vtasdot (Default 0.0))
+		(float x (Default 0.0))
+		(float y (Default 0.0))
+
+		;; Some engine data
+		(float n1_left   (Default 0.0))
+		(float n1_right  (Default 0.0))
+		(float n2_left   (Default 0.0))
+		(float n2_right  (Default 0.0))
+		(float itt_left  (Default 0.0))
+		(float itt_right (Default 0.0))
+		(float rpm_left (Default 0.0))
+		(float rpm_right (Default 0.0))
+		(float tl_left (Default 0.0))
+		(float tl_right (Default 0.0))
+		(int gear (Default 0))
+
+                ;; AP Targets
+                (float altitude_target (Default 0.0))
+                (float speed_target    (Default 0.0))
+                (float Vmin            (Default 0.0))
+                (float Vmax            (Default 0.0))
+
+		;; Performance data
+		(bool  performance_data_valid  (Default false))
+		(float Vc_gamma_max            (Default 0.0))
+		(float gamma_max               (Default 0.0))
+		(float gamma_max_full_thrust (Default 0.0))
+
+		;; Nav radio data
+		(float dme       (Default 0.0))
+		(float course    (Default 0.0))
+		(float trueCourse (Default 0.0))
+		(float deviation (Default 0.0))
+		(float offset    (Default 0.0))
+		(int dme_status (Default 0))
+
+		;; Trim throttle calibration
+		(bool trim_enabled (Default false))
+		;; A trim value [-1,0,1]
+		(int trim      (Default 0))
+
+		;; Auto pilot data
+		(bool ap_hdghold_mode (Default false))
+		(bool ap_althold_mode (Default false))
+
+		(bool ap_hdghold_transition (Default false))
+		(bool ap_althold_transition (Default false))
+
+		(bool crashed    (Default false))
+		(bool fullscreen (Default false))
+
+		;; Instructor data
+		(bool  show_instructor (Default false))
+		(float height       (Default 0.0))
+		(float min_height   (Default 0.0))
+
+		;; Autopilot states
+		(int curVerticalState (Default 0))
+		(int curLateralState (Default 0))
+		(int ap_armed (Default 0))
+		(int APstate (Default 0))
+		(float hdg_bug (Default 0.0))
+		(float target_vs (Default 0.0))
+		(float target_speed (Default 0.0))
+		(float alt_hold (Default 0.0))
+		(bool ap_flash (Default false))
+		(bool pit_flash (Default false))
+		(bool rol_flash (Default false))
+		(float theta_ref (Default 0.0))
+		(float phi_ref (Default 0.0))
+		(int active_nav_source (Default 0))
+		(float needle_deviation (Default 0.0))
+	    	(int vnav_situation (Default 0))
+	    	(float brg (Default 0.0))
+	    	(float altitude_target_vnav (Default 0.0))
+		(float nav_R (Default 0.0))
+		(float vnav_R (Default 0.0))
+		(float turn_rate (Default 0.0))
+		(int alts_flash_state (Default 0))
+		(int alt_flash_state (Default 0))
+		(bool vor_flag_state (Default true))
+
+		;; Failure modes
+		(bool GPS_failure (Default false))
+		(bool VOR_failure (Default false))
+		(bool ADC_failure (Default false))
+		(bool PFD_failure (Default false))
+		(bool GMU_failure (Default false))
+		(bool HSI_failure (Default false))
+		(bool AFCS_pit (Default false))
+		(bool AFCS_rol (Default false))
+		(bool clogged_sp (Default false))
+		(bool clogged_pt (Default false))
+
+		(float map_left (Default 0.0))
+
+		(float map_right (Default 0.0))
+		(std::string fp_name)
+
+		(bool mouse_left (Default false))
+		(bool mouse_down (Default false))
+		(int GFC_msg (Default 0))
+		(int mouse_x (Default 0))
+		(int mouse_y (Default 0))
+		(float dt (Default 0.01))
+		(bool dme_animation (Default false))
+		(bool sync_animation (Default false))
+		(int active_leg (Default 0))
+)

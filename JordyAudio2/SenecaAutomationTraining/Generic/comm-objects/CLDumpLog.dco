@@ -1,0 +1,15 @@
+(Type float)
+;; Dump of control loading main variables
+;; Used for post-mortem, or for logging at high frequency
+(Stream CLDumpLog
+	; input to the valve
+	(float u 3)
+	; measured position
+	(float x 3)
+	; target position
+	(float t 3)
+	; measured moment
+	(float m 3)
+	; measured pressure
+	(float p 3))
+

@@ -1,0 +1,39 @@
+(Type float)
+(Type bool)
+
+(EventAndStream SideStickInput
+	; ignore this channel's pitch data
+	(bool use_pitch_defaults)
+	; ignore this channel's roll data
+	(bool use_roll_defaults)
+
+	; only set the jam/replay position for pitch
+	(bool use_only_jam_pitch)
+
+	; only set the jam/replay position for roll
+	(bool use_only_jam_roll)
+
+	; pitch channel
+	(float pitch_friction)
+	(float pitch_jam_pos)
+	(float pitch_pos_stop)
+	(float pitch_neg_stop)
+	(float pitch_mass)
+	(float pitch_damping)
+	(float pitch_force)
+	(float pitch_switch)
+	(float pitch_trim_vel)
+	(float pitch_init_trim_pos)
+
+	; roll channel
+	(float roll_friction)
+	(float roll_jam_pos)
+	(float roll_pos_stop)
+	(float roll_neg_stop)
+	(float roll_mass)
+	(float roll_damping)
+	(float roll_force)
+	(float roll_switch)
+	(float roll_trim_vel)
+	(float roll_init_trim_pos)
+)

@@ -1,0 +1,14 @@
+(Type double)
+(Type int)
+
+;visual configuration
+;FROM ExperimentControl(?), VisualDisplayProxy
+;TO VisualDisplayProxy, ExperimentControl(?)
+;NOTE 23AUG2001 switches to be determined
+(Event VisualDisplayConfiguration
+	(int switches)
+	(double vrange)
+	(double tod)
+	(double cloud_bottom)
+	(double cloud_top)
+)

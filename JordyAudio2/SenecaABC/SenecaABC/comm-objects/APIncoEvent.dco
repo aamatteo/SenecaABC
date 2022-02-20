@@ -1,0 +1,15 @@
+(Type int)
+(Type float)
+(Type std::string "#include <iostream>")
+
+(Event APIncoEvent
+	(int APstate)
+	(int verticalFDstate)
+	(int lateralFDstate)
+	(int active_nav_source)
+	(float altSelect)
+	(float hdgSelect)
+	(float crsSelect)
+	(std::string fp_name)
+)
+

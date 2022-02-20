@@ -1,0 +1,20 @@
+(Type int)
+(Type bool)
+(Type float)
+
+(Event DisplayEvent
+	(int id (Default 0))
+	;; freeze displays
+	(bool frozen_h (Default false))
+	(bool frozen_v (Default false))
+	;; altitude offset
+	(float offset_h_value (Default 0.0f))
+	(float offset_h_time (Default 0.0f))
+	;; KIAS offset
+	(float offset_v_value (Default 0.0f))
+	(float offset_v_time (Default 0.0f))
+	;; attitude and compass offset
+	(float offset_phi (Default 0.0f))
+	(float offset_theta (Default 0.0f))
+	(float offset_psi (Default 0.0f))
+)

@@ -1,0 +1,15 @@
+nav1active	117.950	NONE
+nav1stby	108.000		
+nav2active	117.950	NONE
+nav2stby	108.000		
+use_vors	0	0	
+vor1	0	0	
+vor2	0	0	
+nr_wps	0
+nr_map_items 6	
+EKDUS	-25993.3	7136.4	7000
+DL525	-24298.8	-7590.4	3000
+DL556	-18987.4	-14548.5	-1
+DL555	-18684.2	-14946.5	-1
+DIKMI	-13077.4	-10003.3	3000
+EDDL	0	0	-1

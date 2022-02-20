@@ -1,0 +1,20 @@
+;; -*-scheme-*-
+
+(Type uint32_t)
+
+;; This event is sent when an error occurs in control loading. The 
+;; event triggers the writing of a dump log, and the status and phase
+;; messages indicate the identified error and the model state of the
+;; control loader
+(Event CLErrorMessage
+        (ConstructorCode "for (int ii = status_fixed_size; ii--; ) {\n
+  status[ii] = 0;\n
+}\n
+for (int ii = phase_fixed_size; ii--; ) {\n
+  phase[ii] = 0;\n
+}")
+	;; error status of the control loading devices
+	(uint32_t status 6)
+	;; phase of the control loading models
+	(uint32_t phase 6))
+

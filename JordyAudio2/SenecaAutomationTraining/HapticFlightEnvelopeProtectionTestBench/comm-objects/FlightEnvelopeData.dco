@@ -1,0 +1,51 @@
+(Type double)
+(Type bool)
+
+;; The flight envelope is defined by the data contained in this channel. Extra functions are available through the FlightEnvelope-class
+(Stream FlightEnvelopeData
+    ( Option hdf5 )
+
+    ;; The hacking things
+    (double m_time_one                    ( Default 1 ))
+    (double m_time_three                  ( Default 3 ))
+
+    ;; The information on the extreme load factors
+    (double m_max_load_factor                  ( Default 0 ))
+    (double m_min_load_factor                  ( Default 0 ))
+
+    ;; Maximum operating velocity
+    (double m_maximum_operation_velocity       ( Default 0 ))
+
+    ;; Minimal velocity
+    (double m_minimum_velocity                 ( Default 0 ))
+
+    ;; Properties required for the lift coefficient
+    ;; The lift coefficient is defined by a line originating in ( 0.0, lift_at_zero_aoa  ) and has slope of m_lift_ci[...]slope
+    (double m_max_angle_of_attack              ( Default 0 ))
+    (double m_min_angle_of_attack)
+    (double m_lift_coefficient_slope_positive)
+    (double m_lift_coefficient_slope_negative  ( Default 0 ))
+    (double m_lift_at_zero_aoa                 ( Default 0 ))
+
+    ;; The operating altitude, defines atmosphere...
+    (double m_altitude)
+
+    ;; And the margins for the protections
+    (double m_margin_angle_of_attack           ( Default 0 ))
+    (double m_margin_low_velocity_al           ( Default 0 ))
+    (double m_margin_high_velocity             ( Default 0 ))
+    (double m_margin_load_factor               ( Default 0 ))
+    (double m_margin_low_velocity_region       ( Default 0 ))
+
+    ;; We are adding information on the pitch angle
+    (double m_max_pitch_angle                  ( Default 0 ))
+    (double m_margin_pitch_angle               ( Default 0 ))
+
+    ;; And some more 'fixed' aircraft information
+    (double m_lifting_surface                  ( Default 0 ))
+    (double m_mass                             ( Default 0 ))
+
+    ;; This switch indicates normal or alternative law
+    (bool m_use_normal_law                     ( Default true ))
+
+    )

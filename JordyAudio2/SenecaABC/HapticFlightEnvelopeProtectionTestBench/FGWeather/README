@@ -1,0 +1,80 @@
+The FGWeather and FGWeatherGui modules are intented to control the outside visual weather shown in FlightGear.
+It uses the telnet-interface available in Flightgear.
+
+@Dirk 2019
+
+License: The usual TU Delft/Dueca license.
+  I like to add the following to the license stuff above:
+    * ----------------------------------------------------------------------------
+    * "THE BEER-WARE LICENSE":
+    * Dirk Van Baelen wrote this file.  As long as you retain this notice,
+    * AND you keep to the TU Delft/C&S/DUECA regulations/license permissions,
+    * you can do whatever you want with this stuff.
+    * If we meet some day, and you think this stuff is worth it,
+    *       you can buy me a beer in return.
+    * Adapted from: Poul-Henning Kamp, https://en.wikipedia.org/wiki/Beerware
+    * ----------------------------------------------------------------------------
+
+-----
+SETUP
+-----
+
+1) Open the telnet port on flightgear, probably you want to do this in the startup script with an extra option:
+    --telnet=5401
+
+2) Add FGWeather to your project, on your solo node, and on ONE computer in the simulation.
+    For example add in modules.solo and/or modules.srsig1:
+    HapticFlightEnvelopeProtectionTestBench/FGWeather HEAD
+
+3) Make a choice:
+    a) You want to keep it simple, and want to use the gui.
+        Note that the gui also has a field to send raw telnet commands, for example to change time.
+        In this case you want to add the FGWeatherGui to modules.solo and/or modules.srsecs:
+        HapticFlightEnvelopeProtectionTestBench/FGWeatherGui HEAD
+    b) You want to automate some things from somewhere else.
+        Now you should write yourself to the FGWeatherInput-channel. So in your module of preference, subscribe to the channel in your comm-objects.lst:
+        HapticFlightEnvelopeProtectionTestBench/comm-objects/FGWeatherInput.dco
+
+4) Add the Telnet-interface to all the nodes where FlightGear is running.
+    Probably this means modules.srsig1/2/3 or modules.dutmms3
+    HapticFlightEnvelopeProtectionTestBench/TelnetInterface HEAD
+
+5) Start changing the dueca.mod file. If you are reading this file, I assume you know how to get a module on a certain node...
+    a) In case you want the gui, on your gui node (srsecs, dutmms1, solo) add the following:
+          ;; Interface to the FlightGear Weather Module
+          ;; Advanced option: If you want to play around with partname, use set-weather-partname or set-telnet-partname.
+          (make-module 'fg-weather-gui "" sim-priority
+            'set-timing sim-timing
+            'check-timing 10000 20000
+          )
+    b) On one node (probably srsig1/dutmms3_0/solo), add the main weather module:
+          ;; Actually make a metar
+          ;; Note that this basically is an interface between the metar input and a telnet command
+          ;; Advanced option, playing with partnames: set-read-part-name/set-write-part-name
+          (make-module 'fg-weather-module "" sim-priority
+            'set-timing sim-timing
+            'check-timing 10000 20000
+          )
+    c) On each of the nodes where FlightGear is running:
+          ;; Interface to some telnet port, probably FlightGear?
+          ;; Keep in mind you adjust the partname (here "center") for each of the difference flightgear nodes
+          ;; Also make sure the ip/port is correct, in HMI you probably need to select a different port on dutmms3_1
+          ;; Keep the read-partname equal to the one used for the fg-weather-module
+          (make-module 'telnet-interface-module "center" sim-priority
+            'set-timing         sim-timing
+            'check-timing       10000 20000
+            'ip                 "127.0.0.1"
+            'port               5401
+            'set-read-part-name ""
+          )
+
+-----
+USAGE
+-----
+
+If you use the gui, just change the parameters to what you want and click send.
+
+If you are sending the FGWeatherInput-channel, the FGWeather-module triggers on the clock and reads your event. It translates it in a metar/telnet command and sends it to telnet interface.
+
+Note that using telnet does not guarantee any correct timing. It happens quite fast, yet is not instantanious.
+Also note that changing the weather in FlightGear itself can sometimes change slowly, so think what you change before wondering why 'it doesn't work (yet)'. ;)

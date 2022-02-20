@@ -1,0 +1,156 @@
+(Type bool)
+(Type double)
+(Type int)
+
+(Enum forcingFunction uint32_t
+  ;; Do these values need a comment?
+  SINE
+  SQUARED_SINE
+  PULSE
+  SAW
+
+  ;; And the maximum value to check the validity of the entry
+  MAX_FORCING_FUNCTION
+)
+
+(Enum severityCue uint32_t
+  ;; Do these values need a comment?
+  WAIT_TIME
+  NUM_TICKS
+  MAGNITUDE
+
+  ;; And the maximum value to check the validity of the entry
+  MAX_SEVERITY_CUES
+)
+
+(Event HapticDisplayConfig
+  ( Option hdf5 )
+  ;; The overall activation of the haptics
+  (bool m_haptics_active (Default false))
+
+  ;; How about the maximum force?
+  (bool m_max_force_trigger (Default false))
+  (double m_max_force (Default 100 ))
+
+  ;; Do we want to chang the neutral position?
+  (bool m_changing_neutral_trigger    (Default false))
+  (bool m_changing_neutral_activation (Default false))
+  (bool m_ap_changing_neutral_trigger    (Default false))
+  (bool m_ap_changing_neutral_activation (Default false))
+  (bool m_over_changing_neutral_trigger    (Default false))
+  (bool m_over_changing_neutral_activation (Default false))
+  (bool m_under_changing_neutral_trigger    (Default false))
+  (bool m_under_changing_neutral_activation (Default false))
+  (bool m_lf_changing_neutral_trigger    (Default false))
+  (bool m_lf_changing_neutral_activation (Default false))
+
+  ;; Some tuning parameters
+  (bool   m_overspeed_tuning_trigger  ( Default 0 ))
+  (bool   m_underspeed_tuning_trigger ( Default 0 ))
+  (double m_overspeed_tuning          ( Default 1 ))
+  (double m_underspeed_tuning         ( Default 1 ))
+
+  ;; Activate the stiffness in the protected region
+  (bool m_stiffness_cues_in_protected_region_trigger (Default false))
+  (bool m_stiffness_cues_in_protected_region_activation (Default false))
+  (double m_stiffness_cues_in_protected_region_low_velocity_gain     ( Default 0 ))
+  (double m_stiffness_cues_in_protected_region_high_velocity_gain    ( Default 0 ))
+  (double m_stiffness_cues_in_protected_region_angle_of_attack_gain  ( Default 0 ))
+  (double m_stiffness_cues_in_protected_region_load_factor_gain      ( Default 0 ))
+  (double m_stiffness_cues_in_protected_region_pitch_angle_gain      ( Default 0 ))
+
+  ;; Add a discrete cues when entering the protected region
+  (bool m_protected_zone_onset_trigger ( Default false ))
+  (bool m_protected_zone_onset_activation  ( Default false ))
+  (forcingFunction m_protected_zone_onset_pull_forcing_function  ( Default SINE ))
+  (double m_protected_zone_onset_pull_pulse_start         ( Default 0 ))
+  (double m_protected_zone_onset_pull_pulse_width         ( Default 0 ))
+  (double m_protected_zone_onset_pull_pulse_magnitude     ( Default 0 ))
+  (double m_protected_zone_onset_pull_periodic_amplitude  ( Default 0 ))
+  (double m_protected_zone_onset_pull_periodic_frequency  ( Default 0 ))
+  (double m_protected_zone_onset_pull_saw_frequency       ( Default 0 ))
+  (double m_protected_zone_onset_pull_saw_width           ( Default 0 ))
+  (double m_protected_zone_onset_pull_saw_magnitude       ( Default 0 ))
+  (double m_protected_zone_onset_pull_saw_wait_run        ( Default 0 ))
+  (double m_protected_zone_onset_pull_saw_wait_reset      ( Default 0 ))
+  (double m_protected_zone_onset_pull_saw_wait_start      ( Default 0 ))
+  (int    m_protected_zone_onset_pull_saw_num_ticks       ( Default 1 ))
+
+  (forcingFunction m_protected_zone_onset_push_forcing_function  ( Default SINE ))
+  (double m_protected_zone_onset_push_pulse_start         ( Default 0 ))
+  (double m_protected_zone_onset_push_pulse_width         ( Default 0 ))
+  (double m_protected_zone_onset_push_pulse_magnitude     ( Default 0 ))
+  (double m_protected_zone_onset_push_periodic_amplitude  ( Default 0 ))
+  (double m_protected_zone_onset_push_periodic_frequency  ( Default 0 ))
+  (double m_protected_zone_onset_push_saw_frequency       ( Default 0 ))
+  (double m_protected_zone_onset_push_saw_width           ( Default 0 ))
+  (double m_protected_zone_onset_push_saw_magnitude       ( Default 0 ))
+  (double m_protected_zone_onset_push_saw_wait_run        ( Default 0 ))
+  (double m_protected_zone_onset_push_saw_wait_reset      ( Default 0 ))
+  (double m_protected_zone_onset_push_saw_wait_start      ( Default 0 ))
+  (int    m_protected_zone_onset_push_saw_num_ticks       ( Default 1 ))
+
+  ;; Add a discrete cues when entering the protected region, the previous one is for continous guidance, this one is really only the entrance.
+  ;; This makes the dco really really big. Maybe too big? :p
+  (bool m_protected_zone_onset2_trigger ( Default false ))
+  (bool m_protected_zone_onset2_activation  ( Default false ))
+  (double m_protected_zone_onset_pull2_saw_frequency       ( Default 0 ))
+  (double m_protected_zone_onset_pull2_saw_width           ( Default 0 ))
+  (double m_protected_zone_onset_pull2_saw_magnitude       ( Default 0 ))
+  (double m_protected_zone_onset_pull2_saw_wait_run        ( Default 0 ))
+  (double m_protected_zone_onset_pull2_saw_wait_reset      ( Default 0 ))
+  (int    m_protected_zone_onset_pull2_saw_num_ticks       ( Default 1 ))
+
+  (double m_protected_zone_onset_push2_saw_frequency       ( Default 0 ))
+  (double m_protected_zone_onset_push2_saw_width           ( Default 0 ))
+  (double m_protected_zone_onset_push2_saw_magnitude       ( Default 0 ))
+  (double m_protected_zone_onset_push2_saw_wait_run        ( Default 0 ))
+  (double m_protected_zone_onset_push2_saw_wait_reset      ( Default 0 ))
+  (int    m_protected_zone_onset_push2_saw_num_ticks       ( Default 1 ))
+
+  ;; Which forcing function to use when the stick shaker is activated
+  (bool m_stick_shaker_trigger (Default false))
+  (bool m_stick_shaker_activation ( Default false ))
+  (forcingFunction m_stick_shaker_forcing_function ( Default SINE ))
+  (double m_stick_shaker_amplitude  ( Default 0 ))
+  (double m_stick_shaker_frequency  ( Default 0 ))
+
+  ;; Add a discrete cues when entering the protected TIME region
+  (int m_protected_time_index ( Default 0 ))
+  (double m_protected_time_limit_time ( Default 1 ) )
+	(double m_protected_time_wait_time  ( Default 0 ) )
+  (bool m_protected_time_trigger ( Default false ))
+  (bool m_protected_time_activation  ( Default false ))
+  (forcingFunction m_protected_time_pull_forcing_function  ( Default SINE ))
+  (double m_protected_time_pull_pulse_start         ( Default 0 ))
+  (double m_protected_time_pull_pulse_width         ( Default 0 ))
+  (double m_protected_time_pull_pulse_magnitude     ( Default 0 ))
+  (double m_protected_time_pull_periodic_amplitude  ( Default 0 ))
+  (double m_protected_time_pull_periodic_frequency  ( Default 0 ))
+  (double m_protected_time_pull_saw_frequency       ( Default 0 ))
+  (double m_protected_time_pull_saw_width           ( Default 0 ))
+  (double m_protected_time_pull_saw_magnitude       ( Default 0 ))
+
+  ;; This is some extra stuff for the sawtooth severity
+  (severityCue m_severity_cue            ( Default WAIT_TIME ) )
+  (double      m_min_severity_cue_tuning ( Default 1.0       ) )
+  (double      m_max_severity_cue_tuning ( Default 5.0       ) )
+
+  (forcingFunction m_protected_time_push_forcing_function)
+  (double m_protected_time_push_pulse_start         ( Default 0 ))
+  (double m_protected_time_push_pulse_width         ( Default 0 ))
+  (double m_protected_time_push_pulse_magnitude     ( Default 0 ))
+  (double m_protected_time_push_periodic_amplitude  ( Default 0 ))
+  (double m_protected_time_push_periodic_frequency  ( Default 0 ))
+  (double m_protected_time_push_saw_frequency       ( Default 0 ))
+  (double m_protected_time_push_saw_width           ( Default 0 ))
+  (double m_protected_time_push_saw_magnitude       ( Default 0 ))
+
+  ;; Which forcing function to use when the protected shaker is activated
+  (bool m_protected_shaker_trigger (Default false))
+  (bool m_protected_shaker_activation ( Default false ))
+  (forcingFunction m_protected_shaker_forcing_function ( Default SINE ))
+  (double m_protected_shaker_amplitude  ( Default 0 ))
+  (double m_protected_shaker_frequency  ( Default 0 ))
+
+ )

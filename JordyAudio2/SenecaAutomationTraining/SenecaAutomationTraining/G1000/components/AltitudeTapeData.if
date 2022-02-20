@@ -1,0 +1,15 @@
+(Type float)
+(Type int)
+(Type bool)
+
+(ComponentInterface AltitudeTapeData
+		    (float altitude (Default 0.0))
+                    (float altitude_target (Default 0.0))
+		    (int curVerticalState (Default 0))
+                    (float altitude_target_vnav (Default 0.0))
+		    (float nav_R (Default 0.0))
+		    (float vnav_R (Default 0.0))
+		    (float hdot (Default 0.0))
+		    (bool ADC_failure (Default false))
+		    (bool clogged_sp (Default false))
+)

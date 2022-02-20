@@ -1,0 +1,6 @@
+(Type float)
+
+(Stream Brake_Pedal_Playback_Channel
+  	;; prerecorded position of the brake pedal in % of total (max 100%)
+	(float playback_position (Default 0.0) )
+)

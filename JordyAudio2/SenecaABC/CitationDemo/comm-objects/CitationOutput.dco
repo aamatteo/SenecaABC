@@ -1,0 +1,12 @@
+(Type float)
+
+(IterableType fixvector<Ycit_no_outputs,float> "#include <fixvector.hxx>
+#include\"CitationArrays.h\"
+using dueca::fixvector;
+")
+(IterableType fixvector<U0cit_no_triminputs,float>)
+
+(EventAndStream CitationOutput
+	(fixvector<Ycit_no_outputs,float> y (Default 0.0f))
+	(fixvector<U0cit_no_triminputs,float> u0 (Default 0.0f))
+)

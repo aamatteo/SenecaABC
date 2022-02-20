@@ -1,0 +1,8 @@
+# this file contains a list of all communicated objects needed by this
+# specific module
+# specify these with the .dco extension, examples:
+# HapticFlightEnvelopeProtectionTestBench/comm-objects/MyDataObject.dco
+# Generic/comm-objects/PrimaryControls.dco
+
+HapticFlightEnvelopeProtectionTestBench/comm-objects/FGWeatherInput.dco
+HapticFlightEnvelopeProtectionTestBench/comm-objects/TelnetInput.dco

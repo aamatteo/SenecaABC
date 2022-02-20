@@ -1,0 +1,77 @@
+# this file contains a list of all modules needed for your application
+# on a specific machine
+# note that the comm-objects directories should not be listed here
+# example:
+# SenecaAutomationTraining/some-module
+#
+# Removed:
+#MotionFiltersRTW50/motion-filters-classical-03r13 HEAD
+#MotionFiltersRTW50/motion-filters-classical06r13 HEAD
+#MotionFiltersRTW50/motion-filter-classical-03r13 HEAD
+#MotionFiltersRTW50/motion-filter-classical-06r13 HEAD
+#SenecaAutomationTraining/ConventionalDisplay 
+#SenecaAutomationTraining/Malfunction 
+#MotionFiltersRTW70/motion-filter-classical-12 HEAD
+
+# Add?
+#SRSMotion/motion-configurater HEAD
+#MotionFiltersRTW70/motion-filter-tuner HEAD
+#MotionFiltersRTW70/motion-filter-tuner-gui HEAD
+#CitationApproach/FlapSelector HEAD
+
+### Used & owned:
+SenecaAutomationTraining/B747DisplaysCommonFiles 
+SenecaAutomationTraining/B747PFD 
+SenecaAutomationTraining/CitationIncoSelector 
+SenecaAutomationTraining/CitationLogger 
+SenecaAutomationTraining/CitationModelInclude 
+SenecaAutomationTraining/CitationNavigator 
+SenecaAutomationTraining/ECI 
+SenecaAutomationTraining/FCSAdapter 
+SenecaAutomationTraining/Malfunctions 
+SenecaAutomationTraining/PA34 
+SenecaAutomationTraining/WAVPlayer 
+SenecaAutomationTraining/WeatherProxy 
+
+# script for visualizing comms
+SenecaAutomationTraining/CommsVisualize 
+
+### Used & borrowed:
+MCP737/MCP737GUI HEAD
+MotionFiltersRTW70/motion-filter-classical-16 HEAD
+SRSMotion/motion-common HEAD
+SRSMotion/motion-limiter HEAD
+SRSMotion/motion-viewer HEAD
+SRSMotion/simple-motion-logger HEAD
+SRSToolbox/GearSelector HEAD
+#CitationDemo/FGVisual
+HapticFlightEnvelopeProtectionTestBench/FGWeather
+
+# GUI stick, to test without having a joystick
+VarStabCitation/GUIStick HEAD
+
+# not used in experiment, added and updated for Herman
+SenecaAutomationTraining/CvCalculation 
+
+WorldListener/WorldListener HEAD
+WorldListener/OpenALListener HEAD
+WorldView/SpecificationBase HEAD
+SenecaAutomationTraining/Enginesound 
+
+# Generic/joystick HEAD
+
+SenecaAutomationTraining/multi-stick 
+SenecaAutomationTraining/Autopilot 
+SenecaAutomationTraining/dusime 
+SenecaAutomationTraining/GFC700GUI 
+SenecaAutomationTraining/G1000 
+SenecaAutomationTraining/MFD 
+SenecaAutomationTraining/Logger 
+SenecaAutomationTraining/SenecaLogger 
+SenecaAutomationTraining/Components 
+SenecaAutomationTraining/include 
+SenecaAutomationTraining/FGVisual 
+
+Generic/multi-stick HEAD
+SenecaAutomationTraining/ATC 
+SenecaAutomationTraining/atc 

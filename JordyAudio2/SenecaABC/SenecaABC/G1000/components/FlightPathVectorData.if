@@ -1,0 +1,9 @@
+(Type float)
+
+(ComponentInterface FlightPathVectorData
+		    (float pitch   (Default 0.0))
+		    (float roll    (Default 0.0))
+		    (float heading (Default 0.0))
+		    (float gamma   (Default 0.0))
+		    (float chi     (Default 0.0))
+		    )

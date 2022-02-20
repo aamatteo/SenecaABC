@@ -1,0 +1,16 @@
+(Type float)
+(Type bool)
+(Type int)
+
+; data for piston engine sound generation
+; set for 2 engines  0=left 1=right
+; power:  engine on/off
+; sounds: combine events into a bitmask
+
+(EventAndStream PropSoundData
+	(float rpm 2)
+	(float torque 2)
+	(bool power 2)
+	(float tas)
+	(int sounds (Default 0))
+)

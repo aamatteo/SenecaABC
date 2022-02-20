@@ -1,0 +1,34 @@
+(Type float)
+(Type char)
+;; be careful to not make this info redundant
+(Enum efis_modes uint8_t 
+	NONE
+	HDG
+	LNAV
+	LOC
+	ALT
+)
+
+(Enum to_from uint8_t
+	NODIR
+	TO
+	FROM
+)
+
+(EventAndStream NavData
+	(float ils_loc_dev (Default 0.0f))
+	(float ils_gs_dev (Default 0.0f))
+	(float course_dev (Default 0.0f))	
+	(float course_ref (Default 0.0f))
+	(to_from direction (Default NODIR))
+	(float heading_ref (Default 0.0f))
+	(float speed_ref (Default 100.0f))
+	(float alt_ref (Default 1000.0f))
+;	(char next_waypoint)
+	(float distance (Default 0.0f))
+	(float time2go (Default 0.0f))
+	(efis_modes lateral_mode (Default NONE))
+	(efis_modes armed_lateral_mode (Default NONE))
+	(efis_modes vertical_mode (Default NONE))
+	(efis_modes armed_vertical_mode (Default NONE))
+)

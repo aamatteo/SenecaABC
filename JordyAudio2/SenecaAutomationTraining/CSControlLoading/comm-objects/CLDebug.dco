@@ -1,0 +1,76 @@
+(Type float)
+(Type unsigned)
+
+; This object transmits debug data on the control loader application
+(Stream CLDebug
+  (Option hdf5)	
+	(ConstructorCode
+	 "for (int ii = 3; ii--; ) {
+  u[ii]                 = 0.0;
+  dp[ii]                = 0.0;
+  pos[ii]               = 0.0;
+  xdotdevicemodel[ii]   = 0.0;
+  xt[ii]                = 0.0;
+  xm[ii]                = 0.0;
+  xdotm[ii]             = 0.0;
+  mom[ii]               = 0.0;
+  ditdp[ii]             = 0.0;
+  offset[ii]            = 0.0;
+  ditg[ii]              = 0.0;
+  status[ii]            = 0;
+  qfeel_input_force[ii] = 0.0;
+  compensator_level[ii] = 0.0;
+}
+for (int ii = 2; ii--; ) {
+  brake[ii] = 0.0;
+  pedal[ii] = 0.0;
+}")
+	; input to the valve
+	(float u 3)
+
+	; measured pressure
+	(float dp 3)
+
+	; current measured position
+	(float pos 3)
+
+	; Device model velocity
+	(float xdotdevicemodel 3)
+
+	; target position
+	(float xt 3)
+	
+	; model position
+	(float xm 3)
+	
+	; model velocity
+	(float xdotm 3)
+
+	; measured force or moment
+	(float mom 3)
+	
+	; measured pressure, at dither frequency
+	(float ditdp 3)
+
+	; current valve offset
+	(float offset 3)
+
+	; gain for the dither 
+	(float ditg 3)
+
+	; integer status report
+	(unsigned status 3)
+
+	; brake force or position
+	(float brake 2)
+
+	; pedal force or position
+	(float pedal 2)
+
+	; the actual qfeel force used as input for the model
+	(float  qfeel_input_force 3)
+
+	; compensator level used (energy compensation scheme variable)
+	(float compensator_level 3)
+)
+

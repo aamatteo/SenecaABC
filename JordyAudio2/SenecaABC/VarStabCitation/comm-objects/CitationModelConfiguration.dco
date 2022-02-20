@@ -1,0 +1,16 @@
+(Type uint32_t "#include \"CitationModelConfiguration_bits.hxx\"")
+(Type bool)
+(Type double)
+
+; CitationModel configuration
+(EventAndStream CitationModelConfiguration
+	(uint32_t valid (Default 0))
+	
+	; reposition
+	(bool abs_repos (Default true))
+	(double reposX (Default 0.0f))
+	(double reposY (Default 0.0f))
+	(double reposH (Default 0.0f))
+	(double reposPsi (Default 0.0f))
+	
+)

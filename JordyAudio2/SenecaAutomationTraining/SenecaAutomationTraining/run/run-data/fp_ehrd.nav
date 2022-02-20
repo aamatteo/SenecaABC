@@ -1,0 +1,15 @@
+nav1active	110.400	RTM
+nav1stby	108.000		
+nav2active	117.800	NONE	
+nav2stby	108.000		
+use_vors	1	1	
+vor1	3450.2	2298.1	
+vor2	45382.1	42491.3	
+nr_wps	0		
+nr_of_map_items	6
+EHRD	0	0	-1
+RTM	3450.2	2298.1	-1
+EH157	12302.6	6710.3	-1
+EH161	17295.6	-3184.7	-1
+EH154	8662.6	-9121.7	-1
+WOODY	-4404.5	-60935.0	-1

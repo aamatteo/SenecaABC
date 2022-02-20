@@ -1,0 +1,7 @@
+;; -*-scheme-*-
+(Type bool)
+
+;; Object to signal completion of control loading calculations
+(Stream CLConfirm
+	(bool dummy (Default true)) 
+	)

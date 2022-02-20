@@ -1,0 +1,21 @@
+(Type bool)
+(Type int)
+(Enum evt_type uint8_t Request Confirm)
+
+;configuration of motion system
+;FROM ExperimentControl/MotionConfigurator
+;TO MotionLimiter
+;	motion: motion filter active
+;	filter: coarse configuration, id of filter (from add-motion-filter)
+;	param: fine configuration, id of parameterset (passed on to MF if != -1)
+(Event MotionConfiguration	
+       (evt_type event_type (Default Request))
+       
+       (bool motion )	    
+       (int filter )
+       (int param (Default -1))
+
+       ;; for Confirm
+       (bool filter_confirmed (Default false))
+       (bool param_confirmed (Default false))
+)

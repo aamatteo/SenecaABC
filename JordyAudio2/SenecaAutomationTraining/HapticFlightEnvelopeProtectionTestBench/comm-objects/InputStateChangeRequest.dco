@@ -1,0 +1,15 @@
+(Type bool)
+(Type double)
+
+;; This provides a way of triggering state changes for the input gui
+(Event InputStateChangeRequest
+	( Option hdf5 )
+	( bool   increase_velocity    (Default false))
+	( bool   decrease_velocity    (Default false))
+	( bool   increase_load_factor (Default false))
+	( bool   decrease_load_factor (Default false))
+	( bool   increase_bank        (Default false))
+	( bool   decrease_bank        (Default false))
+	( double ratio                (Default 0.05))
+	( double accel_x              (Default 0   ))
+)

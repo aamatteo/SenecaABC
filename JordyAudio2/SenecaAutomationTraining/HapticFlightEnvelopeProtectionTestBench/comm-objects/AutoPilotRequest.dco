@@ -1,0 +1,44 @@
+(Type bool)
+(Type int)
+
+(Enum Button uint32_t
+	APP
+	VOR_LOC
+	LNAV
+	VNAV
+	HEADING_REF_BUTTON
+	VERTICAL_SPEED
+	SPEED
+	ALTITUDE
+	FLIGHT_DIRECTOR
+	VOR
+	WAYPOINTS
+	FLIGHT_PATH_VECTOR
+	RADIO_NAV_VOR_1
+	RADIO_NAV_VOR_2
+	RADIO_NAV_ADF_1
+	RADIO_NAV_ADF_2
+	RADIO_NAV_OFF_1
+	RADIO_NAV_OFF_2
+)
+
+(Enum Screen uint32_t
+	SPD
+	HDG
+	ALT
+	CRS
+)
+
+(Event AutoPilotRequest
+	( Option hdf5 )
+
+	;; For a certain button, request a state
+	( Button button_id      ( Default APP   ) )
+	( bool   button_status  ( Default true  ) )
+	( bool   button_trigger ( Default false ) )
+
+	( Screen screen_id      ( Default SPD   ) )
+	( int    screen_value   ( Default 140   ) )
+	( bool   screen_trigger ( Default false ) )
+
+)

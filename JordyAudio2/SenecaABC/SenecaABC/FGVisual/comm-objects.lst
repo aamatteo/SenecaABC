@@ -1,0 +1,4 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+Generic/comm-objects/VehicleCabPosition.dco
+SenecaABC/comm-objects/FGIncoEvent.dco

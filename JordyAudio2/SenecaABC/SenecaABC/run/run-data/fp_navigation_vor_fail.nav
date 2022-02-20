@@ -1,0 +1,11 @@
+nav1active	110.050	COA
+nav1stby	108.000		
+nav2active	117.400	NIK	
+nav2stby	108.000		
+use_vors	1	1	
+vor1	-25798.0	-18272.7	
+vor2	31607.5	-38650.2	
+nr_wps	3		
+EHMZ	0	0	-1
+COA	-25798.0	-18272.7	-1
+NIK	31607.5	-38650.2	-1

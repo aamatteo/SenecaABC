@@ -1,0 +1,9 @@
+;; -*-scheme-*-
+(Type bool)
+
+(Stream IOSync
+	;; Code generation does not work without at least one variable
+	;; may decide later on changes
+	(bool clsync (Default true))
+	)
+	

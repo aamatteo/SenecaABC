@@ -1,0 +1,10 @@
+(Type unsigned)
+
+(Event CLErrorMessage	
+       (ConstructorCode "
+for (int ii = 3; ii--; ) {
+  status[ii] = 0; phase[ii] = 0;
+}")
+	(unsigned status 3)
+	(unsigned phase 3))
+

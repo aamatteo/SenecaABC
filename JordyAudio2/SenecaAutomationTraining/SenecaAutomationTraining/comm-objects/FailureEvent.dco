@@ -1,0 +1,17 @@
+(Type int)
+(Type float)
+(Type bool)
+
+(Event FailureEvent
+	(bool GPS_failure (Default false))
+	(bool VOR_failure (Default false))
+	(bool ADC_failure (Default false))
+	(bool PFD_failure (Default false))
+	(bool GMU_failure (Default false))
+	(bool HSI_failure (Default false))
+	(bool AFCS_pit (Default false))
+	(bool AFCS_rol (Default false))
+	(bool clogged_sp (Default false))
+	(bool clogged_pt (Default false))
+)
+

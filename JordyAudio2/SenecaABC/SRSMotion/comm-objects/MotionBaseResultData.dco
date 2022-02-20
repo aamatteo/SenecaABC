@@ -1,0 +1,15 @@
+(Type float)
+(Type uint32_t)
+
+;Raw data received from Motion Control Cabinet
+; 29APR2002: now internal to the MotionLimiter
+;MotionBaseProxy stripped a sync word and a checksum after receiving it
+;FROM (MotionBaseProxy) MotionLimiter
+;TO (MotionController) MotionLimiter
+(EventAndStream MotionBaseResultData
+	(uint32_t counter)
+	(uint32_t status)
+	(float actual_pos 6)
+	(float actual_len 6)
+)
+

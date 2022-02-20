@@ -1,0 +1,28 @@
+;; -*-mode: scheme-*-
+(Type float)
+(Type int)
+(Type bool)
+(Type std::string "#include <iostream>")
+
+
+(ComponentInterface MapData
+		    (float x (Default 0.0))
+		    (float y (Default 0.0))
+		    (float lat (Default 0.0))
+		    (float lon (Default 0.0))
+		    (float heading (Default 0.0))
+		    (int active_leg (Default 0))
+		    (int active_vnv_leg (Default 0))
+		    (bool GPS_failure (Default false))
+		    (std::string fp_name)
+		    (bool fpl_page (Default false))
+		    (float Vtas (Default 0.0))
+		    (float dist_to_top (Default 0.0))
+		    (float time_to_bod (Default 0.0))
+		    (int curVerticalState (Default 0.0))
+		    (int msg (Default 13))
+		    (int range (Default 5))
+		    (float altitude (Default 0.0))
+		    (float fpa_req (Default 0.0))
+		    (float dt (Default 1.0))
+)

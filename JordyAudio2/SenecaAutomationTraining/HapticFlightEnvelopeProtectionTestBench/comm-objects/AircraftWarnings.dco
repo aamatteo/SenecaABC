@@ -1,0 +1,8 @@
+(Type bool)
+
+(EventAndStream AircraftWarnings
+  (Option hdf5)
+  (bool stall_warning (Default false))
+  (bool overspeed_warning (Default false))
+  (bool ap_disconnect (Default false))
+)

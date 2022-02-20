@@ -1,0 +1,14 @@
+;; -*-scheme-*-
+
+(Type float)
+(Type int)
+
+;; block of log data for reference or drum synchro
+(Event RawSynchroLogBlock
+ (IncludeFile RawSynchroLogBlockExtra)
+ ;; axis number in this block
+ (int axis)
+ ;; raw synchro signal
+ (float synchro -1)
+)
+  

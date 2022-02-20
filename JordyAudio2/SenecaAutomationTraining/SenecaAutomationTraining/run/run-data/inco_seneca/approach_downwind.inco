@@ -1,0 +1,27 @@
+#  PA-34 state incofile generated on Tue Apr 11 16:22:25 2017
+# Description: saved state from DUECA simulation
+#	state	value	state description
+1	-1.184440e-03	PA34-p
+2	-2.798992e-03	PA34-q
+3	-6.383624e-03	PA34-r
+4	6.137285e+01	PA34-u
+5	-1.054004e-01	PA34-v
+6	6.278056e-01	PA34-w
+7	-1.103532e-02	PA34-phi
+8	2.663675e-03	PA34-theta
+9	-6.327187e+00	PA34-psi
+10	1.922599e+03	PA34-X
+11	1.722093e+00	PA34-Y
+12	-3.153006e+02	PA34-Z
+13	0.000000e+00	PA34-who knows1 PA34-gust_state_1
+14	0.000000e+00	PA34-who knows2 PA34-gust_state_2
+15	0.000000e+00	PA34-who knows3 PA34-gust_state_3
+16	1.443547e+02	PA34-who knows4 PA34-fuel_left
+17	1.443547e+02	PA34-who knows5 PA34-fuel_right
+18	4.090337e-02	PA34-trim_de
+19	4.318445e-03	PA34-trim_da
+20	0.000000e+00	PA34-trim_dr
+21	4.801766e-01	PA34-Throttle_left
+22	4.851429e-01	PA34-Throttle_right
+23	0.000000e+00	PA34-Gear
+24	0.000000e+00	PA34-Flaps

@@ -1,0 +1,33 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+# specify these with the .dco extension, examples:
+# CitationDemo/comm-objects/MyDataObject.dco
+
+# input from joystick and column/midconsole/switches
+Generic/comm-objects/PrimaryControls.dco
+Generic/comm-objects/SecondaryControls.dco
+Generic/comm-objects/PrimarySwitches.dco
+Generic/comm-objects/SecondarySwitches.dco
+
+# input from sidestick
+Generic/comm-objects/SideStickOutput.dco 
+Generic/comm-objects/StickSwitches.dco
+
+# output to model
+CitationDemo/comm-objects/CitationPilotInput.dco
+
+# output to column
+#Generic/comm-objects/QFeel.dco
+CSControlLoading/comm-objects/QFeel.dco
+
+# output to sidestick
+Generic/comm-objects/SideStickInput.dco
+
+# status input and output
+CitationDemo/comm-objects/PilotControlConfig.dco
+
+# input voor qfeel
+CitationExample/comm-objects/CitationOutput.dco
+
+SenecaAutomationTraining/comm-objects/AutopilotChannel.dco
+SenecaAutomationTraining/comm-objects/APIncoEvent.dco

@@ -1,0 +1,10 @@
+(Type bool)
+(Type vstring "#include <stringoptions.h>")
+
+(Event TextToSpeechInput
+	( Option hdf5 )
+
+	;; Trigger and do a text to speech
+	(bool    string_trigger ( Default false ))
+	(vstring string_data    ( Default "" ))
+)

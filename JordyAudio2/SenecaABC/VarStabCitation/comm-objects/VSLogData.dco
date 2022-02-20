@@ -1,0 +1,54 @@
+; -*-scheme-*-
+(Header "
+        item            : VSLogData.dco
+        made by         : Rene' van Paassen
+        date            : 170110
+        description     : Log data for variable stability simulation
+        copyright       : (c) 2016 TUDelft-AE-C&S")
+
+;; double
+(Type float)
+
+;; current control parameters (since these may be filtered)
+(Type VSControl "#include \"VSControl.hxx\"")
+
+;; state of the control logic
+(Enum VSState uint8_t
+      ;; pre-tracking, assume current values as average
+      Starting
+      ;; first step in tuning
+      Tuning1
+      ;; tracking alpha, delta_e, V, and waiting for
+      ;; stable data
+      Tuning
+      ;; still tracking, but sending selected channels
+      ;; and waiting for experimental mode
+      ;; activated
+      StableAndWait
+      ;; experimental mode activated, assuming inputs
+      ;; from stick and modifying stability
+      Running
+      ;; error condition, cannot continue
+      Error)
+
+;; set of log parameters; clipping and the control input contribution
+;; from the VS control is logged
+(Stream VSLogData
+        ;; Un-clipped variable stability contribution, y axis
+        (float de_vstab_raw (Default 0.0f))
+        ;; Un-clipped variable stability contribution, x axis
+        (float da_vstab_raw (Default 0.0f))
+        ;; Variable stability contribution, y axis
+        (float de_vstab (Default 0.0f))
+        ;; Variable stability contribution, x axis
+        (float da_vstab (Default 0.0f))
+        ;; Pilot contribution, y axis
+        (float de_pilot (Default 0.0f))
+        ;; Pilot contribution, x axis
+        (float da_pilot (Default 0.0f))
+        ;; Current variable stability gains
+        (VSControl vs_current)
+        ;; Current logic state
+        (VSState vs_state (Default Error))
+        )
+        

@@ -1,0 +1,11 @@
+nav1active	117.95 NONE
+nav1stby	112.05
+nav2active	118.95 NONE
+nav2stby	108.00
+use_vors	1	0
+vor1		1500	5000
+vor2		0	0
+nr_wps 3
+WP1	500	0	-1
+WP2	-1200	7000	2800
+WP3	-6000	7000	2000

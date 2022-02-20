@@ -1,0 +1,12 @@
+(Type int)
+(Type float)
+(Type bool)
+
+(ComponentInterface AircraftReferenceData
+		    (int dummy)
+		    (float pitch (Default 0.0))
+		    (float roll (Default 0.0))
+		    (float theta_ref (Default 0.0))
+		    (float phi_ref (Default 0.0))
+		    (int APstate (Default 0))
+)

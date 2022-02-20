@@ -1,0 +1,15 @@
+(Type double)
+(Type int)
+
+;setpoints for actuator lengths (29APR2002: deprecated | 02MAY2002 now used for logging)
+;FROM MotionLimiter
+;TO MotionController (alternative)
+;NOTE (29APR2002: deprecated) status is bitmask with 0x01 as testbit
+;     no output to motion base when testbit is set!
+(EventAndStream MotionActuatorLengths
+	(int status )
+	(double j 6 )
+	(double jd 6 )
+	(double jdd 6 )
+)
+

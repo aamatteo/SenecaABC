@@ -1,0 +1,12 @@
+(Type bool)
+(Type float)
+(Type int)
+
+(Stream Vc_Channel
+		(bool Threshold)
+		(bool Reduce_left)
+		(bool Reduce_right)
+		(float Vc_1)
+		(float Vc_2)
+ 		(int Threshold_param)
+)

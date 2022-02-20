@@ -1,0 +1,25 @@
+(Type uint32_t "#include \"ControllerConfiguration_bits.hxx\"")
+(Type double)
+
+; Controller parameters
+; defaults from Tuner_Parameters_DLR_Citation.xls 23NOV2016
+(EventAndStream ControllerConfiguration
+	(uint32_t valid (Default 0))
+
+	;longitudinal
+	(double k_Phi_p (Default 6.3f))
+	(double k_Phi_i (Default 5.8f))
+	(double k_Phi_d (Default 5.1f))
+	(double k_Phi_ffw (Default 1.0886f))
+
+	; lateral
+	(double k_Theta_p (Default 6.3278f))
+	(double k_Theta_i (Default 1.0f))
+	(double k_Theta_d (Default 8.8122f))
+	(double k_Theta_ffw (Default 1.0f))
+
+	; directional
+	(double k_Beta_p (Default 1.0f))
+	(double k_Beta_i (Default 0.4f))
+	(double k_r (Default 1.0f))
+)

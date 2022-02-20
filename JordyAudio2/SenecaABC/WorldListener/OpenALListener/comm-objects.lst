@@ -1,0 +1,12 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+# specify these with the .dco extension, examples:
+# WorldListener/comm-objects/MyDataObject.dco
+# Generic/comm-objects/PrimaryControls.dco
+
+WorldView/comm-objects/WorldDataSpec.dco
+WorldListener/comm-objects/BaseObjectPosition.dco
+WorldListener/comm-objects/BaseObjectMotion.dco
+WorldListener/comm-objects/AudioObjectMotion.dco
+WorldListener/comm-objects/AudioObjectFixed.dco
+

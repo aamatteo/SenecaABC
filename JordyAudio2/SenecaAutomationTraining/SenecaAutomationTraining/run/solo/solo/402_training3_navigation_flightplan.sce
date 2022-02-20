@@ -1,0 +1,1 @@
+../../run-data/scenarios/402_training3_navigation_flightplan.sce

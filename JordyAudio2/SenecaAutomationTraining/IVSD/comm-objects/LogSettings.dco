@@ -1,0 +1,4 @@
+(Type vstring "#include <stringoptions.h>")
+
+(Event LogSettings
+       (vstring base_filename))

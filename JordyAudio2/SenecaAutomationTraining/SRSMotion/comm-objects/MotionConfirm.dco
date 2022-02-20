@@ -1,0 +1,11 @@
+(Type vstring "#include <stringoptions.h>")
+
+(Enum motion_position uint8_t NEUTRAL DOWN)
+
+;reply to MotionRequest
+;FROM MotionLimiter
+;TO ... (motion test modules)
+(Event MotionConfirm
+	(vstring receiver )
+	(motion_position position )
+)

@@ -1,0 +1,8 @@
+(Type float)
+
+(Event Reposition
+		(float repos_x)
+		(float repos_y)
+		(float repos_h)
+		(float repos_psi))
+

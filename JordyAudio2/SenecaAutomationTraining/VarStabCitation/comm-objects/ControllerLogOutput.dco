@@ -1,0 +1,6 @@
+(Type double)
+
+; Controller log output
+(EventAndStream ControllerLogOutput
+	(double log 17)
+)

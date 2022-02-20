@@ -1,0 +1,19 @@
+; -*-scheme-*-
+(Header "
+        original item   : OffsetForce.dco
+        made by         : Rene' van Paassen
+        date            : 20xx
+        description     : Additional force vector for control loading tests
+        copyright       : (c) 2020 TUDelft-AE-C&S - Rene van Paassen")
+
+(IterableVarSizeType dueca::varvector<float>
+                     "#include <dueca/varvector.hxx>")
+
+;; This is mainly for testing, adds a force input to whatever is measured
+;; from a control loading device
+(Event OffsetForce
+       ;; additional force, vector. Indices correspond to the index of
+       ;; the control loading channels
+       (dueca::varvector<float> f (Default 0.0f))
+       )
+

@@ -1,0 +1,21 @@
+(Type float)
+(Type bool)
+
+; MASTER: provides single input to model
+; SLAVE: physically follows motions of master
+; IGNORED: moves freely, no input to model
+; COOP: moves independently and provides part of input to model
+;       ratio is determined by capt_bias (1.0=capt in ctrl, 0.0=fo in ctrl)
+(Enum ctrl_cfg uint8_t
+      MASTER
+      SLAVE
+      IGNORED
+      COOP
+)
+
+(EventAndStream PilotControlConfig
+	(ctrl_cfg captain (Default IGNORED))
+	(ctrl_cfg first_officer (Default IGNORED))
+	(float capt_bias (Default 1.0))
+	(bool joystick_override (Default false))
+)

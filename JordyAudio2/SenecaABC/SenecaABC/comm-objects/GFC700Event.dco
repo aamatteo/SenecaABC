@@ -1,0 +1,30 @@
+(Type float)
+(Type int)
+
+(Enum msgType uint32_t
+	GFC700_AP
+	GFC700_VS
+	GFC700_ALT
+	GFC700_VNV
+	GFC700_FLC
+	GFC700_HDG
+	GFC700_NAV
+	GFC700_FD	
+	GFC700_APR
+	GFC700_BC
+	GFC700_NOSEUP
+	GFC700_NOSEDN
+	GFC700_CDI
+	GFC700_NONE
+	GFC700_FPL
+	GFC700_DME
+	GFC700_SYNC
+)
+
+(Event GFC700Event
+	(msgType msg)
+	(float alt_select)
+	(float hdg_select)
+	(float crs_select)
+	(int range (Default 5))
+)

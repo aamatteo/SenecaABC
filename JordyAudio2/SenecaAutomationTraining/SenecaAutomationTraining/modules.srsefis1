@@ -1,0 +1,21 @@
+# this file contains a list of all modules needed for your application
+# on a specific machine
+# note that the comm-objects directories should not be listed here
+# example:
+# SenecaAutomationTraining/some-module
+
+SenecaAutomationTraining/B747PFD 
+SenecaAutomationTraining/B747DisplaysCommonFiles 
+SenecaAutomationTraining/CitationModelInclude 
+SenecaAutomationTraining/CitationNavigator 
+
+# Saitek throttles
+Generic/multi-stick HEAD
+
+# MCP
+MCP737/MCP737GUI HEAD
+MCP737/MCP737Proxy
+
+# displays
+SenecaAutomationTraining/include 
+SenecaAutomationTraining/G1000 

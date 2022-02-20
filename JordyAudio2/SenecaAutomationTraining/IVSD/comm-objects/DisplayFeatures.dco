@@ -1,0 +1,12 @@
+;; -*-mode: scheme-*-
+(Type bool)
+
+(Stream DisplayFeatures
+	(bool causal_pz           (Default false))
+	(bool intentional_pz      (Default false))
+	(bool causal_traffic      (Default false))
+	(bool intentional_traffic (Default false))
+	(bool causal_terrain      (Default false))
+	(bool intentional_terrain (Default false))
+	(bool fill_terrain        (Default false))
+	(bool virtual_terrain     (Default false)) )

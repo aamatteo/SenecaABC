@@ -1,0 +1,13 @@
+(Type double)
+(Type int)
+
+;miscelaneous data for sound generation
+;FROM SoundSystem
+;TO VisualDisplayProxy
+;NOTE combine the switches into a bitmask!
+(EventAndStream SoundData
+	(double n1left)
+	(double n1right)
+	(double tas)
+	(int sounds)
+)

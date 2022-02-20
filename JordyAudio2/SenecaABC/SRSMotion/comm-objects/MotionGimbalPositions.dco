@@ -1,0 +1,14 @@
+(Type double)
+(Type int)
+
+;setpoints for gimbal positions
+;FROM MotionLimiter
+;TO MotionViewer
+;NOTE (29APR2002: deprecated) status is bitmask with 0x01 as testbit
+;     no output to motion base when testbit is set!
+(EventAndStream MotionGimbalPositions
+	(int status )
+	(double x 6 )
+	(double y 6 )
+	(double z 6 )
+)

@@ -1,0 +1,15 @@
+(Type float)
+
+(Stream Steering_Wheel_State_Channel
+	;; the raw, measured torque coming from the FCS [N]
+  	(float measured_wheel_force (Default 0))
+
+	;; the calibrated torque determined from the FCS [Nm]
+  	(float calibrated_wheel_torque (Default 0))
+
+  	;; the raw, measured wheel angle from the FCS [rad]
+  	(float measured_wheel_angle (Default 0))
+
+	;; the raw, measured wheel angle velocity from the FCS [rad/s]
+	(float measured_wheel_angle_velocity (Default 0))
+)

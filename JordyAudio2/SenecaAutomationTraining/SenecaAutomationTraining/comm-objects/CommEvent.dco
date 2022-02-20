@@ -1,0 +1,9 @@
+ (Type int)
+ (Type bool)
+
+
+ (Event CommEvent
+     (int radiocomm)
+ )
+
+ ;; integer, each one of which is associated with a specific audio file

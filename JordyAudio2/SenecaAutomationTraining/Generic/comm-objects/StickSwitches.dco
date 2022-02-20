@@ -1,0 +1,12 @@
+(Type bool)
+(EventAndStream StickSwitches
+	(bool trigger)
+	(bool red)
+	(bool black)
+	(bool blue)
+	(bool green)
+	(bool coolie_down)
+	(bool coolie_up)
+	(bool coolie_right)
+	(bool coolie_left)
+)

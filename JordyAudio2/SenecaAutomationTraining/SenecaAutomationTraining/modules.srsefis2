@@ -1,0 +1,10 @@
+# this file contains a list of all modules needed for your application
+# on a specific machine
+# note that the comm-objects directories should not be listed here
+# example:
+# SenecaAutomationTraining/some-module
+SenecaAutomationTraining/CitationModelInclude 
+SenecaAutomationTraining/include 
+SenecaAutomationTraining/MFD 
+SenecaAutomationTraining/G1000 
+MCP737/MCP737GUI HEAD

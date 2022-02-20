@@ -1,0 +1,23 @@
+(Type double)
+
+;for evaluation of motion filter,
+;comparable with VehicleCabMotion
+;FROM MotionLimiter
+;TO ... (logger)
+(EventAndStream SimulatorCabMotion
+	(double xdotdot )
+	(double ydotdot )
+	(double zdotdot )
+	(double fx )
+	(double fy )
+	(double fz )
+	(double xdot )
+	(double ydot )
+	(double zdot )
+	(double pdot )
+	(double qdot )
+	(double rdot )
+	(double p )
+	(double q )
+	(double r )
+)

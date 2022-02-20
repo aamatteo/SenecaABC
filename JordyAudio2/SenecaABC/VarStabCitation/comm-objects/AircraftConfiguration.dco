@@ -1,0 +1,16 @@
+(Type uint32_t "#include \"AircraftConfiguration_bits.hxx\"")
+(Type double)
+(Type int)
+(Type bool)
+
+(EventAndStream AircraftConfiguration
+	(uint32_t valid (Default 0))
+
+	; Mass updates from flight deck, to FTISAdapter
+	; zero fuel weight [kg]
+	(double ZFW (Default 0.0f))
+	; fuel on board [kg]
+	(double FOB (Default 0.0f))
+	; total mass [kg]
+	(double ACMass (Default 0.0f))
+)

@@ -1,0 +1,5 @@
+(Type vstring "#include <stringoptions.h>")
+
+(Event STARSelect
+	(vstring name)
+)

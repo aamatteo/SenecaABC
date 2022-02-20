@@ -1,0 +1,8 @@
+(Type double)
+
+(EventAndStream WindConfiguration
+	;; wind at 30 ft (9.15 m) [m/s]
+	(double Vw915)
+	;; wind direction [rad]
+	(double winddir)
+)

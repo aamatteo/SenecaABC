@@ -1,0 +1,11 @@
+(Type bool)
+
+;; Object to transmit the state of the switches on the HMI lab side stick
+(EventAndStream HMIStickSwitchState
+	;; Button on forward side of the stick
+	(bool button (Default false))
+	;; trim switch selected to trim nose up, pressed bottom half
+	(bool trim_up (Default false))
+	;; trim switch selected to trim nose down, pressed top half 
+	(bool trim_down (Default false))
+)

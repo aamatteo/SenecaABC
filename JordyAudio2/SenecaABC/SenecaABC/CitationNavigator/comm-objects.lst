@@ -1,0 +1,12 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+# specify these with the .dco extension, examples:
+# CitationApproach/comm-objects/MyDataObject.dco
+# Generic/comm-objects/PrimaryControls.dco
+CitationApproach/comm-objects/STARSelect.dco
+CitationApproach/comm-objects/NavData.dco
+
+CitationExample/comm-objects/CitationOutput.dco
+MCP737/comm-objects/MCP737Event.dco
+
+CitationDemo/comm-objects/PilotControlConfig.dco

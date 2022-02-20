@@ -1,0 +1,32 @@
+(Type float)
+(Type bool)
+(Type int "#include \"SideStickInputParams.hxx\"")
+
+(EventAndStream SideStickInput
+
+   ; pitch channel
+   (int use_pitch_params (Default 0))
+   (float pitch_friction (Default 0))
+   (float pitch_jam_pos (Default 0))
+   (float pitch_pos_stop (Default 0))
+   (float pitch_neg_stop (Default 0))
+   (float pitch_mass (Default 0))
+   (float pitch_damping (Default 0))
+   (float pitch_force (Default 0))
+   (float pitch_switch (Default 0))
+   (float pitch_trim_vel (Default 0))
+   (float pitch_init_trim_pos (Default 0))
+
+   ; roll channel
+   (int use_roll_params (Default 0))
+   (float roll_friction (Default 0))
+   (float roll_jam_pos (Default 0))
+   (float roll_pos_stop (Default 0))
+   (float roll_neg_stop (Default 0))
+   (float roll_mass (Default 0))
+   (float roll_damping (Default 0))
+   (float roll_force (Default 0))
+   (float roll_switch (Default 0))
+   (float roll_trim_vel (Default 0))
+   (float roll_init_trim_pos (Default 0))
+)

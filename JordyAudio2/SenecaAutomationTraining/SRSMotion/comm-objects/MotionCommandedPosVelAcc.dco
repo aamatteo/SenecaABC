@@ -1,0 +1,32 @@
+(Type double)
+(Type int)
+
+;setpoints for positions, velocities and accelerations
+;in sim inertial, except of course (p/q/r[dot])
+;06JUN2002 origin of reference frame in UpperGimbalCenter, may change in future
+;FROM MotionLimiter
+;TO MotionController
+;NOTE (29APR2002: deprecated) status is bitmask with 0x01 as testbit
+;     no output to motion base when testbit is set!
+(EventAndStream MotionCommandedPosVelAcc
+	(int status )
+	(double x)
+	(double y)
+	(double z)
+	(double phi)
+	(double theta)
+	(double psi)
+	(double xdot)
+	(double ydot)
+	(double zdot)
+	(double p)
+	(double q)
+	(double r)
+	(double xdotdot)
+	(double ydotdot)
+	(double zdotdot)
+	(double pdot)
+	(double qdot)
+	(double rdot)
+)
+

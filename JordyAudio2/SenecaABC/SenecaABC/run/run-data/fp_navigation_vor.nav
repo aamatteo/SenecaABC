@@ -1,0 +1,11 @@
+nav1active	113.300	SPY
+nav1stby	108.000		
+nav2active	117.800	PAM	
+nav2stby	108.000		
+use_vors	1	1	
+vor1	3454.1	25187.1	
+vor2	19676.7	2308.9	
+nr_wps 0
+nr_map_items	2
+SPY	3454.1	25187.1	-1
+PAM	19676.7	2308.9	-1

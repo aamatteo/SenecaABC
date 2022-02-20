@@ -1,0 +1,30 @@
+(Type bool)
+(Type int)
+
+;; This channel lists for each of the weather phenomenon we want to use, an index you can use
+;; For each we have two ways of provicing an index:
+;;		A boolean which indicates ALL phenomenons in the list
+;;		An int which indicates only the phenomenon at that index in the list
+;; Which index do you look at, well, that's something you'll have to keep track off :p
+;; If -1 is supplied, you should not look at that specified index
+;; By the way, if you supply a wrong index (too large of too small), nothing is supposed to happen, you should just get a W_MOD
+;;                   but that is for you to program it. SO PLEASE DO IT!
+(Event WeatherIndex
+	( Option hdf5 )
+
+	;; For the wind
+	(bool all_winds (Default false))
+	(int wind (Default -1))
+
+	;; For the windshear
+	(bool all_wind_shears (Default false))
+	(int wind_shear (Default -1))
+
+	;; Icing
+	(bool all_icings (Default false))
+	(int icing (Default -1))
+
+	;; Turbulence
+	(bool all_turbulences (Default false))
+	(int turbulence (Default -1))
+)

@@ -1,0 +1,14 @@
+nav1active	117.950	NONE
+nav1stby	108.000		
+nav2active	117.950	NONE
+nav2stby	108.000		
+use_vors	0	0	
+vor1	0	0	
+vor2	0	0	
+nr_wps	6		
+D	-5069.1	-17380.6	-1
+VEXAR	-10069.1	-17380.6	3000
+TUVOX	-14621.1	-11552.7	2000
+EH509	-8820.8	-6984.0	2000
+BANDU	-5769.0	-4628.4	-1
+EHGG	0	0	-1

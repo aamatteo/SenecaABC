@@ -1,0 +1,20 @@
+;; -*-scheme-*-
+
+(Type float)
+(Type int)
+
+;; block of log data for a single axis 
+(Event 
+ APInfoLogBlock
+ (IncludeFile APInfoLogBlockExtra)
+ ;; axis number in this block
+ (int axis)
+ ;; servo current
+ (float Iservo -1)
+ ;; drum position
+ (float delta_drum -1)
+ ;; target position
+ (float delta_t -1)
+ ;; control surface deflection
+ (float delta -1)
+ )

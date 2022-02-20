@@ -1,0 +1,9 @@
+(Type float)
+
+(Event FGIncoEvent
+	(float lat_zero)
+	(float lon_zero)
+	(float alt_zero)
+	(float psi_zero)
+)
+

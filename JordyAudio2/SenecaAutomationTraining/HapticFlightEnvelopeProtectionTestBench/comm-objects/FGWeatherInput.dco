@@ -1,0 +1,50 @@
+;; How should the visual look on flight gear?
+(Type int)
+(Type vstring "#include <stringoptions.h>")
+
+(Enum cloudCover uint32_t
+  ;; The cloud cover in octas
+  SKC
+  FEW
+  SCT
+  BKN
+  OVC
+
+  ;; And the maximum value to check the validity of the entry
+  MAX_CLOUD_COVER
+)
+
+(Event FGWeatherInput
+  ( Option hdf5 )
+  ;; Information on the station and date/time
+  ( vstring station_id  ( Default "" ) )
+  ( vstring date_time   ( Default "" ) )
+
+  ;; Information on the wind
+  ( int wind_direction  ( Default 0 ) )
+  ( int wind_velocity   ( Default 0 ) )
+
+  ;; How is the visibility?
+  ( int visibility ( Default 0 ) )
+
+  ;; The information on the clouds
+  ;; Layer 0
+  ( int        cloud_layer_0_altitude  ( Default 0 ) )
+  ( cloudCover cloud_layer_0_cover     ( Default SKC ) )
+  ;; Layer 1
+  ( int        cloud_layer_1_altitude  ( Default 0 ) )
+  ( cloudCover cloud_layer_1_cover     ( Default SKC ) )
+  ;; Layer 2
+  ( int        cloud_layer_2_altitude  ( Default 0 ) )
+  ( cloudCover cloud_layer_2_cover     ( Default SKC ) )
+
+  ;; Temperature informaiton
+  ( int temperature ( Default 0 ) )
+  ( int dew_point   ( Default 0 ) )
+
+  ;; The pressure at sealevel
+  ( int qnh ( Default 0 ) )
+
+  ;; The outlook to the next hours, probably nosig
+  ( vstring outlook ( Default "" ) )
+)

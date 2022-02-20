@@ -1,0 +1,25 @@
+(Type float)
+(Type string)
+(Type int)
+(Type bool)
+
+(Event Pedals_Init_Event
+	;; inherent gas pedal stiffness [N/m]
+    (float gas_pedal_stiffness (Default 10.0) )
+    
+	;; inherent gas pedal damping [Ns/m]
+    (float gas_pedal_damping (Default 0.0) )
+    
+	;; inherent gas pedal bias force [N]
+	(float gas_pedal_bias_force (Default 0.0) )
+   
+	;; Flag to signal we want to playback recorded pedal data during sim
+	(bool pedal_playback (Default false) )
+	
+	;; Percentage of gas pedal position to lock pedal input to 
+	(float gas_pedal_position_lock (Default -1.0) )
+	
+	;; Send sync signal (TRUE) or not (FALSE)
+	(bool use_sync_signal (Default false) )
+
+)

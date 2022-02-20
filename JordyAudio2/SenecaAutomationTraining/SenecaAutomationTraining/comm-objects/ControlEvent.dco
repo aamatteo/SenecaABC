@@ -1,0 +1,30 @@
+(Type int)
+(Type float)
+(Type bool)
+
+;; not all these options are implemented
+;; powers are between 0 and 1
+;; angles in degrees
+
+(Event ControlEvent
+	(int id (Default 0))
+	;; ailerons
+	(float aileron_power (Default 1.0f))
+	(float aileron_power_time (Default 0.0f))
+	(float aileron_offset (Default 0.0f))
+	(float aileron_offset_time (Default 0.0f))
+	;; rudder
+	(float rudder_power (Default 1.0f))
+	(float rudder_power_time (Default 0.0f))
+	(float rudder_offset (Default 0.0f))
+	(float rudder_offset_time (Default 0.0f))
+	(float rudder_bias (Default 0.0f))
+	;; gear
+	;;(bool gear_fail)
+	;; aileron-rudder-interconnect
+	(float ARI (Default 0.0f))
+	;; elevator
+        (float elevator_fix (Default 0.0f))
+)
+
+;; rudder_bias goes into simulink, keep for now

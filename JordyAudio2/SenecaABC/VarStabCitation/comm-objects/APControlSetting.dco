@@ -1,0 +1,54 @@
+;; -*-scheme-*-
+;;
+(Type float)
+(Type bool)
+(Enum ControlMode uint8_t
+      ; Normal control
+      Normal
+      ; Voltage output
+      OutputOverride
+      ; Target following
+      TargetOverride
+      ; 3211 fast, 0.5 s base
+      Test3211Fast
+      ; 3211 normal
+      Test3211Normal
+      ; Block normal
+      TestBlock
+      ; Block slow (5s)
+      TestBlockSlow)
+
+;; Settings of the autopilot servo controller
+(Event 
+ APControlSetting
+ (ConstructorCode "
+for (unsigned ii = 3; ii--; ) {
+  selected[ii] = false;
+  override[ii] = false;
+  Kp[ii] = 0.0f;
+  Kff[ii] = 0.0f;
+  Kffq[ii] = 0.0f;
+  KffV[ii] = 0.0f;
+  direct_vout[ii] = 0.0f;
+}")
+ ;; Proportional feedback gain
+ (float Kp 3)
+ ;; Feed-forward gain
+ (float Kff 3)
+ ;; Q-dependent feed-forward gain
+ (float Kffq 3)
+ ;; VCAS dependent feed-forward gain
+ (float KffV 3)
+ ;; Direct voltage control
+ (float direct_vout 3)
+ ;; Is the respective channel selected
+ (bool selected 3)
+ ;; Override the normal init checks
+ (bool override 3)
+ ;; Output override flag
+ (bool output_override (Default false))
+;; Control mode setting
+ (ControlMode cmode (Default Normal))
+ ;; Inhibit the watchdog, test purposes only
+ (bool inhibit_watchdog (Default false))
+ )

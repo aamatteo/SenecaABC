@@ -1,0 +1,5 @@
+(Type bool)
+
+(Event SnapshotRequest
+	(bool makesnapshot)
+)

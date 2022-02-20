@@ -1,0 +1,6 @@
+(Type double)
+
+;; see array_names.hxx for details
+(EventAndStream CitationModelOutput
+	(double y 41)
+)

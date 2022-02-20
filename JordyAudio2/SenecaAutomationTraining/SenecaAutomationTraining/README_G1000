@@ -1,0 +1,65 @@
+# README on the G1000 Avionics Suite
+
+The Garmin G1000 Avionics Suite was developed by J.K. van Leeuwen for his thesis, and based on the PFD module by J. Comans. It consists of a primary flight display, a multi function display and an integrated autopilot based on the Garmin GFC700. The autopilot is fully operational and can be linked to different navigation aids such as VOR and GPS. Note that this suite does not include a navigation database, and that all the GPS waypoints and VOR beacons need to be manually entered pre-flight in the customisation files.
+
+### Modules
+
+The G1000 avionics suite consists of the following modules:
+- Autopilot
+- G1000
+- MFD
+- GFC700GUI (optional)
+
+These modules are depending on each other, and it is not recommended to copy/borrow only one of them. The GFC700GUI is optional and therefore not required to copy/borrow.
+
+Make sure to install the hmilib libraries from the DUECA server and add them in your Makefile.
+
+
+### Channels
+
+The following channels are part of the G1000 avionics suite:
+- AP2G1000Channel
+- APIncoEvent
+- AutopilotChannel
+- FailureEvent
+- GFC700Event
+
+External channel dependencies:
+- Autopilot:
+	state vector output channel of dynamics module ("CitationOutput" in this project)
+- G1000:
+	state vector output channel of dynamics module ("CitationOutput" in this project)
+	secondary controls channel ("SecondaryControls" in this project)
+	secondary switches channel ("SecondarySwitches" in this project)
+	unused remnant of older project ("AutopilotTargets" in this project)
+- MFD:
+	state vector output channel of dynamics module ("CitationOutput" in this project)
+	secondary controls channel ("SecondaryControls" in this project)
+- GFC700GUI:
+	none
+
+The autopilot module outputs the control surfaces deflections (servo/actuator dynamics taken into account) to the AutopilotChannel. This channel should be read by the dynamics module to overwrite the pilot input when the autopilot is engaged (indicated with the variable "APstate" in this channel).
+
+
+### Customisation files
+
+To set-up, initialise and customise the avionics, the following type of files can and should be used:
+- naviagtion files (.nav) in run/run-data
+- scenario files (.sce) in run/run-data/scenarios
+- initial condition files (.inco) in run/run-data/inco-seneca
+
+Appendix K in the thesis "The Effectiveness of Simulating Active Problem Solving in Pilot Training to Deal with Automation Surprises" (2020) explains these files in more detail.
+
+
+### Usage
+
+In the simulation, the user can adjust the avionics settings by clicking on the buttons displayed on the PFD. Note that the MFD is not operational. The only buttons on the PFD that are connected are:
+- All the autopilot buttons on the left (except APP and BC)
+- The CDI and DME softkey
+- The FP button on the right
+- The rotary knobs for HDG, ALT and CRS
+
+The user cannot adjust the flightplan nor the radio settings. This can only be done by loading a new scenario file into the simulation.
+
+
+

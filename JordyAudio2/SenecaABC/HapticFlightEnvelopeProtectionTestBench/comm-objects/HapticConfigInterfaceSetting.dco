@@ -1,0 +1,8 @@
+(Type bool)
+
+;; This one has the settings for the haptic config interface
+;; Basically just switch on whether we follow the gui or the simulation
+(Event HapticConfigInterfaceSetting
+  ;; The actual switch
+  ( bool the_switch )
+)

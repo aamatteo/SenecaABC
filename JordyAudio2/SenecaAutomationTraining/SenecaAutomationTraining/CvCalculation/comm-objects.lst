@@ -1,0 +1,12 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+# specify these with the .dco extension, examples:
+
+# Asym1/comm-objects/MalfunctionsChannel.dco
+
+Asym1/comm-objects/Vc_Channel.dco
+Generic/comm-objects/PrimaryControls.dco
+Generic/comm-objects/PrimarySwitches.dco
+CitationExample/comm-objects/CitationOutput.dco
+CitationDemo/comm-objects/CitationPilotInput.dco
+

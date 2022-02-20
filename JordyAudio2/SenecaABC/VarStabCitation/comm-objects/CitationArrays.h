@@ -1,0 +1,132 @@
+#ifndef CitationArrays_h
+
+#define CitationArrays_h
+
+enum cit_state {
+  Xcit_p,
+  Xcit_q,
+  Xcit_r,
+  Xcit_vtas,
+  Xcit_alpha,
+  Xcit_beta,
+  Xcit_phi,
+  Xcit_theta,
+  Xcit_psi,
+  Xcit_h,
+  Xcit_x,
+  Xcit_y,
+  Xcit_de,
+  Xcit_da,
+  Xcit_dr,
+  Xcit_yawdamper,
+  Xcit_flaps,
+  Xcit_gear,
+  Xcit_n11,
+  Xcit_n12,
+  Xcit_winddir,
+  Xcit_windamplitude,
+  Xcit_n21,
+  Xcit_n22,
+  Xcit_no_states
+};
+
+enum cit_output {
+  Ycit_p,
+  Ycit_q,
+  Ycit_r,
+  Ycit_vtas,
+  Ycit_alpha,
+  Ycit_beta,
+  Ycit_phi,
+  Ycit_theta,
+  Ycit_psi,
+  Ycit_h,
+  Ycit_x,
+  Ycit_y,
+  Ycit_pdot,
+  Ycit_qdot,
+  Ycit_rdot,
+  Ycit_vtasdot,
+  Ycit_hdot,
+  Ycit_ralt,
+  Ycit_m,
+  Ycit_vias,
+  Ycit_uwinde,
+  Ycit_vwinde,
+  Ycit_wwinde,
+  Ycit_fxcg,
+  Ycit_fycg,
+  Ycit_fzcg,
+  Ycit_n,
+  Ycit_gamma,
+  Ycit_chi,
+  Ycit_vground,
+  Ycit_ffleft,
+  Ycit_n1left,
+  Ycit_n2left,
+  Ycit_ffright,
+  Ycit_n1right,
+  Ycit_n2right,
+  Ycit_flaps,
+  Ycit_gear,
+  Ycit_no_outputs
+};
+
+enum cit_trim_inputs {
+  U0cit_de0,
+  U0cit_da0,
+  U0cit_dr0,
+  U0cit_dte0,
+  U0cit_dta0,
+  U0cit_dtr0,
+  U0cit_df0,
+  U0cit_gear0,
+  U0cit_pla10,
+  U0cit_pla20,
+  U0cit_no_triminputs
+};
+
+enum cit_params {
+  Pcit_Vw915,
+  Pcit_auto_throttle_enable,
+  Pcit_auto_throttle_setpoint,
+  Pcit_de0,
+  Pcit_da0,
+  Pcit_dr0,
+  Pcit_dte0,
+  Pcit_dta0,
+  Pcit_dtr0,
+  Pcit_df0,
+  Pcit_gear0,
+  Pcit_pla10,
+  Pcit_pla20,
+  Pcit_wind_tau,
+  Pcit_winddir,
+  Pcit_yaw_damper_enable,
+  Pcit_no_params 
+};
+
+enum cit_input {
+  Ucit_de,
+  Ucit_da,
+  Ucit_dr,
+  Ucit_dte,
+  Ucit_dta,
+  Ucit_dtr,
+  Ucit_df,
+  Ucit_gear,
+  Ucit_pla1,
+  Ucit_pla2,
+  Ucit_gust_u,
+  Ucit_gust_alpha,
+  Ucit_gust_beta,
+  Ucit_gust_udot,
+  Ucit_gust_alphadot,
+  Ucit_gust_betadot,
+  Ucit_gust_ug_asymm,
+  Ucit_gust_ag_asymm,
+  Ucit_terr_elev,
+  Ucit_no_inputs
+};
+
+#endif

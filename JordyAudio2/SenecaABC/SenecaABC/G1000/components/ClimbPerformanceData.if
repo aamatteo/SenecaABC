@@ -1,0 +1,11 @@
+(Type bool)
+(Type float)
+
+(ComponentInterface ClimbPerformanceData
+		    (float pitch                  (Default 0.0))
+		    (float roll                   (Default 0.0))
+
+		    (bool  performance_data_valid (Default false))
+		    (float gamma_max              (Default 0.0))
+		    (float gamma_max_full_thrust  (Default 0.0))
+		    )

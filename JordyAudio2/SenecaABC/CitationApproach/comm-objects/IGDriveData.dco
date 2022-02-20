@@ -1,0 +1,62 @@
+(Type float)
+(Type int)
+(Type uint8_t)
+(Enum SIM_STATUS uint8_t 
+  UNKNOWN
+  HOLDCURRENT
+  ADVANCE
+)
+(Enum GEAR uint8_t 
+  UP
+  DOWN
+  OFF
+)
+
+(EventAndStream IGDriveData
+  (SIM_STATUS sim_status)
+  (GEAR gear)
+    ;; [m]
+  (float x)
+    ;; [m]
+  (float y)
+    ;; [m]
+  (float z)
+    ;; [deg]
+  (float lat)
+    ;; [deg]
+  (float lon)
+    ;; [m]
+  (float pres_alt)
+    ;; [rad]
+  (float psi)
+    ;; [rag]
+  (float theta)
+    ;; [rag]
+  (float phi)
+    ;; [rag]
+  (float elevator_deflection)
+    ;; [rag]
+  (float rudder_deflection)
+    ;; [rag]
+  (float aileron_lft_deflection)
+    ;; [rag]
+  (float aileron_rht_deflection)
+    ;; [0..1] in even detents
+  (float flap_setting)
+    ;; [0..1]
+  (float speedbrakes)
+    ;; [Hz]
+  (int nav1_freq)
+    ;; these int's mask char's
+  (uint8_t nav1_id 5)   
+    ;; [deg]
+  (float nav1_obs_set)
+    ;; [Hz]
+  (int nav2_freq)
+    ;; these int's mask char's
+  (uint8_t nav2_id 5)
+    ;; [deg]
+  (float nav2_obs_set)
+    ;; [Hz]
+  (int adf_freq)
+)

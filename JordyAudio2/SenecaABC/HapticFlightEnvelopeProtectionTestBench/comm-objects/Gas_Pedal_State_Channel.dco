@@ -1,0 +1,12 @@
+(Type float)
+
+(Stream Gas_Pedal_State_Channel
+	;; The gas pedal deflection in % of total (max 100%)
+	(float pedal_deflection (Default 0.0) )
+	
+	;; The gas pedal deflection rate [%/s]
+	(float pedal_deflection_rate (Default 0.0) )
+	
+	;; The gas pedal depression force measured on the pedal pad [N]
+	(float pedal_force (Default 0.0) )
+)

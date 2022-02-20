@@ -1,0 +1,19 @@
+(Type float)
+
+;; proposed engine data channel, written by PA34 and read by PA34_engine making the latter a simple read and display module and allowing full flexibility on the displayed values in the simulation module PA34
+;; another option is to change the CitationOutput to have these values included (SenecaOutput), though they are not part of the model output, so they have to be fudget in
+
+;; throttle, used to see throttle pos in hold
+
+;; 2 engines: 0=left 1=right
+(EventAndStream EngineData
+		(float rpm 2)
+		(float torque 2)
+		(float egt 2)
+		(float oil_pres 2)
+		(float oil_temp 2)
+		(float fuel_qty 2)
+		(float throttle 2)
+		(float flaps)
+		(float gear)
+)

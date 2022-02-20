@@ -1,0 +1,8 @@
+(Type double)
+
+;; This provides the current state of the sidestick
+(Stream ControlDeviceState
+	( Option hdf5 )
+	( double m_position ( Default 0 ) )
+	( double m_load     ( Default 0 ) )
+)

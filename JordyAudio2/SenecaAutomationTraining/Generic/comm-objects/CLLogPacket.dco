@@ -1,0 +1,24 @@
+(Type float)
+(Type int)
+
+; This is a control loader log packet for delayed batch logging. Each 
+; packet is tagged with a packet number, and contains a short stretch of
+; control loading data. Packets are sent at bulk transport level, and 
+; then collected and stored by the actual logger. 
+; the packets have a fixed size of (1 + 5*51) * 4 = 1024 bytes, making them 
+; fall within the (current) DUECA limit for arena pooled objects. 
+; The packets are filled with data of all channels, concentrator and logger
+; configurations must match, else a mixed up log is the result
+(Event CLLogPacket
+       ; counter for the logged packet
+       (int packet_no)
+       ; output values to the valves
+       (float u 51)
+       ; measured position
+       (float x 51)
+       ; target position
+       (float t 51)
+       ; measured moment/force on the device
+       (float m 51)
+       ; measured pressure difference
+       (float p 51))

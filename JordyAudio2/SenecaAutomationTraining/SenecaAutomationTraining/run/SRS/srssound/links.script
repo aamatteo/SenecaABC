@@ -1,0 +1,55 @@
+# this file creates all links to files in the data directory needed for
+# running the application is a specific machine. 
+#
+# [OS]: copied from SenecaStartle
+
+DATADIR=../../run-data
+
+# create a folder for run log history
+if [ ! -d runlogs ]; then
+   mkdir runlogs
+fi    
+
+# make a link in case files with specified extension are found
+makelink(){
+	[[ -n $(ls $DATADIR/*.$1) ]] && ln -sfv $DATADIR/*.$1 . || echo "No '$1'-files found.";
+}
+
+ln -s ../../../../WorldListener/WorldListener/startpulse.script .
+ln -s ../../../../WorldListener/WorldListener/plotaudio.py
+
+SNDDIR=../../../../SenecaStartle/PA34_sounds
+
+# convert all files > 44100 Hz, > 16 bits or > 1 channel
+for f in $SNDDIR/*.wav; do
+    NEWRATE=
+    NEWCHAN=
+    NEWGAIN=
+    NEWBITS=
+    soxi $f
+    if [ `soxi -r $f` -gt 44100 ]; then
+       NEWRATE="-r 44100"
+    fi
+    if [ `soxi -c $f` -gt 1 ]; then
+       NEWCHAN="-c 1"
+       #NEWGAIN="gain -3"
+    fi
+    if [ `soxi -b $f` -gt 16 ]; then
+       NEWBITS="-b 16"
+    fi
+    if [ -n "$NEWCHAN$NEWRATE$NEWBITS" ]; then
+        sox $f $NEWCHAN $NEWRATE $NEWBITS `basename $f` $NEWGAIN
+    else   
+        ln -sf $f `basename $f`
+    fi
+done
+
+rm -f PA34_wind.wav
+sox $SNDDIR/PA34_wind.wav PA34_wind.wav gain +10
+rm -f damage.wav
+sox $SNDDIR/damage.wav damage.wav gain +3
+rm -f PA34_mass.wav
+
+# Jordy's files
+ln -sf $DATADIR/PA34_apbutton.wav .
+ln -sf $DATADIR/PA34_autopilot_disco.wav .

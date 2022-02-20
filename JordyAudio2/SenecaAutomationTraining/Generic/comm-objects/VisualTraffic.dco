@@ -1,0 +1,6 @@
+(Type VisualAircraft "#include \"VisualAircraft.hxx\"")
+
+; data for all traffic to be displayed in the visual
+(Event VisualTraffic
+	(VisualAircraft traffic -1)
+)

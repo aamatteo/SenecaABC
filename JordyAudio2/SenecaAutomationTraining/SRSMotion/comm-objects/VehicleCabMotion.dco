@@ -1,0 +1,23 @@
+(Type double)
+
+;cg corrected velocities and accelerations in a/c body
+;30MAY2002 plus specific forces
+;FROM CabinPositionCorrector
+;TO MotionLimiter
+(EventAndStream VehicleCabMotion
+	(double xdotdot )
+	(double ydotdot )
+	(double zdotdot )
+	(double fx )
+	(double fy )
+	(double fz )
+	(double xdot )
+	(double ydot )
+	(double zdot )
+	(double pdot )
+	(double qdot )
+	(double rdot )
+	(double p )
+	(double q )
+	(double r )
+)

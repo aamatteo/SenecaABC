@@ -1,0 +1,1031 @@
+;; -*-scheme-*-
+
+;; default 
+(define cw16param0 (make-Cw16ParameterSet
+		    'set-id 0
+		    'set-tilt-coordination-method 1
+		    'set-surge-gain 0.7
+		    'set-surge-hp-wn 1.5
+		    'set-surge-hp-z 0.9
+		    'set-surge-hp-wb 0.0
+		    'set-surge-lp-wn 3.0
+		    'set-surge-lp-z 0.9
+		    'set-sway-gain 0.7
+		    'set-sway-hp-wn 1.5
+		    'set-sway-hp-z 0.9
+		    'set-sway-hp-wb 0.0
+		    'set-sway-lp-wn 3.0
+		    'set-sway-lp-z 0.9
+		    'set-heave-gain 0.5
+		    'set-heave-hp-wn 2.0
+		    'set-heave-hp-z 0.9
+		    'set-heave-hp-wb 0.1
+		    'set-roll-gain 0.5
+		    'set-roll-hp-wn 1.0
+		    'set-roll-hp-z 0.9
+		    'set-roll-hp-wb 0.0
+		    'set-pitch-gain 0.5
+		    'set-pitch-hp-wn 1.0
+		    'set-pitch-hp-z 0.9
+		    'set-pitch-hp-wb 0.0
+		    'set-yaw-gain 0.5
+		    'set-yaw-hp-wn 1.0
+		    'set-yaw-hp-z 0.9
+		    'set-yaw-hp-wb 0.0
+		    'set-surge-tilt-gain 1.0
+		    'set-sway-tilt-gain 1.0
+		    'set-surge-selection-gain 1.0
+ 		    'set-sway-selection-gain 1.0
+  		    'set-heave-selection-gain 1.0
+  		    'set-roll-selection-gain 1.0
+  		    'set-pitch-selection-gain 1.0
+  		    'set-yaw-selection-gain 1.0
+		    'set-tilt-rate-limit 3.0
+		    'set-ac-ref-pos-x -3.2
+		    'set-ac-ref-pos-y 0.0
+		    'set-ac-ref-pos-z (+ -1.2075 0.75)
+		    'set-filt-ref-pos-x 0.0
+		    'set-filt-ref-pos-y 0.0
+		    'set-filt-ref-pos-z (+ -1.2075 0.35)
+		    ))
+
+;; filter family 1 offline (sway oriented)
+(define cw16param10 (make-Cw16ParameterSet
+		     'set-id 10
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.55
+		     'set-sway-hp-wn 0.75
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 2.25
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.0
+		     'set-roll-gain 0.45
+		     'set-roll-hp-wn 0.75
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 1 tuning (sway oriented)
+(define cw16param11 (make-Cw16ParameterSet
+		     'set-id 11
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.55
+		     'set-sway-hp-wn 0.75
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 2.25
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.45
+		     'set-roll-hp-wn 0.75
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 1 tuning (sway oriented)
+(define cw16param12 (make-Cw16ParameterSet
+		     'set-id 12
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.55
+		     'set-sway-hp-wn 0.75
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 2.25
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.0
+		     'set-roll-gain 0.45
+		     'set-roll-hp-wn 0.75
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 0.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 1 tuning (sway oriented)
+(define cw16param13 (make-Cw16ParameterSet
+		     'set-id 13
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.55
+		     'set-sway-hp-wn 0.75
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 2.25
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.15
+		     'set-heave-hp-wn 2.5
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.45
+		     'set-roll-hp-wn 0.75
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 1 tuning (sway oriented)
+(define cw16param14 (make-Cw16ParameterSet
+		     'set-id 14
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.55
+		     'set-sway-hp-wn 0.75
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 2.25
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.15
+		     'set-heave-hp-wn 2.5
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.45
+		     'set-roll-hp-wn 0.75
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 2 offline (full sway)
+(define cw16param20 (make-Cw16ParameterSet
+		     'set-id 20
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.55
+		     'set-sway-hp-wn 0.75
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 9.0
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.0
+		     'set-roll-gain 0.0
+		     'set-roll-hp-wn 0.75
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 0.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 2 tuning (full sway)
+(define cw16param21 (make-Cw16ParameterSet
+		     'set-id 21
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.55
+		     'set-sway-hp-wn 0.75
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 9.0
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.0
+		     'set-roll-hp-wn 0.75
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 0.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 2 tuning (full sway)
+(define cw16param22 (make-Cw16ParameterSet
+		     'set-id 22
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.55
+		     'set-sway-hp-wn 0.75
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 9.0
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.0
+		     'set-roll-gain 0.0
+		     'set-roll-hp-wn 0.75
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 0.0
+  		     'set-roll-selection-gain 0.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 2 tuning (full sway)
+(define cw16param23 (make-Cw16ParameterSet
+		     'set-id 23
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.55
+		     'set-sway-hp-wn 0.75
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 9.0
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.15
+		     'set-heave-hp-wn 2.5
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.0
+		     'set-roll-hp-wn 0.75
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 0.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 2 tuning (full sway)
+(define cw16param24 (make-Cw16ParameterSet
+		     'set-id 24
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.55
+		     'set-sway-hp-wn 0.75
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 9.0
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.15
+		     'set-heave-hp-wn 2.5
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.0
+		     'set-roll-hp-wn 0.75
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 0.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 3 offline (roll oriented)
+(define cw16param30 (make-Cw16ParameterSet
+		     'set-id 30
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.3
+		     'set-sway-hp-wn 0.65
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 1.3
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.0
+		     'set-roll-gain 0.65
+		     'set-roll-hp-wn 0.65
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 3 tuning (roll oriented)
+(define cw16param31 (make-Cw16ParameterSet
+		     'set-id 31
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.3
+		     'set-sway-hp-wn 0.65
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 1.3
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.65
+		     'set-roll-hp-wn 0.65
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 3 tuning (roll oriented)
+(define cw16param32 (make-Cw16ParameterSet
+		     'set-id 32
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.3
+		     'set-sway-hp-wn 0.65
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 1.3
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.0
+		     'set-roll-gain 0.65
+		     'set-roll-hp-wn 0.65
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 0.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 3 tuning (roll oriented)
+(define cw16param33 (make-Cw16ParameterSet
+		     'set-id 33
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.3
+		     'set-sway-hp-wn 0.65
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 1.3
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.15
+		     'set-heave-hp-wn 2.5
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.65
+		     'set-roll-hp-wn 0.65
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 3 tuning (roll oriented)
+(define cw16param34 (make-Cw16ParameterSet
+		     'set-id 34
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.3
+		     'set-sway-hp-wn 0.65
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 1.3
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.15
+		     'set-heave-hp-wn 2.5
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.65
+		     'set-roll-hp-wn 0.65
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.0
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 1.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 4 offline (full roll)
+(define cw16param40 (make-Cw16ParameterSet
+		     'set-id 40
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.0
+		     'set-sway-hp-wn 0.65
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 1.3
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.0
+		     'set-roll-gain 0.7
+		     'set-roll-hp-wn 0.0
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.55
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 0.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 4 tuning (full roll)
+(define cw16param41 (make-Cw16ParameterSet
+		     'set-id 41
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.0
+		     'set-sway-hp-wn 0.65
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 1.3
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.7
+		     'set-roll-hp-wn 0.0
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.55
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 0.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 4 tuning (full roll)
+(define cw16param42 (make-Cw16ParameterSet
+		     'set-id 42
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.0
+		     'set-sway-hp-wn 0.65
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 1.3
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.35
+		     'set-heave-hp-wn 1.7
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.0
+		     'set-roll-gain 0.7
+		     'set-roll-hp-wn 0.0
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.55
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 0.0
+  		     'set-heave-selection-gain 0.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 4 tuning (full roll)
+(define cw16param43 (make-Cw16ParameterSet
+		     'set-id 43
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.0
+		     'set-sway-hp-wn 0.65
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 1.3
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.15
+		     'set-heave-hp-wn 2.5
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.7
+		     'set-roll-hp-wn 0.0
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.55
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 0.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+
+;; filter family 4 tuning (full roll)
+(define cw16param44 (make-Cw16ParameterSet
+		     'set-id 44
+		     'set-tilt-coordination-method 1
+		     'set-surge-gain 0.5
+		     'set-surge-hp-wn 1.5
+		     'set-surge-hp-z 1.0
+		     'set-surge-hp-wb 0.0
+		     'set-surge-lp-wn 3.0
+		     'set-surge-lp-z 1.0
+		     'set-sway-gain 0.0
+		     'set-sway-hp-wn 0.65
+		     'set-sway-hp-z 1.0
+		     'set-sway-hp-wb 0.0
+		     'set-sway-lp-wn 1.3
+		     'set-sway-lp-z 1.0
+		     'set-heave-gain 0.15
+		     'set-heave-hp-wn 2.5
+		     'set-heave-hp-z 1.0
+		     'set-heave-hp-wb 0.2
+		     'set-roll-gain 0.7
+		     'set-roll-hp-wn 0.0
+		     'set-roll-hp-z 1.0
+		     'set-roll-hp-wb 0.55
+		     'set-pitch-gain 0.5
+		     'set-pitch-hp-wn 0.0
+		     'set-pitch-hp-z 1.0
+		     'set-pitch-hp-wb 1.5
+		     'set-yaw-gain 0.5
+		     'set-yaw-hp-wn 0.0
+		     'set-yaw-hp-z 1.0
+		     'set-yaw-hp-wb 0.6
+		     'set-surge-tilt-gain 1.0
+		     'set-sway-tilt-gain 1.0
+		     'set-surge-selection-gain 1.0
+ 		     'set-sway-selection-gain 0.0
+  		     'set-heave-selection-gain 1.0
+  		     'set-roll-selection-gain 1.0
+  		     'set-pitch-selection-gain 1.0
+  		     'set-yaw-selection-gain 1.0
+		     'set-tilt-rate-limit 3.0
+		     'set-ac-ref-pos-x -3.2
+		     'set-ac-ref-pos-y 0.0
+		     'set-ac-ref-pos-z (+ -1.2075 0.75)
+		     'set-filt-ref-pos-x 0.0
+		     'set-filt-ref-pos-y 0.0
+		     'set-filt-ref-pos-z (+ -1.2075 0.35)
+		     ))
+

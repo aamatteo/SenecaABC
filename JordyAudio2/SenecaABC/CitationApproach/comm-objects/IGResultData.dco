@@ -1,0 +1,55 @@
+(Type float)
+(Type int)
+(Type bool)
+(Type uint8_t)
+(Enum IG_STATUS uint8_t 
+  UNKNOWN
+  NO_CONFIG
+  SETTING_CONFIG
+  RUNNING
+  PAUSE
+)
+(Enum MARKER uint8_t 
+  NONE
+  INNER
+  MIDDLE
+  OUTER
+)
+(Enum FROMTO uint8_t 
+  INACTIVE
+  TO
+  FROM
+)
+
+(EventAndStream IGResultData
+  (IG_STATUS ig_status)
+  (MARKER marker)
+    ;; [m]
+  (float ground_level)
+  (float ground_normal 3)
+    ;; [deg]  
+  (float mag_variation)
+    ;;[m]
+  (float rvr)
+    ;; [sec] counted from midnight
+  (float timeOfDay)
+    ;; [deg]
+  (float nav1_dir)
+  (FROMTO nav1_fromto)
+  (bool nav1_gs_alive)
+    ;; [deg]
+  (float nav1_hdef)
+    ;; [deg]
+  (float nav1_vdef)
+    ;; [m]
+  (float nav1_dme_dist)
+    ;; [deg]
+  (float nav2_dir)
+  (FROMTO nav2_fromto)
+    ;; [deg]
+  (float nav2_hdef)
+    ;; [m]
+  (float nav2_dme_dist)
+    ;; [deg]
+  (float adf_dir)  
+)

@@ -1,0 +1,11 @@
+(Type bool)
+(Type int)
+(Type float)
+
+(ComponentInterface ThrottleCalibrationData
+		(bool enabled (Default false))
+		(float tl_left (Default 0.0))
+		(float tl_right (Default 0.0))
+		(int gear (Default 0))
+		(float altitude (Default 0.0))
+)

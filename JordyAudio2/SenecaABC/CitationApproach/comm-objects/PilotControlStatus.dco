@@ -1,0 +1,5 @@
+(Type bool)
+
+(EventAndStream PilotControlStatus
+	(bool side_stick_master)
+)

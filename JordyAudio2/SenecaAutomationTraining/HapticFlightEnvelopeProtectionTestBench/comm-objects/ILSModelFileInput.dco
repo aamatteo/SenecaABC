@@ -1,0 +1,22 @@
+(Type vstring "#include <stringoptions.h>")
+(Type bool)
+
+;; This provides the information of the ILS to the ILSMOdel IN A FILE, hence you supply me with the name of the file where you stored the ILS info
+;;    The file is structured as follows:
+;;            line number | content
+;;                      1 | header, you can use this line to store some information you want to know about this file (should be one massive word, for example separate words with "_")
+;;                      2 | latitude of the ils (in rad)
+;;                      3 | longitude of the ils (in rad)
+;;                      4 | altitude of the ils (in meters)
+;;                      5 | heading of the ils (in rad)
+;;                      6 | slope of the ils (in rad)
+;;    If you are not sure how to get the correct cooridnates, look into HapticFlightEnvelopeProtectionTestBench/common/properties/Position.hxx
+(Event ILSModelFileInput
+	( Option hdf5 )
+	;; The file is only used when you put this switch to one.
+	;; This is used to protect from total fools using this
+	( bool file_ready ( Default false ) )
+
+	;; This actually is the file name where we should look (should include extension!)
+	( vstring file_name ( Default "" ) )
+)

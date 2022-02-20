@@ -1,0 +1,18 @@
+(Type vstring "#include <stringoptions.h>")
+
+(Event ATCCommand
+	(Option hdf5)
+	;; An ATC command consists out of three parts
+	;;		who are you adressing? callsign
+	;;      what do they have to do? command
+	;;		and how much do they have to do? number
+
+	;; The callsign (note that this will be spelled)
+	(vstring m_call_sign ( Default "" ))
+
+	;; The command
+	(vstring m_command ( Default "" ))
+
+	;; The number
+	(vstring m_number ( Default "" ))
+)

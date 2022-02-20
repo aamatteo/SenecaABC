@@ -1,0 +1,483 @@
+/* ------------------------------------------------------------------   */
+/*      item            : EngineSound.cxx
+        made by         : hmlandman
+	from template   : DusimeModuleTemplate.cxx
+        template made by: Rene van Paassen
+        date            : Fri Jan 12 15:39:15 2018
+	category        : body file 
+        description     : 
+	changes         : Fri Jan 12 15:39:15 2018 first version
+	template changes: 030401 RvP Added template creation comment
+	                  060512 RvP Modified token checking code
+			  131224 RvP convert snap.data_size to 
+			         snap.getDataSize()
+        language        : C++
+        copyright       : (c) 2016 TUDelft-AE-C&S
+*/
+
+
+#define EngineSound_cxx
+// include the definition of the module class
+#include "Enginesound.hxx"
+
+// include the debug writing header. Warning and error messages
+// are on by default, debug and info can be selected by 
+// uncommenting the respective defines 
+#define D_MOD
+//#define I_MOD
+#include <debug.h>
+
+// include additional files needed for your calculation here
+
+// the standard package for DUSIME, including template source
+#define DO_INSTANTIATE
+#include <dusime.h>
+
+// class/module name
+const char* const EngineSound::classname = "engine-sound";
+
+// initial condition/trim table
+const IncoTable* EngineSound::getMyIncoTable()
+{
+  static IncoTable inco_table[] = {
+    // enter pairs of IncoVariable and VarProbe pointers (i.e. 
+    // objects made with new), in this table.
+    // For example
+//    {(new IncoVariable("example", 0.0, 1.0, 0.01))
+//     ->forMode(FlightPath, Constraint)
+//     ->forMode(Speed, Control),
+//     new VarProbe<_ThisModule_,double>
+//       (REF_MEMBER(&_ThisModule_::i_example))}
+    
+    // always close off with:
+    { NULL, NULL} };
+
+  return inco_table;
+}
+
+// parameters to be inserted
+const ParameterTable* EngineSound::getMyParameterTable()
+{
+  static const ParameterTable parameter_table[] = {
+    { "set-timing", 
+      new MemberCall<EngineSound,TimeSpec>
+        (&EngineSound::setTimeSpec), set_timing_description },
+
+    { "check-timing", 
+      new MemberCall<EngineSound,vector<int> >
+      (&EngineSound::checkTiming), check_timing_description },
+      
+      { "max-torque",
+          new VarProbe<EngineSound, float>
+          (REF_MEMBER(&EngineSound::max_torque)),
+          "Maximum torque value" },
+      
+      { "rpm-idle",
+          new VarProbe<EngineSound, float >
+          (REF_MEMBER(&EngineSound::rpm_idle)),
+          "Give rpm_idle" },
+      
+      { "master-gain",
+          new VarProbe<EngineSound, float>
+          (REF_MEMBER(&EngineSound::master_gain)),
+          "Master gain for engine sounds" },
+
+    /* You can extend this table with labels and MemberCall or
+       VarProbe pointers to perform calls or insert values into your
+       class objects. Please also add a description (c-style string).  
+
+       Note that for efficiency, set_timing_description and
+       check_timing_description are pointers to pre-defined strings,
+       you can simply enter the descriptive strings in the table. */
+
+    /* The table is closed off with NULL pointers for the variable
+       name and MemberCall/VarProbe object. The description is used to
+       give an overall description of the module. */
+    { NULL, NULL, "please give a description of this module"} };
+
+  return parameter_table;
+}
+
+// constructor
+EngineSound::EngineSound(Entity* e, const char* part, const
+		       PrioritySpec& ps) :
+  /* The following line initialises the SimulationModule base class. 
+     You always pass the pointer to the entity, give the classname and the 
+     part arguments.
+     If you give a NULL pointer instead of the inco table, you will not be 
+     called for trim condition calculations, which is normal if you for 
+     example implement logging or a display.
+     If you give 0 for the snapshot state, you will not be called to 
+     fill a snapshot, or to restore your state from a snapshot. Only 
+     applicable if you have no state. */
+  SimulationModule(e, classname, part, getMyIncoTable(), 0),
+
+  // initialize the data you need in your simulation
+
+rpm_idle(800),
+max_torque(0.080),
+master_gain(1.0),
+
+  // initialize the data you need for the trim calculation
+
+  // initialize the channel access tokens, check the documentation for the
+  // various parameters. Some examples:
+  // r_mytoken(getId(), NameSet(getEntity(), MyData::classname, part),
+  //           MyData::classname, 0, Channel::Events, Channel::ReadAllData),
+  // w_mytoken(getId(), NameSet(getEntity(), MyData::classname, part),
+  //           MyData::classname, "label", Channel::Continuous),
+
+sounddata_token( getId(), NameSet( getEntity(), "PropSoundData", part ) ),
+
+w_rpm1left(getId(), NameSet("audio", "AnyAudioClass", ""),
+         "AudioObjectFixed", "rpm1left",
+         Channel::Continuous, Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+w_rpm1right(getId(), NameSet("audio", "AnyAudioClass", ""),
+         "AudioObjectFixed", "rpm1right",
+         Channel::Continuous,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+w_rpm2left(getId(), NameSet("audio", "AnyAudioClass", ""),
+         "AudioObjectFixed", "rpm2left",
+         Channel::Continuous,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+w_rpm2right(getId(), NameSet("audio", "AnyAudioClass", ""),
+         "AudioObjectFixed", "rpm2right",
+         Channel::Continuous,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  // activity initialization
+  // myclock(),
+  cb1(this, &_ThisModule_::doCalculation),
+  do_calc(getId(), "drive sound", &cb1, ps)
+{
+  // do the actions you need for the simulation
+
+  // connect the triggers for simulation
+  do_calc.setTrigger(sounddata_token);
+  
+  // connect the triggers for trim calculation. Leave this out if you 
+  // don not need input for trim calculation 
+  //trimCalculationCondition(/* fill in your trim triggering channels */);
+}
+
+bool EngineSound::complete()
+{
+  /* All your parameters have been set. You may do extended
+     initialisation here. Return false if something is wrong. */
+  return true;
+}
+
+// destructor
+EngineSound::~EngineSound()
+{
+  //
+}
+
+// as an example, the setTimeSpec function
+bool EngineSound::setTimeSpec(const TimeSpec& ts)
+{
+  // a time span of 0 is not acceptable
+  if (ts.getValiditySpan() == 0) return false;
+
+  // specify the timespec to the activity
+  do_calc.setTimeSpec(ts);
+  // or do this with the clock if you have it (don't do both!)
+  // myclock.changePeriodAndOffset(ts);
+
+  // do whatever else you need to process this in your model
+  // hint: ts.getDtInSeconds()
+
+  // return true if everything is acceptable
+  return true;
+}
+
+// and the checkTiming function
+bool EngineSound::checkTiming(const vector<int>& i)
+{
+  if (i.size() == 3) {
+    new TimingCheck(do_calc, i[0], i[1], i[2]);
+  }
+  else if (i.size() == 2) {
+    new TimingCheck(do_calc, i[0], i[1]);
+  }
+  else {
+    return false;
+  }
+  return true;
+}
+
+// tell DUECA you are prepared
+bool EngineSound::isPrepared()
+{
+  bool res = true;
+
+  // Example checking a token:
+  // CHECK_TOKEN(w_somedata);
+
+  // Example checking anything
+  // CHECK_CONDITION(myfile.good());
+  // CHECK_CONDITION2(sometest, "some test failed");
+    
+    CHECK_TOKEN( sounddata_token );
+    CHECK_TOKEN( w_rpm1left );
+    CHECK_TOKEN( w_rpm1right );
+    CHECK_TOKEN( w_rpm2left );
+    CHECK_TOKEN( w_rpm2right );
+
+
+  // return result of checks
+  return res;
+}
+
+// start the module
+void EngineSound::startModule(const TimeSpec &time)
+{
+  do_calc.switchOn(time);
+}
+
+// stop the module
+void EngineSound::stopModule(const TimeSpec &time)
+{
+  do_calc.switchOff(time);
+}
+
+// fill a snapshot with state data. You may remove this method (and the
+// declaration) if you specified to the SimulationModule that the size of 
+// state snapshots is zero
+void EngineSound::fillSnapshot(const TimeSpec& ts, 
+                              Snapshot& snap, bool from_trim)
+{
+  // The most efficient way of filling a snapshot is with an AmorphStore
+  // object.
+  AmorphStore s(snap.accessData(), snap.getDataSize());
+
+  if (from_trim) {
+    // use packData(s, trim_state_variable1); ... to pack your state into 
+    // the snapshot
+  }
+  else {
+    // this is a snapshot from the running simulation. Dusime takes care 
+    // that no other snapshot is taken at the same time, so you can safely
+    // pack the data you copied into (or left into) the snapshot state 
+    // variables in here
+    // use packData(s, snapshot_state_variable1); ...
+  }
+}
+
+// reload from a snapshot. You may remove this method (and the
+// declaration) if you specified to the SimulationModule that the size of 
+// state snapshots is zero
+void EngineSound::loadSnapshot(const TimeSpec& t, const Snapshot& snap)
+{
+  // access the data in the snapshot with an AmorphReStore object
+  AmorphReStore s(snap.data, snap.getDataSize());
+
+  // use unPackData(s, real_state_variable1 ); ... to unpack the data 
+  // from the snapshot. 
+  // You can safely do this, while snapshot loading is going on the 
+  // simulation is in HoldCurrent or the activity is stopped. 
+}
+
+// this routine contains the main simulation process of your module. You 
+// should read the input channels here, and calculate and write the 
+// appropriate output
+void EngineSound::doCalculation(const TimeSpec& ts)
+{
+  // check the state we are supposed to be in
+  switch (getAndCheckState(ts)) {
+  case SimulationState::HoldCurrent: {
+    // only repeat the output, do not change the model state
+      
+      DataWriter<AudioObjectFixed> rpm1left(w_rpm1left,ts);
+      DataWriter<AudioObjectFixed> rpm1right(w_rpm1right,ts);
+      DataWriter<AudioObjectFixed> rpm2left(w_rpm2left,ts);
+      DataWriter<AudioObjectFixed> rpm2right(w_rpm2right,ts);
+          
+      rpm1left.data().pitch = 1;
+      rpm1right.data().pitch = 1;
+      rpm2left.data().pitch = 1;
+      rpm2right.data().pitch = 1;
+      
+      rpm1left.data().volume = 0;
+      rpm1right.data().volume = 0;
+      rpm2left.data().volume = 0;
+      rpm2right.data().volume = 0;
+
+    break;
+    }
+
+  case SimulationState::Replay:
+  case SimulationState::Advance: {
+
+    // do the simulation calculations, one step
+      
+      try {
+        
+          StreamReader<PropSoundData> sound_reader( sounddata_token, ts );
+          
+          float  eng_rpm [2];
+          float  eng_trq [2];
+          bool   eng_pwr [2];
+          float  rpm1pitch [2];
+          float  rpm2pitch [2];
+          float  rpm1volume [2];
+          float  rpm2volume [2];
+          
+          DataWriter<AudioObjectFixed> rpm1left(w_rpm1left,ts);
+          DataWriter<AudioObjectFixed> rpm1right(w_rpm1right,ts);
+          DataWriter<AudioObjectFixed> rpm2left(w_rpm2left,ts);
+          DataWriter<AudioObjectFixed> rpm2right(w_rpm2right,ts);
+          
+          for (int eng_nr=0; eng_nr<2; eng_nr++) {
+            
+            eng_rpm[eng_nr] = sound_reader.data().rpm[eng_nr];
+            eng_trq[eng_nr] = sound_reader.data().torque[eng_nr] / max_torque; // between 0 and 1
+            eng_pwr[eng_nr] = sound_reader.data().power[eng_nr];
+            
+            // rpm1 sound start up
+            if (eng_rpm[eng_nr] < rpm_idle+1 && eng_trq[eng_nr] == 0 && eng_pwr[eng_nr] == 1) {
+                
+                rpm1volume[eng_nr] = eng_rpm[eng_nr]/(2*rpm_idle); //fade in 0 to 0.5
+                rpm1pitch[eng_nr] = 0.5 + eng_rpm[eng_nr]/(2*rpm_idle); // fade in 0.5 to 1
+            }
+            
+            // phase 2: transition rpm1 to rpm2
+            if (eng_trq[eng_nr] > 0 && eng_trq[eng_nr] < 0.6 && eng_pwr[eng_nr] == 1) {
+                
+                //fade out the rpm1 sound
+                rpm1volume[eng_nr] = 0.5f - (eng_trq[eng_nr])*(0.5/0.6); // 0.5 to 0
+                rpm1pitch[eng_nr] = 1;
+                
+                if (eng_trq[eng_nr] < 0.3) {
+                    
+                    // fade in the rpm2 sound
+                    rpm2volume[eng_nr] = (eng_trq[eng_nr])*(1/0.3); // 0 to 1
+                }
+                else {
+                    rpm2volume[eng_nr] = 1.0f;
+                }
+                
+                rpm2pitch[eng_nr] = 0.5 + eng_trq[eng_nr]*1.3; // 0.5 to 1.28
+                
+              }
+            
+            // phase 3: rpm2
+            else if (eng_trq[eng_nr] > 0.6 && eng_pwr[eng_nr] == 1) {
+                
+                rpm2pitch[eng_nr] = 0.5 + eng_trq[eng_nr]*1.3; // 1.28 to 2.1
+                rpm2volume[eng_nr] = 1.0f;
+                
+                rpm1pitch[eng_nr] = 1;
+                rpm1volume[eng_nr] = 0;
+                
+            }
+          }
+          
+            rpm1left.data().pitch = rpm1pitch[0];
+            rpm1right.data().pitch = rpm1pitch[1];
+            rpm2left.data().pitch = rpm2pitch[0];
+            rpm2right.data().pitch = rpm2pitch[1];
+
+            rpm1left.data().volume = master_gain * rpm1volume[0];
+            rpm1right.data().volume = master_gain * rpm1volume[1];
+            rpm2left.data().volume = master_gain * rpm2volume[0];
+            rpm2right.data().volume = master_gain * rpm2volume[1];
+          
+      }
+      catch(Exception& e)
+      {
+          W_MOD( getId() << '/' << classname << "Error reading PropSoundData channel @ " << ts << ": " << e );
+      }
+
+    break;
+    }
+  default:
+    // other states should never be entered for a SimulationModule, 
+    // HardwareModules on the other hand have more states. Throw an
+    // exception if we get here, 
+    throw CannotHandleState(getId(),GlobalId(), "state unhandled");
+  }
+
+  // DUECA applications are data-driven. From the time a module is switched
+  // on, it should produce data, so that modules "downstreams" are 
+  // activated
+  // access your output channel(s)
+  // example
+  // StreamWriter<MyOutput> y(output_token, ts);
+
+  // write the output into the output channel, using the stream writer
+  // y.data().var1 = something; ...
+
+  if (snapshotNow()) {
+    // keep a copy of the model state. Snapshot sending is done in the 
+    // sendSnapshot routine, later, and possibly at lower priority
+    // e.g. 
+    // snapshot_state_variable1 = state_variable1; ...
+    // (or maybe if your state is very large, there is a cleverer way ...)
+  }
+} 
+
+void EngineSound::trimCalculation(const TimeSpec& ts, const TrimMode& mode)
+{
+  // read the event equivalent of the input data
+  // example
+  // EventReader u(i_input_token, ts);
+
+  // using the input, and the data put into your trim variables,
+  // calculate the derivative of the state. DO NOT use the state
+  // vector of the normal simulation here, because it might be that
+  // this is done while the simulation runs!  
+  // Some elements in this state derivative are needed as target, copy
+  // these out again into trim variables (see you TrimTable
+
+  // trim calculation
+  switch(mode) {
+  case FlightPath: {
+    // one type of trim calculation, find a power setting and attitude
+    // belonging to a flight path angle and speed
+  }
+  break;
+
+  case Speed: {
+    // find a flightpath belonging to a speed and power setting (also
+    // nice for gliders)
+  }
+  break;
+
+  case Ground: {
+    // find an altitude/attitude belonging to standing still on the 
+    // ground, power/speed 0
+  }
+  break;
+
+  default:
+    W_MOD(getId() << " cannot calculate inco mode " << mode);
+  break;
+  }
+
+  // This works just like a normal calculation, only you provide the
+  // steady state value (if your system is stable anyhow). So, if you
+  // have other modules normally depending on your output, you should
+  // also produce the equivalent output here. 
+  // EventWriter<MyOutput> y(output_token, ts);
+
+  // write the output into the output channel, using the EventWriter
+  // N.B. you may also use:
+  // output_token.sendEvent(ts, new MyOutput(arguments));
+  // this is slightly more efficient. However, the EventWriter makes
+  // it easier, because the code will look much more like your normal
+  // calculation code.
+
+  // now return. The real results from the trim calculation, as you
+  // specified them in the TrimTable, will now be collected and sent
+  // off for processing.
+}
+
+// Make a TypeCreator object for this module, the TypeCreator
+// will check in with the scheme-interpreting code, and enable the
+// creation of modules of this type
+static TypeCreator<EngineSound> a(EngineSound::getMyParameterTable());
+

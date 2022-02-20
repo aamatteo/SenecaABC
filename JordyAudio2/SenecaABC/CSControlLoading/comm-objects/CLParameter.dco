@@ -1,0 +1,22 @@
+; -*-scheme-*-
+
+(Type double)
+(Type vstring "#include <stringoptions.h>")
+
+;; Event object to send over parameter name and data for the parameter
+(Event CLParameter
+       (ConstructorCode
+"#if GENCODEGEN >= 110\n
+for (int ii = value.size(); ii--; ) {\n
+#else\n
+for (int ii = value_variable_size; ii--; ) {\n
+#endif\n
+  value[ii] = 0.0;
+}")
+	;; name of the parameter
+       (vstring symbol)
+       ;; adjustable array with values
+       (double value -1)
+       ;; string value, if numeric not applicable
+       (vstring string)
+)

@@ -1,0 +1,49 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+# specify these with the .dco extension, examples:
+# Asym1/comm-objects/MyDataObject.dco
+# Generic/comm-objects/PrimaryControls.dco
+# Generic/comm-objects/SecondaryControls.dco
+# Generic/comm-objects/PrimarySwitches.dco
+# Generic/comm-objects/SecondarySwitches.dco
+
+# Generic/comm-objects/SoundData.dco
+# Asym1/comm-objects/MalfunctionsChannel.dco
+# Asym1/comm-objects/Solo_flap_channel.dco
+# Asym1/comm-objects/AsymmetryChannel.dco
+# CitationExample/comm-objects/TurbulenceConfiguration.dco
+
+Generic/comm-objects/PrimaryControls.dco
+
+CitationDemo/comm-objects/CitationPilotInput.dco
+CitationExample/comm-objects/CitationOutput.dco
+CitationExample/comm-objects/SnapshotRequest.dco
+Generic/comm-objects/VehicleCabPosition.dco
+SRSMotion/comm-objects/VehicleCabMotion.dco
+
+Asym1/comm-objects/Reposition.dco
+Asym1/comm-objects/Trim_inco.dco
+
+SenecaAutomationTraining/comm-objects/PropSoundData.dco
+
+SenecaAutomationTraining/comm-objects/ControlEvent.dco
+SenecaAutomationTraining/comm-objects/EngineEvent.dco
+SenecaAutomationTraining/comm-objects/MassEvent.dco
+SenecaAutomationTraining/comm-objects/WindEvent.dco
+
+SenecaAutomationTraining/comm-objects/AutopilotChannel.dco
+SenecaAutomationTraining/comm-objects/AP2G1000Channel.dco
+SenecaAutomationTraining/comm-objects/GFC700Event.dco
+SenecaAutomationTraining/comm-objects/ManifoldChannel.dco
+
+WorldListener/comm-objects/BaseObjectPosition.dco
+WorldListener/comm-objects/BaseObjectMotion.dco
+WorldListener/comm-objects/AudioObjectFixed.dco
+
+#Communication Event // added by Matteo Piras
+
+SenecaAutomationTraining/comm-objects/CommEvent.dco
+
+
+
+

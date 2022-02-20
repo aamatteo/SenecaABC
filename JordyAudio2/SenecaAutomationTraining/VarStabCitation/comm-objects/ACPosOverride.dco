@@ -1,0 +1,11 @@
+(Type float)
+(Type bool)
+
+(Event ACPosOverride 
+       (float lat (Default 0.0f))
+       (float lon (Default 0.0f))
+       (float psi (Default 0.0f))
+       (float chi (Default 0.0f))
+       (bool override (Default false))
+       (float sel_alt (Default 0.0f))
+       (bool override_sel (Default false)))

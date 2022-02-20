@@ -1,0 +1,9 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+# specify these with the .dco extension, examples:
+# SRSMotion/comm-objects/MyDataObject.dco
+# Generic/comm-objects/PrimaryControls.dco
+SRSMotion/comm-objects/VehicleCabMotion.dco
+SRSMotion/comm-objects/SimulatorMotionState.dco
+SRSMotion/comm-objects/SimulatorMotionAcceleration.dco
+SRSMotion/comm-objects/MotionFilterUserData.dco

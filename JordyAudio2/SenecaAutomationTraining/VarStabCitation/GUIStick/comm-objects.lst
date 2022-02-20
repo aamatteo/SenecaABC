@@ -1,0 +1,12 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+# specify these with the .dco extension, examples:
+# Generic/comm-objects/MyDataObject.dco
+# Generic/comm-objects/PrimaryControls.dco
+Generic/comm-objects/PrimaryControls.dco
+Generic/comm-objects/SecondaryControls.dco
+Generic/comm-objects/PrimarySwitches.dco
+Generic/comm-objects/SecondarySwitches.dco
+
+# Hack for CS CitationModel
+VarStabCitation/comm-objects/FlightControlInput.dco

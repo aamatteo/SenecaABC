@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <generic>
+  <input>
+
+    <binary_mode>true</binary_mode>
+
+   <chunk>
+    <name>cloud-type-layer</name>
+    <type>double</type>
+    <node>/environment/metar/clouds/layer/coverage-type</node>
+   </chunk>
+
+  </input>
+ </generic>
+</PropertyList>

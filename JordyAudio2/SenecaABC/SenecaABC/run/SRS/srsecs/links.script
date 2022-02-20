@@ -1,0 +1,43 @@
+#!/bin/bash
+# this file creates all links to files in the data directory needed for
+# running the application is a specific machine. 
+#
+# example
+# ln -sf $DATADIR/*.cnf .
+DATADIR=../../run-data
+
+# make a link in case files with specified extension are found
+makelink(){
+	[[ -n $(ls $DATADIR/*.$1) ]] && ln -sf $DATADIR/*.$1 .;
+}
+
+makelink cnf
+makelink dat
+makelink star
+makelink tga
+#makelink txt
+
+# Plot motion data
+ln -sfv ../../../../SRSMotion/simple-motion-logger/plot.sci plotmotion.sci
+ln -sfv ../../../CitationLogger/plot.sci plotlog.sci
+
+# INCO files, only those for the Seneca
+ln -sfv $DATADIR/inco_seneca/*.inco .
+ln -sfv $DATADIR/inco_seneca/template.inco.txt .
+
+# GLADE files
+ln -sfv ../../../../SRSToolbox/GearSelector/gearselector.glade* .
+ln -sfv ../../../CitationIncoSelector/*.glade .
+ln -sfv ../../../Malfunctions/*.glade .
+ln -sfv ../../../ECI/*.glade .
+ln -sfv ../../../../CitationApproach/FlapSelector/*.glade .
+
+# Scenario files
+ln -sfv $DATADIR/scenarios/*.sce .
+
+# Sound files
+ln -sfv $DATADIR/audio .
+
+# Script to move log files
+ln -sfv $DATADIR/log_move.bash .
+

@@ -1,0 +1,16 @@
+;; -*-scheme-*-
+(Type bool)
+(Type string32 "#include <stringoptions.h>")
+
+;; Indication of whether the condition for autopilot servo control is reached
+(Event 
+ APControlState
+ ;; roll control
+ (bool x_init (Default false))
+ ;; pitch control init true
+ (bool y_init (Default false))
+ ;; yaw control init true
+ (bool z_init (Default false))
+ ;; string message
+ (string32 message)
+ )

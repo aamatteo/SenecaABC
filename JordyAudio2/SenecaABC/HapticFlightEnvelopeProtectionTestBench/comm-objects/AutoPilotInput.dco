@@ -1,0 +1,21 @@
+( Type double )
+
+( Stream AutoPilotInput
+  ( Option hdf5 )
+
+  ; Lateral variables
+  ( double roll )
+  ( double heading )
+  ( double track )
+
+  ; Longitudinal variables
+  ( double pitch )
+  ( double angle_of_attack )
+  ( double flight_path_angle )
+
+  ; More variables
+  ( double altitude )
+  ( double vertical_speed )
+  ( double velocity )
+
+)

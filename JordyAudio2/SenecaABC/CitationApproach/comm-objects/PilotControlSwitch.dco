@@ -1,0 +1,5 @@
+(Type bool)
+
+(Event PilotControlSwitch
+	(bool side_stick_master)
+)

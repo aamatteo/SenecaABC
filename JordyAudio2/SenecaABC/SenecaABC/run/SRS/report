@@ -1,0 +1,66 @@
+# This is a file that will/should (in the future) contain reports of
+# success of running the application @AppName@ on a specific dueca
+# set-up. Use the prepare and report options of the "dueca-project" 
+# script
+
+
+Application run/test report for: SenecaAutomationTraining
+Test performed on platform     : SRS
+Date                           : Wed Feb 24 15:27:18 2021
+Dueca version                  : 2.7.11
+
+Application revision tag       : report1
+Borrowed modules in node srsig2, with versions:
+HapticFlightEnvelopeProtectionTestBench/FGWeather  version:
+HapticFlightEnvelopeProtectionTestBench/TelnetInterface  version:
+Borrowed modules in node srsefis1, with versions:
+Generic/multi-stick  version:HEAD
+MCP737/MCP737GUI  version:HEAD
+MCP737/MCP737Proxy  version:
+Borrowed modules in node srsecs, with versions:
+Generic/joystick  version:HEAD
+MCP737/MCP737GUI  version:HEAD
+MotionFiltersRTW70/motion-filter-tuner-gui  version:
+SRSMotion/motion-viewer  version:HEAD
+SRSMotion/motion-configurater  version:HEAD
+SRSMotion/simple-motion-logger  version:HEAD
+SRSToolbox/GearSelector  version:HEAD
+CitationApproach/FlapSelector  version:HEAD
+Borrowed modules in node srsefis2, with versions:
+MCP737/MCP737GUI  version:HEAD
+Borrowed modules in node srshost, with versions:
+SRSMotion/motion-common  version:HEAD
+SRSMotion/motion-limiter  version:HEAD
+MotionFiltersRTW70/motion-filter-classical-16  version:HEAD
+MotionFiltersRTW70/motion-filter-tuner  version:HEAD
+Generic/SideStickController  version:
+Borrowed modules in node srssound, with versions:
+WorldListener/WorldListener  version:HEAD
+WorldListener/OpenALListener  version:HEAD
+WorldView/SpecificationBase  version:HEAD
+SenecaStartle/PA34_sounds  version:
+Borrowed modules in node srsctrl2, with versions:
+Generic/srs-midconsole  version:
+Generic/control-switches  version:
+Borrowed modules in node srsig1, with versions:
+HapticFlightEnvelopeProtectionTestBench/FGWeather  version:
+HapticFlightEnvelopeProtectionTestBench/TelnetInterface  version:
+No external modules borrowed in node:srsefis5
+Borrowed modules in node srsctrlecat, with versions:
+CSControlLoading/ControlLoading  version:
+CSControlLoading/CLConfigurations  version:
+CSControlLoading/CLTools  version:
+CSControlLoading/cl-analyser  version:
+CSControlLoading/IOController  version:
+CSControlLoading/scripts  version:
+SRS/b777-ts  version:
+SRS/udp-connector  version:
+UDPSlave/udp-writer  version:
+UDPSlave/udp-reader  version:
+SRS/control-switches  version:
+SRS/gear-lever  version:
+Borrowed modules in node srsig3, with versions:
+HapticFlightEnvelopeProtectionTestBench/FGWeather  version:
+HapticFlightEnvelopeProtectionTestBench/TelnetInterface  version:
+The result, claimed by user ostroosma, is: ran successful experiment of Jordy van Leeuwen
+

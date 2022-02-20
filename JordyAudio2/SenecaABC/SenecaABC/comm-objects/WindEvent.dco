@@ -1,0 +1,24 @@
+(Type int)
+(Type bool)
+(Type float)
+
+;; for wind_vel, wind_dir & visibility, negative values (defaults) are ignored (no update send to FlightGear)
+
+(Event WindEvent
+	(int id (Default 0))
+	(bool turbulence (Default false))
+	(float turb_int (Default -1.0f))
+	(float wind_vel (Default -1.0f))
+	(float wind_dir (Default -1.0f))
+	(bool gust (Default false))
+	
+	;; used only for FG
+	;; visibility in meters
+	;; cloud altitude in feet
+	(int visibility (Default -1))
+	(int cloud_layer_0_altitude (Default -1))
+	(int cloud_layer_1_altitude (Default -1))
+	(int cloud_layer_2_altitude (Default -1))
+)
+
+;; wind shear / gust was a float set to either 0 or 1

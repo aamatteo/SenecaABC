@@ -1,0 +1,15 @@
+(Type double)
+(Type bool)
+
+;return packet from simFusions
+;FROM Vega(external)
+;TO VisualDisplayProxy
+;NOTE 23AUG2001 need to output r_alt somehow
+;NOTE switches to be determined
+(EventAndStream SimFusionResultData
+	(double terr_elev)
+	(double terr_pitch)
+	(double terr_roll)
+	(double delay_estimate)
+	(bool reply_xfer)
+)

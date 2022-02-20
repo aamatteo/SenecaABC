@@ -1,0 +1,5 @@
+(Type float)
+(Stream ManifoldChannel
+	(float map_l (Default 0.0))
+	(float map_r (Default 0.0))
+)

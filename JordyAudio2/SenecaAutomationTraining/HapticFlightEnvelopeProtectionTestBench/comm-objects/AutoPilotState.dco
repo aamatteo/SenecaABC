@@ -1,0 +1,47 @@
+(Type bool)
+(Type double)
+
+(Stream AutoPilotState
+	(Option hdf5)
+	;; For the autothrottle
+	(bool auto_throttle_active ( Default false ) )
+	(double auto_throttle_ref  ( Default 0 ) )
+
+	;; For the altitude
+	(double altitude_ref       ( Default 0 ) )
+	(double vertical_speed_ref ( Default 0 ) )
+	(double heading_ref        ( Default 0 ) )
+	(double course_ref         ( Default 0 ) )
+	(double course_left_ref    ( Default 0 ) )
+
+	;; To make the map look like you want
+	(double map_range          ( Default 0 ) )
+
+	;; States of the buttons
+	(bool app                 ( Default false ) )
+	(bool vor_loc             ( Default false ) )
+	(bool lnav                ( Default false ) )
+	(bool vnav                ( Default false ) )
+	(bool heading_ref_button  ( Default false ) )
+	(bool altitude_hld        ( Default false ) )
+	(bool vertical_speed      ( Default false ) )
+	(bool flight_director     ( Default false ) )
+	(bool vor                 ( Default false ) )
+	(bool lvl_chg             ( Default false ) )
+	(bool waypoints           ( Default false ) )
+	(bool flight_path_vector  ( Default false ) )
+	(bool speed               ( Default false ) )
+	(bool cws_a               ( Default false ) )
+	(bool cws_b               ( Default false ) )
+	(bool cmd_a               ( Default false ) )
+	(bool cmd_b               ( Default false ) )
+	(bool ap_disconnect       ( Default false ) )
+
+	;; This is also an interesting case: the radio nav selector
+	(bool radio_nav_off_1  ( Default false ) )
+	(bool radio_nav_off_2  ( Default false ) )
+	(bool radio_nav_vor_1  ( Default false ) )
+	(bool radio_nav_vor_2  ( Default false ) )
+	(bool radio_nav_adf_1  ( Default false ) )
+	(bool radio_nav_adf_2  ( Default false ) )
+)

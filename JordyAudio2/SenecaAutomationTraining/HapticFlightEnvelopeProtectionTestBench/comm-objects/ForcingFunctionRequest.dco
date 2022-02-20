@@ -1,0 +1,56 @@
+( Type double )
+( Type bool )
+(Type vstring "#include <stringoptions.h>")
+
+;; Defnition of the different test singal type supported by this class
+( Enum TestType uint32_t
+  STEP
+  SINE
+  PULSE
+  ABSOLUTESINE
+  SQUAREDSINE
+  FORCINGFILE
+  MAX_TYPE
+)
+
+( Enum Axis uint32_t
+  X
+  Y
+  MAX_AXIS
+)
+
+;; Container to keep track of all settings required in this class
+( Event ForcingFunctionRequest
+  ;; Flag to indicate invalid settings
+  ( bool     legit             ( Default false ) )
+
+  ;; Which axis are we working with?
+  ( Axis     axis              ( Default X     ) )
+
+  ;; The overall test type
+  ( TestType test_type         ( Default STEP  ) )
+
+  ;; The options for the step function
+  ( double   step_start        ( Default 0.0   ) )
+  ( double   step_stop         ( Default 0.0   ) )
+  ( double   step_time         ( Default 0.0   ) )
+
+  ;; The options for the sine function
+  ( double   sine_amplitude    ( Default 0.0   ) )
+  ( double   sine_frequency    ( Default 0.0   ) )
+  ( double   sine_offset       ( Default 0.0   ) )
+  ( double   sine_phase        ( Default 0.0   ) )
+
+  ;; The options for the pulse function
+  ( double   pulse_neutral     ( Default 0.0   ) )
+  ( double   pulse_value       ( Default 0.0   ) )
+  ( double   pulse_width       ( Default 0.0   ) )
+  ( double   pulse_start       ( Default 0.0   ) )
+
+  ;; Options for the forcing file
+  ( vstring  file_name         ( Default ""     ) )
+  ( double   file_gain         ( Default 1.0    ) )
+
+  ;; The options for the global
+  ( double   global_ramp_speed ( Default 1.0   ) )
+)

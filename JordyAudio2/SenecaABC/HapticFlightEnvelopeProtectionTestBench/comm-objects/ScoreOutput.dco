@@ -1,0 +1,29 @@
+(Type int)
+(Type double)
+(Type vstring "#include <stringoptions.h>")
+
+(Enum Conditions uint32_t
+  ;; Do these values need a comment?
+  TRAINING
+  WINDSHEAR
+  ICING
+  RUNWAY
+  GOAROUND
+
+  ;; And the maximum value to check the validity of the entry
+  MAX_CONDITIONS
+)
+
+(Event ScoreOutput
+  ( Option hdf5 )
+  ( int        run_number       ( Default 0 ) )
+  ( vstring    subject_name     ( Default "" ) )
+  ( Conditions condition        ( Default TRAINING ) )
+  ( double     ws_alt_loss_m    ( Default 0 ) )
+  ( double     ic_rms_hor_m     ( Default 0 ) )
+  ( double     ic_rms_ver_m     ( Default 0 ) )
+  ( double     ic_rms_tot_m     ( Default 0 ) )
+  ( double     rwy_ss_closest_m ( Default 0 ) )
+  ( double     climb_rate_good  ( Default 0 ) )
+  ( double     flight_envelope_good ( Default 0 ) )
+ )

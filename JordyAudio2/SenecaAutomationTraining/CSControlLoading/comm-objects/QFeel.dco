@@ -1,0 +1,30 @@
+(Type float)
+
+; This communicatable object transmits the effects of aerodynamic and
+; other forces on the controls back to the control loading simulation
+; The QFeel version has been configured for 6 cl axes.
+(EventAndStream QFeel
+(Option hdf5)
+		
+	(ConstructorCode
+	 "for (int ii = 6; ii--; ) {
+  mom_offset[ii] = 0.0;
+  pos_offset[ii] = 0.0;
+  extra_spring[ii] = 0.0;
+  extra_damping[ii] = 0.0;
+}" )
+
+	; Additional moment on the stick or column in x (roll) axis
+	(float mom_offset 6)
+
+	; Additional position on the stick or column in x (roll) axis
+	(float pos_offset 6)
+
+	; Additional spring constant in x (roll) axis
+	(float extra_spring 6)
+
+	; Additional damping constant in x (roll) axis
+	(float extra_damping 6)
+	
+	
+)

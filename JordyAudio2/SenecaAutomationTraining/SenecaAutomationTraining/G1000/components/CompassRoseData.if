@@ -1,0 +1,13 @@
+(Type float)
+(Type int)
+(Type bool)
+
+(ComponentInterface CompassRoseData
+		    (float heading (Default 0.0))
+		    (float track   (Default 0.0))
+		    (float hdg_bug (Default 0.0))
+		    (float course (Default 0.0))
+		    (int active_nav_source (Default 0))
+		    (float turn_rate (Default 0.0))
+		    (bool GMU_failure (Default false))
+)

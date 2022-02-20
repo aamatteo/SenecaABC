@@ -1,0 +1,29 @@
+( Type bool   )
+( Type double )
+( Type vstring "#include <stringoptions.h>" )
+
+( Event SimStopperOptions
+	( Option hdf5 )
+	( bool   altitude_stop_switch ( Default false    ) )
+	( double altitude_lower_limit ( Default - 9999.9 ) )
+	( double altitude_upper_limit ( Default 999999.9 ) )
+
+	( bool   pitch_stop_switch ( Default false    ) )
+	( double pitch_lower_limit ( Default - 9999.9 ) )
+	( double pitch_upper_limit ( Default 999999.9 ) )
+
+	( bool   velocity_stop_switch ( Default false    ) )
+	( double velocity_lower_limit ( Default - 9999.9 ) )
+	( double velocity_upper_limit ( Default 999999.9 ) )
+
+	( bool   roll_stop_switch ( Default false    ) )
+	( double roll_lower_limit ( Default - 9999.9 ) )
+	( double roll_upper_limit ( Default 999999.9 ) )
+
+	( bool   loadfactor_stop_switch ( Default false    ) )
+	( double loadfactor_lower_limit ( Default - 9999.9 ) )
+	( double loadfactor_upper_limit ( Default 999999.9 ) )
+
+	( bool    stop_file_switch ( Default false ) )
+	( vstring stop_file_name   ( Default ""    ) )
+)

@@ -1,0 +1,9 @@
+(Type int)
+
+; A confirmation event, notifying the log concentrator of the packet
+; no logged. To prevent clogging dueca, this is checked agains the current
+; packet being concentrated, and logging stops when a limit of floating
+; packets is exceeded
+ (Event CLLogConfirm
+       ; counter for the logged packet
+       (int packet_no))

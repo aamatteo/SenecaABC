@@ -1,0 +1,6 @@
+(Type float)
+
+(ComponentInterface HorizonFieldsData
+		    (float pitch (Default 0.0))
+		    (float roll  (Default 0.0))
+)

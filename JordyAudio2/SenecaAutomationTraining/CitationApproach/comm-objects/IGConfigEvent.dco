@@ -1,0 +1,43 @@
+(Type float)
+(Type bool)
+(Type uint8_t)
+(Enum IG_CONFIG_FLAG uint8_t 
+  FLAG_NOT_SET
+  IG_AS_VISUAL
+  IG_AS_SIM_ENG
+)
+(Enum AC_MODEL uint8_t 
+  MODEL_NOT_SET
+  CITATION_500
+  BOEING_747
+  AIRBUS_320
+)
+(Enum IG_VIEW_TYPE uint8_t 
+  NORMAL
+  CHASE_PLANE
+)
+  
+(Event IGConfigEvent
+  (IG_CONFIG_FLAG ig_config_flag)
+  (AC_MODEL ac_model)
+  (IG_VIEW_TYPE ig_view_type)
+    ;; these int's mask char's
+  (uint8_t callsign 8)
+    ;; [deg]
+  (float lat)
+    ;; [deg]
+  (float lon)
+    ;; [m]
+  (float pres_alt)
+    ;; [rad]
+  (float psi)
+    ;; [rad]
+  (float theta)
+    ;; [rad]
+  (float phi)
+  (bool on_ground)
+    ;; [m]
+  (float rvr)
+    ;; [sec] counted from midnight
+  (float timeOfDay)
+)

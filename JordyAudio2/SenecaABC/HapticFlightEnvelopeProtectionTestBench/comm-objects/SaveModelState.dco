@@ -1,0 +1,8 @@
+(Type bool)
+(Type vstring "#include <stringoptions.h>")
+
+(Event SaveModelState
+	( Option hdf5 )
+	(bool save_state   ( Default false ))
+	(vstring save_name ( Default "" ))
+)

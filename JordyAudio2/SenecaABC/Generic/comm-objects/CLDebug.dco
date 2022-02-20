@@ -1,0 +1,14 @@
+(Type float)
+(Type unsigned)
+
+(Stream CLDebug
+	(float u 3)
+	(float dp 3)
+	(float pos 3)
+	(float mom 3)
+	(float ditdp 3)
+	(float offset 3)
+	(float ditg 3)
+	(unsigned status 3)
+	(float brake 2))
+

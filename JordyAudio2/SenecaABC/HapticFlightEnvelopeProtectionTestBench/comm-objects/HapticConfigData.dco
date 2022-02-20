@@ -1,0 +1,69 @@
+(Type double)
+(Type bool)
+(Type uint32_t)
+(IterableType HapticConfigDataBoolVector "
+#ifndef MAX_CURVE_POINTS
+#define MAX_CURVE_POINTS 15
+#endif
+#include <fixvector.hxx>
+typedef dueca::fixvector< MAX_CURVE_POINTS, bool > HapticConfigDataBoolVector;")
+(IterableType HapticConfigDataDoubleVector "
+#ifndef MAX_CURVE_POINTS
+#define MAX_CURVE_POINTS 15
+#endif
+#include <fixvector.hxx>
+typedef dueca::fixvector< MAX_CURVE_POINTS, double > HapticConfigDataDoubleVector;")
+
+;; This provides the current force-displacement curve for the sidestick
+;; With the extra functions it should provide a class which can be used to add to
+;; or remove from the current curve.
+;; Note that this extra functionallity is present in HFEP/common/HapticConfig.hxx
+;;
+;; If you want to change the number of points, just do 'Find and Replace all' on: 15
+(Stream HapticConfigData
+    ( Option hdf5 )
+    (ConstructorCode "for ( int ii = 0; ii < MAX_CURVE_POINTS; ii++ )
+    {
+        m_position_target[ii] = 0.0;
+        m_position_state[ii]  = 0.0;
+        m_load_target[ii]     = 0.0;
+        m_load_state[ii]      = 0.0;
+        m_active[ii]          = false;
+        m_to_delete[ii]       = false;
+    }
+
+    m_extra_load_target = 0.0;
+    m_extra_load_state  = 0.0;
+
+    m_position_rate   = 1000.0;
+    m_load_rate       = 1000.0;
+    m_extra_load_rate = 1000.0;
+
+    m_active[0]     = true;
+    m_active_points = 1;")
+
+    ;; The curve is defined by maximum MAX_CURVE_POINTS-number of points
+    ;; Using the position and force
+    ;; Note that we include a delayed form in the Extra-files
+    ;; This requires a state, target, and ramping rate
+    (HapticConfigDataDoubleVector m_position_target)
+    (HapticConfigDataDoubleVector m_position_state)
+    (HapticConfigDataDoubleVector m_load_target)
+    (HapticConfigDataDoubleVector m_load_state)
+    (double m_position_rate)
+    (double m_load_rate)
+
+    ;; Additionally, to include an extra forcing function, another state, target, rate
+    (double m_extra_load_target)
+    (double m_extra_load_state)
+    (double m_extra_load_rate)
+
+    ;; To check whether a points is used, a list of booleans is set to true if so
+    (HapticConfigDataBoolVector m_active)
+
+    ;; Points can be deleted, but can not always disappear immediately due to ramping, therefore this check
+    (HapticConfigDataBoolVector m_to_delete)
+
+    ;; And a single number is used as a counter of how many points defined (for loops)
+    (uint32_t m_active_points)
+)

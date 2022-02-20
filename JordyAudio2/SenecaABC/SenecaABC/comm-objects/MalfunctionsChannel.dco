@@ -1,0 +1,21 @@
+(Type bool)
+(Type float)
+
+(Event MalfunctionsChannel
+	;; CvCalculation (restore covariance)
+		(bool reset_cov)
+	;; CvCalculation (restore parameters)
+		(bool reset_para)
+	;; CvCalculation (inhibit reset)
+		(bool reset_uit)
+	;; for Cv calculation (1, 2, 3 or 4). Vc display is on for 1 & 2, off for 3 & 4. Bij 2 & 4 al vaste waarden ingevoerd. (CvCalculation.cxx) [used as INT]
+		(float database)
+	;; CvCalculation - ?? and max tau ??
+		(float Phi_req)
+		(float maxt)
+	;; PFD
+		(bool Slip_top)
+		(bool Slip_beta)
+	;; only used for log [used as INT]
+		(float Scenario)
+)

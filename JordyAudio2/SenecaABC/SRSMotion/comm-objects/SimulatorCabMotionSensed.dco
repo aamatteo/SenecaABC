@@ -1,0 +1,28 @@
+(Type double)
+
+; the sensed data from the IMU
+; FROM MotionSensor
+; TO Logging
+; NOTE: this data is delayed, due to numerical differentation
+
+(EventAndStream SimulatorCabMotionSensed
+	(double fx)
+	(double fy)
+	(double fz)
+	(double fx_c)
+	(double fy_c)
+	(double fz_c)
+	(double p)
+	(double q)
+	(double r)
+	(double pdot)
+	(double qdot)
+	(double rdot)
+;raw data, just interpolated, not filtered or position corrected
+	(double fx_r)
+	(double fy_r)
+	(double fz_r)
+	(double p_r)
+	(double q_r)
+	(double r_r)
+)

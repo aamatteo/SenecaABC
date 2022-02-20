@@ -1,0 +1,69 @@
+(Type bool)
+(Type float)
+(Type int "#include \"SideStickInputParams.hxx\"")
+
+(EventAndStream SideStickConfiguration
+
+   ; select pitch parameters, see SideStickInputParams.hxx
+   ; PITCH_NONE = none, PITCH_ALL = all;
+   (int use_pitch_params (Default PITCH_NONE))
+
+   ; pitch channel default inputs
+   (float default_pitch_friction (Default 0))
+   (float default_pitch_jam_pos (Default 0))
+   (float default_pitch_pos_stop (Default 0))
+   (float default_pitch_neg_stop (Default 0))
+   (float default_pitch_mass (Default 0))
+   (float default_pitch_damping (Default 0))
+   (float default_pitch_force (Default 0))
+   (float default_pitch_switch (Default 0))
+   (float default_pitch_trim_vel (Default 0))
+   (float default_pitch_init_trim_pos (Default 0))
+
+   ; pitch channel configuration
+   (float pitch_pos_trim_stop (Default 0))
+   (float pitch_neg_trim_stop (Default 0))
+   (float pitch_spring_slope1 (Default 0))
+   (float pitch_spring_slope2 (Default 0))
+   (float pitch_spring_slope3 (Default 0))
+   (float pitch_spring_slope4 (Default 0))
+   (float pitch_spring_slope5 (Default 0))
+   (float pitch_spring_break1 (Default 0))
+   (float pitch_spring_break2 (Default 0))
+   (float pitch_spring_break3 (Default 0))
+   (float pitch_spring_break4 (Default 0))
+   (float pitch_breakout_level (Default 0))
+   (float pitch_breakout_grad (Default 0))
+
+
+   ; select roll parameters, see SideStickInputParams.hxx
+   ; ROLL_NONE = none, ROLL_ALL = all;
+   (int use_roll_params (Default ROLL_NONE))
+
+   ; roll channel default inputs
+   (float default_roll_friction (Default 0))
+   (float default_roll_jam_pos (Default 0))
+   (float default_roll_pos_stop (Default 0))
+   (float default_roll_neg_stop (Default 0))
+   (float default_roll_mass (Default 0))
+   (float default_roll_damping (Default 0))
+   (float default_roll_force (Default 0))
+   (float default_roll_switch (Default 0))
+   (float default_roll_trim_vel (Default 0))
+   (float default_roll_init_trim_pos (Default 0))
+
+   ; roll channel configuration
+   (float roll_pos_trim_stop (Default 0))
+   (float roll_neg_trim_stop (Default 0))
+   (float roll_spring_slope1 (Default 0))
+   (float roll_spring_slope2 (Default 0))
+   (float roll_spring_slope3 (Default 0))
+   (float roll_spring_slope4 (Default 0))
+   (float roll_spring_slope5 (Default 0))
+   (float roll_spring_break1 (Default 0))
+   (float roll_spring_break2 (Default 0))
+   (float roll_spring_break3 (Default 0))
+   (float roll_spring_break4 (Default 0))
+   (float roll_breakout_level (Default 0))
+   (float roll_breakout_grad (Default 0))
+)

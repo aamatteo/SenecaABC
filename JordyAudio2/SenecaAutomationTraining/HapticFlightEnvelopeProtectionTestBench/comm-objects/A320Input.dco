@@ -1,0 +1,37 @@
+; DLR A320 inputs
+(Type double)
+(Type int)
+(Type bool)
+
+
+(Stream A320Input
+  (Option hdf5)
+  ; Throttle setting: range 0-1, 0=0kN, 1=108 kN / engine
+  (double throttle_setting_left (Default 0.0))
+  (double throttle_setting_right (Default 0.0))
+  ; Commanded roll rate [rad/s]
+  (double phidot_com (Default 0.0))
+  ; Commanded pitch rate [rad/s]
+  (double thetadot_com (Default 0.0))
+  ; Commanded load factor [-]
+  (double n_com (Default 0.0))
+  ; Commanded side slip angle [rad]
+  (double beta_com (Default 0.0))
+  ; Enable/disable roll commanded to maintain heading
+  (bool doSteadyHeadingSideslip (Default 1))
+  ; Enable/disable Pitch commanded to maintain flight path angle
+  (bool doPitchTurnCompensation (Default 1))
+  ; AP setpoints: for MCP and displays
+
+  ; Enable/disable autothrottle
+  (bool doAutothrottle (Default 1))
+  ; Autothrottle spd setpoint [m/s]
+  (double VCAS_com (Default 100.0))
+  (double setpoint_mach ( Default 0 ))
+  (double setpoint_hdg  ( Default 0 ))
+  (double setpoint_alt  ( Default 0 ))
+  (double setpoint_vspd ( Default 0 ))
+  (int nd_range ( Default 0 ))
+  ; Commanded flaps configuration
+  (int flapconfig (Default 0))
+)

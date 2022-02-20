@@ -1,0 +1,5 @@
+(Type double)
+
+(EventAndStream MotionFilterUserData
+	(double data 6 )
+)

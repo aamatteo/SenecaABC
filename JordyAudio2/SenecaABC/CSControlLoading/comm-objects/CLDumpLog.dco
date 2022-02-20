@@ -1,0 +1,29 @@
+(Type uint16_t)
+(Type float)
+;; Dump of control loading main variables
+;; Used for post-mortem, or for logging at high frequency
+(Stream CLDumpLog
+	(ConstructorCode "
+for (int ii = 3; ii--; ) {
+  this->u[ii] = 0.0f; this->x[ii] = 0.0f; this->t[ii] = 0.0f;
+  this->m[ii] = 0.0f; this->p[ii] = 0.0f; this->e[ii] = 0.0f;
+  this->device_status[ii] = uint16_t(0); this->sim_phase[ii] = uint16_t(0);
+}")
+	; input to the valve
+	(float u 3)
+	; measured position
+	(float x 3)
+	; target position
+	(float t 3)
+	; measured moment
+	(float m 3)
+	; measured pressure
+	(float p 3)
+	; device status
+	; extra value, currently energy state
+	(float e 3)
+	; status of the device logic
+	(uint16_t device_status 3)
+	; model simulation phase
+	(uint16_t sim_phase 3) )
+

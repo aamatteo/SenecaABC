@@ -1,0 +1,40 @@
+;; -*-scheme-*-
+
+(define mymotionfilter
+	(make-motion-filter-classical-16
+			;; "safe" default
+			'add-parameter-set cw16param0
+
+			;; offline tuned sets
+			'add-parameter-set cw16param10 ;; sway oriented
+			'add-parameter-set cw16param20 ;; full sway focus
+			'add-parameter-set cw16param30 ;; roll oriented
+			'add-parameter-set cw16param40 ;; full roll focus
+			
+			;; offline tuned sets - 3rd order heave
+			'add-parameter-set cw16param11
+			'add-parameter-set cw16param21
+			'add-parameter-set cw16param31
+			'add-parameter-set cw16param41
+			
+			;; offline tuned sets - no heave
+			'add-parameter-set cw16param12
+			'add-parameter-set cw16param22
+			'add-parameter-set cw16param32
+			'add-parameter-set cw16param42
+			
+			;; offline tuned sets - severely down-tuned heave
+			'add-parameter-set cw16param13
+			'add-parameter-set cw16param23
+			'add-parameter-set cw16param33
+			'add-parameter-set cw16param43
+			
+			;; online tuning sets - copy of last offline set
+			'add-parameter-set cw16param14
+			'add-parameter-set cw16param24
+			'add-parameter-set cw16param34
+			'add-parameter-set cw16param44
+			
+			'select-parameter-set 0
+	)
+)

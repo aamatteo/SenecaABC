@@ -1,0 +1,22 @@
+(Type bool)
+
+; Controller switches, which are inputs
+(EventAndStream ControllerSwitches
+	(bool Enable (Default false))
+
+	(bool Reset (Default false))
+		
+	(bool IndiOnOff (Default false))
+	(bool PchOnOff (Default false))
+	(bool CstarOnOff (Default false))
+	
+	(bool ActrMdlIndiOnOff (Default false))
+	(bool ActrMdlPchOnOff (Default false))
+	
+	(bool BetaEstOnOff (Default false))
+	
+	(bool AlphaVaneOnOff (Default false))
+	
+	(bool doTurnComp (Default false))
+	(bool doRollBeta (Default false))
+)

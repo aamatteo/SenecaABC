@@ -1,0 +1,56 @@
+(Type double)
+(Type bool)
+(Type vstring "#include <stringoptions.h>")
+
+;; This provides the information of the ILS from the ILSModel, hence I supply you with the information of where you are relative to the ILS
+;;    If you are not sure how to get the correct cooridnates, look into HapticFlightEnvelopeProtectionTestBench/common/properties/Position.hxx, if you want to handle angles? Look at Angle.hxx in there
+(Stream ILSModelOutput
+	( Option hdf5 )
+	;; The difference in ILS course versus "Your heading to the ILS", positive if you are right of the localizer [rad]
+	;; Note that this one also includes the false lobes
+	( double localizer_indication ( Default 0 ) )
+	;; If you really want to have a clean signal, you can use this one [rad]
+	( double localizer_raw ( Default 0 ) )
+	;; If you want to use the deviation for a score, you might need the deviation in meters (as this is more honest because angles change when getting closer) [m]
+	( double localizer_raw_meters ( Default 0 ) )
+	;; Sometimes something is wrong with the signal, this is flagged with this bool when false
+	( bool localizer_indication_valid ( Default false ) )
+
+	;; Difference between the glide slope and "Your slope to the ILS", positive if you are above the glide slope [rad]
+	;; Note that this one also includes the false lobes
+	( double glide_slope_indication ( Default 0 ) )
+	;; If you really want to have a clean signal, you can use this one [rad]
+	( double glide_slope_raw ( Default 0 ) )
+	;; If you want to use the deviation for a score, you might need the deviation in meters (as this is more honest because angles change when getting closer) [m]
+	( double glide_slope_raw_meters ( Default 0 ) )
+	;; Sometimes something is wrong with the signal, this is flagged with this bool when false
+	( bool glide_slope_indication_valid ( Default false ) )
+
+	;; Sometimes you want information on what you selected in the ILS model
+	( double localizer_selected_track ( Default 0 ) )
+	( double glide_slope_selected_slope ( Default 0 ) )
+
+	;; Slant range, the distance from you till the beacon itself (including the altitude difference) [M]
+	( double slant_range ( Default 0 ) )
+
+	;; The markers indicate where you are along the glide slope
+	;; This outer marker is the furtest away, if this is true, you are in the beam of the marker
+	( bool outer_marker ( Default false ) )
+	;; This middle marker is between outer and inner, if this is true, you are in the beam of the marker
+	( bool middle_marker ( Default false ) )
+	;; This inner marker is closest to the RWY, hopefully you are established? If this is true, you are in the beam of the marker
+	( bool inner_marker ( Default false ) )
+
+	;; The TO-flag is true is you are flying towards the beacon.
+	;; It basically means that the radial you selected is in the other direction from where you are going.
+	;; With TO, you should follow the needle
+	;; When FROM, you should avoid the needle
+	( bool to_flag ( Default true ) )
+
+	;; This is some extra information which is loaded from file, which you can show the pilot if you want
+	;; The identifier show which beacon is active
+	( vstring identifier ( Default "" ) )
+
+	;; The frequency is where the electromagnetic signals are transmitted (DUH)
+	( vstring frequency ( Default "" ) )
+)

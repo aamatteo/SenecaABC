@@ -1,0 +1,12 @@
+;; Which weather scenario do we want to use?
+( Type vstring "#include <stringoptions.h>" )
+( Type bool )
+
+( Event WeatherScenario
+	( Option hdf5 )
+	;; Switch this bool or I won't do anything
+	( bool trigger ( Default false ) )
+
+	;; The name of the scenario
+	( vstring scenario ( Default "" ) )
+)

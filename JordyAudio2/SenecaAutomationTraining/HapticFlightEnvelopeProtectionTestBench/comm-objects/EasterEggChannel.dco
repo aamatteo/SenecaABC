@@ -1,0 +1,15 @@
+(Enum Country uint32_t
+  ;; Do these values need a comment?
+  BELGIUM
+  NETHERLANDS
+  GERMANY
+  MAX_COUNTRIES
+)
+(Type bool)
+
+(Stream EasterEggChannel
+  (Country country_sound)
+  (bool    country_sound_trigger (Default false))
+
+  (bool    nyan_cat              (Default false))
+)

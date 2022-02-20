@@ -1,0 +1,22 @@
+(Type float)
+
+(EventAndStream SideStickOutput
+
+	; pitch channel
+	(float pitch_fwd_pos)
+	(float pitch_fwd_vel)
+	(float pitch_act_force)
+	(float pitch_cable_force)
+	(float pitch_trim_pos)
+	(float pitch_aft_pos)
+	(float pitch_act_pos)
+
+	; roll channel
+	(float roll_fwd_pos)
+	(float roll_fwd_vel)
+	(float roll_act_force)
+	(float roll_cable_force)
+	(float roll_trim_pos)
+	(float roll_aft_pos)
+	(float roll_act_pos)
+)

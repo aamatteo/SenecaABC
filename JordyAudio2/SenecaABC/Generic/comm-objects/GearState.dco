@@ -1,0 +1,40 @@
+(Type double)
+(Enum GearStateType uint8_t
+      ; Gear is down and locked
+      DownAndLocked
+      ; Gear is moving in
+      Retracting
+      ; Gear is moving out
+      Extending
+      ; Gear is stationary (handle not released)
+      Stationary
+      ; Gear is in
+      Retracted
+      ; Gear handle is not set correctly in inco
+      IncoMismatch
+)
+
+(Enum HandleStateType uint8_t
+      ; released and down
+      ReleasedDown      
+      ; released and in neutral
+      ReleasedNeutral
+      ; released and up
+      ReleasedUp
+      ; pulled and down
+      PulledDown      
+      ; pulled and in neutral
+      PulledNeutral
+      ; pulled and up
+      PulledUp)
+
+;; Class that describes the manipulations of the gear handle, the current
+;; extension position of the gear and the state of the gear. 
+(Stream GearState 
+     ;; Extension position of the gear. 0 = retracted, 1 = extended
+     (double position)
+     ;; State of movement of the gear
+     (GearStateType gearstate)
+     ;; current selection from the handle
+     (HandleStateType handlestate))
+      

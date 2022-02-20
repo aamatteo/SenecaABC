@@ -1,0 +1,6 @@
+(Type int)
+
+(Event DataLoggerOutput
+	( Option hdf5 )
+	( int run_number ( Default 0 ) )
+)

@@ -1,0 +1,21 @@
+(Type float)
+
+(Stream Gas_Pedal_Command_Channel
+	;; The feedback force on the gas pedal in [N]
+	(float feedback_force (Default 0.0) )
+	
+	;; Additional stiffess of the gas pedal in [Nm]
+	(float stiffness (Default 0.0) )
+	
+	;; Additional damping of the gas pedal in [Nm/s]
+	(float damping (Default 0.0) )
+	
+	;; The vibration frequency of the gas pedal [Hz]
+	(float shaker_frequency (Default 0.0) )
+	
+	;; The force amplitude of the pedal vibration [N]
+	(float shaker_amplitude (Default 0.0) )
+	
+	;; A rerecorded position of the pedal in % of the total (100% max)
+	(float playback_position (Default 0.0) )
+)

@@ -1,0 +1,35 @@
+(Type int)
+(Type bool)
+(Type vstring "#include <stringoptions.h>")
+
+(Enum Conditions uint32_t
+  ;; Do these values need a comment?
+  TRAINING
+  WINDSHEAR
+  ICING
+  RUNWAY
+  GOAROUND
+
+  ;; And the maximum value to check the validity of the entry
+  MAX_CONDITIONS
+)
+
+(Event SimConfig
+  ( Option hdf5 )
+  (vstring    ac_inco_file          ( Default "" ) )
+  (vstring    vor_file              ( Default "" ) )
+  (vstring    flight_plan_file      ( Default "" ) )
+  (vstring    subject_name          ( Default "" ) )
+  (Conditions condition             ( Default TRAINING ) )
+  (bool       use_normal_law        ( Default false ) )
+  (bool       use_haptics           ( Default false ) )
+  (bool       use_visual_protection ( Default false ) )
+  (bool       use_static_protection ( Default false ) )
+  (int        bank_protection_angle ( Default 33    ) )
+  (int        bank_max_angle        ( Default 67    ) )
+  (int        missed_app_alt_ft     ( Default 0     ) )
+  (int        ga_trigger_alt_ft     ( Default 0     ) )
+  (vstring    ils_display_file      ( Default ""    ) )
+  (vstring    ils_score_file        ( Default ""    ) )
+  (vstring    weather_scenario_file ( Default ""    ) )
+ )

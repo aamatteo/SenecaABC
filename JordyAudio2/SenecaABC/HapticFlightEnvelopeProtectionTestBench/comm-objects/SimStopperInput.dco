@@ -1,0 +1,14 @@
+( Type double )
+
+;; This channels provides the properties used by the SimStopper to trigger a hold current event
+;; Remember that the variables below can be in whatever units you want, as long as you match the options to the input.
+( Stream SimStopperInput
+	( Option hdf5 )
+	( double altitude   ( Default 0 ) )
+	( double pitch      ( Default 0 ) )
+	( double velocity   ( Default 0 ) )
+	( double roll       ( Default 0 ) )
+	( double loadfactor ( Default 0 ) )
+	( double latitude   ( Default 0 ) )
+	( double longitude  ( Default 0 ) )
+)

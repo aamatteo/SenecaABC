@@ -1,0 +1,52 @@
+(Type float)
+(Type double)
+(Type bool)
+
+(EventAndStream AircraftData
+                (Option hdf5)
+		(ConstructorCode "
+for (unsigned ii = 2; ii--; ) {
+  N1[ii] = 0.0f;
+  FuelUsed[ii] = 0.0f;
+}")
+	(float PBody (Default 0.0f))
+	(float QBody (Default 0.0f))
+	(float RBody (Default 0.0f))
+	(float Phi (Default 0.0f))
+	(float Theta (Default 0.0f))
+	(float Psi (Default 0.0f))
+	(float PsiMag (Default 0.0f))   ; extra
+	(float AltBaro (Default 0.0f))  ; baro corrected alt (QNH)
+	(float VertSpd (Default 0.0f))
+	(float AltGnd (Default 0.0f))   ; radio alt
+	(float Mach (Default 0.0f))
+	(float DynPress (Default 0.0f))
+	(float VTrue (Default 0.0f))
+	(float VCAS (Default 0.0f))
+	(float VEAS (Default 0.0f))
+	(float Alpha (Default 0.0f))
+	(float AlphaBoom (Default 0.0f))
+	(float BetaBoom (Default 0.0f))
+	(float N1 2)
+	(float FuelUsed 2)
+	(float Axb (Default 0.0f))
+	(float Ayb (Default 0.0f))
+	(float Azb (Default 0.0f))
+	(float Gamma (Default 0.0f))
+	(float Ghi (Default 0.0f))
+	(float VGnd (Default 0.0f))
+	(float DeltaAil (Default 0.0f))
+	(float DeltaElev (Default 0.0f))
+	(float DeltaRud (Default 0.0f))
+	(float StickX (Default 0.0f))
+	(float StickY (Default 0.0f))
+
+	; new
+	(float Flaps (Default 0.0f))
+	(bool Gear (Default false))
+
+	; extra
+	(float StaticTemp (Default 0.0f))
+	(float TotalTemp (Default 0.0f))
+	(float StaticPres (Default 101325.0f))
+)

@@ -1,0 +1,6 @@
+(Type float)
+
+(Stream Gas_Pedal_Playback_Channel
+	;; A rerecorded position of the pedal in % of the total (100% max)
+	(float playback_position (Default 0.0) )
+)

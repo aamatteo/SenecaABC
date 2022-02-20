@@ -1,0 +1,12 @@
+(Type float)
+
+(Stream Steering_Wheel_Command_Channel
+  ;; feedback force from IDSS
+  (float feedback_force (Default 0.0) )	
+  
+  ;; feedback stiffness from IDSS
+  (float feedback_stiffness (Default 0.0) )	
+      	
+  ;; the optimal steering angle determined by the IDSS [deg]. The SteeringWheelIO module will not do anything with this parameter. Just for logging purposes.
+  (float optimal_wheel_angle)
+)

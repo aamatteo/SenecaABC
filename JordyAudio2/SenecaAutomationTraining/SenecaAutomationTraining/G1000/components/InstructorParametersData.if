@@ -1,0 +1,14 @@
+;; -*-mode: scheme-*-
+(Type bool)
+(Type float)
+
+(ComponentInterface InstructorParametersData
+
+		    (bool show_instructor (Default false))
+		    (float fuel_left  (Default 0.0))
+		    (float fuel_right (Default 0.0))
+
+		    (float height     (Default 0.0))
+		    (float min_height (Default 0.0))
+		    )
+

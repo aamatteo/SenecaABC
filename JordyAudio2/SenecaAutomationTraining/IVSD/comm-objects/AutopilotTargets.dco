@@ -1,0 +1,9 @@
+;; -*-mode: scheme-*-
+(Type double)
+
+(Stream AutopilotTargets
+        (double Vcmd     (Default 0.0))
+        (double Vx       (Default 0.0))
+        (double Vmin     (Default 0.0))
+        (double Vmax     (Default 0.0))
+	(double altitude (Default 0.0)) )

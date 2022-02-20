@@ -1,0 +1,28 @@
+# this file creates all links to files in the data directory needed for
+# running the application is a specific machine. 
+#
+# example
+# ln -sf $DATADIR/*.cnf .
+DATADIR=../../run-data
+
+# make a link in case files with specified extension are found
+makelink(){
+	[[ -n $(ls $DATADIR/*.$1) ]] && ln -sfv $DATADIR/*.$1 . || echo "No '$1'-files found.";
+}
+
+makelink cnf
+makelink dat
+makelink star
+makelink tga
+#makelink txt
+
+# INCO files, only those for the Seneca
+ln -sfv $DATADIR/inco_seneca/*.inco .
+ln -sfv $DATADIR/inco_seneca/template.inco.txt .
+
+# NAV files
+ln -sfv $DATADIR/*.nav .
+
+# Scenario files
+ln -sfv $DATADIR/scenarios/*.sce .
+

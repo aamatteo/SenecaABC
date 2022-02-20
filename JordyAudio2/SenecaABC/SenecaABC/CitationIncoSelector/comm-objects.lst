@@ -1,0 +1,18 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+# specify these with the .dco extension, examples:
+# CitationExample/comm-objects/MyDataObject.dco
+# Generic/comm-objects/PrimaryControls.dco
+# CitationExample/comm-objects/TurbulenceConfiguration.dco
+# HapticFlightEnvelopeProtectionTestBench/comm-objects/FGWeatherInput.dco
+
+CitationApproach/comm-objects/STARSelect.dco
+CitationExample/comm-objects/SnapshotRequest.dco
+CitationExample/comm-objects/CitationOutput.dco
+CitationDemo/comm-objects/CitationPilotInput.dco
+Asym1/comm-objects/Reposition.dco
+Asym1/comm-objects/Trim_inco.dco
+
+SenecaABC/comm-objects/INCOSelect.dco
+SenecaABC/comm-objects/WindEvent.dco
+

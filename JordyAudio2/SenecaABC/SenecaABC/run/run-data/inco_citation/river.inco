@@ -1,0 +1,27 @@
+# Citation state inco file, generated on 21-Jan-2005 at 15:08:55.
+# Description: CitationApproach River scenario
+#	state value  	state description
+1	+0.000000e+000	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+2	+0.000000e+000	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+3	+0.000000e+000	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+4	+1.286000e+002	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+5	+9.163859e-003	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+6	-2.077264e-012	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+7	+0.000000e+000	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+8	+9.163859e-003	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+9	+7.333000e-001	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+10	+2.133600e+003	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+11	-2.814000e+003	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+12	-5.914000e+003	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EQM/Integrator
+13	+2.570837e-003	Citation/Cessna Citation 500/Actuators/de/Integrator
+14	+5.542440e-013	Citation/Cessna Citation 500/Actuators/da/Integrator
+15	-2.774622e-012	Citation/Cessna Citation 500/Actuators/dr/Integrator
+16	+0.000000e+000	Citation/Cessna Citation 500/Controllers/Yaw damper/Washout
+17	+0.000000e+000	Citation/Cessna Citation 500/Actuators/flaps/Integrator
+18	+0.000000e+000	Citation/Cessna Citation 500/Actuators/gear/Integrator
+19	+7.964127e+001	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EFM/Engmod/Citation eng_mod/Subsystem1/JT15 Dynamic/Subsystem/engine/Fan/N1 state
+20	+7.964127e+001	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EFM/Engmod/Citation eng_mod/Subsystem1/JT15 Dynamic1/Subsystem/engine/Fan/N1 state
+21	+7.853982e-001	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/WIND//TURBULENCE/Logarithmic Wind model/Logarithmic Wind model/Windddirection/Parameter
+22	+0.000000e+000	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/WIND//TURBULENCE/Logarithmic Wind model/Logarithmic Wind model/Vwind915/Parameter
+23	+8.308240e+001	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EFM/Engmod/Citation eng_mod/Subsystem1/JT15 Dynamic/Subsystem/engine/Gasgenerator/N2 state
+24	+8.308240e+001	Citation/Cessna Citation 500/Citation model DASMAT/AIRCRAFT MODEL/EFM/Engmod/Citation eng_mod/Subsystem1/JT15 Dynamic1/Subsystem/engine/Gasgenerator/N2 state

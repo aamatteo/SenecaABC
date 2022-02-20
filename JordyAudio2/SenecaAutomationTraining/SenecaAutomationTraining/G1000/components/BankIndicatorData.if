@@ -1,0 +1,6 @@
+(Type float)
+
+(ComponentInterface BankIndicatorData
+		    (float roll (Default 0.0))
+		    (float Y_fycg (Default 0.0))
+)

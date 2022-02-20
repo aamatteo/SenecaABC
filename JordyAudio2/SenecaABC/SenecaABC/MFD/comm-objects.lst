@@ -1,0 +1,21 @@
+# this file contains a list of all communicated objects needed by this 
+# specific module
+# specify these with the .dco extension, examples:
+# IVSD/comm-objects/MyDataObject.dco
+# Generic/comm-objects/PrimaryControls.dco
+
+#IVSD/comm-objects/CitationOut.dco
+#IVSD/comm-objects/AutopilotTargets.dco
+
+#Generic/comm-objects/SecondaryControls.dco
+
+
+CitationExample/comm-objects/CitationOutput.dco
+IVSD/comm-objects/AutopilotTargets.dco
+Generic/comm-objects/SecondaryControls.dco
+SenecaABC/comm-objects/AP2G1000Channel.dco
+SenecaABC/comm-objects/AutopilotChannel.dco
+SenecaABC/comm-objects/FailureEvent.dco
+SenecaABC/comm-objects/ManifoldChannel.dco
+SenecaABC/comm-objects/APIncoEvent.dco
+SenecaABC/comm-objects/GFC700Event.dco

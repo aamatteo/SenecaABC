@@ -1,0 +1,5 @@
+*.timinglog
+*.activitylog
+*.log
+*.glade
+*.nav

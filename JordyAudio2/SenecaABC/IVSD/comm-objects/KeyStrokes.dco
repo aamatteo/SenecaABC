@@ -1,0 +1,6 @@
+(Type int)
+
+;; NOTE: you need at least DUECA 0.10.30 for this to work
+(Stream KeyStrokes
+  (int zoomfactor)
+)

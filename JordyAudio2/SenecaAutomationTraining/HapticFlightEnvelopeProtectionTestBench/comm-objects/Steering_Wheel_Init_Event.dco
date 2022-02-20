@@ -1,0 +1,13 @@
+(Type float)
+
+(Event Steering_Wheel_Init_Event
+   ;; Inherent steering wheel stiffness gain
+   (float Kk_i (Default 1.0) )
+   ;; Inherent steering wheel damping gain
+   (float Kb_i (Default 0.0) )
+   ;; Inherent steering wheel mass gain
+   (float Km_i (Default 0.0) )
+
+   ;; friction force [N]
+   (float Ff (Default 0.0) )
+)

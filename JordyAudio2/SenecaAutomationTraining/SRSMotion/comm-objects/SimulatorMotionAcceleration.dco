@@ -1,0 +1,14 @@
+(Type double)
+
+;internal motion accelerations + output for logging (29APR2002)
+;06JUN2002 translational acc's now assumed in sim inertial
+;FROM GenericMotionFilter, MotionLimiter
+;TO MotionLimiter, MotionLogger
+(EventAndStream SimulatorMotionAcceleration
+	(double xdotdot)
+	(double ydotdot)
+	(double zdotdot)
+	(double pdot)
+	(double qdot)
+	(double rdot)
+)

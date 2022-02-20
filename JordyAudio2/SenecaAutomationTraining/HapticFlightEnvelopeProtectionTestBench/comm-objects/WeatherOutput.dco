@@ -1,0 +1,19 @@
+; Windshear module wind components output and icing
+(Type double)
+(Type bool)
+
+(Stream WeatherOutput
+  ( Option hdf5 )
+  ; Wind Components
+  (double uE (Default 0.0))
+  (double vE (Default 0.0))
+  (double wE (Default 0.0))
+  (double uT (Default 0.0))
+  (double vT (Default 0.0))
+  (double wT (Default 0.0))
+  (bool icing_enabled (Default false))
+  (bool windshear_warning (Default false))
+
+  ; Icing value range 0-1, [-]
+  (double icing (Default 0.0))
+)

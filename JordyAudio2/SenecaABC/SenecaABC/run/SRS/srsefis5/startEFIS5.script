@@ -1,0 +1,3 @@
+#!/bin/bash
+
+__GL_FSAA_MODE=10 __GL_LOG_MAX_ANISO=1 xinit ../../../dueca_run.x -- :1 -layout LayoutEfis5 -nocursor -novtswitch 

@@ -1,0 +1,24 @@
+(Type vstring "#include <stringoptions.h>")
+(Type bool)
+
+(IterableType CommandVector "
+#include <fixvector.hxx>
+#include <stringoptions.h>
+typedef dueca::fixvector< 20, vstring > CommandVector;")
+
+(Event TelnetInput
+;; This one doesnt work for now  ( Option hdf5 )
+  ;; The command is only used when you put this switch to one.
+  ;; This is used to protect from total fools using this
+  ( bool command_ready ( Default false ) )
+
+  ;; This actually is the command which you want to send/t
+  ( vstring command ( Default "" ) )
+
+  ;; As an upgrade, I add a vector for sending a sequence of commands
+  ;; Can be useful when using NASAL code over telnet to remove an entire set of properties
+  ( bool command_vector_ready ( Default false ) )
+
+  ;; The actual vector of commands
+  ( CommandVector command_vector )
+)

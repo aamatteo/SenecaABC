@@ -1,0 +1,23 @@
+# this file contains a list of all modules needed for your application
+# on a specific machine
+# note that the comm-objects directories should not be listed here
+# example:
+# SenecaABC/some-module
+
+# pedals/CL
+CSControlLoading/ControlLoading 
+CSControlLoading/CLConfigurations 
+CSControlLoading/CLTools
+CSControlLoading/cl-analyser
+CSControlLoading/IOController
+CSControlLoading/scripts
+
+# pedestal
+SRS/b777-ts
+SRS/udp-connector
+UDPSlave/udp-writer
+UDPSlave/udp-reader
+
+# switches etc.
+SRS/control-switches
+SRS/gear-lever

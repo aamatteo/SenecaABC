@@ -1,0 +1,18 @@
+(Type float)
+
+(Stream Disturbance_Channel
+	;; Force disturbance value
+	(float force_disturbance (Default 0.0) )
+	
+	;; Force disturbance value in Newtons
+	(float force_disturbance_Newtons (Default 0.0) )
+
+	;; Force disturbance gain value
+  	(float force_disturbance_gain (Default 0.0) )
+  	
+	;; Force disturbance ratio value. Value is between [0, 1]. 0=use low gain; 1=use high gain; in between is transient gain
+	(float disturbance_ratio (Default 0.0) )
+	
+	;; Disturbance value for a controlled system
+	(float system_disturbance)
+)

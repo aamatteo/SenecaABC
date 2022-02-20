@@ -1,0 +1,18 @@
+;; on-off indication
+(Type bool)
+
+;; typical switches on secondary control inputs
+(EventAndStream SecondarySwitches
+		(Option hdf5)
+		;; autothrottle disconnect
+		(bool AT_disconnect (Default false))
+		;; left engine ignition
+		(bool ignition_left (Default false))
+		;; right engine ignition
+		(bool ignition_right (Default false))
+		;; gear selected to raise
+		(bool gear_up (Default false))
+		;; gear handle in neutral
+		(bool gear_neutral (Default false))
+		;; gear selected to lower
+		(bool gear_down (Default false)))

@@ -1,0 +1,8 @@
+(Type int)
+(Type vstring "#include <stringoptions.h>")
+
+(Event INCOSelect
+	(int id (Default 0))
+	(vstring name)
+	(vstring note)
+)

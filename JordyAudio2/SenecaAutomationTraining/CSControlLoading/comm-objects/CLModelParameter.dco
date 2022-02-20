@@ -1,0 +1,119 @@
+(IterableType CLModelParameterDoubleVector "
+#ifndef CL_MODEL_PARAMETER_SIZE
+#define CL_MODEL_PARAMETER_SIZE 6
+#endif
+#include <fixvector.hxx>
+typedef dueca::fixvector< CL_MODEL_PARAMETER_SIZE, double > CLModelParameterDoubleVector;")
+
+(IterableType CLModelParameterBoolVector "
+#ifndef CL_MODEL_PARAMETER_SIZE
+#define CL_MODEL_PARAMETER_SIZE 6
+#endif
+#include <fixvector.hxx>
+typedef dueca::fixvector< CL_MODEL_PARAMETER_SIZE, bool > CLModelParameterBoolVector;")
+
+; These are some hacking variables for the elaborate spring profile
+(Type bool)
+(IterableType CLModelSpringDoubleVector "
+#ifdef CSMODEL_USE_MULTIPLE_SPRINGS
+#define CSMODEL_MAX_SPRINGS_CHANNEL CSMODEL_USE_MULTIPLE_SPRINGS
+#else
+#define CSMODEL_MAX_SPRINGS_CHANNEL 8
+#endif
+#include <fixvector.hxx>
+typedef dueca::fixvector< CSMODEL_MAX_SPRINGS_CHANNEL, double > CLModelSpringDoubleVector;")
+
+(IterableType CLModelPosDoubleVector "
+#ifdef  CSMODEL_USE_MULTIPLE_SPRINGS
+#define CSMODEL_MAX_POSITION_CHANNEL ( CSMODEL_USE_MULTIPLE_SPRINGS + 1 )
+#else
+#define CSMODEL_MAX_POSITION_CHANNEL 9
+#endif
+#include <fixvector.hxx>
+typedef dueca::fixvector< CSMODEL_MAX_POSITION_CHANNEL, double > CLModelPosDoubleVector;")
+
+
+; This communicatable object transmits the settings for a cl model
+; back to the control loading simulation. Note that you can enable
+; or disable setting the settings with the 'enable'-bool
+; The CLModelParameter version has been configured for 6 cl axes.
+; Note that for now, I only implement the springs
+(Stream CLModelParameter
+(Option hdf5)
+
+    ;; Do we use a certain axes?
+    ( CLModelParameterBoolVector use_axes           ( Default false ) )
+
+    ;; Spring coefficient lower end of spectrum.
+    ( CLModelParameterBoolVector   do_spring_low    ( Default false ) )
+    ( CLModelParameterDoubleVector spring_low       ( Default 0.0   ) )
+
+    ;; Spring coefficient middle for both pos and negative deflections
+    ( CLModelParameterBoolVector   do_spring_middle_neg ( Default false ) )
+    ( CLModelParameterDoubleVector spring_middle_neg    ( Default 0.0   ) )
+    ( CLModelParameterBoolVector   do_spring_middle_pos ( Default false ) )
+    ( CLModelParameterDoubleVector spring_middle_pos    ( Default 0.0   ) )
+
+    ;; Spring coefficient high.
+    ( CLModelParameterBoolVector   do_spring_high   ( Default false ) )
+    ( CLModelParameterDoubleVector spring_high      ( Default 0.0   ) )
+
+    ;; Minimum position.
+    ( CLModelParameterBoolVector   do_xmin          ( Default false ) )
+    ( CLModelParameterDoubleVector xmin             ( Default 0.0   ) )
+
+    ;; Transition between low and middle spring.
+    ( CLModelParameterBoolVector   do_xlow          ( Default false ) )
+    ( CLModelParameterDoubleVector xlow             ( Default 0.0   ) )
+
+    ;; Neutral position.
+    ( CLModelParameterBoolVector   do_xneutral      ( Default false ) )
+    ( CLModelParameterDoubleVector xneutral         ( Default 0.0   ) )
+
+    ;; Transition between middle and high spring.
+    ( CLModelParameterBoolVector   do_xhigh         ( Default false ) )
+    ( CLModelParameterDoubleVector xhigh            ( Default 0.0   ) )
+
+    ;; Maximum position.
+    ( CLModelParameterBoolVector   do_xmax          ( Default false ) )
+    ( CLModelParameterDoubleVector xmax             ( Default 0.0   ) )
+
+    ( bool                      do_springs_0 ( Default false ) )
+    ( CLModelSpringDoubleVector springs_0    ( Default 0.0   ) )
+    ( bool                      do_springs_1 ( Default false ) )
+    ( CLModelSpringDoubleVector springs_1    ( Default 0.0   ) )
+
+    ( bool                   do_x_es_0 ( Default false ) )
+    ( CLModelPosDoubleVector x_es_0    ( Default 0.0   ) )
+    ( bool                   do_x_es_1 ( Default false ) )
+    ( CLModelPosDoubleVector x_es_1    ( Default 0.0   ) )
+)
+
+;;    ;; Inertia of the simulated loader
+;;    ( CLModelParameterBoolVector   do_inertia       ( Default false ) )
+;;    ( CLModelParameterDoubleVector inertia          ( Default 0.0   ) )
+;;
+;;    ;; Damping coefficient.
+;;    ( CLModelParameterBoolVector   do_damping       ( Default false ) )
+;;    ( CLModelParameterDoubleVector damping          ( Default 0.0   ) )
+;;
+;;    ;; Break-out force, for breaking out of middle.
+;;    ( CLModelParameterBoolVector   do_break_out     ( Default false ) )
+;;    ( CLModelParameterDoubleVector break_out        ( Default 0.0   ) )
+;;
+;;    ;; Fraction of the mass that is involved in the break_out mechanism.
+;;    ( CLModelParameterBoolVector   do_bsfract       ( Default false ) )
+;;    ( CLModelParameterDoubleVector bsfract          ( Default 0.0   ) )
+;;
+;;    ;; Impact energy at break-out transition.
+;;    ( CLModelParameterBoolVector   do_break_impact  ( Default false ) )
+;;    ( CLModelParameterDoubleVector break_impact     ( Default 0.0   ) )
+;;
+;;    ;; Moving friction.
+;;    ( CLModelParameterBoolVector   do_friction      ( Default false ) )
+;;    ( CLModelParameterDoubleVector friction         ( Default 0.0   ) )
+;;
+;;    ;; Static friction.
+;;    ( CLModelParameterBoolVector   do_stiction      ( Default false ) )
+;;    ( CLModelParameterDoubleVector stiction         ( Default 0.0   ) )
+;;

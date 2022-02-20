@@ -1,0 +1,11 @@
+(Type float)
+
+(Event Trim_inco
+		(float de_trim)
+		(float da_trim)
+		(float dr_trim)
+		(float pla1_trim)
+		(float pla2_trim)
+		(float gear_trim)
+		(float flaps_trim))
+

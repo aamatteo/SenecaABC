@@ -1,0 +1,15 @@
+(Type float)
+(Enum safety_type uint8_t 
+	HI_PHI
+	HI_THETA
+	HI_GAMMA
+	HI_SINK
+	LO_SPD
+	NO_GEAR
+)
+
+(Event SafetyEvent
+	(safety_type type)
+	(float value)	
+	(float altitude)
+)

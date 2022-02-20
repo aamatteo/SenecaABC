@@ -1,0 +1,38 @@
+# -*-makefile-*-
+# ============================================================================
+#       item            : template Makefile dueca executable
+#       made by         : Ren� van Paassen
+#       date            : 010320
+# ============================================================================
+
+# =========================================================================
+#
+# EDIT THIS SECTION TO CHOOSE DIFFERENT DUECA COMPONENTS OR ADD EXTRA 
+# LIBRARIES TO LINK IN WITH YOUR PROGRAM
+#
+# =========================================================================
+
+# enter a component choice for DUECA (check dueca-config for possible values) 
+DCOMPONENTS =	 --ip --dusime --extra --gtk2 --gtkmm --rtwv70 --hmi --xml
+
+# optionally, add includes and defines that are common to all modules
+COMMON_INCLUDES = # $(shell pkg-config --cflags dueca-rtw-7.0)
+
+# specify which extra libs need to be included in the app
+# all dueca's stuff is already handled by the DCOMPONENTS and 
+# dueca-config
+EXTRALIBS = -lalut -lopenal $(shell pkg-config --libs sdl2 hmilib-aux hmilib-glfont hmilib-ftgl)
+# for WAVPlayer
+
+# A second batch of extra libraries can be specified. This batch is 
+# included *after* all dueca's libs
+EXTRALIBS2 =  -lclodterrain -lboost_chrono -lboost_filesystem -lboost_system -lboost_regex -lhmi-aux
+
+# Quick fix needed after every update
+# rename u_int32_t to uint32_t in ../SRSMotion/comm-objects/MotionBaseResultData.dco
+# shell sed -i -- 's/u_int32_t/uint32_t/g' ../SRSMotion/comm-objects/MotionBaseResultData.dco
+# still have to figure out how this can be included
+
+# the rest is handled by generic rules
+TAILFILE =	$(shell dueca-config --path-datafiles)/data/MakefileTail.app
+include $(TAILFILE)

@@ -1,0 +1,23 @@
+(Type double)
+(Type int)
+(Type VisualAircraft "#include \"VisualAircraft.hxx\"")
+
+;total data packet sent over to simFusions
+;FROM VisualDisplayProxy
+;TO Vega(external)
+(Event SimFusionDriveData
+	(double x)
+	(double y)
+	(double z)
+	(double phi)
+	(double theta)
+	(double psi)
+	(double n1left)
+	(double n1right)
+	(double tas)
+	(double vrange)
+	(int sounds)
+	(int switches)
+	(int test)
+	(VisualAircraft traffic -1)
+)

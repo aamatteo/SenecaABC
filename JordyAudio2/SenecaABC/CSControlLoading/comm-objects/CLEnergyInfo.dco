@@ -1,0 +1,18 @@
+; -*-scheme-*-
+
+(Type float)
+(Type uint32_t)
+
+; debug signal for energy information stuff, focuses on a single channel
+(EventAndStream 
+ CLEnergyInfo
+ (Option hdf5)
+ (ConstructorCode "
+for (int ii = 16; ii--; ) {
+  v[ii] = 0.0;
+}")
+ ; a vector with logging parameters
+ (float v 16)
+ ; status word describing model and device logic
+ (uint32_t status (Default 0))
+ )

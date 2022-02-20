@@ -1,0 +1,12 @@
+(Type double)
+(Type bool)
+
+(EventAndStream CitationConfiguration
+	;; auto throttle enable
+	(bool auto_throttle_enable (Default false))
+	;; auto throttle setpoint [m/s]
+	(double auto_throttle_setpoint (Default 128.6f))
+	
+	;; yaw damper enable
+	(bool yaw_damper_enable (Default true))
+)

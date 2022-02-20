@@ -1,0 +1,15 @@
+(Type double)
+(Type int)
+
+;cg corrected viewpoint position
+;FROM CabinPositionCorrector
+;TO VisualDisplayProxy
+(EventAndStream VehicleCabPosition
+	(double x)
+	(double y)
+	(double z)
+	(double phi)
+	(double theta)
+	(double psi)
+	(int test)
+)

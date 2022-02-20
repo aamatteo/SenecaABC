@@ -1,0 +1,6 @@
+(Type float)
+
+(Stream Solo_flap_channel
+
+		(float flap_setting))
+

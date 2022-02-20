@@ -1,0 +1,62 @@
+(Type int)
+(Type double)
+
+(Event Lm2ParameterSet (Inherits ScriptCreatable)
+	(int id)
+	; classical washout parameters
+	(double tilt_coordination_method)
+	(double surge_gain)    
+	(double surge_hp_wn)
+	(double surge_hp_z)
+	(double surge_lp_wn)
+	(double surge_lp_z)
+	(double sway_gain) ; not used
+	(double sway_hp_wn) ; not used
+	(double sway_hp_z) ; not used
+	(double sway_lp_wn) ; not used
+	(double sway_lp_z) ; not used
+	(double heave_gain)
+	(double heave_hp_wn)
+	(double heave_hp_z)
+	(double roll_gain) ; not used
+	(double roll_hp_wn) ; not used
+	(double pitch_gain)
+	(double pitch_hp_wn)
+	(double yaw_gain)
+	(double yaw_hp_wn)
+	; turn surge tilt coordination on (1) or off (0)
+	(double surge_tilt_gain)
+	; turn sway tilt coordination on (1) or off (0)
+	(double sway_tilt_gain)
+	; lm2 parameters 
+	(double lm2_ref_pos_ac_x)
+	(double lm2_ref_pos_ac_y)
+	(double lm2_ref_pos_ac_z)
+	(double lm2_ref_pos_sim_x)
+	(double lm2_ref_pos_sim_y)
+	(double lm2_ref_pos_sim_z)
+	(double lm2_roll_HPomega)
+        (double lm2_roll_HPygamma)
+	(double lm2_roll_HPzeta)  
+	(double lm2_roll_Ky)		
+	(double lm2_roll_acc_limit) 
+	(double lm2_roll_kphi)		
+	(double lm2_roll_rate_limit)
+	(double lm2_roll_servo_w)	
+	(double lm2_roll_servo_z)	
+	(double lm2_sway_HPgain)	 
+	(double lm2_sway_HPomega)	
+	(double lm2_sway_HPzeta)	 
+	(double lm2_sway_LPgain)
+	(double lm2_sway_LPomega)
+	(double lm2_sway_LPomega_p)
+	(double lm2_sway_LPomega_r)
+	(double lm2_sway_LPzeta)	
+	(double lm2_sway_LPzeta_p)
+	(double lm2_sway_LPzeta_r)
+	(double lm2_sway_servo_w) 
+	(double lm2_sway_servo_z) 
+	(double lm2_yaw_acc_limit)
+	; eliminated (for now) parameters
+	(double lm2_yaw_rate_limit)
+)

@@ -1,0 +1,25 @@
+# this file contains a list of all modules needed for your application
+# on a specific machine
+# note that the comm-objects directories should not be listed here
+# example:
+# SenecaABC/some-module
+SenecaABC/CitationIncoSelector 
+SenecaABC/CitationLogger 
+SenecaABC/CitationModelInclude 
+SenecaABC/ECI 
+SenecaABC/Malfunctions 
+SenecaABC/WAVPlayer 
+SenecaABC/WeatherProxy 
+
+Generic/joystick HEAD
+MCP737/MCP737GUI HEAD
+
+MotionFiltersRTW70/motion-filter-tuner-gui
+
+SRSMotion/motion-viewer HEAD
+SRSMotion/motion-configurater HEAD
+SRSMotion/simple-motion-logger HEAD
+
+SRSToolbox/GearSelector HEAD
+CitationApproach/FlapSelector HEAD
+

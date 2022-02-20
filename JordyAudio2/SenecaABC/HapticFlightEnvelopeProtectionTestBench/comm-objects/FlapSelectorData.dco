@@ -1,0 +1,7 @@
+( Type int )
+
+( Event FlapSelectorData
+	( Option hdf5 )
+	;; The flap setting you want to communicate
+	( int flaps ( Default 0 ) )
+)

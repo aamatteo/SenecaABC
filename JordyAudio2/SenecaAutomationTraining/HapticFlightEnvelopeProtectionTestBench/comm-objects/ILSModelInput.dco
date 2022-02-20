@@ -1,0 +1,21 @@
+(Type double)
+
+;; This provides the information of the ILS to the ILSMOdel, hence you supply me with the information on how you want the ILS to behave
+;;    If you are not sure how to get the correct cooridnates, look into HapticFlightEnvelopeProtectionTestBench/common/properties/Position.hxx
+(Event ILSModelInput
+	( Option hdf5 )
+	;; The origin from which the ILS beam originates, latitude in latlonalt [rad]
+	( double origin_latitude   ( Default 0 ) )
+
+	;; The origin from which the ILS beam originates, longitude in latlonalt [rad]
+	( double origin_longtitude ( Default 0 ) )
+
+	;; The origin from which the ILS beam originates, altitude relative to the standard earth radius (6371km) in latlonalt [m]
+	( double origin_altitude   ( Default 0 ) )
+
+	;; Heading of the ILS beam, relative to the north [rad]
+	( double heading           ( Default 0 ) )
+
+	;; Slope of the ILS beam, relative to the horizontal plane [rad]
+	( double slope             ( Default 0 ) )
+)

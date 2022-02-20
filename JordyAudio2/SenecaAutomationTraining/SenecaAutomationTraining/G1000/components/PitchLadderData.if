@@ -1,0 +1,7 @@
+(Type float)
+
+(ComponentInterface PitchLadderData
+		    (float pitch (Default 0.0))
+		    (float roll  (Default 0.0))
+		    (float dummy (Default 0.0))
+		    )

@@ -1,0 +1,5 @@
+(Type double)
+
+(Event VisualDelayMeasurement
+	(double delay)
+)

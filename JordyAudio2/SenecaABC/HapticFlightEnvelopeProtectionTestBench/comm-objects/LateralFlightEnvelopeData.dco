@@ -1,0 +1,19 @@
+(Type double)
+
+;; The lateral flight envelope is defined by the data contained in this channel.
+;; Extra functions are available through the LateralFlightEnvelope-class
+(EventAndStream LateralFlightEnvelopeData
+	( Option hdf5 )
+
+	;; The hacking things
+	(double m_time_one                    ( Default 1 ))
+	(double m_time_three                  ( Default 3 ))
+
+    ;; The information on the extreme values
+	( double m_max_bank_angle_left     ( Default 67.0 ) )
+	( double m_max_bank_angle_right    ( Default 67.0 ) )
+
+    ;; The information on the extreme values
+	( double m_margin_bank_angle_left  ( Default 34.0 ) )
+	( double m_margin_bank_angle_right ( Default 34.0 ) )
+)

@@ -1,0 +1,13 @@
+(Type float)
+(Type int)
+(Type bool)
+
+(ComponentInterface VerticalSpeedTapeData
+		    (float hdot (Default 0.0))
+		    (float target_vs (Default 0.0))
+		    (int curVerticalState (Default 0))
+		    (float Vtas (Default 0.0))
+		    (bool ADC_failure (Default false))
+		    (bool clogged_sp (Default false))
+		    (float dt (Default 0.01))
+)

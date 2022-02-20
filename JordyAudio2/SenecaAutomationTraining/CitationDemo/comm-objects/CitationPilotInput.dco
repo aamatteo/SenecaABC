@@ -1,0 +1,19 @@
+(Type float)
+
+(EventAndStream CitationPilotInput
+	; primary controls
+	(float de)
+	(float da)
+	(float dr)
+	
+	; secondary controls
+	(float df)
+	(float pla1)
+	(float pla2)
+
+	; primary switches (pitch trim)
+	; handled by FCSAdapter, included in de
+
+	; secondary switches
+	(float gear)
+)
