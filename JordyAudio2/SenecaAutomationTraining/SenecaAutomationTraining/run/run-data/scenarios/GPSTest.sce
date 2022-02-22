@@ -24,7 +24,7 @@ fg_visibility		8000	in meters
 fg_cloud2_alt		2500	ft # 0=SCT 1=BKN 2=OVC
 
 failureEvent
-eventtime		30000
+eventtime		30
 GPS_failure		1
 
 
