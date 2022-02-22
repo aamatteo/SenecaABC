@@ -62,6 +62,12 @@ private: // channel access
   // ChannelWriteToken   w_mytoken;
 
   ChannelWriteToken w_comm; // added by Matteo Piras
+
+
+
+
+
+
   StreamChannelReadToken<CitationOutput> citation_token;
 
 

@@ -505,6 +505,80 @@
 					'set-looping #f
 					'add-controlled-static-sound "audiot" "PHDOC2lg.wav"
 					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phdoc1" "PHDOC1.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phdoc3" "PHDOC3.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phdoc4" "PHDOC4.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phspz1" "PHSPZ1.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phspz2" "PHSPZ2.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phspz3" "PHSPZ3.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phspz4" "PHSPZ4.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phspz5" "PHSPZ5.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phspz6" "PHSPZ6.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phspz7" "PHSPZ7.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phspz8" "PHSPZ8.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phspz9" "PHSPZ9.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phsvt1" "PHSVT1.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phsvt2" "PHSVT2.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phsvt3" "PHSVT3.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "phsvt4" "PHSVT4.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr1" "TWR1.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr2" "TWR2.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr3" "TWR3.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr4" "TWR4.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr5" "TWR5.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr6" "TWR6.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr7" "TWR7.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr8" "TWR8.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr9" "TWR9.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr10" "TWR10.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr11" "TWR11.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr12" "TWR12.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr13" "TWR13.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr14" "TWR14.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr15" "TWR15.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr16" "TWR16.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr17" "TWR17.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr18" "TWR18.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr19" "TWR19.wav"
+					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr20" "TWR20.wav"
+					'set-coordinates 0 0 0 0 0 0
+					
+
 
 
                                        )
