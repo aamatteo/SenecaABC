@@ -1,4 +1,4 @@
-# Install script for directory: /home/matteo/Desktop/JordyW/SenecaAutomationTraining
+# Install script for directory: /home/matteo/Desktop/JordyAudio2-backup/SenecaAutomationTraining
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/matteo/Desktop/JordyW/SenecaAutomationTraining/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/matteo/Desktop/JordyAudio2-backup/SenecaAutomationTraining/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

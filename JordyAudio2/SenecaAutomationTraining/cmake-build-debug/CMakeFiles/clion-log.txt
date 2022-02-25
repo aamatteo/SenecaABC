@@ -1,4 +1,4 @@
-/home/matteo/clion-2021.1.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/matteo/Desktop/JordyW/SenecaAutomationTraining
+/home/matteo/clion-2021.1.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/matteo/Desktop/JordyAudio2-backup/SenecaAutomationTraining
 -- The C compiler identification is GNU 9.3.0
 -- The CXX compiler identification is GNU 9.3.0
 -- Detecting C compiler ABI info
@@ -13,4 +13,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/matteo/Desktop/JordyW/SenecaAutomationTraining/cmake-build-debug
+-- Build files have been written to: /home/matteo/Desktop/JordyAudio2-backup/SenecaAutomationTraining/cmake-build-debug

@@ -13,7 +13,7 @@
 (define use-flightgear      #t)
 (define use-weather         #f)
 ;; sounds
-(define use-sound       #t)
+(define use-sound           #t)
 ;; motion
 (define show-motion         #f)
 (define log-motion          #f)
@@ -553,6 +553,8 @@
 					'set-coordinates 0 0 0 0 0 0
 					'add-controlled-static-sound "twr8" "TWR8.wav"
 					'set-coordinates 0 0 0 0 0 0
+					'add-controlled-static-sound "twr8bis" "TWR8BIS.wav"
+					'set-coordinates 0 0 0 0 0 0
 					'add-controlled-static-sound "twr9" "TWR9.wav"
 					'set-coordinates 0 0 0 0 0 0
 					'add-controlled-static-sound "twr10" "TWR10.wav"
@@ -577,7 +579,7 @@
 					'set-coordinates 0 0 0 0 0 0
 					'add-controlled-static-sound "twr20" "TWR20.wav"
 					'set-coordinates 0 0 0 0 0 0
-					
+
 
 
 

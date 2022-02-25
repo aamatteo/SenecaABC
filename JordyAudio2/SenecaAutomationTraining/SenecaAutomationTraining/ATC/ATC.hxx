@@ -23,7 +23,7 @@ USING_DUECA_NS;
 #include "comm-objects.h"
 
 // include headers for functions/classes you need in the module
-
+#include <ctime>
 #include "StatesOutputs.h"
 
 CitationOutput co; // assigns a reference name to the channel;
@@ -47,6 +47,11 @@ private: // simulation data
   // declare the data you need in your simulation
   float lat,lon ;
   bool  playcomm;
+  clock_t time_req;
+  clock_t audio_trigger_time;
+  clock_t audio_trigger_doc2;
+  clock_t audio_trigger_twr2;
+
 
 
 private: // trim calculation data
@@ -62,21 +67,45 @@ private: // channel access
   // ChannelWriteToken   w_mytoken;
 
   ChannelWriteToken w_comm; // added by Matteo Piras
-
-
-
-
-
+  ChannelWriteToken w_doc1;
+  ChannelWriteToken w_doc3;
+  ChannelWriteToken w_doc4;
+  ChannelWriteToken w_spz1;
+  ChannelWriteToken w_spz2;
+  ChannelWriteToken w_spz3;
+  ChannelWriteToken w_spz4;
+  ChannelWriteToken w_spz5;
+  ChannelWriteToken w_spz6;
+  ChannelWriteToken w_spz7;
+  ChannelWriteToken w_spz8;
+  ChannelWriteToken w_spz9;
+  ChannelWriteToken w_svt1;
+  ChannelWriteToken w_svt2;
+  ChannelWriteToken w_svt3;
+  ChannelWriteToken w_svt4;
+  ChannelWriteToken w_twr1;
+  ChannelWriteToken w_twr2;
+  ChannelWriteToken w_twr3;
+  ChannelWriteToken w_twr4;
+  ChannelWriteToken w_twr5;
+  ChannelWriteToken w_twr6;
+  ChannelWriteToken w_twr7;
+  ChannelWriteToken w_twr8;
+  ChannelWriteToken w_twr8bis;
+  ChannelWriteToken w_twr9;
+  ChannelWriteToken w_twr10;
+  ChannelWriteToken w_twr11;
+  ChannelWriteToken w_twr12;
+  ChannelWriteToken w_twr13;
+  ChannelWriteToken w_twr14;
+  ChannelWriteToken w_twr15;
+  ChannelWriteToken w_twr16;
+  ChannelWriteToken w_twr17;
+  ChannelWriteToken w_twr18;
+  ChannelWriteToken w_twr19;
+  ChannelWriteToken w_twr20;
 
   StreamChannelReadToken<CitationOutput> citation_token;
-
-
-
-
-
-
-
-
 
 private: // activity allocation
   /** You might also need a clock. Don't mis-use this, because it is

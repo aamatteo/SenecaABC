@@ -106,6 +106,10 @@ ATC::ATC(Entity* e, const char* part, const
   lat(0),
   lon(0),
   playcomm(true),
+  time_req(0.0),
+  audio_trigger_time(0.0),
+  audio_trigger_doc2(0.0),
+  audio_trigger_twr2(0.0),
 
   // initialize the data you need for the trim calculation
 
@@ -123,7 +127,153 @@ ATC::ATC(Entity* e, const char* part, const
          "AudioObjectFixed", "audiot", Channel::Events,
          Channel::OneOrMoreEntries, Channel::MixedPacking),
 
+  w_doc1(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phdoc1", Channel::Events,
 
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+  w_doc3(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phdoc3", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_doc4(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phdoc4", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_spz1(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phspz1", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_spz2(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phspz2", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_spz3(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phspz3", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_spz4(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phspz4", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_spz5(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phspz5", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_spz6(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phspz6", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_spz7(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phspz7", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_spz8(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phspz8", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_spz9(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phspz9", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_svt1(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phsvt1", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_svt2(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phsvt2", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_svt3(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phsvt3", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_svt4(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "phsvt4", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr1(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr1", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr2(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr2", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr3(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr3", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr4(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr4", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr5(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr5", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr6(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr6", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr7(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr7", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr8(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr8", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr8bis(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr8bis", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr9(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr9", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr10(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr10", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr11(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr11", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr12(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr12", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr13(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr13", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr14(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr14", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr15(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr15", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr16(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr16", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr17(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr17", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr18(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr18", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr19(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+         "AudioObjectFixed", "twr19", Channel::Events,
+         Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+  w_twr20(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+          "AudioObjectFixed", "twr20", Channel::Events,
+          Channel::OneOrMoreEntries, Channel::MixedPacking),
 
 
 
@@ -342,25 +492,85 @@ void ATC::doCalculation(const TimeSpec& ts)
     //lat  = c.y[Y_y];
     //lon  = c.y[Y_x];
 
-    std::cout << "LONG IS :";
-    std::cout << lon << std::endl;
-    std::cout << "playcomm is : ";
-    std::cout << playcomm << std::endl;
+    //std::cout << "LONG IS :";
+    //std::cout << lon << std::endl;
+    //std::cout << "playcomm is : ";
+    //std::cout << playcomm << std::endl;
 
 
     if (lon < 14000 && playcomm == true){
+        // time_req = clock();
+        // std::cout << "TIME REQ START IS  : %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" << std::endl;
+        // std::cout <<time_req << std::endl;
 
-    //if (lon < 15000){
-        DataWriter<AudioObjectFixed> sndcomm(w_comm, ts);
-        sndcomm.data().volume = 1.0f;
-        sndcomm.data().pitch = 1.0;
-        D_MOD("COMM TESTING POSITIVE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+        DataWriter<AudioObjectFixed> snddoc1(w_doc1, ts);
+        snddoc1.data().volume = 1.0f;
+        snddoc1.data().pitch = 1.0;
+        //D_MOD("COMM TESTING POSITIVE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
         playcomm = false;
-        std::cout << playcomm;
+        audio_trigger_time = clock();
+
+        //std::cout << playcomm;
+
+        // time_req = clock() - time_req;
+        //time_req = (float)time_req/CLOCKS_PER_SEC;
+
+        // std::cout << "TIME END IS  :";
+        // std::cout << time_req << std::endl;
+        // std::cout << "_________________________________________________________________________________________________________%";
+
+                //if(time_req > 10) {
+                  //DataWriter <AudioObjectFixed> sndtwr1(w_twr1, ts);
+                  //sndtwr1.data().volume = 1.0f;
+                  //sndtwr1.data().pitch = 1.0;
+                //
+    }
+
+    if (audio_trigger_time != clock_t(0.0) && (clock() - audio_trigger_time)/CLOCKS_PER_SEC > 15) {
+      DataWriter <AudioObjectFixed> sndtwr1(w_twr1, ts);
+      sndtwr1.data().volume = 1.0f;
+      sndtwr1.data().pitch = 1.0;
+
+      audio_trigger_time = clock_t(0.0);
+      //playcomm = true;
+
+      audio_trigger_doc2 = clock();
 
     }
-    std::cout << "PLAYCOMM AFTER IS : ";
-    std::cout << playcomm << std::endl;
+
+    if (audio_trigger_doc2 != clock_t(0.0) && (clock() - audio_trigger_doc2)/CLOCKS_PER_SEC > 16) {
+      DataWriter <AudioObjectFixed> snddoc2(w_comm, ts);
+      snddoc2.data().volume = 1.0f;
+      snddoc2.data().pitch = 1.0;
+
+      audio_trigger_doc2 = clock_t(0.0);
+      audio_trigger_twr2 = clock();
+    }
+
+
+    if (audio_trigger_twr2 != clock_t(0.0) && (clock() - audio_trigger_twr2)/CLOCKS_PER_SEC > 8) {
+      DataWriter <AudioObjectFixed> sndtwr2(w_twr2, ts);
+      sndtwr2.data().volume = 1.0f;
+      sndtwr2.data().pitch = 1.0;
+
+      audio_trigger_twr2 = clock_t(0.0);
+
+    }
+
+
+
+
+
+
+    //std::cout << time_req << std::endl;
+    //std::cout << clock() << std::endl;
+
+
+
+
+
+    //std::cout << "PLAYCOMM AFTER IS : ";
+    //std::cout << playcomm << std::endl;
 
 
     /**
