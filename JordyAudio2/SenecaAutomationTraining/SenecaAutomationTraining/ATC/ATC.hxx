@@ -46,11 +46,18 @@ class ATC: public SimulationModule
 private: // simulation data
   // declare the data you need in your simulation
   float lat,lon ;
-  bool  playcomm;
+  bool  playcomm1, playcomm2;
   clock_t time_req;
   clock_t audio_trigger_time;
   clock_t audio_trigger_doc2;
   clock_t audio_trigger_twr2;
+  clock_t audio_trigger_twr4;
+  clock_t audio_trigger_doc3;
+  clock_t audio_trigger_twr5;
+  clock_t audio_trigger_doc4;
+  clock_t audio_trigger_twr6;
+  clock_t audio_trigger_twr3;
+
 
 
 

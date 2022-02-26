@@ -105,11 +105,15 @@ ATC::ATC(Entity* e, const char* part, const
 
   lat(0),
   lon(0),
-  playcomm(true),
+  playcomm1(true),
+  playcomm2(true),
   time_req(0.0),
   audio_trigger_time(0.0),
   audio_trigger_doc2(0.0),
   audio_trigger_twr2(0.0),
+  audio_trigger_doc4(0.0),
+  audio_trigger_twr3(0.0),
+
 
   // initialize the data you need for the trim calculation
 
@@ -498,7 +502,7 @@ void ATC::doCalculation(const TimeSpec& ts)
     //std::cout << playcomm << std::endl;
 
 
-    if (lon < 14000 && playcomm == true){
+    if (lon < 14500 && playcomm1 == true){
         // time_req = clock();
         // std::cout << "TIME REQ START IS  : %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" << std::endl;
         // std::cout <<time_req << std::endl;
@@ -507,7 +511,7 @@ void ATC::doCalculation(const TimeSpec& ts)
         snddoc1.data().volume = 1.0f;
         snddoc1.data().pitch = 1.0;
         //D_MOD("COMM TESTING POSITIVE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
-        playcomm = false;
+        playcomm1 = false;
         audio_trigger_time = clock();
 
         //std::cout << playcomm;
@@ -554,8 +558,116 @@ void ATC::doCalculation(const TimeSpec& ts)
       sndtwr2.data().pitch = 1.0;
 
       audio_trigger_twr2 = clock_t(0.0);
+      audio_trigger_twr4 = clock();
 
     }
+
+
+    if (audio_trigger_twr4 != clock_t(0.0) && (clock() - audio_trigger_twr4)/CLOCKS_PER_SEC > 24) {
+      DataWriter <AudioObjectFixed> sndtwr4(w_twr4, ts);
+      sndtwr4.data().volume = 1.0f;
+      sndtwr4.data().pitch = 1.0;
+
+      audio_trigger_twr4 = clock_t(0.0);
+      audio_trigger_doc3 = clock();
+
+    }
+
+
+    if (audio_trigger_doc3 != clock_t(0.0) && (clock() - audio_trigger_doc3)/CLOCKS_PER_SEC > 20) {
+      DataWriter <AudioObjectFixed> snddoc3(w_doc3, ts);
+      snddoc3.data().volume = 1.0f;
+      snddoc3.data().pitch = 1.0;
+
+      audio_trigger_doc3 = clock_t(0.0);
+      audio_trigger_twr5 = clock();
+
+
+    }
+
+    if (audio_trigger_twr5 != clock_t(0.0) && (clock() - audio_trigger_twr5)/CLOCKS_PER_SEC > 7) {
+      DataWriter <AudioObjectFixed> sndtwr5(w_twr5, ts);
+      sndtwr5.data().volume = 1.0f;
+      sndtwr5.data().pitch = 1.0;
+
+      audio_trigger_twr5 = clock_t(0.0);
+      audio_trigger_doc4 = clock();
+
+
+    }
+
+
+    if (audio_trigger_doc4 != clock_t(0.0) && (clock() - audio_trigger_doc4)/CLOCKS_PER_SEC > 6) {
+      DataWriter <AudioObjectFixed> snddoc4(w_doc4, ts);
+      snddoc4.data().volume = 1.0f;
+      snddoc4.data().pitch = 1.0;
+
+      audio_trigger_doc4 = clock_t(0.0);
+      audio_trigger_twr6 = clock();
+
+
+    }
+
+    if (audio_trigger_twr6 != clock_t(0.0) && (clock() - audio_trigger_twr6)/CLOCKS_PER_SEC > 6) {
+      DataWriter <AudioObjectFixed> sndtwr6(w_twr6, ts);
+      sndtwr6.data().volume = 1.0f;
+      sndtwr6.data().pitch = 1.0;
+
+      audio_trigger_twr6 = clock_t(0.0);
+
+
+
+    }
+
+
+//############################################################# second latitude trigger
+
+
+    if (lon < 11000 && playcomm2 == true){
+      // time_req = clock();
+      // std::cout << "TIME REQ START IS  : %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" << std::endl;
+      // std::cout <<time_req << std::endl;
+
+      DataWriter<AudioObjectFixed> sndsvt1(w_svt1, ts);
+      sndsvt1.data().volume = 1.0f;
+      sndsvt1.data().pitch = 1.0;
+      //D_MOD("COMM TESTING POSITIVE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+      playcomm2 = false;
+      audio_trigger_twr3 = clock();
+
+      //std::cout << playcomm;
+
+      // time_req = clock() - time_req;
+      //time_req = (float)time_req/CLOCKS_PER_SEC;
+
+      // std::cout << "TIME END IS  :";
+      // std::cout << time_req << std::endl;
+      // std::cout << "_________________________________________________________________________________________________________%";
+
+      //if(time_req > 10) {
+      //DataWriter <AudioObjectFixed> sndtwr1(w_twr1, ts);
+      //sndtwr1.data().volume = 1.0f;
+      //sndtwr1.data().pitch = 1.0;
+      //
+    }
+
+    if (audio_trigger_twr3 != clock_t(0.0) && (clock() - audio_trigger_twr3)/CLOCKS_PER_SEC > 6) {
+      DataWriter <AudioObjectFixed> sndtwr3(w_twr3, ts);
+      sndtwr3.data().volume = 1.0f;
+      sndtwr3.data().pitch = 1.0;
+
+      audio_trigger_twr3 = clock_t(0.0);
+      //playcomm = true;
+      
+
+    }
+
+
+
+
+
+
+
 
 
 

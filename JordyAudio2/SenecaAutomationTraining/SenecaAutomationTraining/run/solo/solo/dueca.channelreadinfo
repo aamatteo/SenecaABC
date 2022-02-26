@@ -118,10 +118,6 @@
   Multiple        20      0,33         0      1
   Multiple        20      0,36         0      1
   Multiple        20      0,37         0      1
-  Multiple        50      0,27         1      1
-  Multiple        50      0,27         0      1
-  Multiple        50      0,33         1      1
-  Multiple        50      0,33         0      1
       byId        56      0,37         0      1
       byId        56      0,37         1      1
       byId        56      0,37         2      1
@@ -176,7 +172,11 @@
       byId        56      0,37        51      0
       byId        56      0,37        52      0
       byId        56      0,37        53      0
+  Multiple        25      0,20         0      1
+  Multiple        50      0,27         1      1
+  Multiple        50      0,27         0      1
+  Multiple        50      0,33         1      1
+  Multiple        50      0,33         0      1
   Multiple        60      0,30         0      1
   Multiple        44      0,33         0      1
   Multiple        43      0,33         0      1
-  Multiple        25      0,20         0      1
