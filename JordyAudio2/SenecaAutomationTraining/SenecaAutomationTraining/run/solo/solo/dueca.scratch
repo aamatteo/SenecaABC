@@ -859,4 +859,4 @@
 ;; comment-column: 0 **
 ;; End:
 (pass-control 2) ; *Added by ScriptInterpret*
-(quit) ; *Added by ScriptInterpret*
+(quit)

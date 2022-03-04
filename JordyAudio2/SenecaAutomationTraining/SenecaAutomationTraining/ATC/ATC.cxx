@@ -105,14 +105,37 @@ ATC::ATC(Entity* e, const char* part, const
 
   lat(0),
   lon(0),
+  gear(0.0),
+  alt(0.0),
   playcomm1(true),
   playcomm2(true),
+  playcomm3(true),
+  playcomm4(true),
+  playcomm5(true),
+  playcomm6(false),
   time_req(0.0),
   audio_trigger_time(0.0),
   audio_trigger_doc2(0.0),
   audio_trigger_twr2(0.0),
   audio_trigger_doc4(0.0),
   audio_trigger_twr3(0.0),
+  audio_trigger_svt2(0.0),
+  audio_trigger_spz1(0.0),
+  audio_trigger_twr7(0.0),
+  audio_trigger_spz2(0.0),
+  audio_trigger_twr8(0.0),
+  audio_trigger_spz3(0.0),
+  audio_trigger_twr8bis(0.0),
+  audio_trigger_spz4(0.0),
+  audio_trigger_twr9(0.0),
+  audio_trigger_twr12(0.0),
+  audio_trigger_twr17(0.0),
+  audio_trigger_spz6(0.0),
+  audio_trigger_twr16(0.0),
+  audio_trigger_spz7(0.0),
+  audio_trigger_twr18(0.0),
+  audio_trigger_svt4(0.0),
+  audio_trigger_twr20(0.0),
 
 
   // initialize the data you need for the trim calculation
@@ -123,6 +146,9 @@ ATC::ATC(Entity* e, const char* part, const
   //           MyData::classname, 0, Channel::Events, Channel::ReadAllData),
   // w_mytoken(getId(), NameSet(getEntity(), MyData::classname, part),
   //           MyData::classname, "label", Channel::Continuous),
+
+
+  pilot_input_token(getId(), NameSet(getEntity(), "CitationPilotInput", part), 101),
 
   // sample communication
 
@@ -363,6 +389,7 @@ bool ATC::isPrepared()
 
   CHECK_TOKEN(w_comm);
   CHECK_TOKEN(citation_token);
+  CHECK_TOKEN(pilot_input_token);
 
   D_MOD("PREPARED");
 
@@ -436,15 +463,35 @@ void ATC::doCalculation(const TimeSpec& ts)
 
       lon = cit.data().y[Y_y];
       lat = cit.data().y[Y_x];
+      alt = cit.data().y[Y_h];
+
 
 
     }
+
+
     catch(Exception& e)
     {
       W_MOD(getId()<< classname << " caught " << e << " @ " << ts <<
                    " -- reading CitationOutput Channel");
     }
 
+
+    try
+    {
+      StreamReader<CitationPilotInput> pint(pilot_input_token, ts);
+
+      gear = pint.data().gear;
+
+
+
+    }
+
+    catch(Exception& e)
+    {
+      W_MOD(getId()<< classname << " caught " << e << " @ " << ts <<
+                   " -- reading CitationPilotInput Channel");
+    }
 
 
 
@@ -484,13 +531,33 @@ void ATC::doCalculation(const TimeSpec& ts)
 
       lon = cit.data().y[Y_y];
       lat = cit.data().y[Y_x];
+      alt = cit.data().y[Y_h];
+
 
 
 
     }
+
     catch(Exception& e) {
       W_MOD(getId() << classname << " caught " << e << " @ " << ts <<
                     " -- reading CitationOutput Channel");
+    }
+
+
+    try
+    {
+      StreamReader<CitationPilotInput> pint(pilot_input_token, ts);
+
+      gear = pint.data().gear;
+
+
+
+    }
+
+    catch(Exception& e)
+    {
+      W_MOD(getId()<< classname << " caught " << e << " @ " << ts <<
+                   " -- reading CitationPilotInput Channel");
     }
 
     //lat  = c.y[Y_y];
@@ -502,7 +569,7 @@ void ATC::doCalculation(const TimeSpec& ts)
     //std::cout << playcomm << std::endl;
 
 
-    if (lon < 14500 && playcomm1 == true){
+    if (lon < 15500 && playcomm1 == true){
         // time_req = clock();
         // std::cout << "TIME REQ START IS  : %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" << std::endl;
         // std::cout <<time_req << std::endl;
@@ -657,8 +724,274 @@ void ATC::doCalculation(const TimeSpec& ts)
       sndtwr3.data().pitch = 1.0;
 
       audio_trigger_twr3 = clock_t(0.0);
+      audio_trigger_svt2 = clock();
       //playcomm = true;
       
+
+    }
+
+    if (audio_trigger_svt2 != clock_t(0.0) && (clock() - audio_trigger_svt2)/CLOCKS_PER_SEC > 6) {
+      DataWriter <AudioObjectFixed> sndsvt2(w_svt2, ts);
+      sndsvt2.data().volume = 1.0f;
+      sndsvt2.data().pitch = 1.0;
+
+      audio_trigger_svt2 = clock_t(0.0);
+
+      //playcomm = true;
+
+
+    }
+
+
+    if (lon < 9500 && playcomm3 == true){
+      // time_req = clock();
+      std::cout << "SECOND LONGITUDE TRIGGER ACTIVATED %%%%%%%%%%%%%" << std::endl;
+      // std::cout <<time_req << std2 ::endl;
+
+      DataWriter<AudioObjectFixed> sndspz1(w_spz1, ts);
+      sndspz1.data().volume = 1.0f;
+      sndspz1.data().pitch = 1.0;
+
+      playcomm3 = false;
+
+      audio_trigger_twr7 = clock();
+
+    }
+
+
+    if (audio_trigger_twr7 != clock_t(0.0) && (clock() - audio_trigger_twr7)/CLOCKS_PER_SEC > 9) {
+      DataWriter <AudioObjectFixed> sndtwr7(w_twr7, ts);
+      sndtwr7.data().volume = 1.0f;
+      sndtwr7.data().pitch = 1.0;
+
+      audio_trigger_twr7 = clock_t(0.0);
+      audio_trigger_spz2  = clock();
+
+      //playcomm = true;
+
+
+    }
+
+    if (audio_trigger_spz2 != clock_t(0.0) && (clock() - audio_trigger_spz2)/CLOCKS_PER_SEC > 9) {
+      DataWriter <AudioObjectFixed> sndspz2(w_spz2, ts);
+      sndspz2.data().volume = 1.0f;
+      sndspz2.data().pitch = 1.0;
+
+      audio_trigger_spz2 = clock_t(0.0);
+      audio_trigger_twr8 = clock();
+
+      //playcomm = true;
+
+
+    }
+
+    if (audio_trigger_twr8 != clock_t(0.0) && (clock() - audio_trigger_twr8)/CLOCKS_PER_SEC > 21) {
+      DataWriter <AudioObjectFixed> sndtwr8(w_twr8, ts);
+      sndtwr8.data().volume = 1.0f;
+      sndtwr8.data().pitch = 1.0;
+
+      audio_trigger_twr8 = clock_t(0.0);
+      audio_trigger_spz3 = clock();
+
+      //playcomm = true;
+
+
+    }
+
+    if (audio_trigger_spz3 != clock_t(0.0) && (clock() - audio_trigger_spz3)/CLOCKS_PER_SEC > 10) {
+      DataWriter <AudioObjectFixed> sndspz3(w_spz3, ts);
+      sndspz3.data().volume = 1.0f;
+      sndspz3.data().pitch = 1.0;
+
+      audio_trigger_spz3 = clock_t(0.0);
+      audio_trigger_twr8bis = clock();
+
+      //playcomm = true;
+
+
+    }
+
+    if (audio_trigger_twr8bis != clock_t(0.0) && (clock() - audio_trigger_twr8bis)/CLOCKS_PER_SEC > 14) {
+      DataWriter <AudioObjectFixed> sndtwr8bis(w_twr8bis, ts);
+      sndtwr8bis.data().volume = 1.0f;
+      sndtwr8bis.data().pitch = 1.0;
+
+      audio_trigger_twr8bis = clock_t(0.0);
+      audio_trigger_spz4 = clock();
+
+      //playcomm = true;
+
+
+    }
+
+    if (audio_trigger_spz4 != clock_t(0.0) && (clock() - audio_trigger_spz4)/CLOCKS_PER_SEC > 10) {
+      DataWriter <AudioObjectFixed> sndspz4(w_spz4, ts);
+      sndspz4.data().volume = 1.0f;
+      sndspz4.data().pitch = 1.0;
+
+      audio_trigger_spz4 = clock_t(0.0);
+
+
+      //playcomm = true;
+
+
+    }
+
+    if (gear > 0.0 && playcomm4 == true) {
+      DataWriter <AudioObjectFixed> sndspz5(w_spz5, ts);
+      sndspz5.data().volume = 1.0f;
+      sndspz5.data().pitch = 1.0;
+
+      playcomm4 = false;
+      audio_trigger_twr9 = clock();
+
+
+    }
+
+    if (audio_trigger_twr9 != clock_t(0.0) && (clock() - audio_trigger_twr9)/CLOCKS_PER_SEC > 25) {
+      DataWriter <AudioObjectFixed> sndtwr9(w_twr9, ts);
+      sndtwr9.data().volume = 1.0f;
+      sndtwr9.data().pitch = 1.0;
+
+      audio_trigger_twr9 = clock_t(0.0);
+      audio_trigger_twr12 = clock();
+
+
+      //playcomm = true;
+
+
+    }
+
+
+    if (audio_trigger_twr12 != clock_t(0.0) && (clock() - audio_trigger_twr12)/CLOCKS_PER_SEC > 15) {
+      DataWriter <AudioObjectFixed> sndtwr12(w_twr12, ts);
+      sndtwr12.data().volume = 1.0f;
+      sndtwr12.data().pitch = 1.0;
+
+      audio_trigger_twr12 = clock_t(0.0);
+
+      //playcomm = true;
+
+
+    }
+
+    std::cout << "altitude is: " << std::endl;
+    std::cout << alt << std::endl;
+
+    if (alt < 91 && playcomm5 == true){
+
+      DataWriter <AudioObjectFixed> sndtwr14(w_twr14, ts);
+      sndtwr14.data().volume = 1.0f;
+      sndtwr14.data().pitch = 1.0;
+
+      audio_trigger_twr17 = clock();
+
+      playcomm5 = false;
+      playcomm6 = true;
+    }
+
+
+    if (audio_trigger_twr17 != clock_t(0.0) && (clock() - audio_trigger_twr17)/CLOCKS_PER_SEC > 20) {
+      DataWriter <AudioObjectFixed> sndtwr17(w_twr17, ts);
+      sndtwr17.data().volume = 1.0f;
+      sndtwr17.data().pitch = 1.0;
+
+      audio_trigger_twr17 = clock_t(0.0);
+      audio_trigger_spz6 = clock();
+
+      //playcomm = true;
+
+
+    }
+
+    if (audio_trigger_spz6 != clock_t(0.0) && (clock() - audio_trigger_spz6)/CLOCKS_PER_SEC > 20) {
+      DataWriter <AudioObjectFixed> sndspz6(w_spz6, ts);
+      sndspz6.data().volume = 1.0f;
+      sndspz6.data().pitch = 1.0;
+
+      audio_trigger_spz6 = clock_t(0.0);
+      audio_trigger_twr16 = clock();
+
+      //playcomm = true;
+
+
+    }
+
+    if (audio_trigger_twr16 != clock_t(0.0) && (clock() - audio_trigger_twr16)/CLOCKS_PER_SEC > 6) {
+      DataWriter <AudioObjectFixed> sndtwr16(w_twr16, ts);
+      sndtwr16.data().volume = 1.0f;
+      sndtwr16.data().pitch = 1.0;
+
+      audio_trigger_twr16 = clock_t(0.0);
+      audio_trigger_spz7 = clock();
+
+      //playcomm = true;
+
+
+    }
+
+    if (audio_trigger_spz7 != clock_t(0.0) && (clock() - audio_trigger_spz7)/CLOCKS_PER_SEC > 5) {
+      DataWriter <AudioObjectFixed> sndspz7(w_spz7, ts);
+      sndspz7.data().volume = 1.0f;
+      sndspz7.data().pitch = 1.0;
+
+      audio_trigger_spz7 = clock_t(0.0);
+
+
+      playcomm6 = true;
+
+
+    }
+
+    /////////////////////////////////////////////
+
+    if (alt > 275 && playcomm6 == true){
+
+
+      DataWriter <AudioObjectFixed> sndsvt3(w_svt3, ts);
+      sndsvt3.data().volume = 1.0f;
+      sndsvt3.data().pitch = 1.0;
+
+      audio_trigger_twr18 = clock();
+
+      playcomm6 = false;
+
+
+
+    }
+
+    if (audio_trigger_twr18 != clock_t(0.0) && (clock() - audio_trigger_twr18)/CLOCKS_PER_SEC > 8) {
+      DataWriter <AudioObjectFixed> sndtwr18(w_twr18, ts);
+      sndtwr18.data().volume = 1.0f;
+      sndtwr18.data().pitch = 1.0;
+
+      audio_trigger_twr18 = clock_t(0.0);
+      audio_trigger_svt4  = clock();
+
+
+      //playcomm = true;
+
+
+    }
+
+
+    if (audio_trigger_svt4 != clock_t(0.0) && (clock() - audio_trigger_svt4)/CLOCKS_PER_SEC > 5) {
+      DataWriter <AudioObjectFixed> sndsvt4(w_svt4, ts);
+      sndsvt4.data().volume = 1.0f;
+      sndsvt4.data().pitch = 1.0;
+
+      audio_trigger_svt4 = clock_t(0.0);
+      audio_trigger_twr20  = clock();
+
+    }
+
+    if (audio_trigger_twr20 != clock_t(0.0) && (clock() - audio_trigger_twr20)/CLOCKS_PER_SEC > 20) {
+      DataWriter <AudioObjectFixed> sndtwr20(w_twr20, ts);
+      sndtwr20.data().volume = 1.0f;
+      sndtwr20.data().pitch = 1.0;
+
+      audio_trigger_twr20 = clock_t(0.0);
+      audio_trigger_twr20 = clock_t(0.0);
 
     }
 
@@ -674,27 +1007,14 @@ void ATC::doCalculation(const TimeSpec& ts)
 
 
 
-    //std::cout << time_req << std::endl;
-    //std::cout << clock() << std::endl;
 
 
 
 
 
-    //std::cout << "PLAYCOMM AFTER IS : ";
-    //std::cout << playcomm << std::endl;
 
 
-    /**
-      if(radioevent == true){
 
-          DataWriter<AudioObjectFixed> sndcomm(w_comm, ts);
-          sndcomm.data().volume = 0.5f;
-          sndcomm.data().pitch = 1.0;
-          D_MOD("comm sound sent");
-
-
-      } */
 
     break;
     }

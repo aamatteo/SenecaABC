@@ -6,6 +6,8 @@
     These are:
     AudioObjectFixed
     CitationOutput
+    CitationPilotInput
 */
 #include "../../WorldListener/comm-objects/AudioObjectFixed.hxx"
 #include "../../CitationExample/comm-objects/CitationOutput.hxx"
+#include "../../CitationDemo/comm-objects/CitationPilotInput.hxx"

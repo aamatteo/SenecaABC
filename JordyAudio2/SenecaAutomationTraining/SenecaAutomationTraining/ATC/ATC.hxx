@@ -45,8 +45,8 @@ class ATC: public SimulationModule
 
 private: // simulation data
   // declare the data you need in your simulation
-  float lat,lon ;
-  bool  playcomm1, playcomm2;
+  float lat,lon, gear, alt;
+  bool  playcomm1, playcomm2, playcomm3, playcomm4, playcomm5, playcomm6;
   clock_t time_req;
   clock_t audio_trigger_time;
   clock_t audio_trigger_doc2;
@@ -57,6 +57,23 @@ private: // simulation data
   clock_t audio_trigger_doc4;
   clock_t audio_trigger_twr6;
   clock_t audio_trigger_twr3;
+  clock_t audio_trigger_svt2;
+  clock_t audio_trigger_spz1;
+  clock_t audio_trigger_twr7;
+  clock_t audio_trigger_spz2;
+  clock_t audio_trigger_twr8;
+  clock_t audio_trigger_spz3;
+  clock_t audio_trigger_twr8bis;
+  clock_t audio_trigger_spz4;
+  clock_t audio_trigger_twr9;
+  clock_t audio_trigger_twr12;
+  clock_t audio_trigger_twr17;
+  clock_t audio_trigger_spz6;
+  clock_t audio_trigger_twr16;
+  clock_t audio_trigger_spz7;
+  clock_t audio_trigger_twr18;
+  clock_t audio_trigger_svt4;
+  clock_t audio_trigger_twr20;
 
 
 
@@ -113,6 +130,7 @@ private: // channel access
   ChannelWriteToken w_twr20;
 
   StreamChannelReadToken<CitationOutput> citation_token;
+  StreamChannelReadToken<CitationPilotInput> pilot_input_token;
 
 private: // activity allocation
   /** You might also need a clock. Don't mis-use this, because it is
