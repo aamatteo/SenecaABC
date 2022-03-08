@@ -538,6 +538,7 @@ ATC.o: ATC.cxx /usr/include/stdc-predef.h ATC.hxx \
  ../../WorldListener/comm-objects/AudioObjectFixed.hxx \
  ../../CitationExample/comm-objects/CitationOutput.hxx \
  /usr/include/dueca/dueca/fixvector.hxx \
+ ../../CitationDemo/comm-objects/CitationPilotInput.hxx \
  ../CitationModelInclude/StatesOutputs.h /usr/include/dueca/dueca/debug.h \
  /usr/include/dueca/dueca/newlog.hxx \
  /usr/include/dueca/dueca/LogCategory.hxx \

@@ -224,6 +224,11 @@
 		        	'check-timing 10000 20000
 		        )
 
+				(make-module 'LGlights "" sim-priority
+				'set-timing display-timing
+				'check-timing 10000 20000
+				)
+
 				(make-module 'gear-selector "" admin-priority
 					'set-timing slow-timing
 					'master #t
