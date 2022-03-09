@@ -15,10 +15,11 @@
 
 # if needed, add extra defines or the include statements to extra header
 # files you need
-EXTRA_INCLUDES = 
+EXTRA_INCLUDES = -I../CitationModelInclude
+EXTRALIBS = -L/usr/local/lib $(shell pkg-config --libs glew glfw3)
 
 # add all c++-files here (.cxx files), except the ones generated from .dco
-# files. The line that is in there now simply finds all .cxx files. Change 
+# files. The line that is in there now simply finds all .cxx files. Change
 # to : CPPSRC = File1.cxx File2.cxx
 # if you don't want that behaviour
 CPPSRC :=	$(shell ls *.cxx 2>/dev/null)

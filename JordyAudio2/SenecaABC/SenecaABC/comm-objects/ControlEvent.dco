@@ -1,5 +1,6 @@
 (Type int)
 (Type float)
+(Type bool)
 
 ;; not all these options are implemented
 ;; powers are between 0 and 1
@@ -18,6 +19,8 @@
 	(float rudder_offset (Default 0.0f))
 	(float rudder_offset_time (Default 0.0f))
 	(float rudder_bias (Default 0.0f))
+	;; gear
+	;;(bool gear_fail)
 	;; aileron-rudder-interconnect
 	(float ARI (Default 0.0f))
 	;; elevator

@@ -13,6 +13,6 @@ CitationDemo/comm-objects/CitationPilotInput.dco
 Asym1/comm-objects/Reposition.dco
 Asym1/comm-objects/Trim_inco.dco
 
-SenecaABC/comm-objects/INCOSelect.dco
-SenecaABC/comm-objects/WindEvent.dco
+SenecaAutomationTraining/comm-objects/INCOSelect.dco
+SenecaAutomationTraining/comm-objects/WindEvent.dco
 

@@ -17,6 +17,8 @@
 
 // include the dusime header
 #include <dusime.h>
+#include <GL/glew.h>
+#include <GLFW/glfw3.h>
 USING_DUECA_NS;
 
 // This includes headers for the objects that are sent over the channels
@@ -39,6 +41,8 @@ class LGlights: public SimulationModule
 
 private: // simulation data
   // declare the data you need in your simulation
+
+  float gear;
 
 private: // trim calculation data
   // declare the trim calculation data needed for your simulation
@@ -133,6 +137,12 @@ public: // member functions for cooperation with DUSIME
       calculates, based on the event channel input, the steady state
       output. */
   void trimCalculation(const TimeSpec& ts, const TrimMode& mode);
+
+private:
+  int window_setup();
+  GLuint VBO, VAO;
+  GLuint shaderProgram;
+  GLFWwindow* window;
 };
 
 #endif

@@ -15,24 +15,24 @@
 
 ### for the logger ###
 
-SenecaABC/comm-objects/INCOSelect.dco
-SenecaABC/comm-objects/MassEvent.dco
-SenecaABC/comm-objects/ControlEvent.dco
-SenecaABC/comm-objects/EngineEvent.dco
-SenecaABC/comm-objects/DisplayEvent.dco
-SenecaABC/comm-objects/WindEvent.dco
-SenecaABC/comm-objects/AutopilotChannel.dco
-SenecaABC/comm-objects/GFC700Event.dco
-SenecaABC/comm-objects/AP2G1000Channel.dco
-SenecaABC/comm-objects/GFC700Event.dco
-SenecaABC/comm-objects/FailureEvent.dco
+SenecaAutomationTraining/comm-objects/INCOSelect.dco
+SenecaAutomationTraining/comm-objects/MassEvent.dco
+SenecaAutomationTraining/comm-objects/ControlEvent.dco
+SenecaAutomationTraining/comm-objects/EngineEvent.dco
+SenecaAutomationTraining/comm-objects/DisplayEvent.dco
+SenecaAutomationTraining/comm-objects/WindEvent.dco
+SenecaAutomationTraining/comm-objects/AutopilotChannel.dco
+SenecaAutomationTraining/comm-objects/GFC700Event.dco
+SenecaAutomationTraining/comm-objects/AP2G1000Channel.dco
+SenecaAutomationTraining/comm-objects/GFC700Event.dco
+SenecaAutomationTraining/comm-objects/FailureEvent.dco
 
 CitationExample/comm-objects/CitationOutput.dco
 
 
 ### additional channels for the replayer ###
 
-SenecaABC/comm-objects/PropSoundData.dco
+SenecaAutomationTraining/comm-objects/PropSoundData.dco
 
 Generic/comm-objects/VehicleCabPosition.dco
 SRSMotion/comm-objects/MotionConfirm.dco

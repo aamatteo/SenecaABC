@@ -534,7 +534,9 @@ LGlights.o: LGlights.cxx /usr/include/stdc-predef.h LGlights.hxx \
  /usr/include/dueca/dueca/EntityConfirm.hxx \
  /usr/include/dueca/dueca/Activity.hxx \
  /usr/include/dueca/dusime/HardwareModule.hxx \
- /usr/include/dueca/dusime/RTWModule.hxx comm-objects.h \
+ /usr/include/dueca/dusime/RTWModule.hxx /usr/include/GL/glew.h \
+ /usr/include/GL/glu.h /usr/include/GL/gl.h \
+ /usr/local/include/GLFW/glfw3.h comm-objects.h \
  ../../CitationExample/comm-objects/CitationOutput.hxx \
  /usr/include/dueca/dueca/fixvector.hxx \
  ../../CitationDemo/comm-objects/CitationPilotInput.hxx \

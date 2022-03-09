@@ -2,13 +2,13 @@
 # on a specific machine
 # note that the comm-objects directories should not be listed here
 # example:
-# SenecaABC/some-module
+# SenecaAutomationTraining/some-module
 
 # model
-SenecaABC/CitationModelInclude 
-SenecaABC/PA34 
-SenecaABC/Autopilot 
-SenecaABC/include 
+SenecaAutomationTraining/CitationModelInclude 
+SenecaAutomationTraining/PA34 
+SenecaAutomationTraining/Autopilot 
+SenecaAutomationTraining/include 
 
 # motion
 SRSMotion/motion-common HEAD
@@ -18,9 +18,9 @@ MotionFiltersRTW70/motion-filter-tuner HEAD
 
 # control loading
 Generic/SideStickController
-SenecaABC/FCSAdapter
+SenecaAutomationTraining/FCSAdapter
 
 
 # not used in experiment, added and updated for Herman
-SenecaABC/CvCalculation 
+SenecaAutomationTraining/CvCalculation 
 

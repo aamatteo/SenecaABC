@@ -16,7 +16,7 @@
 
 #ifdef CitationIncoSelector_cxx
 static const char h_id[] =
-"$Id: CitationIncoSelector.hxx,v 1.1.1.1 2022/02/17 15:04:28 matteopiras Exp $";
+"$Id: CitationIncoSelector.hxx,v 1.1 2020/03/20 16:17:33 ostroosma Exp $";
 #endif
 
 // include the dusime header

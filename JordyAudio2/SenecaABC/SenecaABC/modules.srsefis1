@@ -2,12 +2,12 @@
 # on a specific machine
 # note that the comm-objects directories should not be listed here
 # example:
-# SenecaABC/some-module
+# SenecaAutomationTraining/some-module
 
-SenecaABC/B747PFD 
-SenecaABC/B747DisplaysCommonFiles 
-SenecaABC/CitationModelInclude 
-SenecaABC/CitationNavigator 
+SenecaAutomationTraining/B747PFD 
+SenecaAutomationTraining/B747DisplaysCommonFiles 
+SenecaAutomationTraining/CitationModelInclude 
+SenecaAutomationTraining/CitationNavigator 
 
 # Saitek throttles
 Generic/multi-stick HEAD
@@ -17,5 +17,5 @@ MCP737/MCP737GUI HEAD
 MCP737/MCP737Proxy
 
 # displays
-SenecaABC/include 
-SenecaABC/G1000 
+SenecaAutomationTraining/include 
+SenecaAutomationTraining/G1000 

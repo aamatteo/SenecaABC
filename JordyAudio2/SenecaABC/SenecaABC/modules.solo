@@ -2,15 +2,15 @@
 # on a specific machine
 # note that the comm-objects directories should not be listed here
 # example:
-# SenecaABC/some-module
+# SenecaAutomationTraining/some-module
 #
 # Removed:
 #MotionFiltersRTW50/motion-filters-classical-03r13 HEAD
 #MotionFiltersRTW50/motion-filters-classical06r13 HEAD
 #MotionFiltersRTW50/motion-filter-classical-03r13 HEAD
 #MotionFiltersRTW50/motion-filter-classical-06r13 HEAD
-#SenecaABC/ConventionalDisplay 
-#SenecaABC/Malfunction 
+#SenecaAutomationTraining/ConventionalDisplay 
+#SenecaAutomationTraining/Malfunction 
 #MotionFiltersRTW70/motion-filter-classical-12 HEAD
 
 # Add?
@@ -20,21 +20,21 @@
 #CitationApproach/FlapSelector HEAD
 
 ### Used & owned:
-SenecaABC/B747DisplaysCommonFiles 
-SenecaABC/B747PFD 
-SenecaABC/CitationIncoSelector 
-SenecaABC/CitationLogger 
-SenecaABC/CitationModelInclude 
-SenecaABC/CitationNavigator 
-SenecaABC/ECI 
-SenecaABC/FCSAdapter 
-SenecaABC/Malfunctions 
-SenecaABC/PA34 
-SenecaABC/WAVPlayer 
-SenecaABC/WeatherProxy 
+SenecaAutomationTraining/B747DisplaysCommonFiles 
+SenecaAutomationTraining/B747PFD 
+SenecaAutomationTraining/CitationIncoSelector 
+SenecaAutomationTraining/CitationLogger 
+SenecaAutomationTraining/CitationModelInclude 
+SenecaAutomationTraining/CitationNavigator 
+SenecaAutomationTraining/ECI 
+SenecaAutomationTraining/FCSAdapter 
+SenecaAutomationTraining/Malfunctions 
+SenecaAutomationTraining/PA34 
+SenecaAutomationTraining/WAVPlayer 
+SenecaAutomationTraining/WeatherProxy 
 
 # script for visualizing comms
-SenecaABC/CommsVisualize 
+SenecaAutomationTraining/CommsVisualize 
 
 ### Used & borrowed:
 MCP737/MCP737GUI HEAD
@@ -51,25 +51,30 @@ HapticFlightEnvelopeProtectionTestBench/FGWeather
 VarStabCitation/GUIStick HEAD
 
 # not used in experiment, added and updated for Herman
-SenecaABC/CvCalculation 
+SenecaAutomationTraining/CvCalculation 
 
 WorldListener/WorldListener HEAD
 WorldListener/OpenALListener HEAD
 WorldView/SpecificationBase HEAD
-SenecaABC/Enginesound 
+SenecaAutomationTraining/Enginesound 
 
 # Generic/joystick HEAD
 
-SenecaABC/multi-stick 
-SenecaABC/Autopilot 
-SenecaABC/dusime 
-SenecaABC/GFC700GUI 
-SenecaABC/G1000 
-SenecaABC/MFD 
-SenecaABC/Logger 
-SenecaABC/SenecaLogger 
-SenecaABC/Components 
-SenecaABC/include 
-SenecaABC/FGVisual 
+SenecaAutomationTraining/multi-stick 
+SenecaAutomationTraining/Autopilot 
+SenecaAutomationTraining/dusime 
+SenecaAutomationTraining/GFC700GUI 
+SenecaAutomationTraining/G1000 
+SenecaAutomationTraining/MFD 
+SenecaAutomationTraining/Logger 
+SenecaAutomationTraining/SenecaLogger 
+SenecaAutomationTraining/Components 
+SenecaAutomationTraining/include 
+SenecaAutomationTraining/FGVisual 
 
 Generic/multi-stick HEAD
+SenecaAutomationTraining/ATC 
+SenecaAutomationTraining/atc 
+SenecaAutomationTraining/LGlights 
+SenecaAutomationTraining/dueca-project  
+SenecaAutomationTraining/GearLights 

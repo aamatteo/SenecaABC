@@ -2,14 +2,14 @@
 # on a specific machine
 # note that the comm-objects directories should not be listed here
 # example:
-# SenecaABC/some-module
-SenecaABC/CitationIncoSelector 
-SenecaABC/CitationLogger 
-SenecaABC/CitationModelInclude 
-SenecaABC/ECI 
-SenecaABC/Malfunctions 
-SenecaABC/WAVPlayer 
-SenecaABC/WeatherProxy 
+# SenecaAutomationTraining/some-module
+SenecaAutomationTraining/CitationIncoSelector 
+SenecaAutomationTraining/CitationLogger 
+SenecaAutomationTraining/CitationModelInclude 
+SenecaAutomationTraining/ECI 
+SenecaAutomationTraining/Malfunctions 
+SenecaAutomationTraining/WAVPlayer 
+SenecaAutomationTraining/WeatherProxy 
 
 Generic/joystick HEAD
 MCP737/MCP737GUI HEAD
