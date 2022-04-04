@@ -86,7 +86,7 @@ const ParameterTable* LGlights::getMyParameterTable()
   return parameter_table;
 }
 
-
+/*
 //key call back
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mode)
 {
@@ -95,7 +95,7 @@ void key_callback(GLFWwindow* window, int key, int scancode, int action, int mod
   if(key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
     glfwSetWindowShouldClose(window, GL_TRUE);
 }
-
+*/
 
 // Shaders
 // vertex shader: transforms given coordinates in pixel coordinates (????????)
@@ -119,7 +119,7 @@ const GLchar* fragmentShaderSource = "#version 330 core\n"
                                      //"color = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
                                      "}\n\0";
 
-
+/*
 int LGlights::window_setup() {
   glfwInit();
   glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -265,6 +265,9 @@ int LGlights::window_setup() {
   return 0;
 }
 
+*/
+
+
 // constructor
 LGlights::LGlights(Entity* e, const char* part, const
                        PrioritySpec& ps) :
@@ -276,7 +279,7 @@ LGlights::LGlights(Entity* e, const char* part, const
   do_calc(getId(), "displays LG lights", &cb1, ps)
 {
   do_calc.setTrigger(pilot_input_token);
-  window_setup();
+  //window_setup();
 }
 
 
@@ -291,13 +294,13 @@ bool LGlights::complete()
 LGlights::~LGlights()
 {
   // Properly de-allocate all resources once they've outlived their purpose
-  glDeleteVertexArrays(1, &VAO);
-  glDeleteBuffers(1, &VBO);
+  //glDeleteVertexArrays(1, &VAO);
+  //glDeleteBuffers(1, &VBO);
   // Terminate GLFW, clearing any resources allocated by GLFW.
-  glfwTerminate();
+  //glfwTerminate();
 
 
-  glfwTerminate();
+  //glfwTerminate();
 }
 
 // as an example, the setTimeSpec function
@@ -474,7 +477,7 @@ void LGlights::doCalculation(const TimeSpec& ts)
                    " -- reading CitationPilotInput Channel");
     }
 
-
+/*
     // Check if any events have been activiated (key pressed, mouse moved etc.) and call corresponding response functions
     glfwPollEvents();
 
@@ -502,7 +505,7 @@ void LGlights::doCalculation(const TimeSpec& ts)
 
     // Swap the screen buffers
     glfwSwapBuffers(window);
-
+*/
 
     break;
     }

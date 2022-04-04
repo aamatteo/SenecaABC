@@ -12,7 +12,7 @@
 */
 
 static const char c_id[] =
-"$Id: CitationIncoSelector.cxx,v 1.2 2020/07/20 10:09:55 jkvanleeuwen Exp $";
+"$Id: CitationIncoSelector.cxx,v 1.1.1.1 2022/02/17 15:04:28 matteopiras Exp $";
 
 #define CitationIncoSelector_cxx
 // include the definition of the module class

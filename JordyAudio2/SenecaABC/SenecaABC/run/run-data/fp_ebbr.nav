@@ -2,7 +2,7 @@ nav1active	112.050	FLO
 nav1stby	108.000		
 nav2active	114.600	BUB	
 nav2stby	108.000		
-use_vors	1	1	
+use_vors	1	0
 vor1	42907.2	-2478.4	
 vor2	1038.0	378.7	
 nr_wps	5		

@@ -224,7 +224,7 @@
 		        	'check-timing 10000 20000
 		        )
 
-				(make-module 'LGlights "" sim-priority
+				(make-module 'l-glights "" sim-priority
 				'set-timing display-timing
 				'check-timing 10000 20000
 				)

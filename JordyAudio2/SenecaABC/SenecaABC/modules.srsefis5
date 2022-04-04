@@ -2,8 +2,8 @@
 # on a specific machine
 # note that the comm-objects directories should not be listed here
 # example:
-# SenecaAutomationTraining/some-module
-SenecaAutomationTraining/include 
-SenecaAutomationTraining/CitationModelInclude 
-SenecaAutomationTraining/B747DisplaysCommonFiles 
-SenecaAutomationTraining/B747PFD 
+# SenecaABC/some-module
+SenecaABC/include 
+SenecaABC/CitationModelInclude 
+SenecaABC/B747DisplaysCommonFiles 
+SenecaABC/B747PFD 

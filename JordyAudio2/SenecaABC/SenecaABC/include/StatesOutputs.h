@@ -97,7 +97,7 @@ enum output_vec {
   Y_rpmright_IGNORE, // copy of above
 // always zero, no flaps and gear state output
   Y_flaps_IGNORE,    // DO NOT USE or find another purpose for these
-  Y_gear_IGNORE,     // DO NOT USE
+  Y_gear,
 // Inputs
   Y_de0,
   Y_da0,

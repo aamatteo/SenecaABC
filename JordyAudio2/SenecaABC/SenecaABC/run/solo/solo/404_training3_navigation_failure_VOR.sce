@@ -1,0 +1,1 @@
+../../run-data/scenarios/404_training3_navigation_failure_VOR.sce

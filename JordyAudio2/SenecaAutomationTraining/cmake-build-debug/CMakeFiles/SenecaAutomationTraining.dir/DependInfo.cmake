@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/matteo/Desktop/JordyAudio2-backup/SenecaAutomationTraining/main.cpp" "/home/matteo/Desktop/JordyAudio2-backup/SenecaAutomationTraining/cmake-build-debug/CMakeFiles/SenecaAutomationTraining.dir/main.cpp.o"
+  "/home/matteo/Desktop/backup/SenecaAutomationTraining/main.cpp" "/home/matteo/Desktop/backup/SenecaAutomationTraining/cmake-build-debug/CMakeFiles/SenecaAutomationTraining.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

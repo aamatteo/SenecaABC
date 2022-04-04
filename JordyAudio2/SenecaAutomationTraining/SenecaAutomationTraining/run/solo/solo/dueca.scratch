@@ -408,6 +408,11 @@
 		        	'check-timing 10000 20000
 		        )
 
+				(make-module 'l-glights "" sim-priority
+				'set-timing display-timing
+				'check-timing 10000 20000
+				)
+
 				(make-module 'gear-selector "" admin-priority
 					'set-timing slow-timing
 					'master #t
@@ -859,4 +864,4 @@
 ;; comment-column: 0 **
 ;; End:
 (pass-control 2) ; *Added by ScriptInterpret*
-(quit)
+(quit) ; *Added by ScriptInterpret*

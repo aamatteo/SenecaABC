@@ -12,7 +12,7 @@
 */
 
 static const char c_id[] =
-"$Id: CitationLogger.cxx,v 1.4 2020/07/31 14:47:20 jkvanleeuwen Exp $";
+"$Id: CitationLogger.cxx,v 1.1.1.1 2022/02/17 15:04:28 matteopiras Exp $";
 
 #define CitationLogger_cxx
 // include the definition of the module class

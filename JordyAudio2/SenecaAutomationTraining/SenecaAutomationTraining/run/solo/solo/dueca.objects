@@ -28,18 +28,20 @@
      0,26                      malfunctions://pa34
      0,27            citation-inco-selector://pa34
      0,28                               atc://pa34
-     0,29                     gear-selector://pa34
-     0,30                       fcs-adapter://pa34
-     0,31                citation-navigator://pa34
-     0,32                          b747-pfd://pa34
-     0,33                       pa_34_model://pa34
-     0,34                         gui-stick://pa34
-     0,35                  fg-visual://pa34/center
-     0,36                      engine-sound://pa34
-     0,37                    world-listener://pa34
-     0,38                       LogPoint://dueca/0
-     0,39               log-concentrator://dueca/0
-     0,40                     LogMessage://dueca/0
-     0,41                     log-points://dueca/0
-     0,42            ActivityDescription://dueca/0
-     0,43          activity-descriptions://dueca/0
+     0,29                         l-glights://pa34
+     0,30                     gear-selector://pa34
+     0,31                       fcs-adapter://pa34
+     0,32                citation-navigator://pa34
+     0,33                          b747-pfd://pa34
+     0,34                       pa_34_model://pa34
+     0,35                         gui-stick://pa34
+     0,36                  fg-visual://pa34/center
+     0,37                      engine-sound://pa34
+     0,38                    world-listener://pa34
+     0,39                       LogPoint://dueca/0
+     0,40               log-concentrator://dueca/0
+     0,41                     LogMessage://dueca/0
+     0,42                     log-points://dueca/0
+     0,43            ActivityDescription://dueca/0
+     0,44          activity-descriptions://dueca/0
+     0,45                  TimingResults://dueca/0

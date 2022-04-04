@@ -1,37 +1,967 @@
-Thu Mar  3 12:41:02.851239     1 -                     not initialised:0000255255  id(-,-)                          unknown|Popped up from script, stage=1
-Thu Mar  3 12:41:02.851348     1 -                     not initialised:0000255255  id(-,-)                          unknown|Creating the node manager
-Thu Mar  3 12:41:02.851428     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0874  0255  id(0,2)       wait additional model copy|Completing dueca objects
-Thu Mar  3 12:41:02.851667     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0945  0255  id(0,2)       wait additional model copy|slow ticking
-Thu Mar  3 12:41:04.081859     1 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeJoining
-Thu Mar  3 12:41:04.184626     2 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeJoined
-Thu Mar  3 12:41:04.184747     1 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0278  0255  id(0,2)       wait additional model copy|slowing down node query at time TimeSpec(260, 260)
-Thu Mar  3 12:41:04.284958     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0967  0255  id(0,2)       wait additional model copy|Dueca nodes now complete
-Thu Mar  3 12:41:04.286287     1 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0869  0255  id(0,2)       wait additional model copy|ActivityManager 0 qsize 600 working on id(0,12)/process node state message TimeSpec(260, 260) scheduled id(0,0)/script config line read TimeSpec(280, 280)
-Thu Mar  3 12:41:04.291004     3 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeSynced
-Thu Mar  3 12:41:05.415282     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1006  0255  id(0,2)       wait additional model copy|Real-time running, two seconds from now ....
-Thu Mar  3 12:41:05.415425     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1207  0255  id(0,2)       wait additional model copy|id(0,2)Returning to script
-Thu Mar  3 12:41:05.423963     1 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0082  0255  id(0,2)       wait additional model copy|Using DUECAFontManager with FTFont implementation
-Thu Mar  3 12:41:05.424036     1 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/btype.ttf
-Thu Mar  3 12:41:05.424093     2 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/Monaco.ttf
-Thu Mar  3 12:41:05.424113     3 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/Vera.ttf
-Thu Mar  3 12:41:05.446157     2 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0837  0255  id(0,2)       wait additional model copy|Popped up from script, stage=2
-Thu Mar  3 12:41:05.446404     1 wSYS/usr/src/packages/BUILD/dueca/Su.cxx:0065  0255  id(0,2)       wait additional model copy|Su: no root/super user capabilities
-Thu Mar  3 12:41:05.446433     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1062  0255  id(0,2)       wait additional model copy|id(0,2) trying memlock without root capability
-Thu Mar  3 12:41:05.446462     1 wSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1073  0255  id(0,2)       wait additional model copy|Cannot memlock the DUECA executable: Cannot allocate memory
-Thu Mar  3 12:41:05.446489     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1087  0255  id(0,2)       wait additional model copy|id(0,2) creating graphics thread with (e)uids: 1000, 1000
-Thu Mar  3 12:41:05.446564     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1111  0255  id(0,2)       wait additional model copy|Halting script thread
-Thu Mar  3 12:41:05.446655     1 iSYS/usr/src/packages/BUILD/dueca/gui/gtk2/GtkHandler.cxx:0097  0255  id(0,2)       wait additional model copy|Initialising gtk2 graphics
-Thu Mar  3 12:41:05.670436     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0489  0255  id(0,2)       wait additional model copy|id(0,2) passing control to graphics lib
-Thu Mar  3 12:41:05.670507     1 iSYS/usr/src/packages/BUILD/dueca/gui/gtk2/GtkHandler.cxx:0109  0255  id(0,2)       wait additional model copy|Passing control to gtk 2.x
-Thu Mar  3 12:41:05.875092     1 wMOD               OpenALListener.cxx:0085  0255  id(0,2)       wait additional model copy|opened device OpenAL Soft
-Thu Mar  3 12:41:07.415260     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0558  0255  id(0,2)       wait additional model copy|Time to start real-time running
-Thu Mar  3 12:41:07.415796     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0580  0  0  id(0,8)            general dueca service|id(0,2) starting activity managers
-Thu Mar  3 12:41:07.416020     1 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  1  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
-Thu Mar  3 12:41:07.416060     1 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  1  id(0,2)       wait additional model copy|ActivityManager 1 mode requested FIFO actual OTHER
-Thu Mar  3 12:41:07.518071     2 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  2  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
-Thu Mar  3 12:41:07.518996     2 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  2  id(0,2)       wait additional model copy|ActivityManager 2 mode requested FIFO actual OTHER
-Thu Mar  3 12:41:07.622582     3 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  3  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
-Thu Mar  3 12:41:07.622669     3 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  3  id(0,2)       wait additional model copy|ActivityManager 3 mode requested FIFO actual OTHER
-Thu Mar  3 12:41:07.722769     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0597  0  0  id(0,8)            general dueca service|id(0,2) setting ticker to autonomous
-Thu Mar  3 12:41:07.722826     1 iTIM/usr/src/packages/BUILD/dueca/Ticker.cxx:0707  0  0  id(0,8)            general dueca service|First schedule for tick PeriodicTimeSpec(940, 960 p:20) with ActivityManager 3
-Thu Mar  3 12:47:44.016703     2 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0869  0  0  id(0,3)                  graphics update|ActivityManager 0 qsize 600 working on id(0,3)/graphics update TimeSpec(754080, 754080) scheduled id(0,8)/general dueca service TimeSpec(765340, 765360)
+Thu Mar 17 17:32:48.490654     1 -                     not initialised:0000255255  id(-,-)                          unknown|Popped up from script, stage=1
+Thu Mar 17 17:32:48.490743     1 -                     not initialised:0000255255  id(-,-)                          unknown|Creating the node manager
+Thu Mar 17 17:32:48.490796     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0874  0255  id(0,2)       wait additional model copy|Completing dueca objects
+Thu Mar 17 17:32:48.491028     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0945  0255  id(0,2)       wait additional model copy|slow ticking
+Thu Mar 17 17:32:49.736959     1 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeJoining
+Thu Mar 17 17:32:49.841402     2 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeJoined
+Thu Mar 17 17:32:49.841485     1 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0278  0255  id(0,2)       wait additional model copy|slowing down node query at time TimeSpec(260, 260)
+Thu Mar 17 17:32:49.942424     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0967  0255  id(0,2)       wait additional model copy|Dueca nodes now complete
+Thu Mar 17 17:32:49.947840     1 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0869  0255  id(0,2)       wait additional model copy|ActivityManager 0 qsize 600 working on id(0,12)/process node state message TimeSpec(260, 260) scheduled id(0,0)/script config line read TimeSpec(280, 280)
+Thu Mar 17 17:32:49.956076     3 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeSynced
+Thu Mar 17 17:32:51.081893     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1006  0255  id(0,2)       wait additional model copy|Real-time running, two seconds from now ....
+Thu Mar 17 17:32:51.081951     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1207  0255  id(0,2)       wait additional model copy|id(0,2)Returning to script
+Thu Mar 17 17:32:51.087853     1 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0082  0255  id(0,2)       wait additional model copy|Using DUECAFontManager with FTFont implementation
+Thu Mar 17 17:32:51.087913     1 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/btype.ttf
+Thu Mar 17 17:32:51.087935     2 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/Monaco.ttf
+Thu Mar 17 17:32:51.087962     3 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/Vera.ttf
+Thu Mar 17 17:32:51.117945     2 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0837  0255  id(0,2)       wait additional model copy|Popped up from script, stage=2
+Thu Mar 17 17:32:51.118174     1 wSYS/usr/src/packages/BUILD/dueca/Su.cxx:0065  0255  id(0,2)       wait additional model copy|Su: no root/super user capabilities
+Thu Mar 17 17:32:51.118208     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1062  0255  id(0,2)       wait additional model copy|id(0,2) trying memlock without root capability
+Thu Mar 17 17:32:51.118238     1 wSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1073  0255  id(0,2)       wait additional model copy|Cannot memlock the DUECA executable: Cannot allocate memory
+Thu Mar 17 17:32:51.118265     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1087  0255  id(0,2)       wait additional model copy|id(0,2) creating graphics thread with (e)uids: 1000, 1000
+Thu Mar 17 17:32:51.118359     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1111  0255  id(0,2)       wait additional model copy|Halting script thread
+Thu Mar 17 17:32:51.118452     1 iSYS/usr/src/packages/BUILD/dueca/gui/gtk2/GtkHandler.cxx:0097  0255  id(0,2)       wait additional model copy|Initialising gtk2 graphics
+Thu Mar 17 17:32:51.810931     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0489  0255  id(0,2)       wait additional model copy|id(0,2) passing control to graphics lib
+Thu Mar 17 17:32:51.810969     1 iSYS/usr/src/packages/BUILD/dueca/gui/gtk2/GtkHandler.cxx:0109  0255  id(0,2)       wait additional model copy|Passing control to gtk 2.x
+Thu Mar 17 17:32:52.467586     1 wMOD               OpenALListener.cxx:0085  0255  id(0,2)       wait additional model copy|opened device OpenAL Soft
+Thu Mar 17 17:32:53.081892     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0558  0255  id(0,2)       wait additional model copy|Time to start real-time running
+Thu Mar 17 17:32:53.082294     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0580  0  0  id(0,8)            general dueca service|id(0,2) starting activity managers
+Thu Mar 17 17:32:53.082572     1 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  1  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
+Thu Mar 17 17:32:53.082612     1 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  1  id(0,2)       wait additional model copy|ActivityManager 1 mode requested FIFO actual OTHER
+Thu Mar 17 17:32:53.185933     2 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  2  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
+Thu Mar 17 17:32:53.186013     2 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  2  id(0,2)       wait additional model copy|ActivityManager 2 mode requested FIFO actual OTHER
+Thu Mar 17 17:32:53.286863     3 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  3  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
+Thu Mar 17 17:32:53.286993     3 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  3  id(0,2)       wait additional model copy|ActivityManager 3 mode requested FIFO actual OTHER
+Thu Mar 17 17:32:53.387140     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0597  0  0  id(0,8)            general dueca service|id(0,2) setting ticker to autonomous
+Thu Mar 17 17:32:53.387459     1 iTIM/usr/src/packages/BUILD/dueca/Ticker.cxx:0707  0  0  id(0,8)            general dueca service|First schedule for tick PeriodicTimeSpec(940, 960 p:20) with ActivityManager 3
+Thu Mar 17 17:33:10.933585     1 -                     not initialised:0000  0  0 id(0,13)           process entity command|This target is already triggered, ignoring new trigger
+Thu Mar 17 17:33:10.933771     2 -                     not initialised:0000  0  0 id(0,13)           process entity command|This target is already triggered, ignoring new trigger
+Thu Mar 17 17:33:10.936650     1 -                     not initialised:0000  0  0 id(0,13)           process entity command|PREPARED
+Thu Mar 17 17:33:10.936938     1 -                     not initialised:0000  0  0 id(0,13)           process entity command|gui-stick has invalid FlightControlInput trim token
+Thu Mar 17 17:33:11.622912     1 -                     not initialised:0000  0  1 id(0,31)  combining input from control lo|fcs-adapter caught NoDataAvailable id(0,42)->id(0,31) @ TimeSpec(37400, 37420)
+Thu Mar 17 17:33:11.623012     1 -                     not initialised:0000  0  1 id(0,34)    Calculates aircraft dynamics |pa_34_model Preparing for mass shift in 1 steps
+Thu Mar 17 17:33:11.623071     1 -                     not initialised:0000  0  1 id(0,34)    Calculates aircraft dynamics |pa_34_model Set control; Aileron power: 1; Rudder power: 1; Rudder fix: 0; Elevator fix: 0
+Thu Mar 17 17:33:11.623111     1 -                     not initialised:0000  0  1 id(0,34)    Calculates aircraft dynamics |pa_34_model Turbulence disabled: K_turb=0
+Thu Mar 17 17:33:11.623142     1 -                     not initialised:0000  0  1 id(0,34)    Calculates aircraft dynamics |pa_34_model K_shear: 0
+Thu Mar 17 17:33:11.623173     1 -                     not initialised:0000  0  1 id(0,34)    Calculates aircraft dynamics |pa_34_model: Wind direction changed instantly to 0
+Thu Mar 17 17:33:11.623227     1 -                     not initialised:0000  0  1 id(0,34)    Calculates aircraft dynamics |pa_34_model (trim_inco) gear position: 0
+Thu Mar 17 17:33:11.623388     1 -                     not initialised:0000  0  1 id(0,34)    Calculates aircraft dynamics |pa_34_model (trim_inco) flap position: 0 deg
+Thu Mar 17 17:33:11.624774     1 -                     not initialised:0000  0  1 id(0,34)    Calculates aircraft dynamics |pa_34_model updated mass shift in Hold
+Thu Mar 17 17:33:11.625013     1 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:11.625302     1 -                     not initialised:0000  0  1 id(0,32)                       navigating|id(0,32) initializing STAR EHRD_lg
+Thu Mar 17 17:33:11.625504     1 -                     not initialised:0000  0  1 id(0,32)                       navigating|id(0,32) ref LNAV: 0, 0, 0
+Thu Mar 17 17:33:11.625615     1 -                     not initialised:0000  0  1 id(0,32)                       navigating|id(0,32) ref HDG: 0, 0, 0
+Thu Mar 17 17:33:11.625744     1 -                     not initialised:0000  0  1 id(0,32)                       navigating|id(0,32) ref LOC: 0, 0, 0
+Thu Mar 17 17:33:11.625902     1 -                     not initialised:0000  0  1 id(0,36)               send to flightgear|READING NEW FG INPUTS
+Thu Mar 17 17:33:11.626075     1 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class audiot entry 0
+Thu Mar 17 17:33:11.626203     1 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHDOC2lg.wav
+Thu Mar 17 17:33:11.639411     1 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.641191     2 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phdoc1 entry 1
+Thu Mar 17 17:33:11.641356     2 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHDOC1.wav
+Thu Mar 17 17:33:11.654472     2 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.657530     3 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phdoc3 entry 2
+Thu Mar 17 17:33:11.657617     3 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHDOC3.wav
+Thu Mar 17 17:33:11.663039     3 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.663242     4 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phdoc4 entry 3
+Thu Mar 17 17:33:11.663304     4 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHDOC4.wav
+Thu Mar 17 17:33:11.684423     4 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.684549     5 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz1 entry 4
+Thu Mar 17 17:33:11.684591     5 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ1.wav
+Thu Mar 17 17:33:11.715747     5 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.716573     6 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz2 entry 5
+Thu Mar 17 17:33:11.716623     6 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ2.wav
+Thu Mar 17 17:33:11.725975     6 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.728452     7 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz3 entry 6
+Thu Mar 17 17:33:11.728881     7 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ3.wav
+Thu Mar 17 17:33:11.790292     7 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.791672     8 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz4 entry 7
+Thu Mar 17 17:33:11.791887     8 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ4.wav
+Thu Mar 17 17:33:11.797658     8 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.801816     9 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz5 entry 8
+Thu Mar 17 17:33:11.801898     9 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ5.wav
+Thu Mar 17 17:33:11.812459     9 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.814697    10 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz6 entry 9
+Thu Mar 17 17:33:11.814995    10 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ6.wav
+Thu Mar 17 17:33:11.818387    10 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.818623    11 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz7 entry 10
+Thu Mar 17 17:33:11.818786    11 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ7.wav
+Thu Mar 17 17:33:11.822995    11 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.823420    12 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz8 entry 11
+Thu Mar 17 17:33:11.823626    12 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ8.wav
+Thu Mar 17 17:33:11.826785    12 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.827091    13 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz9 entry 12
+Thu Mar 17 17:33:11.827281    13 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ9.wav
+Thu Mar 17 17:33:11.830944    13 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.831217    14 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phsvt1 entry 13
+Thu Mar 17 17:33:11.831377    14 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSVT1.wav
+Thu Mar 17 17:33:11.834136    14 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.834470    15 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phsvt2 entry 14
+Thu Mar 17 17:33:11.834808    15 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSVT2.wav
+Thu Mar 17 17:33:11.838086    15 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.838468    16 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phsvt3 entry 15
+Thu Mar 17 17:33:11.838751    16 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSVT3.wav
+Thu Mar 17 17:33:11.842737    16 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.843762    17 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phsvt4 entry 16
+Thu Mar 17 17:33:11.843982    17 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSVT4.wav
+Thu Mar 17 17:33:11.848022    17 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.848262    18 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr1 entry 17
+Thu Mar 17 17:33:11.848482    18 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR1.wav
+Thu Mar 17 17:33:11.881394    18 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.882948    19 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr2 entry 18
+Thu Mar 17 17:33:11.883191    19 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR2.wav
+Thu Mar 17 17:33:11.889126    19 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.890347    20 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr3 entry 19
+Thu Mar 17 17:33:11.890573    20 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR3.wav
+Thu Mar 17 17:33:11.895394    20 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.895690    21 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr4 entry 20
+Thu Mar 17 17:33:11.895848    21 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR4.wav
+Thu Mar 17 17:33:11.901154    21 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.902106    22 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr5 entry 21
+Thu Mar 17 17:33:11.902338    22 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR5.wav
+Thu Mar 17 17:33:11.905903    22 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.906199    23 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr6 entry 22
+Thu Mar 17 17:33:11.906390    23 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR6.wav
+Thu Mar 17 17:33:11.910313    23 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.910448    24 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr7 entry 23
+Thu Mar 17 17:33:11.910507    24 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR7.wav
+Thu Mar 17 17:33:11.912969    24 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.913228    25 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr8 entry 24
+Thu Mar 17 17:33:11.913437    25 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR8.wav
+Thu Mar 17 17:33:11.919439    25 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.920476    26 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr8bis entry 25
+Thu Mar 17 17:33:11.920560    26 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR8BIS.wav
+Thu Mar 17 17:33:11.928440    26 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.929577    27 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr9 entry 26
+Thu Mar 17 17:33:11.929630    27 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR9.wav
+Thu Mar 17 17:33:11.933617    27 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.933793    28 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr10 entry 27
+Thu Mar 17 17:33:11.933862    28 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR10.wav
+Thu Mar 17 17:33:11.940157    28 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.941836    29 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr11 entry 28
+Thu Mar 17 17:33:11.941930    29 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR11.wav
+Thu Mar 17 17:33:11.945318    29 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:11.945572    30 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr12 entry 29
+Thu Mar 17 17:33:11.945656    30 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR12.wav
+Thu Mar 17 17:33:12.003672    30 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.003880    31 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr13 entry 30
+Thu Mar 17 17:33:12.003958    31 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR13.wav
+Thu Mar 17 17:33:12.006455    31 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.006575    32 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr14 entry 31
+Thu Mar 17 17:33:12.006632    32 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR14.wav
+Thu Mar 17 17:33:12.011255    32 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.012142    33 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr15 entry 32
+Thu Mar 17 17:33:12.012215    33 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR15.wav
+Thu Mar 17 17:33:12.015757    33 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.015931    34 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr16 entry 33
+Thu Mar 17 17:33:12.015992    34 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR16.wav
+Thu Mar 17 17:33:12.019544    34 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.019678    35 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr17 entry 34
+Thu Mar 17 17:33:12.019762    35 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR17.wav
+Thu Mar 17 17:33:12.022782    35 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.023325    36 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr18 entry 35
+Thu Mar 17 17:33:12.023414    36 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR18.wav
+Thu Mar 17 17:33:12.025801    36 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.025918    37 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr19 entry 36
+Thu Mar 17 17:33:12.025979    37 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR19.wav
+Thu Mar 17 17:33:12.030848    37 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.031862    38 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr20 entry 37
+Thu Mar 17 17:33:12.031936    38 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR20.wav
+Thu Mar 17 17:33:12.035721    38 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.036408    39 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class gearup entry 38
+Thu Mar 17 17:33:12.036470    39 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_gear_up.wav
+Thu Mar 17 17:33:12.041574    39 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.042328    40 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class geardown entry 39
+Thu Mar 17 17:33:12.042403    40 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_gear_down.wav
+Thu Mar 17 17:33:12.046380    40 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.047093    41 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class flaps entry 40
+Thu Mar 17 17:33:12.047158    41 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_flaps.wav
+Thu Mar 17 17:33:12.049127    41 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.049227    42 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class wind entry 41
+Thu Mar 17 17:33:12.049305    42 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_wind.wav
+Thu Mar 17 17:33:12.052639    42 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.053283    43 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class stall entry 42
+Thu Mar 17 17:33:12.053358    43 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_stall.wav
+Thu Mar 17 17:33:12.054990     1 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit mono format
+Thu Mar 17 17:33:12.055040    44 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class mass entry 43
+Thu Mar 17 17:33:12.055132    44 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_mass.wav
+Thu Mar 17 17:33:12.058483     1 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|OpenAL error 40962 for mass when obtaining source
+Thu Mar 17 17:33:12.058531    45 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class overspeed entry 44
+Thu Mar 17 17:33:12.058581    45 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_overspeed.wav
+Thu Mar 17 17:33:12.062080    43 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.062665    46 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class wheels entry 45
+Thu Mar 17 17:33:12.062714    46 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_groundroll.wav
+Thu Mar 17 17:33:12.065483    44 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.065572    47 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class touchdown entry 46
+Thu Mar 17 17:33:12.065610    47 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_touchdown.wav
+Thu Mar 17 17:33:12.066821    45 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.066857    48 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class gearalert entry 47
+Thu Mar 17 17:33:12.066903    48 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_gearalert.wav
+Thu Mar 17 17:33:12.068071     2 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit mono format
+Thu Mar 17 17:33:12.068110    49 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class autopilotdisco entry 48
+Thu Mar 17 17:33:12.068135    49 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_autopilot_disco.wav
+Thu Mar 17 17:33:12.069865    46 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.069933    50 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class apbutton entry 49
+Thu Mar 17 17:33:12.069983    50 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_apbutton.wav
+Thu Mar 17 17:33:12.071405    47 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.071445    51 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class rpm1left entry 50
+Thu Mar 17 17:33:12.071467    51 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_rpm1_left.wav
+Thu Mar 17 17:33:12.074147    48 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.074252    52 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class rpm1right entry 51
+Thu Mar 17 17:33:12.074297    52 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_rpm1_right.wav
+Thu Mar 17 17:33:12.077149    49 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.077233    53 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class rpm2left entry 52
+Thu Mar 17 17:33:12.077298    53 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_rpm2_left.wav
+Thu Mar 17 17:33:12.085065    50 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.087104    54 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class rpm2right entry 53
+Thu Mar 17 17:33:12.087207    54 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PA34_rpm2_right.wav
+Thu Mar 17 17:33:12.094781    51 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Thu Mar 17 17:33:12.105619     2 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.105815     3 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.121427     4 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.121565     5 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.121630     6 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.121724     7 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.121816     8 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.121875     9 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.121931    10 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.121989    11 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.122060    12 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.122117    13 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.122172    14 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.122228    15 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.122285    16 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.122353    17 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.122629     1 -                     not initialised:0000  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(37500, 37600)
+Thu Mar 17 17:33:12.122676     2 -                     not initialised:0000  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(37600, 37700)
+Thu Mar 17 17:33:12.127092    18 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127244    19 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127333    20 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127386    21 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127465    22 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127534    23 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127591    24 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127648    25 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127705    26 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127801    27 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127860    28 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127918    29 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.127973    30 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128030    31 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128098    32 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128154    33 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128209    34 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128262    35 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128320    36 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128388    37 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128447    38 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128506    39 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128565    40 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128659    41 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128729    42 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128788    43 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128847    44 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128901    45 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.128955    46 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.129054    47 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.129114    48 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.129163    49 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.129223    50 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.129284    51 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.129358    52 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.129412    53 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.129458    54 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.129518    55 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.144893     3 -                     not initialised:0000  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(37700, 37800)
+Thu Mar 17 17:33:12.144938     4 -                     not initialised:0000  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(37800, 37900)
+Thu Mar 17 17:33:12.144956     5 -                     not initialised:0000  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(37900, 38000)
+Thu Mar 17 17:33:12.144972     6 -                     not initialised:0000  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(38000, 38100)
+Thu Mar 17 17:33:12.145061     7 -                     not initialised:0000  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(38100, 38200)
+Thu Mar 17 17:33:12.145108     8 -                     not initialised:0000  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(38200, 38300)
+Thu Mar 17 17:33:12.145149     9 -                     not initialised:0000  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(38300, 38400)
+Thu Mar 17 17:33:12.182137    56 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.182254    57 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.182305    58 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.182356    59 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.182400    60 -                     not initialised:0000  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.235841    61 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.235961    62 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.236019    63 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.236076    64 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.236129    65 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.268744    66 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.268902    67 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.268987    68 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.269087    69 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.269143    70 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.318073    71 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.318209    72 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.318896    73 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.319244    74 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.319467    75 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.374175    76 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.374483    77 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.374715    78 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.374967    79 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.375172    80 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.418434    81 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.418715    82 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.418819    83 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.418885    84 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.418945    85 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.469319    86 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.469732    87 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.470037    88 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.470241    89 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.470444    90 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.519383    91 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.519858    92 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.520076    93 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.520319    94 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.520525    95 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.569044    96 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.569542    97 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.569828    98 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.570031    99 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.570249   100 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.618902   101 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.619456   102 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.619673   103 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.622432   104 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.622684   105 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.668126   106 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.668488   107 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.668738   108 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.669061   109 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.669269   110 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.719281   111 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.719668   112 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.719893   113 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.720099   114 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.720302   115 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.768013   116 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.768428   117 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.768720   118 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.769033   119 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.769247   120 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.819565   121 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.819792   122 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.819892   123 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.819962   124 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.820021   125 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.824205     1 -                     not initialised:0000  0  0  id(0,3)                  graphics update|Modules not running, cannot change dusime state
+Thu Mar 17 17:33:12.868277   126 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.868418   127 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.868490   128 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.868552   129 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.868613   130 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.918250   131 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.918361   132 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.918411   133 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.918499   134 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.918559   135 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.969134   136 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.969271   137 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.969700   138 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.969957   139 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:12.970161   140 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.019014   141 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.019521   142 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.019755   143 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.020035   144 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.020270   145 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.068811   146 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.069569   147 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.069782   148 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.069986   149 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.070188   150 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.117999   151 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.118547   152 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.118852   153 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.119057   154 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.119260   155 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.169240   156 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.169703   157 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.169974   158 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.170180   159 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.170384   160 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.218440   161 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.218887   162 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.219114   163 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.219325   164 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.219598   165 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.268495   166 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.268847   167 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.269109   168 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.269315   169 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.269518   170 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.319082   171 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.319432   172 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.319695   173 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.320094   174 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.320303   175 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.373389   176 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.373754   177 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.374066   178 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.374274   179 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.374482   180 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.418388   181 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.418659   182 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.418856   183 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.418954   184 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.419140   185 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.470049   186 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.470939   187 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.472395   188 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.473975   189 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.475292   190 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.534938   191 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.535056   192 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.535131   193 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.535197   194 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.535256   195 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.582909   196 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.583070   197 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.583265   198 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.583435   199 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.583678   200 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.618365   201 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.619111   202 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.619433   203 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.619689   204 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.619905   205 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.668654   206 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.670152   207 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.671143   208 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.672100   209 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.673198   210 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.719104   211 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.719271   212 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.719356   213 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.719438   214 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.719519   215 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.777704   216 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.778487   217 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.778883   218 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.779367   219 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.779782   220 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.826437   221 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.826610   222 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.826675   223 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.826738   224 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.826793   225 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.868594   226 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.868745   227 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.868830   228 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.868905   229 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.868990   230 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.921799   231 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.922211   232 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.922522   233 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.922779   234 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.923021   235 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.969344   236 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.969534   237 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.969636   238 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.969732   239 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:13.969865   240 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.021902   241 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.022101   242 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.022194   243 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.022344   244 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.022419   245 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.067968   246 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.068089   247 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.068141   248 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.068185   249 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.068246   250 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.118821   251 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.119006   252 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.119148   253 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.119269   254 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.119365   255 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.168801   256 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.169098   257 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.169227   258 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.169332   259 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.169409   260 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.219506   261 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.220530   262 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.220971   263 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.221656   264 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.222870   265 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.270194   266 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.270588   267 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.270757   268 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.270876   269 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.271027   270 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.320309   271 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.320912   272 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.321346   273 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.321664   274 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.322050   275 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.369886   276 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.370054   277 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.370114   278 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.370171   279 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.370226   280 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.418864   281 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.419731   282 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.420054   283 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.420308   284 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.420670   285 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.468190   286 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.468395   287 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.468466   288 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.468536   289 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.468672   290 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.518682   291 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.519001   292 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.519224   293 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.519478   294 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.519697   295 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.568298   296 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.568664   297 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.569061   298 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.569281   299 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.569483   300 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.619374   301 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.619983   302 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.620386   303 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.620792   304 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.621227   305 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.673928   306 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.674243   307 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.674484   308 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.674688   309 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.674891   310 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.718579   311 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.718722   312 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.718783   313 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.718838   314 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.718891   315 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.769602   316 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.770087   317 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.770350   318 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.770818   319 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.771178   320 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.820495   321 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.820651   322 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.820753   323 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.820863   324 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.820930   325 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.869204   326 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.869879   327 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.870509   328 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.871109   329 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.871791   330 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.918830   331 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.919062   332 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.919330   333 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.919498   334 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.919621   335 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.968519   336 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.968900   337 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.969347   338 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.969636   339 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:14.969841   340 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.020408   341 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.020895   342 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.021154   343 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.021360   344 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.021564   345 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.068605   346 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.068903   347 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.069090   348 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.069174   349 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.069277   350 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.119578   351 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.119883   352 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.120022   353 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.120109   354 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.120182   355 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.168072   356 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.168223   357 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.168315   358 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.168389   359 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.168516   360 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.218508   361 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.219121   362 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.219341   363 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.219547   364 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.219773   365 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.268509   366 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.270514   367 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.271688   368 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.272730   369 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.274000   370 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.319090   371 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.319464   372 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.319690   373 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.319897   374 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.320103   375 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.368483   376 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.368944   377 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.369310   378 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.369670   379 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.369893   380 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.418489   381 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.418866   382 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.418974   383 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.419070   384 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.419167   385 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.468323   386 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.468498   387 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.468600   388 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.468735   389 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.468846   390 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.518923   391 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.519086   392 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.519169   393 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.519247   394 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.519326   395 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.568615   396 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.568916   397 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.569009   398 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.569146   399 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.569241   400 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.619579   401 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.619913   402 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.620040   403 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.620134   404 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.620398   405 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.668281   406 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.668645   407 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.669052   408 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.669270   409 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.669474   410 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.722224   411 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.722871   412 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.723120   413 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.723368   414 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.723836   415 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.775007   416 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.775137   417 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.775188   418 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.775232   419 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.775336   420 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.818371   421 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.818540   422 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.818624   423 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.818678   424 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.818828   425 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.868873   426 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.870387   427 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.871059   428 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.871665   429 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.872344   430 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.920552   431 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.920923   432 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.921238   433 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.921479   434 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.921722   435 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.969597   436 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.969918   437 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.970204   438 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.970420   439 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:15.970626   440 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.019493   441 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.020898   442 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.022133   443 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.023267   444 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.024353   445 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.078352   446 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.078480   447 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.078537   448 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.078591   449 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.078650   450 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.118115   451 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.118367   452 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.118435   453 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.118476   454 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.118548   455 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.169459   456 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.170855   457 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.171928   458 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.172979   459 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.174371   460 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.221470   461 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.221660   462 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.221749   463 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.221833   464 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.221911   465 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.269652   466 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.269838   467 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.269965   468 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.270149   469 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.270265   470 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.324557   471 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.325365   472 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.325553   473 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.325636   474 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.325722   475 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.368450   476 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.368816   477 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.369242   478 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.369450   479 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.369654   480 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.418548   481 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.418940   482 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.419183   483 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.419387   484 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.419589   485 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.473302   486 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.473987   487 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.474220   488 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.474457   489 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.474778   490 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.518695   491 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.519064   492 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.519313   493 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.519558   494 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.519767   495 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.568557   496 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.568712   497 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.568784   498 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.568947   499 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.569077   500 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.618063   501 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.618189   502 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.618239   503 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.618284   504 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.618328   505 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.684228   506 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.684371   507 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.684468   508 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.684520   509 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.684575   510 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.726729   511 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.732433   512 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.732658   513 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.732916   514 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.733187   515 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.768482   516 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.768891   517 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.769243   518 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.769578   519 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.769895   520 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.817921   521 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.818229   522 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.818471   523 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.818701   524 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.818916   525 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.869543   526 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.870916   527 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.872014   528 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.873232   529 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.875968   530 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.920754   531 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.921512   532 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.921811   533 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.922032   534 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.922300   535 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.968643   536 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.976706   537 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.976821   538 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.976914   539 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:16.978304   540 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.018284   541 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.018522   542 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.018595   543 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.018645   544 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.018692   545 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.069605   546 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.070125   547 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.071342   548 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.072404   549 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.073649   550 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.118202   551 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.118560   552 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.118828   553 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.119037   554 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.119241   555 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.171721   556 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.172180   557 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.172452   558 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.172655   559 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.172933   560 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.219171   561 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.219629   562 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.219936   563 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.220374   564 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.220628   565 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.268363   566 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.268602   567 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.268670   568 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.268754   569 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.268877   570 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.318037   571 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.318286   572 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.318404   573 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.318483   574 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.318561   575 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.369465   576 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.370418   577 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.371520   578 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.372551   579 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.374025   580 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.428183   581 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.428384   582 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.428449   583 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.428508   584 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.428563   585 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.468437   586 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.468567   587 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.468658   588 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.468880   589 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.469166   590 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.527381   591 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.528676   592 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.529545   593 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.530092   594 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.530567   595 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.574546   596 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.574748   597 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.574842   598 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.575057   599 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.575148   600 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.617923   601 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.622007   602 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.622139   603 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.622202   604 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.622261   605 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.668877   606 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.669077   607 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.669142   608 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.669232   609 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.669314   610 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.720278   611 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.720894   612 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.721510   613 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.721839   614 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.722284   615 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.770103   616 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.770270   617 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.770326   618 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.774486   619 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.774561   620 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.818869   621 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.820321   622 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.821661   623 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.822727   624 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.823898   625 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.868218   626 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.868582   627 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.868804   628 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.869102   629 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.869326   630 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.920041   631 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.920576   632 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.920946   633 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.921453   634 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.921721   635 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.972167   636 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.972384   637 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.972462   638 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.972561   639 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:17.972642   640 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.018978   641 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.019138   642 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.019220   643 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.019304   644 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.019411   645 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.072454   646 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.073580   647 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.073991   648 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.074502   649 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.075020   650 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.118293   651 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.118477   652 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.118574   653 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.122658   654 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.122745   655 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.168612   656 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.170238   657 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.170509   658 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.170979   659 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.171241   660 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.220312   661 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.220503   662 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.220587   663 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.220671   664 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.220753   665 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.278975   666 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.279544   667 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.279954   668 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.280471   669 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.281137   670 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.326095   671 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.326237   672 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.326306   673 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.326371   674 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.326436   675 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.368911   676 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.369092   677 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.369154   678 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.369217   679 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.369271   680 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.421560   681 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.422121   682 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.422370   683 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.422629   684 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.422884   685 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.475364   686 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.475503   687 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.475587   688 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.475685   689 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.475768   690 dMOD                          ATC.cxx:0503  0  1 id(0,28)              contains comm info |STUCK IN HOLD
+Thu Mar 17 17:33:18.532797     2 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for rpm1left when starting
+Thu Mar 17 17:33:18.532877     3 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for rpm2left when starting
+Thu Mar 17 17:33:52.122450    10 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(118300, 118400)
+Thu Mar 17 17:34:12.407047    11 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(158800, 158900)
+Thu Mar 17 17:34:22.169878    12 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(178300, 178400)
+Thu Mar 17 17:34:24.989786    13 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(184000, 184100)
+Thu Mar 17 17:34:41.924023     4 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for phdoc1 when single play
+Thu Mar 17 17:34:49.942263    14 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(233900, 234000)
+Thu Mar 17 17:34:53.063564    15 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(240100, 240200)
+Thu Mar 17 17:35:16.140691    16 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(286300, 286400)
+Thu Mar 17 17:35:23.120788    17 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(300300, 300400)
+Thu Mar 17 17:35:30.941453    18 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(315900, 316000)
+Thu Mar 17 17:35:55.028458    19 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(364100, 364200)
+Thu Mar 17 17:36:04.150237    20 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(382300, 382400)
+Thu Mar 17 17:36:04.469731    21 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(383000, 383100)
+Thu Mar 17 17:36:05.757434    22 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(385500, 385600)
+Thu Mar 17 17:36:13.748726    23 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(401500, 401600)
+Thu Mar 17 17:36:33.897625    24 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(441800, 441900)
+Thu Mar 17 17:36:34.324639    25 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(442700, 442800)
+Thu Mar 17 17:36:35.565304    26 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(445100, 445200)
+Thu Mar 17 17:36:35.790767    27 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(445600, 445700)
+Thu Mar 17 17:36:36.099929    28 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(446200, 446300)
+Thu Mar 17 17:36:40.521506    29 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(455100, 455200)
+Thu Mar 17 17:36:51.527412    30 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(477100, 477200)
+Thu Mar 17 17:37:38.742122    31 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(571500, 571600)
+Thu Mar 17 17:38:21.069670    32 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(656200, 656300)
+Thu Mar 17 17:39:21.113996    33 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(776200, 776300)
+Thu Mar 17 17:39:58.646218    34 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(851300, 851400)
+Thu Mar 17 17:40:12.920742     5 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for phspz5 when single play
+Thu Mar 17 17:40:14.821216     2 iMOD                   PA34_model.cxx:0816  0  1 id(0,34)    Calculates aircraft dynamics |pa_34_model Set control; Aileron power: 1; Rudder power: 1; Rudder fix: -3; Elevator fix: 0
+Thu Mar 17 17:40:17.268307     6 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for twr14 when single play
+Thu Mar 17 17:40:34.424122    35 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(922900, 923000)
+Thu Mar 17 17:40:34.735981    36 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(923500, 923600)
+Thu Mar 17 17:40:34.868934     7 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for twr17 when single play
+Thu Mar 17 17:40:34.932097     8 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for twr9 when single play
+Thu Mar 17 17:40:48.169160     9 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for twr12 when single play
+Thu Mar 17 17:40:52.257174    10 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for phspz6 when single play
+Thu Mar 17 17:40:57.996476    11 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for twr16 when single play
+Thu Mar 17 17:41:02.936417    12 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for phspz7 when single play
+Thu Mar 17 17:41:26.570308    37 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1027100, 1027200)
+Thu Mar 17 17:41:26.690039    38 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1027300, 1027400)
+Thu Mar 17 17:41:26.766462    39 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1027500, 1027600)
+Thu Mar 17 17:41:26.878822    40 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1027800, 1027900)
+Thu Mar 17 17:41:27.040957    41 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1028100, 1028200)
+Thu Mar 17 17:41:27.172321    42 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1028400, 1028500)
+Thu Mar 17 17:41:27.457155    43 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1028900, 1029000)
+Thu Mar 17 17:41:27.564412    44 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1029100, 1029200)
+Thu Mar 17 17:41:27.662697    45 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1029300, 1029400)
+Thu Mar 17 17:41:27.748613    46 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1029500, 1029600)
+Thu Mar 17 17:41:28.430688    47 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1030900, 1031000)
+Thu Mar 17 17:41:28.573605    48 wMOD                      B747PFD.cxx:0407  0  0 id(0,33)  Display the primary flight disp|b747-pfd behind @ TimeSpec(1031200, 1031300)

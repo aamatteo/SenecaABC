@@ -102,11 +102,15 @@ private: // simulation data
 	vstring sce_name;
 	// general
 	int scenario_id;
-	float eventtime, eventspeed, eventaltitude, eventgear;
+	float eventtime, eventspeed, eventaltitude, eventgear, eventgeardown; // eventgeardown added by Matteo Piras
 	long fpos; // position in file
-	bool send_events;
+	bool send_events; // gear_fail; // gear_fail added by Matteo Piras
+	// communication audio trigger
+	bool radioevent; // added by Matteo Piras
+	int radiocomm; // added by Matteo Piras: radioevent is the trigger, while radiocomm is the integer referring to the specific communication transmission
+
 	// events
-	bool do_engineEvent, do_massEvent, do_controlEvent, do_displayEvent, do_windEvent, do_failureEvent;
+	bool do_engineEvent, do_massEvent, do_controlEvent, do_displayEvent, do_windEvent, do_failureEvent, do_commEvent;
 	// engines
 	float power_left, power_right;
 	float max_rpm_left, max_rpm_right;
@@ -114,7 +118,7 @@ private: // simulation data
 	// mass shift
 	float shift_x, shift_y, shift_z, shift_mass, shift_time;
 	// controls
-	float aileron_power, rudder_power, rudder_bias, ARI, elevator_fix;
+	float aileron_power, rudder_power, rudder_bias, ARI, elevator_fix, rudder_offset, rudder_offset_time;
 	// display
 	bool frozen_v, frozen_h;
 	float offset_v_value, offset_v_time, offset_h_value, offset_h_time;
@@ -124,6 +128,10 @@ private: // simulation data
 	// addition to windEvent: FlightGear weather
 	int fg_visibility;
 	int fg_cloud0_alt, fg_cloud1_alt, fg_cloud2_alt;
+
+	//
+
+
 
   bool GPS_failure;
   bool VOR_failure;
@@ -154,6 +162,7 @@ private: // simulation data
 
   // utility functions
   void sendEngineEvent();
+  void sendCommEvent();
   void sendMassEvent();
   void sendControlEvent();
   void sendDisplayEvent();
@@ -196,6 +205,8 @@ private: // channel access
   EventChannelWriteToken<FGIncoEvent> fginco_token;
   // EventChannelWriteToken<Reposition> repos_token;
   StreamChannelReadToken<CitationOutput> pa34_token;
+  EventChannelWriteToken<CommEvent> comm_token;
+
 
 private: // activity allocation
   /** You might also need a clock. Don't mis-use this, because it is

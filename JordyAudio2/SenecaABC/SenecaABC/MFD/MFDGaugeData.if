@@ -1,4 +1,9 @@
 ;; -*-mode: scheme-*-
+;; gear integers:
+;; -1 warning
+;;  0 up & locked
+;;  1 down & locked
+;;  2 in transition
 (Type int)
 (Type float)
 (Type bool)
@@ -116,5 +121,9 @@
 		(int msg (Default 13))
 		(int range (Default 5))
 		(float fpa_req (Default 0.0))
+
+		(int lgear (Default 0))
+		(int ngear (Default 0))
+		(int rgear (Default 0))
 )
 

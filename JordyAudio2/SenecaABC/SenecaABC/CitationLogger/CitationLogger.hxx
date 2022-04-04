@@ -16,7 +16,7 @@
 
 #ifdef CitationLogger_cxx
 static const char h_id[] =
-"$Id: CitationLogger.hxx,v 1.2 2020/06/27 11:24:00 jkvanleeuwen Exp $";
+"$Id: CitationLogger.hxx,v 1.1.1.1 2022/02/17 15:04:28 matteopiras Exp $";
 #endif
 
 // include the dusime header

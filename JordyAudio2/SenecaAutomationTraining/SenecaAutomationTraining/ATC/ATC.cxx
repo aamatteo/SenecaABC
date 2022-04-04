@@ -876,8 +876,8 @@ void ATC::doCalculation(const TimeSpec& ts)
 
     }
 
-    std::cout << "altitude is: " << std::endl;
-    std::cout << alt << std::endl;
+    //std::cout << "altitude is: " << std::endl;
+    //std::cout << alt << std::endl;
 
     if (alt < 91 && playcomm5 == true){
 

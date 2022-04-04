@@ -117,6 +117,11 @@ MFD::MFD(Entity* e, const char* part, const
   mouse_left(false),
   mouse_x(false),
   mouse_y(false),
+  reset_gear(false),
+
+  rudder_bias(0.0),
+  gear_pos(0.0),
+  eventgeardown(0.0),
 
   // initialize the data you need for the trim calculation
 
@@ -131,6 +136,9 @@ MFD::MFD(Entity* e, const char* part, const
   gfc_token(getId(), NameSet(getEntity(), "GFC700Event", part)),
   ap_token(getId(), NameSet(getEntity(), "AutopilotChannel", part)),
   //ma_token(getId(), NameSet(getEntity(), "ManifoldChannel", part)),
+  control_token(getId(), NameSet(getEntity(), "ControlEvent", part)),
+  trim_inco_token(getId(), NameSet(getEntity(), "Trim_inco", part)),
+
 
   ap_targets_read_token_(new APTargetsReadToken(getId(), NameSet(getEntity(),"AutopilotTargets", ""))),
 
@@ -225,6 +233,8 @@ bool MFD::isPrepared()
   CHECK_TOKEN(fail_token);
   CHECK_TOKEN(gfc_token);
   CHECK_TOKEN(ap_token);
+  CHECK_TOKEN(control_token);
+  CHECK_TOKEN(trim_inco_token);
   // CHECK_TOKEN(ma_token);
 
   if(ap_targets_read_token_ && !ap_targets_read_token_->isValid())
@@ -336,6 +346,61 @@ void MFD::doCalculation(const TimeSpec& ts)
       W_MOD(classname << ": Error while reading AP2G1000Channel!");
     }
   }
+//////////////////////
+  if (control_token.getNumWaitingEvents(ts))
+  {
+    try
+    {
+      EventReader<ControlEvent> control(control_token, ts);
+      rudder_bias = control.data().rudder_bias;
+      //display_lg_failure = control.data().display_lg_failure;
+
+    }
+    catch (Exception& e)
+    {
+      W_MOD(classname << " caught " << e << " @ " << ts << " when reading ControlEvent" );
+    }
+  }
+
+/////////////////
+
+
+  if(trim_inco_token.getNumWaitingEvents(ts))
+  {
+    try
+    {
+      EventReader<Trim_inco> trim(trim_inco_token, ts);
+      //EventWriter<CitationPilotInput> cpi_trim(cpi_trim_token, ts);
+
+      //D_MOD(classname << " Trim_input from inco: " << trim.data());
+
+      //cpi_trim.data().de = trim.data().de_trim;
+      //cpi_trim.data().da = trim.data().da_trim;
+      //cpi_trim.data().dr = trim.data().dr_trim;
+
+      // de wordt goed gezet maar da dr en gear niet
+      // same problem for flaps?
+      // this thing is read by the FCSAdapter - only de is set, the rest is ignored
+
+      //flap_pos = trim.data().flaps_trim; // rad
+      gear_pos = trim.data().gear_trim; // 0 or 1
+      //I_MOD(classname << " (trim_inco) gear position: " << gear_pos );
+      //I_MOD(classname << " (trim_inco) flap position: " << flap_pos/DEG2RAD << " deg" );
+
+      // engine wordt getrimd vanuit trim channel
+
+      //inco_loaded = true;
+    }
+    catch(Exception& e)
+    {
+      W_MOD(classname << " caught " << e << " @ " << ts << " (reading Trim_inco)" );
+    }
+  }
+
+
+
+
+
 
   if (apinco_token.getNumWaitingEvents(ts))
   {
@@ -390,8 +455,59 @@ void MFD::doCalculation(const TimeSpec& ts)
     g1000_data.x = citoutput[Y_y];
     g1000_data.y = citoutput[Y_x];
 
+    // landing gear
+    // TODO: implement asymmetric and stuck gears
+    int gear = 0;
+
+    //display_lg_failure = display_lg_failure;
+    //cout << display_lg_failure << endl;
+    if(citoutput[Y_gear] == 0.0f){
+      gear = 0;
+      //cout << "LG CHECK DEPLOYMENT 0 = UP" << endl;
+
+      // test landing gear display
 
 
+    }
+
+    else if (citoutput[Y_gear] > 0.999f ){
+
+      //display_lg_failure = 1;
+      //cout << display_lg_failure << endl;
+
+      if (rudder_bias != 0){
+
+        //cout << "LG CHECK DEPLOYMENT -1" << endl;
+        gear = -1;
+        reset_gear = true;
+      }
+      else { gear = 1; }
+
+      }
+
+   //else if(citoutput[Y_gear] > 0.999f){
+      //gear = 1;
+      //rudder_bias = rudder_bias;
+      //cout << rudder_bias << endl;
+      //cout << "LG CHECK DEPLOYMENT TRANSIT = 1" << endl;
+      //cout << eventgeardown << endl;
+    //}
+
+    else if(citoutput[Y_gear] > 0.0f){
+      gear = 2;}
+
+
+    if(reset_gear == true && citoutput[Y_gear] < 0.999f){
+
+      rudder_bias = 0;
+    }
+
+
+
+    g1000_data.lgear = gear;
+    g1000_data.ngear = gear;
+    g1000_data.rgear = gear;
+    
 
     if(ap_targets_read_token_)
     {

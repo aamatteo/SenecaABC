@@ -2,7 +2,7 @@
 # on a specific machine
 # note that the comm-objects directories should not be listed here
 # example:
-# SenecaAutomationTraining/some-module
+# SenecaABC/some-module
 
 # pedals/CL
 CSControlLoading/ControlLoading 

@@ -40,4 +40,10 @@ WorldListener/comm-objects/BaseObjectPosition.dco
 WorldListener/comm-objects/BaseObjectMotion.dco
 WorldListener/comm-objects/AudioObjectFixed.dco
 
+#Communication Event // added by Matteo Piras
+
+SenecaABC/comm-objects/CommEvent.dco
+
+
+
 

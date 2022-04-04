@@ -1,0 +1,37 @@
+Dueca timing log, run start at Mon Apr  4 15:11:29 2022
+
+                                  activity  strt tim  min st  avg st  max st  min cp  avg cp  max cp warn crit user
+  id(0,25)              send to flightgear         0  -39576  -16762   27934  -39570  -16747   27962    1    6    0
+  id(0,25)              send to flightgear         1  -39604  -17708   10273  -39598  -17693   10317    1    0    0
+  id(0,25)              send to flightgear         2  -39572  -17777   15464  -39556  -17761   15504    0    1    0
+  id(0,25)         driving control loaders         3      29    8988  545728      34    8993  545729   27   54    0
+  id(0,25)              send to flightgear         4  -39248  -16755   23500  -39243  -16739   23537    2    1    0
+  id(0,25)   Calculates aircraft dynamics          5  -39626  -14924  286852  -39608  -14867  286871   11   31    0
+  id(0,25)              send to flightgear         6  -39277  -17376   12296  -39269  -17358   12326    2    0    0
+  id(0,25)              send to flightgear         7  -39357  -17264    9999  -39350  -17249   10036    1    0    0
+  id(0,25) combining input from control lo         8  -39628  -17471   23377  -39627  -17468   23385    6    1    0
+  id(0,25)        Update the G1000 display         9   14749   19137   45530   22127   27434   53559    0  400    0
+  id(0,25)              send to flightgear        10  -39114  -17748    8604  -39104  -17732    8637    0    0    0
+  id(0,25)                                        11  -39575  -17404   23482  -39573  -17398   23493    5    1    0
+  id(0,25)              send to flightgear        12  -39280  -17642   13760  -39269  -17626   13794    3    0    0
+  id(0,25)         driving control loaders        13      26    1262   22338      30    1272   22345   19    2    0
+  id(0,25)             contains comm info         14  -39359  -17373   23493  -39357  -17369   23495    7    1    0
+  id(0,25)              send to flightgear        15  -39280  -16842   13094  -39274  -16827   13124    5    0    0
+  id(0,25)        Update the G1000 display        16     286    2886   19380   14375   19053   35595    7  393    0
+  id(0,25)   Calculates aircraft dynamics         17  -39494  -17378   18556  -39412  -17303   18647   10    0    0
+  id(0,25)              send to flightgear        18  -39405  -16877   18685  -39398  -16861   18718    0    2    0
+  id(0,25)              send to flightgear        19  -39232  -16635   15319  -39226  -16617   15410    4    1    0
+  id(0,25) combining input from control lo        20  -39496  -17214   18548  -39495  -17210   18555   15    0    0
+  id(0,25)        Update the G1000 display        21   14388   19356   39120   22195   27518   48048    0  400    0
+  id(0,25)              send to flightgear        22  -39351  -17113   20338  -39339  -17097   20377    3    1    0
+  id(0,25)                                        23  -39411  -17027   20287  -39408  -17021   20322   18    1    0
+  id(0,25)              send to flightgear        24  -39272  -17512   18125  -39265  -17495   18162    0    1    0
+  id(0,25)         driving control loaders        25      35    1341   27974      40    1359   27979   23    3    0
+  id(0,25)             contains comm info         26  -39407  -17009   20323  -39405  -17001   20333   15    1    0
+  id(0,25)              send to flightgear        27  -39254  -17738   15776  -39243  -17722   15817    0    1    0
+  id(0,25)        Update the G1000 display        28     330    2993   20436   14720   18817   39987    5  395    0
+  id(0,25)   Calculates aircraft dynamics         29  -39439  -17349   20201  -39362  -17271   20285   13    1    0
+  id(0,25)              send to flightgear        30  -39349  -17308   12870  -39342  -17293   12920    3    0    0
+  id(0,25)              send to flightgear        31  -39283  -17068   10704  -39277  -17052   10734    1    0    0
+  id(0,25) combining input from control lo        32  -39440  -17410   20189  -39439  -17406   20197    9    1    0
+  id(0,25)        Update the G1000 display        33   14727   18796   40002   22193   26951   48796    0  400    0

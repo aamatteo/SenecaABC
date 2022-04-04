@@ -34,22 +34,12 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SenecaABC" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SenecaAutomationTraining" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SenecaAutomationTraining" TARGET_NAME="SenecaAutomationTraining" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SenecaAutomationTraining" RUN_TARGET_NAME="SenecaAutomationTraining">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
   </component>
@@ -62,6 +52,11 @@
       <option name="presentableId" value="Default" />
       <updated>1645719489389</updated>
       <workItem from="1645719492103" duration="62000" />
+      <workItem from="1647508425522" duration="1076000" />
+      <workItem from="1647522372336" duration="596000" />
+      <workItem from="1647531864102" duration="310000" />
+      <workItem from="1647534710004" duration="985000" />
+      <workItem from="1647536263891" duration="1220000" />
     </task>
     <servers />
   </component>

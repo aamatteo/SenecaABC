@@ -157,7 +157,7 @@ private: // simulation data
 
   /** comm event parameters and trigger */
 
-  bool radioevent;// radioevent is the trigger, radiocomm is the parameter defined in CommEvent
+  bool radioevent, check_gear_asym;// radioevent is the trigger, radiocomm is the parameter defined in CommEvent
   int radiocomm;
 
   /** bool to signal end of fligh*/

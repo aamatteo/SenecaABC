@@ -19,3 +19,6 @@ SenecaABC/comm-objects/FailureEvent.dco
 SenecaABC/comm-objects/ManifoldChannel.dco
 SenecaABC/comm-objects/APIncoEvent.dco
 SenecaABC/comm-objects/GFC700Event.dco
+SenecaABC/comm-objects/ControlEvent.dco
+Asym1/comm-objects/Trim_inco.dco
+

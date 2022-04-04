@@ -26,7 +26,7 @@ EXTRALIBS = -lalut -lopenal $(shell pkg-config --libs sdl2 hmilib-aux hmilib-glf
 
 # A second batch of extra libraries can be specified. This batch is 
 # included *after* all dueca's libs
-EXTRALIBS2 =  -lclodterrain -lboost_chrono -lboost_filesystem -lboost_system -lboost_regex -lhmi-aux
+EXTRALIBS2 =  -lclodterrain -lboost_chrono -lboost_filesystem -lboost_system -lboost_regex -lhmi-aux  $(shell pkg-config --libs glew glfw3)
 
 # Quick fix needed after every update
 # rename u_int32_t to uint32_t in ../SRSMotion/comm-objects/MotionBaseResultData.dco

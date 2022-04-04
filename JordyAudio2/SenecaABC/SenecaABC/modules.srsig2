@@ -2,7 +2,7 @@
 # on a specific machine
 # note that the comm-objects directories should not be listed here
 # example:
-# SenecaAutomationTraining/some-module
-SenecaAutomationTraining/FGVisual 
+# SenecaABC/some-module
+SenecaABC/FGVisual 
 HapticFlightEnvelopeProtectionTestBench/FGWeather 
 HapticFlightEnvelopeProtectionTestBench/TelnetInterface

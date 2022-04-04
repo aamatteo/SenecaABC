@@ -84,8 +84,8 @@ void EngineData::Render()
   const float cht_y = -400;
   const float temp_y = -462;
   const float pres_y = -524;
-  const float amps_y = -586;
-  const float fuel_y = -648;
+  const float amps_y = -586;// not actually used
+  const float fuel_y = -586;// move up to make room for gear
 
 
   const GLTriangle triangle_l(-11.0f, 16.0f,
@@ -299,6 +299,96 @@ void EngineData::Render()
 
   }
 
+  // landing gear
+  {
+    HMIText text(hmi::FontManager::Get(2));
+    GLSaveMatrix matrix_state;
+    GLLineSmooth antialias;
+    GLLineWidth  line_width(2.0f);
+    hmi::Colour::PaletteColour(cn_foreground);
+    text.position(72, -648 + 25).hcenter().vcenter().size(0.13);
+    text << "LANDING GEAR";
+    text.draw();
+
+    draw_gear(72.0-36.0, -648, *data.lgear);
+    draw_gear(72.0     , -648, *data.ngear);
+    draw_gear(72.0+36.0, -648, *data.rgear);
+  }
+}
+
+
+void EngineData::draw_gear(float x_value, float y_value, int state)
+{
+  glTranslatef(x_value, y_value, 0.0);
+  
+  switch (state) {
+  default:
+  case -1:
+    {
+      glColor3f(1.0, 0.0, 0.0);
+      glBegin(GL_POLYGON);
+      circlePoints(12.0, 0.0, 360.0, 60.0);
+      glEnd();
+      break;
+    }
+  case 0:
+    {
+      glColor3f(1.0, 1.0, 1.0);
+      glBegin(GL_LINE_STRIP);
+      circlePoints(12.0, 0.0, 360.0, 60.0);
+      glEnd();
+      break;
+    }
+  case 1:
+    {
+      glColor3f(0.0, 1.0, 0.0);
+      glBegin(GL_POLYGON);
+      circlePoints(12.0, 0.0, 360.0, 60.0);
+      glEnd();
+      break;
+    }
+  case 2:
+    {
+      glColor3f(1.0, 1.0, 1.0);
+      glBegin(GL_LINE_LOOP);
+      glVertex2f(-12.0,-12.0);
+      glVertex2f(-12.0, 12.0);
+      glVertex2f( 12.0, 12.0);
+      glVertex2f( 12.0,-12.0);
+      glEnd();
+      glBegin(GL_LINES);
+      glVertex2f(-12.0, 10.0);
+      glVertex2f(-10.0, 12.0);
+      glVertex2f(-12.0,  6.0);
+      glVertex2f( -6.0, 12.0);
+      glVertex2f(-12.0,  2.0);
+      glVertex2f( -2.0, 12.0);
+      glVertex2f(-12.0, -2.0);
+      glVertex2f(  2.0, 12.0);
+      glVertex2f(-12.0, -6.0);
+      glVertex2f(  6.0, 12.0);
+      glVertex2f(-12.0, -10.0);
+      glVertex2f( 10.0, 12.0);
+      glVertex2f(-10.0, -12.0);
+      glVertex2f( 12.0, 10.0);
+      glVertex2f(- 6.0, -12.0);
+      glVertex2f( 12.0, 6.0);
+      glVertex2f(- 2.0, -12.0);
+      glVertex2f( 12.0, 2.0);
+      glVertex2f( 2.0, -12.0);
+      glVertex2f( 12.0, -2.0);
+      glVertex2f( 6.0, -12.0);
+      glVertex2f( 12.0, -6.0);
+      glVertex2f( 10.0, -12.0);
+      glVertex2f( 12.0, -10.0);
+     glEnd();
+	
+      break;
+    }
+
+  } 
+
+  glTranslatef(-x_value, -y_value, 0.0);
 }
 
 void EngineData::draw_bar(float y_value, std::string &txt, bool draw_ticks,

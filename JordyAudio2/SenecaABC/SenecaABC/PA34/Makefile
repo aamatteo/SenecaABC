@@ -20,7 +20,8 @@ EXTRA_INCLUDES = -I../CitationModelInclude -I.  $(shell pkg-config --cflags duec
 CPPSRC :=	$(shell ls *.cxx 2>/dev/null)
 
 # and all c-files here (.c files)
-CSRC :=		$(shell ls *.c 2>/dev/null)
+CSRC :=         pa34model_dueca_8b.c pa34model_dueca_8b_data.c rt_atan2.c
+
 
 # and all f-files here (.f, FORTRAN)
 FSRC :=         $(shell ls *.f 2>/dev/null)

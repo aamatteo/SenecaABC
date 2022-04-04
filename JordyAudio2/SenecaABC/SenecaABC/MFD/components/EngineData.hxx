@@ -35,6 +35,8 @@ private:// Member data
 
   void draw_bar(float y_value, std::string &txt, bool draw_ticks, float green_l, float green_r, float red_l, float red_r, float x_l, float x_r);
 
+  void draw_gear(float x_value, float y_value, int state);
+  
   // Your other member data here
 
 public:// Construction / Destruction

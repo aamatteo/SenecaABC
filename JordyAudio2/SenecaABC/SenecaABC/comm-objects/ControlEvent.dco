@@ -20,6 +20,7 @@
 	(float rudder_offset_time (Default 0.0f))
 	(float rudder_bias (Default 0.0f))
 	;; gear
+	(int  display_lg_failure )
 	;;(bool gear_fail)
 	;; aileron-rudder-interconnect
 	(float ARI (Default 0.0f))

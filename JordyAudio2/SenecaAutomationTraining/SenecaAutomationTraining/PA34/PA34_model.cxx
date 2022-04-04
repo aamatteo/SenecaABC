@@ -155,6 +155,7 @@ PA34_model::PA34_model(Entity* e, const char* part, const
   gear_pos(0.0), gear_time(6.0f), gear_incr(0.01f/gear_time), eventgeardown(0.0),// time in s for full move
   flapsOK(true),
   gearOK(true),
+  check_gear_asym(false),
 
   // communication items added by Matteo Piras
 
@@ -1179,6 +1180,11 @@ void PA34_model::doCalculation(const TimeSpec& ts)
 
 		    rudder_bias = rudder_bias;
 
+		}
+
+		if (check_gear_asym = true && gear_pos<0.3){
+
+		  rudder_bias = 0.0;
 		}
 
 		//if(radioevent == true){

@@ -163,7 +163,7 @@ ECI::ECI(Entity* e, const char* part, const
   sce_name("<initialize>"),
   // general
   scenario_id(-1),
-  eventtime(-1.0), eventspeed(-1.0), eventaltitude(-1.0), eventgear(-1.0),
+  eventtime(-1.0), eventspeed(-1.0), eventaltitude(-1.0), eventgear(-1.0), eventgeardown(-1.0),
   fpos(0),
   send_events(false),
   // events
@@ -173,6 +173,10 @@ ECI::ECI(Entity* e, const char* part, const
   do_displayEvent(false),
   do_windEvent(false),
   do_failureEvent(false),
+  do_commEvent(false), // added by Matteo Piras
+  radioevent(false),   // added by Matteo Piras
+
+ // gear_fail(false),
   // engines
   power_left(1.0), power_right(1.0),
   max_rpm_left(2800), max_rpm_right(2800),
@@ -228,6 +232,8 @@ ECI::ECI(Entity* e, const char* part, const
 
   active_nav_source(0),
 
+  // display landing gear
+
   // fp_comment(""),
   // dummy_string(""),
   // repos_x(0),
@@ -253,7 +259,7 @@ ECI::ECI(Entity* e, const char* part, const
   fginco_token(getId(), NameSet(getEntity(), "FGIncoEvent","")),
   // repos_token(getId(), NameSet(getEntity(), "Reposition",part), ChannelDistribution::NO_OPINION),
   pa34_token(getId(), NameSet(getEntity(), "CitationOutput",part),101),
-
+  comm_token(getId(), NameSet(getEntity(), "CommEvent", part), ChannelDistribution::JOIN_MASTER), // added by Matteo Piras
   // activity initialization
   myclock(),
   cb1(this, &ECI::doCalculation),
@@ -416,6 +422,8 @@ bool ECI::isPrepared()
   CHECK_TOKEN(fginco_token);
   // CHECK_TOKEN(repos_token);
   CHECK_TOKEN(pa34_token);
+  CHECK_TOKEN(comm_token); // added by Matteo Piras
+
 
   // Example checking anything
   // CHECK_CONDITION(myfile.good());
@@ -574,8 +582,11 @@ void ECI::doCalculation(const TimeSpec& ts)
 
 	// event checks
 	// GUI update upcoming event text
-	if (eventtime < 0 && eventspeed < 0 && eventaltitude < 0 && eventgear < 0) {
+	if (eventtime < 0 && eventspeed < 0 && eventaltitude < 0 && eventgear < 0  && eventgeardown < 0 && radioevent == false) {// && gear_fail == false) {
 		gtk_label_set_text( GTK_LABEL(g_event_text), "Finished all events." );
+		//cout << "eventgeardownvalue is :";
+		//cout << eventgeardown;
+
 	}
 	else {
 		// timer going?
@@ -617,6 +628,28 @@ void ECI::doCalculation(const TimeSpec& ts)
 			send_events = true;
 			D_MOD( classname <<  " : EVENT specified gear position reached: " << pa34_gear << " < " << eventgear);
 		}
+
+		//if (gear_fail == true){
+
+		    //send_events = true;
+            //D_MOD( classname <<  " : EVENT specified gear failed: " << pa34_gear << " < " << eventgear);
+
+		//}
+
+        if (eventgeardown > 0.0 && pa34_gear >= eventgeardown ) {
+            send_events = true;
+            D_MOD( classname <<  " : EVENT specified gear position reached: " << pa34_gear << " > " << eventgeardown);
+            cout << "eventgeardown value is: ";
+            cout << eventgeardown;
+        }
+
+        if (eventtime > 0 && radioevent == true) {
+            send_events = true;
+            D_MOD( classname <<  " : EVENT radio comm is transmitted: ");
+        }
+
+
+
 	}
 
 	break;
@@ -665,7 +698,14 @@ void ECI::doCalculation(const TimeSpec& ts)
 			do_displayEvent = false;
 		}
 
-		// Send WindEvent
+        // Send CommEvent
+        if (do_commEvent){
+            sendCommEvent();
+            do_commEvent = false;
+        }
+
+
+        // Send WindEvent
 		if (do_windEvent){
 			sendWindEvent();
 			do_windEvent = false;
@@ -676,12 +716,16 @@ void ECI::doCalculation(const TimeSpec& ts)
       do_failureEvent = false;
     }
 
+
 		//reset all triggers
 		send_events   = false;
+        radioevent    = false;
 		eventtime     = -1;
 		eventspeed    = -1;
 		eventaltitude = -1;
 		eventgear     = -1;
+		//gear_fail     = false;
+		eventgeardown = -1;
 
 		//read new event
 		readScenarioFileNext( sce_name );
@@ -756,6 +800,14 @@ void ECI::trimCalculation(const TimeSpec& ts, const TrimMode& mode)
 }
 
 
+void ECI::sendCommEvent() // added by Matteo Piras
+{
+    EventWriter<CommEvent> comm(comm_token); // SimTime::getTimeTick() or SimTime::now() included here?
+    comm.data().radiocomm = radiocomm;
+    D_MOD(classname << "sending communication event");
+}
+
+
 void ECI::sendEngineEvent()
 {
 	EventWriter<EngineEvent> e(engine_token); // SimTime::getTimeTick() or SimTime::now() included here?
@@ -768,7 +820,7 @@ void ECI::sendEngineEvent()
 	e.data().time_left     = engine_time_left;
 	e.data().time_right    = engine_time_right;
 
-	D_MOD(classname << " sending engine event");
+	D_MOD(classname << "sending engine event");
 }
 
 void ECI::sendMassEvent()
@@ -799,6 +851,8 @@ void ECI::sendControlEvent()
 	c.data().rudder_offset       = 0.0;
 	c.data().rudder_offset_time  = 0.0;
 	c.data().rudder_bias         = rudder_bias;
+
+	//c.data().gear_fail           = false;
 	c.data().ARI                 = ARI;
 	c.data().elevator_fix        = elevator_fix;
 
@@ -878,6 +932,8 @@ void ECI::readScenarioFileHeader(const vstring& name)
 		eventspeed    = -1;
 		eventaltitude = -1;
 		eventgear     = -1;
+		eventgeardown = -1;
+		//gear_fail     = false;
 		return;
 	}
 
@@ -1039,6 +1095,8 @@ void ECI::readScenarioFileNext(const vstring& name)
 			GET_SCENARIO_SETTING(float, eventspeed)
 			GET_SCENARIO_SETTING(float, eventaltitude)
 			GET_SCENARIO_SETTING(float, eventgear)
+            GET_SCENARIO_SETTING(float, eventgeardown)
+            //GET_SCENARIO_SETTING(float, gear_fail)
 			GET_SCENARIO_SETTING(float, eventtime_after)
 			ACTIVATE_SCENARIO_SETTING(event_button_press, @button_press)
 
@@ -1073,8 +1131,11 @@ void ECI::readScenarioFileNext(const vstring& name)
 			GET_SCENARIO_SETTING(float, aileron_power)
 			GET_SCENARIO_SETTING(float, rudder_power)
 			GET_SCENARIO_SETTING(float, rudder_bias)
+            GET_SCENARIO_SETTING(float, rudder_offset)
+            GET_SCENARIO_SETTING(float, rudder_offset_time)
 			GET_SCENARIO_SETTING(float, ARI)
 			GET_SCENARIO_SETTING(float, elevator_fix)
+
 
 			// display event
 			GET_SCENARIO_SETTING(bool, frozen_h)
@@ -1123,7 +1184,9 @@ void ECI::readScenarioFileNext(const vstring& name)
 		eventspeed      = -999;
 		eventaltitude   = -999;
 		eventgear       = -999;
+		eventgeardown   = -999;
 		eventtime_after = -999;
+		radioevent      = false;
 	}
 
 	// if eventtime_after was set, set eventtime (overruling any settings for eventtime)
@@ -1235,6 +1298,9 @@ void ECI::resetParameters()
 	eventspeed    = -1;
 	eventaltitude = -1;
 	eventgear     = -1;
+    eventgeardown = -1;
+    radioevent    = false; 
+	//gear_fail     = false;
 	fpos=0;
 	send_events=false;
 	// events
@@ -1243,6 +1309,7 @@ void ECI::resetParameters()
 	do_controlEvent=false;
 	do_displayEvent=false;
 	do_windEvent=false;
+	do_commEvent=false;
   do_failureEvent=false;
 	// engines
 	power_left=1.0;
@@ -1263,6 +1330,7 @@ void ECI::resetParameters()
 	rudder_bias=0.0;
 	ARI=0.0;
 	elevator_fix=0.0;
+
 	// display
 	frozen_v=false;
 	frozen_h=false;
@@ -1300,6 +1368,7 @@ void ECI::sendAllEvents()
 	sendEngineEvent( );
 	sendMassEvent( );
 	sendControlEvent( );
+	sendCommEvent();
 	sendDisplayEvent( );
 	sendWindEvent( );
   sendFailureEvent( );
@@ -1338,6 +1407,11 @@ void ECI::fullGUIupdate()
 		sprintf(tmp_txt, "Event if gear pos < %3.2f", eventgear);
 		gtk_label_set_text( GTK_LABEL(g_event_text), tmp_txt);
 	}
+
+    if (eventgeardown > 0.0) {
+        sprintf(tmp_txt, "Event if gear pos > %3.2f", eventgeardown);
+        gtk_label_set_text( GTK_LABEL(g_event_text), tmp_txt);
+    }
 
 	// event
 	//TODO check bools do_ : indicator of what will be send to be added to GUI

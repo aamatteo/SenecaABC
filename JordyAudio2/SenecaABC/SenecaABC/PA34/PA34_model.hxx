@@ -93,7 +93,7 @@ private: // simulation data
   /** flaps and gear */
   float flap_pos, flap_speed, flap_incr;
   float gear_pos, gear_time, gear_incr;
-  bool flapsOK, gearOK;
+  bool flapsOK, gearOK, gear_fail, check_gear_asym;
 
   /** aileron rudder inter connect als percentage */
   double ARI;
@@ -153,7 +153,12 @@ private: // simulation data
   int mass_nsteps;
 
   /** control parameters */
-  float aileron_power, rudder_power, rudder_bias, elevator_fix;
+  float aileron_power, rudder_power, rudder_bias, elevator_fix, rudder_offset, rudder_offset_time, eventgeardown; //eventgeardown
+
+  /** comm event parameters and trigger */
+
+  bool radioevent;// radioevent is the trigger, radiocomm is the parameter defined in CommEvent
+  int radiocomm;
 
   /** bool to signal end of fligh*/
   bool flying;
@@ -198,6 +203,10 @@ private: // channel access
   EventChannelReadToken<EngineEvent> engine_token;
   EventChannelReadToken<ControlEvent> control_token;
 
+  // communication events
+
+  EventChannelReadToken<CommEvent> comm_token;
+
   // autopilot settings
   StreamChannelReadToken<AutopilotChannel> ap_token;
   EventChannelReadToken<GFC700Event> gfcr_token;
@@ -234,6 +243,7 @@ private: // channel access
   ChannelWriteToken w_gearalert;
   ChannelWriteToken w_autopilotdisco;
   ChannelWriteToken w_apbutton;
+  //ChannelWriteToken w_comm; // added by Matteo Piras
 
 private: // activity allocation
   /** Callback object for simulation calculation. */

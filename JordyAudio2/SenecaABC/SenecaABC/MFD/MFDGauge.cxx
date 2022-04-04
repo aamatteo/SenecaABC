@@ -146,6 +146,9 @@ MFDGauge::MFDGauge(bool frame) :
   make_link(engine_data->GetData().map_left, data.map_left);
   make_link(engine_data->GetData().map_right, data.map_right);
   make_link(engine_data->GetData().dt, data.dt);
+  make_link(engine_data->GetData().lgear, data.lgear);
+  make_link(engine_data->GetData().ngear, data.ngear);
+  make_link(engine_data->GetData().rgear, data.rgear);
   // ////////////////////////////////////////////////////////////
 
   // The text and data fields

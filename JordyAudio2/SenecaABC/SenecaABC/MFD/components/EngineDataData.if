@@ -1,6 +1,13 @@
 ;; -*-mode: scheme-*-
+;; gear integers:
+;; -1 warning
+;;  0 up & locked
+;;  1 down & locked
+;;  2 in transition
+
 (Type float)
 (Type bool)
+(Type int)
 
 (ComponentInterface EngineDataData
 		    (float n1_left   (Default 0.0))
@@ -17,4 +24,7 @@
 		    (float map_left (Default 0.0))
 		    (float map_right (Default 0.0))
 		    (float dt (Default 0.0))
+		    (int lgear (Default 0))
+		    (int ngear (Default 0))
+		    (int rgear (Default 0))
 )

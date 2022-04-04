@@ -1,0 +1,21 @@
+nav1active	112.050	PAM
+nav1stby	108.000
+nav2active	114.600	BUB
+nav2stby	108.000
+use_vors	1	0
+vor1	45703.4 41151.5
+vor2	1038.0	378.7
+nr_wps	3
+BEGINNING	20000   6200    1000
+MIKE        15000   4860    0
+EHRD        0       0       -15
+
+
+
+
+
+
+
+
+
+

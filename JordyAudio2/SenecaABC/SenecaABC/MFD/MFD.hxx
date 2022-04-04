@@ -41,8 +41,11 @@ private: // simulation data
 
   bool fpl_page;
   bool mouse_left;
+  bool reset_gear;
+
   int mouse_x;
   int mouse_y;
+  float rudder_bias, gear_pos, eventgeardown;
 
 private: // trim calculation data
   // declare the trim calculation data needed for your simulation
@@ -64,6 +67,8 @@ private: // channel access
   EventChannelReadToken<GFC700Event> gfc_token;
   StreamChannelReadToken<AutopilotChannel> ap_token;
   // StreamChannelReadToken<ManifoldChannel> ma_token;
+  EventChannelReadToken<ControlEvent> control_token;
+  EventChannelReadToken<Trim_inco> trim_inco_token;
 
   typedef StreamChannelReadToken<AutopilotTargets> APTargetsReadToken;
   boost::scoped_ptr<APTargetsReadToken> ap_targets_read_token_;

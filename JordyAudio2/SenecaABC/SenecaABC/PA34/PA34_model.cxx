@@ -22,7 +22,7 @@
 */
 
 static const char c_id[] =
-"$Id: PA34_model.cxx,v 1.1.1.1 2022/02/17 15:04:28 matteopiras Exp $";
+"$Id: PA34_model.cxx,v 1.6 2022/04/04 13:15:14 matteopiras Exp $";
 
 
 #define PA34_model_cxx
@@ -32,7 +32,7 @@ static const char c_id[] =
 // include the debug writing header, by default, write warning and
 // error messages
 //#define D_MOD
-//#define I_MOD
+#define I_MOD
 #define W_MOD
 #define E_MOD
 #include <debug.h>
@@ -152,9 +152,18 @@ PA34_model::PA34_model(Entity* e, const char* part, const
   prev_de(0.08),
   // flaps and gear
   flap_pos(0.0), flap_speed(0.14f), flap_incr(0.01f*flap_speed), // speed in rad/s
-  gear_pos(0.0), gear_time(6.0f), gear_incr(0.01f/gear_time), // time in s for full move
+  gear_pos(0.0), gear_time(6.0f), gear_incr(0.01f/gear_time), eventgeardown(0.0),// time in s for full move
   flapsOK(true),
   gearOK(true),
+  check_gear_asym(false),
+
+  // communication items added by Matteo Piras
+
+  radioevent(false),
+  radiocomm(0),
+
+
+  //gear_fail(false), // setting that in principle the landing gear does not fail
   // wind and turb
   K_turb(0.0),
   K_shear(0.0),
@@ -196,6 +205,8 @@ PA34_model::PA34_model(Entity* e, const char* part, const
   aileron_power(1),
   rudder_power(1),
   rudder_bias(0.0),
+  rudder_offset(0.0),
+  rudder_offset_time(0.0),
   elevator_fix(0.0),
   flying(false),
 
@@ -226,6 +237,7 @@ PA34_model::PA34_model(Entity* e, const char* part, const
   mass_token(getId(), NameSet(getEntity(), "MassEvent", part)),
   engine_token(getId(), NameSet(getEntity(), "EngineEvent", part)),
   control_token(getId(), NameSet(getEntity(), "ControlEvent", part)),
+  comm_token(getId(), NameSet(getEntity(), "CommEvent", part)),
 
   ap_token(getId(), NameSet(getEntity(), "AutopilotChannel", part), 101),
   gfcr_token(getId(), NameSet(getEntity(), "GFC700Event", ""), ChannelDistribution::JOIN_MASTER),
@@ -299,6 +311,10 @@ PA34_model::PA34_model(Entity* e, const char* part, const
     w_apbutton(getId(), NameSet("audio", "AnyAudioClass", ""),
             "AudioObjectFixed", "apbutton", Channel::Events,
             Channel::OneOrMoreEntries, Channel::MixedPacking),
+
+    //w_comm(getId(), NameSet("audio", "AnyAudioClass", ""), // added by Matteo Piras - up to here all ok
+             //"AudioObjectFixed", "audiot", Channel::Events,
+             //Channel::OneOrMoreEntries, Channel::MixedPacking),
 
     // label invullen en in modfile aantal parameters koppelen aan het label
 
@@ -510,6 +526,7 @@ bool PA34_model::isPrepared()
   CHECK_TOKEN(mass_token);
   CHECK_TOKEN(engine_token);
   CHECK_TOKEN(control_token);
+  CHECK_TOKEN(comm_token);
 
   CHECK_TOKEN(ap_token);
 
@@ -540,6 +557,8 @@ bool PA34_model::isPrepared()
   CHECK_TOKEN(w_gearalert);
   CHECK_TOKEN(w_autopilotdisco);
   CHECK_TOKEN(w_apbutton);
+  //CHECK_TOKEN(w_comm);
+
 
   // return result of checks
   return res;
@@ -648,8 +667,33 @@ void PA34_model::loadSnapshot(const TimeSpec& t, const Snapshot& snap)
 // this routine contains the main simulation process of your module. You
 // should read the input channels here, and calculate and write the
 // appropriate output
+
+
 void PA34_model::doCalculation(const TimeSpec& ts)
 {
+
+    if (comm_token.getNumWaitingEvents(ts)) //added by Matteo Piras
+    {
+        try
+        {
+            EventReader<CommEvent> comm(comm_token, ts);
+
+            radiocomm = comm.data().radiocomm;
+
+            //if (fade_in == 1) { // if we fly
+                //DataWriter<AudioObjectFixed> sndmass(w_sndmass, ts);
+                //sndmass.data().volume = 2.0f;
+                //sndmass.data().pitch = 1.0;
+            //}
+
+        }
+        catch (Exception& e)
+        {
+            W_MOD(classname << " caught " << e << " @ " << ts << " when reading MassEvent" );
+        }
+    }
+
+
 	// Read MassEvent
 	if (mass_token.getNumWaitingEvents(ts))
 	{
@@ -755,6 +799,9 @@ void PA34_model::doCalculation(const TimeSpec& ts)
 			//c.data().rudder_power_time;
 			//c.data().rudder_delta;
 			//c.data().rudder_delta_time;
+			//gear_fail = c.data().gear_fail;
+			rudder_offset = c.data().rudder_offset;
+			rudder_offset_time = c.data().rudder_offset_time;
 			rudder_bias = c.data().rudder_bias;
 			elevator_fix = c.data().elevator_fix;
 
@@ -1129,6 +1176,31 @@ void PA34_model::doCalculation(const TimeSpec& ts)
 		if (U[U_df] < cpi.data().df-0.0025) { U[U_df] += 0.0015; } // go down
 		*/
 
+		if (gear_pos > eventgeardown && eventgeardown != 0.0){
+
+        cout << eventgeardown << endl;
+		    rudder_bias = rudder_bias;
+		    check_gear_asym = true;
+
+		}
+
+		if(check_gear_asym = true && gear_pos < 0.3){
+
+		  rudder_bias = 0.0;
+
+		}
+
+		//if(radioevent == true){
+
+		    //radiocomm = radiocomm;
+           // DataWriter<AudioObjectFixed> sndcomm(w_comm, ts);
+           // sndcomm.data().volume = 0.5f;
+           // sndcomm.data().pitch = 1.0;
+            //D_MOD("comm sound sent");
+
+
+		//}
+
 		//TODO option to disable normal operations, setting flapsOK or gearOK to false
 
 		// MOVE FLAPS
@@ -1243,6 +1315,11 @@ void PA34_model::doCalculation(const TimeSpec& ts)
     }
   }
 
+  //if (gear_fail == true){
+      //rudder_offset      = rudder_offset;
+      //rudder_offset_time = 6.0;
+  //}
+
 	// FILLING REMAINDER OF THE INPUT_VEC FOR MODEL
 	// always set all data in the input vector
 	// do not trust data which is already in this vector
@@ -1353,6 +1430,9 @@ void PA34_model::doCalculation(const TimeSpec& ts)
     #endif
         y.data().y[i] = Y[i];
       }
+
+      // propagate gear position
+      y.data().y[Y_gear] = gear_pos;
   }
 
   // remember the trimmed pitch input

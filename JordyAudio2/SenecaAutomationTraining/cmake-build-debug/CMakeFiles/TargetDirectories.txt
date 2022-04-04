@@ -1,3 +1,3 @@
-/home/matteo/Desktop/JordyAudio2-backup/SenecaAutomationTraining/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/matteo/Desktop/JordyAudio2-backup/SenecaAutomationTraining/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/matteo/Desktop/JordyAudio2-backup/SenecaAutomationTraining/cmake-build-debug/CMakeFiles/SenecaAutomationTraining.dir
+/home/matteo/Desktop/backup/SenecaAutomationTraining/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/matteo/Desktop/backup/SenecaAutomationTraining/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/matteo/Desktop/backup/SenecaAutomationTraining/cmake-build-debug/CMakeFiles/SenecaAutomationTraining.dir

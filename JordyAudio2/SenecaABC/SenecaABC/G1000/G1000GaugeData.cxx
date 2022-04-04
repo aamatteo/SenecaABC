@@ -1,0 +1,115 @@
+/* ------------------------------------------------------------------   */
+/*      item            : G1000GaugeData.cxx
+        from template   : DataInterface.cxx
+        template made by: Joost Ellerbroek
+        category        : implementation file
+        template changes: 081016 first version
+        language        : C++
+*/
+
+#include "G1000GaugeData.hxx"
+
+
+
+G1000GaugeData::G1000GaugeData() :
+    pitch(0.0),
+    roll(0.0),
+    heading(0.0),
+    gamma(0.0),
+    chi(0.0),
+    altitude(0.0),
+    hdot(0.0),
+    Vias(0.0),
+    Vtas(0.0),
+    Y_fycg(0.0),
+    vtasdot(0.0),
+    x(0.0),
+    y(0.0),
+    n1_left(0.0),
+    n1_right(0.0),
+    n2_left(0.0),
+    n2_right(0.0),
+    itt_left(0.0),
+    itt_right(0.0),
+    rpm_left(0.0),
+    rpm_right(0.0),
+    tl_left(0.0),
+    tl_right(0.0),
+    gear(0),
+    altitude_target(0.0),
+    speed_target(0.0),
+    Vmin(0.0),
+    Vmax(0.0),
+    performance_data_valid(false),
+    Vc_gamma_max(0.0),
+    gamma_max(0.0),
+    gamma_max_full_thrust(0.0),
+    dme(0.0),
+    course(0.0),
+    trueCourse(0.0),
+    deviation(0.0),
+    offset(0.0),
+    dme_status(0),
+    trim_enabled(false),
+    trim(0),
+    ap_hdghold_mode(false),
+    ap_althold_mode(false),
+    ap_hdghold_transition(false),
+    ap_althold_transition(false),
+    crashed(false),
+    fullscreen(false),
+    show_instructor(false),
+    height(0.0),
+    min_height(0.0),
+    curVerticalState(0),
+    curLateralState(0),
+    ap_armed(0),
+    APstate(0),
+    hdg_bug(0.0),
+    target_vs(0.0),
+    target_speed(0.0),
+    alt_hold(0.0),
+    ap_flash(false),
+    pit_flash(false),
+    rol_flash(false),
+    theta_ref(0.0),
+    phi_ref(0.0),
+    active_nav_source(0),
+    needle_deviation(0.0),
+    vnav_situation(0),
+    brg(0.0),
+    altitude_target_vnav(0.0),
+    nav_R(0.0),
+    vnav_R(0.0),
+    turn_rate(0.0),
+    alts_flash_state(0),
+    alt_flash_state(0),
+    vor_flag_state(true),
+    GPS_failure(false),
+    VOR_failure(false),
+    ADC_failure(false),
+    PFD_failure(false),
+    GMU_failure(false),
+    HSI_failure(false),
+    AFCS_pit(false),
+    AFCS_rol(false),
+    clogged_sp(false),
+    clogged_pt(false),
+    map_left(0.0),
+    map_right(0.0),
+    mouse_left(false),
+    mouse_down(false),
+    GFC_msg(0),
+    mouse_x(0),
+    mouse_y(0),
+    dt(0.01),
+    dme_animation(false),
+    sync_animation(false),
+    active_leg(0)
+{
+}
+
+
+G1000GaugeData::~G1000GaugeData()
+{
+}

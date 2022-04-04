@@ -2,10 +2,10 @@
 # on a specific machine
 # note that the comm-objects directories should not be listed here
 # example:
-# SenecaAutomationTraining/some-module
-SenecaAutomationTraining/WAVPlayer 
+# SenecaABC/some-module
+SenecaABC/WAVPlayer 
 WorldListener/WorldListener HEAD
 WorldListener/OpenALListener HEAD
 WorldView/SpecificationBase HEAD
-SenecaAutomationTraining/Enginesound 
+SenecaABC/Enginesound 
 SenecaStartle/PA34_sounds
