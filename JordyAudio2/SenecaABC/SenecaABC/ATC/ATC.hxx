@@ -210,6 +210,7 @@ public: // member functions for cooperation with DUSIME
       calculates, based on the event channel input, the steady state
       output. */
   void trimCalculation(const TimeSpec& ts, const TrimMode& mode);
+  void resetParameters();
 };
 
 #endif

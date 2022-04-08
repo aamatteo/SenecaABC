@@ -372,11 +372,11 @@
 				;	'check-timing 10000 20000
 				;)
 
-				; (make-module 'citation-logger "" admin-priority
-				; 	'set-timing log-timing
-				; 	'check-timing 10000 20000
-				; 	;'read-cv-channel do-cv-calculation
-				; )
+				 (make-module 'citation-logger "" admin-priority
+				 	'set-timing log-timing
+				 	'check-timing 10000 20000
+				 	;'read-cv-channel do-cv-calculation
+				 )
 			)
 			(list)
 		)

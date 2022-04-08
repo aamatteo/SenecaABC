@@ -497,7 +497,7 @@ void ATC::doCalculation(const TimeSpec& ts)
 
 
 
-
+    resetParameters();
 
 
     //D_MOD("STUCK IN HOLD");
@@ -570,7 +570,7 @@ void ATC::doCalculation(const TimeSpec& ts)
     //std::cout << playcomm << std::endl;
 
 
-    if (lon < 15500 && playcomm1 == true){
+    if (lon < 16000 && lat < 8000 && playcomm1 == true){
         // time_req = clock();
         // std::cout << "TIME REQ START IS  : %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" << std::endl;
         // std::cout <<time_req << std::endl;
@@ -632,9 +632,9 @@ void ATC::doCalculation(const TimeSpec& ts)
 
 
     if (audio_trigger_twr4 != clock_t(0.0) && (clock() - audio_trigger_twr4)/CLOCKS_PER_SEC > 24) {
-      DataWriter <AudioObjectFixed> sndtwr4(w_twr4, ts);
-      sndtwr4.data().volume = 1.0f;
-      sndtwr4.data().pitch = 1.0;
+      //DataWriter <AudioObjectFixed> sndtwr4(w_twr4, ts);
+      //sndtwr4.data().volume = 1.0f;
+      //sndtwr4.data().pitch = 1.0;
 
       audio_trigger_twr4 = clock_t(0.0);
       audio_trigger_doc3 = clock();
@@ -642,7 +642,7 @@ void ATC::doCalculation(const TimeSpec& ts)
     }
 
 
-    if (audio_trigger_doc3 != clock_t(0.0) && (clock() - audio_trigger_doc3)/CLOCKS_PER_SEC > 20) {
+    if (audio_trigger_doc3 != clock_t(0.0) && (clock() - audio_trigger_doc3)/CLOCKS_PER_SEC > 15) {
       DataWriter <AudioObjectFixed> snddoc3(w_doc3, ts);
       snddoc3.data().volume = 1.0f;
       snddoc3.data().pitch = 1.0;
@@ -691,7 +691,7 @@ void ATC::doCalculation(const TimeSpec& ts)
 //############################################################# second latitude trigger
 
 
-    if (lon < 11000 && playcomm2 == true){
+    if (lon < 11000 && lat < 8000 && playcomm2 == true){
       // time_req = clock();
       // std::cout << "TIME REQ START IS  : %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%" << std::endl;
       // std::cout <<time_req << std::endl;
@@ -744,7 +744,7 @@ void ATC::doCalculation(const TimeSpec& ts)
     }
 
 
-    if (lon < 9500 && playcomm3 == true){
+    if (lon < 9500 && lat < 8000 && playcomm3 == true){
       // time_req = clock();
       std::cout << "SECOND LONGITUDE TRIGGER ACTIVATED %%%%%%%%%%%%%" << std::endl;
       // std::cout <<time_req << std2 ::endl;
@@ -838,7 +838,7 @@ void ATC::doCalculation(const TimeSpec& ts)
 
     }
 
-    if (gear > 0.0 && playcomm4 == true) {
+    if (gear > 0.0 && lat < 8000 && playcomm4 == true) {
       DataWriter <AudioObjectFixed> sndspz5(w_spz5, ts);
       sndspz5.data().volume = 1.0f;
       sndspz5.data().pitch = 1.0;
@@ -879,7 +879,7 @@ void ATC::doCalculation(const TimeSpec& ts)
     //std::cout << "altitude is: " << std::endl;
     //std::cout << alt << std::endl;
 
-    if (alt < 91 && playcomm5 == true){
+    if (alt < 91 && lat < 8000 && playcomm5 == true){
 
       DataWriter <AudioObjectFixed> sndtwr14(w_twr14, ts);
       sndtwr14.data().volume = 1.0f;
@@ -1094,6 +1094,45 @@ void ATC::trimCalculation(const TimeSpec& ts, const TrimMode& mode)
   // now return. The real results from the trim calculation, as you
   // specified them in the TrimTable, will now be collected and sent
   // off for processing.
+}
+
+void ATC::resetParameters()
+{
+
+          lat = 0;
+          lon = 0;
+          gear=0.0;
+          alt=0.0;
+          playcomm1=true;
+          playcomm2=true;
+          playcomm3=true;
+          playcomm4=true;
+          playcomm5=true;
+          playcomm6=false;
+          time_req=0.0;
+          audio_trigger_time=0.0;
+          audio_trigger_doc2=0.0;
+          audio_trigger_twr2=0.0;
+          audio_trigger_doc4=0.0;
+          audio_trigger_twr3=0.0;
+          audio_trigger_svt2=0.0;
+          audio_trigger_spz1=0.0;
+          audio_trigger_twr7=0.0;
+          audio_trigger_spz2=0.0;
+          audio_trigger_twr8=0.0;
+          audio_trigger_spz3=0.0;
+          audio_trigger_twr8bis=0.0;
+          audio_trigger_spz4=0.0;
+          audio_trigger_twr9=0.0;
+          audio_trigger_twr12=0.0;
+          audio_trigger_twr17=0.0;
+          audio_trigger_spz6=0.0;
+          audio_trigger_twr16=0.0;
+          audio_trigger_spz7=0.0;
+          audio_trigger_twr18=0.0;
+          audio_trigger_svt4=0.0;
+          audio_trigger_twr20=0.0;
+
 }
 
 // Make a TypeCreator object for this module, the TypeCreator

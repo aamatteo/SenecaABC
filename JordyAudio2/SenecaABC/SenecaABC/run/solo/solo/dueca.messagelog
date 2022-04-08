@@ -1,244 +1,265 @@
-Mon Apr  4 15:11:25.809009     1 -                     not initialised:0000255255  id(-,-)                          unknown|Popped up from script, stage=1
-Mon Apr  4 15:11:25.809086     1 -                     not initialised:0000255255  id(-,-)                          unknown|Creating the node manager
-Mon Apr  4 15:11:25.809136     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0874  0255  id(0,2)       wait additional model copy|Completing dueca objects
-Mon Apr  4 15:11:25.809364     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0945  0255  id(0,2)       wait additional model copy|slow ticking
-Mon Apr  4 15:11:27.130578     1 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeJoining
-Mon Apr  4 15:11:27.233413     2 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeJoined
-Mon Apr  4 15:11:27.233558     1 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0278  0255  id(0,2)       wait additional model copy|slowing down node query at time TimeSpec(260, 260)
-Mon Apr  4 15:11:27.349096     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0967  0255  id(0,2)       wait additional model copy|Dueca nodes now complete
-Mon Apr  4 15:11:27.352606     1 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0869  0255  id(0,2)       wait additional model copy|ActivityManager 0 qsize 600 working on id(0,12)/process node state message TimeSpec(260, 260) scheduled id(0,0)/script config line read TimeSpec(280, 280)
-Mon Apr  4 15:11:27.357380     3 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeSynced
-Mon Apr  4 15:11:28.558206     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1006  0255  id(0,2)       wait additional model copy|Real-time running, two seconds from now ....
-Mon Apr  4 15:11:28.558357     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1207  0255  id(0,2)       wait additional model copy|id(0,2)Returning to script
-Mon Apr  4 15:11:28.566732     1 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0082  0255  id(0,2)       wait additional model copy|Using DUECAFontManager with FTFont implementation
-Mon Apr  4 15:11:28.566792     1 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/btype.ttf
-Mon Apr  4 15:11:28.566815     2 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/Monaco.ttf
-Mon Apr  4 15:11:28.566840     3 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/Vera.ttf
-Mon Apr  4 15:11:28.588840     2 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0837  0255  id(0,2)       wait additional model copy|Popped up from script, stage=2
-Mon Apr  4 15:11:28.589080     1 wSYS/usr/src/packages/BUILD/dueca/Su.cxx:0065  0255  id(0,2)       wait additional model copy|Su: no root/super user capabilities
-Mon Apr  4 15:11:28.589109     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1062  0255  id(0,2)       wait additional model copy|id(0,2) trying memlock without root capability
-Mon Apr  4 15:11:28.589133     1 wSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1073  0255  id(0,2)       wait additional model copy|Cannot memlock the DUECA executable: Cannot allocate memory
-Mon Apr  4 15:11:28.589173     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1087  0255  id(0,2)       wait additional model copy|id(0,2) creating graphics thread with (e)uids: 1000, 1000
-Mon Apr  4 15:11:28.589258     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1111  0255  id(0,2)       wait additional model copy|Halting script thread
-Mon Apr  4 15:11:28.589339     1 iSYS/usr/src/packages/BUILD/dueca/gui/gtk2/GtkHandler.cxx:0097  0255  id(0,2)       wait additional model copy|Initialising gtk2 graphics
-Mon Apr  4 15:11:29.542661     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0489  0255  id(0,2)       wait additional model copy|id(0,2) passing control to graphics lib
-Mon Apr  4 15:11:29.542702     1 iSYS/usr/src/packages/BUILD/dueca/gui/gtk2/GtkHandler.cxx:0109  0255  id(0,2)       wait additional model copy|Passing control to gtk 2.x
-Mon Apr  4 15:11:30.229570     1 wMOD               OpenALListener.cxx:0085  0255  id(0,2)       wait additional model copy|opened device OpenAL Soft
-Mon Apr  4 15:11:30.661481     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0558  0255  id(0,2)       wait additional model copy|Time to start real-time running
-Mon Apr  4 15:11:30.662173     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0580  0  0  id(0,7)          channel registry update|id(0,2) starting activity managers
-Mon Apr  4 15:11:30.662334     1 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  1  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
-Mon Apr  4 15:11:30.662370     1 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  1  id(0,2)       wait additional model copy|ActivityManager 1 mode requested FIFO actual OTHER
-Mon Apr  4 15:11:30.763147     2 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  2  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
-Mon Apr  4 15:11:30.763186     2 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  2  id(0,2)       wait additional model copy|ActivityManager 2 mode requested FIFO actual OTHER
-Mon Apr  4 15:11:30.863295     3 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  3  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
-Mon Apr  4 15:11:30.863332     3 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  3  id(0,2)       wait additional model copy|ActivityManager 3 mode requested FIFO actual OTHER
-Mon Apr  4 15:11:30.963311     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0597  0  0  id(0,7)          channel registry update|id(0,2) setting ticker to autonomous
-Mon Apr  4 15:11:30.963363     1 iTIM/usr/src/packages/BUILD/dueca/Ticker.cxx:0707  0  0  id(0,7)          channel registry update|First schedule for tick PeriodicTimeSpec(760, 780 p:20) with ActivityManager 3
-Mon Apr  4 15:11:41.429402     1 -                     not initialised:0000  0  0  id(0,3)                  graphics update|st-eci: skipping unknown scenario parameter display_lg_failure
-Mon Apr  4 15:12:11.389662     1 -                     not initialised:0000  0  0 id(0,13)           process entity command|This target is already triggered, ignoring new trigger
-Mon Apr  4 15:12:11.389868     2 -                     not initialised:0000  0  0 id(0,13)           process entity command|This target is already triggered, ignoring new trigger
-Mon Apr  4 15:12:11.390355     1 -                     not initialised:0000  0  0 id(0,13)           process entity command|PREPARED
-Mon Apr  4 15:12:11.391134     1 -                     not initialised:0000  0  0 id(0,13)           process entity command|gui-stick has invalid FlightControlInput trim token
-Mon Apr  4 15:12:23.191652     1 -                     not initialised:0000  0  1 id(0,30)  combining input from control lo|fcs-adapter caught NoDataAvailable id(0,42)->id(0,30) @ TimeSpec(105200, 105220)
-Mon Apr  4 15:12:23.192088     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Preparing for mass shift in 1 steps
-Mon Apr  4 15:12:23.192428     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Set control; Aileron power: 1; Rudder power: 1; Rudder fix: 0; Elevator fix: 0
-Mon Apr  4 15:12:23.192677     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Turbulence disabled: K_turb=0
-Mon Apr  4 15:12:23.192904     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model K_shear: 0
-Mon Apr  4 15:12:23.193113     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model: Wind direction changed instantly to 0
-Mon Apr  4 15:12:23.193354     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model (trim_inco) gear position: 0
-Mon Apr  4 15:12:23.193565     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model (trim_inco) flap position: 0 deg
-Mon Apr  4 15:12:23.195775     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model updated mass shift in Hold
-Mon Apr  4 15:12:23.199315     1 -                     not initialised:0000  0  1 id(0,31)                       navigating|id(0,31) initializing STAR EHRD_lg
-Mon Apr  4 15:12:23.199734     1 -                     not initialised:0000  0  1 id(0,31)                       navigating|id(0,31) ref LNAV: 0, 0, 0
-Mon Apr  4 15:12:23.200254     1 -                     not initialised:0000  0  1 id(0,31)                       navigating|id(0,31) ref HDG: 0, 0, 0
-Mon Apr  4 15:12:23.200572     1 -                     not initialised:0000  0  1 id(0,31)                       navigating|id(0,31) ref LOC: 0, 0, 0
-Mon Apr  4 15:12:23.200921     1 -                     not initialised:0000  0  1 id(0,35)               send to flightgear|READING NEW FG INPUTS
-Mon Apr  4 15:12:23.201263     1 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class audiot entry 0
-Mon Apr  4 15:12:23.201620     1 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHDOC2lg.wav
-Mon Apr  4 15:12:23.219939     1 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.221673     2 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phdoc1 entry 1
-Mon Apr  4 15:12:23.221752     2 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHDOC1.wav
-Mon Apr  4 15:12:23.237749     2 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.239215     3 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phdoc3 entry 2
-Mon Apr  4 15:12:23.239264     3 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHDOC3.wav
-Mon Apr  4 15:12:23.244348     3 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.244546     4 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phdoc4 entry 3
-Mon Apr  4 15:12:23.244727     4 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHDOC4.wav
-Mon Apr  4 15:12:23.250629     4 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.251905     5 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phspz1 entry 4
-Mon Apr  4 15:12:23.251997     5 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSPZ1.wav
-Mon Apr  4 15:12:23.259172     5 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.260173     6 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phspz2 entry 5
-Mon Apr  4 15:12:23.260290     6 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSPZ2.wav
-Mon Apr  4 15:12:23.290143     6 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.293986     7 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phspz3 entry 6
-Mon Apr  4 15:12:23.294103     7 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSPZ3.wav
-Mon Apr  4 15:12:23.314475     7 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.315918     8 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phspz4 entry 7
-Mon Apr  4 15:12:23.315995     8 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSPZ4.wav
-Mon Apr  4 15:12:23.335121     8 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.336493     9 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phspz5 entry 8
-Mon Apr  4 15:12:23.336598     9 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSPZ5.wav
-Mon Apr  4 15:12:23.369380     9 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.371791    10 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phspz6 entry 9
-Mon Apr  4 15:12:23.371845    10 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSPZ6.wav
-Mon Apr  4 15:12:23.375675    10 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.375798    11 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phspz7 entry 10
-Mon Apr  4 15:12:23.375842    11 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSPZ7.wav
-Mon Apr  4 15:12:23.381436    11 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.381594    12 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phspz8 entry 11
-Mon Apr  4 15:12:23.381635    12 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSPZ8.wav
-Mon Apr  4 15:12:23.384989    12 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.385096    13 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phspz9 entry 12
-Mon Apr  4 15:12:23.385133    13 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSPZ9.wav
-Mon Apr  4 15:12:23.394901    13 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.395047    14 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phsvt1 entry 13
-Mon Apr  4 15:12:23.395103    14 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSVT1.wav
-Mon Apr  4 15:12:23.407964    14 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.408114    15 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phsvt2 entry 14
-Mon Apr  4 15:12:23.408173    15 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSVT2.wav
-Mon Apr  4 15:12:23.412813    15 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.413002    16 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phsvt3 entry 15
-Mon Apr  4 15:12:23.413045    16 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSVT3.wav
-Mon Apr  4 15:12:23.420381    16 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.421238    17 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class phsvt4 entry 16
-Mon Apr  4 15:12:23.421284    17 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PHSVT4.wav
-Mon Apr  4 15:12:23.425855    17 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.426097    18 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr1 entry 17
-Mon Apr  4 15:12:23.426190    18 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR1.wav
-Mon Apr  4 15:12:23.451969    18 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.453313    19 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr2 entry 18
-Mon Apr  4 15:12:23.453405    19 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR2.wav
-Mon Apr  4 15:12:23.466906    19 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.468049    20 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr3 entry 19
-Mon Apr  4 15:12:23.468095    20 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR3.wav
-Mon Apr  4 15:12:23.473610    20 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.473988    21 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr4 entry 20
-Mon Apr  4 15:12:23.474609    21 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR4.wav
-Mon Apr  4 15:12:23.480564    21 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.482571    22 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr5 entry 21
-Mon Apr  4 15:12:23.482877    22 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR5.wav
-Mon Apr  4 15:12:23.487200    22 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.487648    23 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr6 entry 22
-Mon Apr  4 15:12:23.487944    23 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR6.wav
-Mon Apr  4 15:12:23.494616    23 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.494961    24 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr7 entry 23
-Mon Apr  4 15:12:23.495200    24 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR7.wav
-Mon Apr  4 15:12:23.499441    24 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.499705    25 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr8 entry 24
-Mon Apr  4 15:12:23.499941    25 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR8.wav
-Mon Apr  4 15:12:23.507728    25 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.508843    26 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr8bis entry 25
-Mon Apr  4 15:12:23.509088    26 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR8BIS.wav
-Mon Apr  4 15:12:23.543046    26 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.545030    27 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr9 entry 26
-Mon Apr  4 15:12:23.545091    27 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR9.wav
-Mon Apr  4 15:12:23.575278    27 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.575472    28 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr10 entry 27
-Mon Apr  4 15:12:23.575522    28 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR10.wav
-Mon Apr  4 15:12:23.584364    28 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.585669    29 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr11 entry 28
-Mon Apr  4 15:12:23.585716    29 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR11.wav
-Mon Apr  4 15:12:23.590463    29 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.590591    30 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr12 entry 29
-Mon Apr  4 15:12:23.590657    30 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR12.wav
-Mon Apr  4 15:12:23.595577    30 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.595775    31 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr13 entry 30
-Mon Apr  4 15:12:23.595848    31 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR13.wav
-Mon Apr  4 15:12:23.598766    31 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.598962    32 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr14 entry 31
-Mon Apr  4 15:12:23.599039    32 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR14.wav
-Mon Apr  4 15:12:23.605813    32 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.606682    33 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr15 entry 32
-Mon Apr  4 15:12:23.606804    33 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR15.wav
-Mon Apr  4 15:12:23.610898    33 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.611060    34 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr16 entry 33
-Mon Apr  4 15:12:23.611126    34 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR16.wav
-Mon Apr  4 15:12:23.617097    34 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.617229    35 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr17 entry 34
-Mon Apr  4 15:12:23.617296    35 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR17.wav
-Mon Apr  4 15:12:23.620716    35 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.621186    36 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr18 entry 35
-Mon Apr  4 15:12:23.621243    36 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR18.wav
-Mon Apr  4 15:12:23.623453    36 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.623594    37 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr19 entry 36
-Mon Apr  4 15:12:23.623657    37 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR19.wav
-Mon Apr  4 15:12:23.630059    37 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.631041    38 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class twr20 entry 37
-Mon Apr  4 15:12:23.631107    38 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file TWR20.wav
-Mon Apr  4 15:12:23.635438    38 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.636142    39 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class gearup entry 38
-Mon Apr  4 15:12:23.636215    39 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_gear_up.wav
-Mon Apr  4 15:12:23.643035    39 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.643813    40 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class geardown entry 39
-Mon Apr  4 15:12:23.643859    40 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_gear_down.wav
-Mon Apr  4 15:12:23.665201    40 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.666401    41 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class flaps entry 40
-Mon Apr  4 15:12:23.666478    41 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_flaps.wav
-Mon Apr  4 15:12:23.678036    41 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.678155    42 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class wind entry 41
-Mon Apr  4 15:12:23.678241    42 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_wind.wav
-Mon Apr  4 15:12:23.683422    42 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.684047    43 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class stall entry 42
-Mon Apr  4 15:12:23.684119    43 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_stall.wav
-Mon Apr  4 15:12:23.685957     1 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit mono format
-Mon Apr  4 15:12:23.686064    44 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class mass entry 43
-Mon Apr  4 15:12:23.686131    44 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_mass.wav
-Mon Apr  4 15:12:23.692524     1 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|OpenAL error 40962 for mass when obtaining source
-Mon Apr  4 15:12:23.692587    45 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class overspeed entry 44
-Mon Apr  4 15:12:23.692639    45 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_overspeed.wav
-Mon Apr  4 15:12:23.697666    43 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.698240    46 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class wheels entry 45
-Mon Apr  4 15:12:23.698345    46 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_groundroll.wav
-Mon Apr  4 15:12:23.702959    44 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.703075    47 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class touchdown entry 46
-Mon Apr  4 15:12:23.703123    47 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_touchdown.wav
-Mon Apr  4 15:12:23.704455    45 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.704506    48 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class gearalert entry 47
-Mon Apr  4 15:12:23.704540    48 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_gearalert.wav
-Mon Apr  4 15:12:23.706082     2 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit mono format
-Mon Apr  4 15:12:23.706140    49 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class autopilotdisco entry 48
-Mon Apr  4 15:12:23.706172    49 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_autopilot_disco.wav
-Mon Apr  4 15:12:23.708198    46 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.708237    50 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class apbutton entry 49
-Mon Apr  4 15:12:23.708257    50 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_apbutton.wav
-Mon Apr  4 15:12:23.709179    47 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.709217    51 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class rpm1left entry 50
-Mon Apr  4 15:12:23.709236    51 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_rpm1_left.wav
-Mon Apr  4 15:12:23.712640    48 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.712741    52 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|connecting sound class rpm1right entry 51
-Mon Apr  4 15:12:23.712787    52 -                     not initialised:0000  0  1 id(0,37)                   run audio feed|Loading file PA34_rpm1_right.wav
-Mon Apr  4 15:12:23.716922    49 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.717035    53 iMOD               OpenALListener.cxx:0158  0  1 id(0,37)                   run audio feed|connecting sound class rpm2left entry 52
-Mon Apr  4 15:12:23.717073    53 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,37)                   run audio feed|Loading file PA34_rpm2_left.wav
-Mon Apr  4 15:12:23.725493    50 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.726757    54 iMOD               OpenALListener.cxx:0158  0  1 id(0,37)                   run audio feed|connecting sound class rpm2right entry 53
-Mon Apr  4 15:12:23.726826    54 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,37)                   run audio feed|Loading file PA34_rpm2_right.wav
-Mon Apr  4 15:12:23.738211    51 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,37)                   run audio feed|16 bit stereo format
-Mon Apr  4 15:12:23.761325     1 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(105300, 105400)
-Mon Apr  4 15:12:23.761364     2 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(105400, 105500)
-Mon Apr  4 15:12:23.761375     3 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(105500, 105600)
-Mon Apr  4 15:12:23.761402     4 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(105600, 105700)
-Mon Apr  4 15:12:23.761436     5 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(105700, 105800)
-Mon Apr  4 15:12:23.761451     6 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(105800, 105900)
-Mon Apr  4 15:12:23.761465     7 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(105900, 106000)
-Mon Apr  4 15:12:23.761506     8 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(106000, 106100)
-Mon Apr  4 15:12:23.761547     9 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(106100, 106200)
-Mon Apr  4 15:12:23.761586    10 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(106200, 106300)
-Mon Apr  4 15:12:34.887702     2 wMOD                 OpenALObject.cxx:0041  0  1 id(0,37)                   run audio feed|OpenAL error 40963 for rpm1left when starting
-Mon Apr  4 15:12:40.596248     3 wMOD                 OpenALObject.cxx:0041  0  1 id(0,37)                   run audio feed|OpenAL error 40963 for phspz5 when single play
-Mon Apr  4 15:12:42.485339     2 iMOD                   PA34_model.cxx:0816  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Set control; Aileron power: 1; Rudder power: 1; Rudder fix: -3; Elevator fix: 0
-Mon Apr  4 15:12:49.584991     4 wMOD                 OpenALObject.cxx:0041  0  1 id(0,37)                   run audio feed|OpenAL error 40963 for gearup when single play
-Mon Apr  4 15:12:58.586953     5 wMOD                 OpenALObject.cxx:0041  0  1 id(0,37)                   run audio feed|OpenAL error 40963 for geardown when single play
-Mon Apr  4 15:13:05.834348     6 wMOD                 OpenALObject.cxx:0041  0  1 id(0,37)                   run audio feed|OpenAL error 40963 for twr14 when single play
-Mon Apr  4 15:13:06.286288     7 wMOD                 OpenALObject.cxx:0041  0  1 id(0,37)                   run audio feed|OpenAL error 40963 for twr9 when single play
-Mon Apr  4 15:13:07.585526     8 wMOD                 OpenALObject.cxx:0041  0  1 id(0,37)                   run audio feed|OpenAL error 40963 for gearup when single play
-Mon Apr  4 15:13:17.584885     9 wMOD                 OpenALObject.cxx:0041  0  1 id(0,37)                   run audio feed|OpenAL error 40963 for geardown when single play
-Mon Apr  4 15:13:22.084376    10 wMOD                 OpenALObject.cxx:0041  0  1 id(0,37)                   run audio feed|OpenAL error 40963 for twr12 when single play
-Mon Apr  4 15:13:26.535415    11 wMOD                 OpenALObject.cxx:0041  0  1 id(0,37)                   run audio feed|OpenAL error 40963 for twr17 when single play
-Mon Apr  4 15:13:31.701794     1 -                     not initialised:0000  0  0 id(0,24)         Update the G1000 display|User signal Ctrl-C
-Mon Apr  4 15:13:31.701872     1 -                     not initialised:0000  0  0 id(0,24)         Update the G1000 display|ActivityManager 3 queue size 0 last activity id(0,11)/clock wait TimeSpec(242220, 242240)
-Mon Apr  4 15:13:31.701891     1 -                     not initialised:0000  0  0 id(0,24)         Update the G1000 display|ActivityManager 2 has not yet run
-Mon Apr  4 15:13:31.701906     2 -                     not initialised:0000  0  0 id(0,24)         Update the G1000 display|ActivityManager 1 queue size 0 last activity id(0,30)/driving control loaders TimeSpec(242220, 242240)
-Mon Apr  4 15:13:31.701930     3 -                     not initialised:0000  0  0 id(0,24)         Update the G1000 display|ActivityManager 0 queue size 2 last activity id(0,24)/Update the G1000 display TimeSpec(242200, 242300)
-Mon Apr  4 15:13:31.718755     1 -                     not initialised:0000  0  0 id(0,12)       process node state message|scheduling node stop at TimeSpec(248220, 248220)
+Fri Apr  8 17:58:14.064647     1 -                     not initialised:0000255255  id(-,-)                          unknown|Popped up from script, stage=1
+Fri Apr  8 17:58:14.064731     1 -                     not initialised:0000255255  id(-,-)                          unknown|Creating the node manager
+Fri Apr  8 17:58:14.064866     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0874  0255  id(0,2)       wait additional model copy|Completing dueca objects
+Fri Apr  8 17:58:14.065149     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0945  0255  id(0,2)       wait additional model copy|slow ticking
+Fri Apr  8 17:58:15.375104     1 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeJoining
+Fri Apr  8 17:58:15.486292     2 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeJoined
+Fri Apr  8 17:58:15.486627     1 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0278  0255  id(0,2)       wait additional model copy|slowing down node query at time TimeSpec(260, 260)
+Fri Apr  8 17:58:15.588871     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0967  0255  id(0,2)       wait additional model copy|Dueca nodes now complete
+Fri Apr  8 17:58:15.593917     1 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0869  0255  id(0,2)       wait additional model copy|ActivityManager 0 qsize 600 working on id(0,12)/process node state message TimeSpec(260, 260) scheduled id(0,0)/script config line read TimeSpec(280, 280)
+Fri Apr  8 17:58:15.600713     3 iSYS/usr/src/packages/BUILD/dueca/NodeManager.cxx:0200  0255  id(0,2)       wait additional model copy|Node 0 changed to state NodeSynced
+Fri Apr  8 17:58:16.774709     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1006  0255  id(0,2)       wait additional model copy|Real-time running, two seconds from now ....
+Fri Apr  8 17:58:16.774781     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1207  0255  id(0,2)       wait additional model copy|id(0,2)Returning to script
+Fri Apr  8 17:58:16.780168     1 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0082  0255  id(0,2)       wait additional model copy|Using DUECAFontManager with FTFont implementation
+Fri Apr  8 17:58:16.780222     1 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/btype.ttf
+Fri Apr  8 17:58:16.780244     2 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/Monaco.ttf
+Fri Apr  8 17:58:16.780265     3 wMOD/usr/src/packages/BUILD/hmilib-dueca/src/DUECAFontManager.cxx:0134  0255  id(0,2)       wait additional model copy|DUECAFontManager::addFont: added font: /usr/share/HMIlib/fonts/Vera.ttf
+Fri Apr  8 17:58:16.802138     2 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0837  0255  id(0,2)       wait additional model copy|Popped up from script, stage=2
+Fri Apr  8 17:58:16.802265     1 wSYS/usr/src/packages/BUILD/dueca/Su.cxx:0065  0255  id(0,2)       wait additional model copy|Su: no root/super user capabilities
+Fri Apr  8 17:58:16.802292     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1062  0255  id(0,2)       wait additional model copy|id(0,2) trying memlock without root capability
+Fri Apr  8 17:58:16.802328     1 wSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1073  0255  id(0,2)       wait additional model copy|Cannot memlock the DUECA executable: Cannot allocate memory
+Fri Apr  8 17:58:16.802354     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1087  0255  id(0,2)       wait additional model copy|id(0,2) creating graphics thread with (e)uids: 1000, 1000
+Fri Apr  8 17:58:16.802446     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:1111  0255  id(0,2)       wait additional model copy|Halting script thread
+Fri Apr  8 17:58:16.802522     1 iSYS/usr/src/packages/BUILD/dueca/gui/gtk2/GtkHandler.cxx:0097  0255  id(0,2)       wait additional model copy|Initialising gtk2 graphics
+Fri Apr  8 17:58:17.710882     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0489  0255  id(0,2)       wait additional model copy|id(0,2) passing control to graphics lib
+Fri Apr  8 17:58:17.710924     1 iSYS/usr/src/packages/BUILD/dueca/gui/gtk2/GtkHandler.cxx:0109  0255  id(0,2)       wait additional model copy|Passing control to gtk 2.x
+Fri Apr  8 17:58:18.460546     1 iMOD               CitationLogger.cxx:0204  0255  id(0,2)       wait additional model copy|id(0,34) found latest log file with number 16
+Fri Apr  8 17:58:18.626324     1 wMOD               OpenALListener.cxx:0085  0255  id(0,2)       wait additional model copy|opened device OpenAL Soft
+Fri Apr  8 17:58:19.025215     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0558  0255  id(0,2)       wait additional model copy|Time to start real-time running
+Fri Apr  8 17:58:19.025982     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0580  0  0  id(0,7)          channel registry update|id(0,2) starting activity managers
+Fri Apr  8 17:58:19.026185     1 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  1  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
+Fri Apr  8 17:58:19.026214     1 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  1  id(0,2)       wait additional model copy|ActivityManager 1 mode requested FIFO actual OTHER
+Fri Apr  8 17:58:19.126663     2 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  2  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
+Fri Apr  8 17:58:19.126721     2 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  2  id(0,2)       wait additional model copy|ActivityManager 2 mode requested FIFO actual OTHER
+Fri Apr  8 17:58:19.226987     3 wSYS/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0238  0  3  id(0,2)       wait additional model copy|Failure trying to adjust scheduling priority: Operation not permitted
+Fri Apr  8 17:58:19.227030     3 wACT/usr/src/packages/BUILD/dueca/ActivityManager.cxx:0249  0  3  id(0,2)       wait additional model copy|ActivityManager 3 mode requested FIFO actual OTHER
+Fri Apr  8 17:58:19.326951     1 iSYS/usr/src/packages/BUILD/dueca/Environment.cxx:0597  0  0  id(0,7)          channel registry update|id(0,2) setting ticker to autonomous
+Fri Apr  8 17:58:19.327073     1 iTIM/usr/src/packages/BUILD/dueca/Ticker.cxx:0707  0  0  id(0,7)          channel registry update|First schedule for tick PeriodicTimeSpec(760, 780 p:20) with ActivityManager 3
+Fri Apr  8 17:58:41.949368     1 -                     not initialised:0000  0  0  id(0,3)                  graphics update|st-eci: skipping unknown scenario parameter display_lg_failure
+Fri Apr  8 17:59:12.879798     2 wMOD                          ECI.cxx:1159  0  0  id(0,3)                  graphics update|st-eci: skipping unknown scenario parameter display_lg_failure
+Fri Apr  8 17:59:13.081118     3 wMOD                          ECI.cxx:1159  0  0  id(0,3)                  graphics update|st-eci: skipping unknown scenario parameter display_lg_failure
+Fri Apr  8 17:59:21.353851     1 -                     not initialised:0000  0  0 id(0,13)           process entity command|This target is already triggered, ignoring new trigger
+Fri Apr  8 17:59:21.353939     2 -                     not initialised:0000  0  0 id(0,13)           process entity command|This target is already triggered, ignoring new trigger
+Fri Apr  8 17:59:21.353991     1 -                     not initialised:0000  0  0 id(0,13)           process entity command|PREPARED
+Fri Apr  8 17:59:21.354103     1 -                     not initialised:0000  0  0 id(0,13)           process entity command|gui-stick has invalid FlightControlInput trim token
+Fri Apr  8 17:59:26.731814     1 -                     not initialised:0000  0  0 id(0,33)                    load snapshot|id(0,33)/pa_34_model no room for snapshot
+Fri Apr  8 17:59:26.850027     1 -                     not initialised:0000  0  1 id(0,30)  combining input from control lo|fcs-adapter caught NoDataAvailable id(0,42)->id(0,30) @ TimeSpec(135800, 135820)
+Fri Apr  8 17:59:26.850206     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Preparing for mass shift in 1 steps
+Fri Apr  8 17:59:26.850295     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Set control; Aileron power: 1; Rudder power: 1; Rudder fix: 0; Elevator fix: 0
+Fri Apr  8 17:59:26.850725     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Turbulence disabled: K_turb=0
+Fri Apr  8 17:59:26.850848     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model K_shear: 0
+Fri Apr  8 17:59:26.851241     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model: Wind direction changed instantly to 0
+Fri Apr  8 17:59:26.851533     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model (trim_inco) gear position: 0
+Fri Apr  8 17:59:26.851915     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model (trim_inco) flap position: 0 deg
+Fri Apr  8 17:59:26.852223     1 -                     not initialised:0000  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model updated mass shift in Hold
+Fri Apr  8 17:59:26.856965     1 -                     not initialised:0000  0  1 id(0,31)                       navigating|id(0,31) initializing STAR EHRD_lg
+Fri Apr  8 17:59:26.857481     1 -                     not initialised:0000  0  1 id(0,31)                       navigating|id(0,31) ref LNAV: 0, 0, 0
+Fri Apr  8 17:59:26.857675     1 -                     not initialised:0000  0  1 id(0,31)                       navigating|id(0,31) ref HDG: 0, 0, 0
+Fri Apr  8 17:59:26.858064     1 -                     not initialised:0000  0  1 id(0,31)                       navigating|id(0,31) ref LOC: 0, 0, 0
+Fri Apr  8 17:59:26.858460     1 -                     not initialised:0000  0  1 id(0,36)               send to flightgear|READING NEW FG INPUTS
+Fri Apr  8 17:59:26.858822     1 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class audiot entry 0
+Fri Apr  8 17:59:26.859055     1 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHDOC2lg.wav
+Fri Apr  8 17:59:26.879288     1 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:26.880779     2 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phdoc1 entry 1
+Fri Apr  8 17:59:26.880854     2 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHDOC1.wav
+Fri Apr  8 17:59:26.895051     2 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:26.898088     3 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phdoc3 entry 2
+Fri Apr  8 17:59:26.898148     3 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHDOC3.wav
+Fri Apr  8 17:59:26.904208     3 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:26.904382     4 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phdoc4 entry 3
+Fri Apr  8 17:59:26.904430     4 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHDOC4.wav
+Fri Apr  8 17:59:26.910361     4 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:26.910662     5 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz1 entry 4
+Fri Apr  8 17:59:26.910904     5 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ1.wav
+Fri Apr  8 17:59:26.922028     5 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:26.922826     6 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz2 entry 5
+Fri Apr  8 17:59:26.922882     6 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ2.wav
+Fri Apr  8 17:59:26.945882     6 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:26.955158     7 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz3 entry 6
+Fri Apr  8 17:59:26.955256     7 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ3.wav
+Fri Apr  8 17:59:26.987741     7 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:26.989105     8 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz4 entry 7
+Fri Apr  8 17:59:26.989159     8 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ4.wav
+Fri Apr  8 17:59:27.015939     8 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.017269     9 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz5 entry 8
+Fri Apr  8 17:59:27.017330     9 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ5.wav
+Fri Apr  8 17:59:27.053811     9 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.057638    10 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz6 entry 9
+Fri Apr  8 17:59:27.057718    10 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ6.wav
+Fri Apr  8 17:59:27.061105    10 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.061213    11 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz7 entry 10
+Fri Apr  8 17:59:27.061254    11 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ7.wav
+Fri Apr  8 17:59:27.065583    11 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.065780    12 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz8 entry 11
+Fri Apr  8 17:59:27.065836    12 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ8.wav
+Fri Apr  8 17:59:27.068972    12 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.069107    13 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phspz9 entry 12
+Fri Apr  8 17:59:27.069177    13 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSPZ9.wav
+Fri Apr  8 17:59:27.073588    13 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.073786    14 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phsvt1 entry 13
+Fri Apr  8 17:59:27.073849    14 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSVT1.wav
+Fri Apr  8 17:59:27.077973    14 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.078106    15 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phsvt2 entry 14
+Fri Apr  8 17:59:27.078169    15 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSVT2.wav
+Fri Apr  8 17:59:27.082196    15 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.082345    16 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phsvt3 entry 15
+Fri Apr  8 17:59:27.082425    16 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSVT3.wav
+Fri Apr  8 17:59:27.086481    16 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.087243    17 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class phsvt4 entry 16
+Fri Apr  8 17:59:27.087321    17 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file PHSVT4.wav
+Fri Apr  8 17:59:27.090464    17 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.090574    18 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr1 entry 17
+Fri Apr  8 17:59:27.090613    18 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR1.wav
+Fri Apr  8 17:59:27.100088    18 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.101566    19 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr2 entry 18
+Fri Apr  8 17:59:27.101634    19 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR2.wav
+Fri Apr  8 17:59:27.110543    19 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.111751    20 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr3 entry 19
+Fri Apr  8 17:59:27.111823    20 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR3.wav
+Fri Apr  8 17:59:27.119652    20 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.119833    21 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr4 entry 20
+Fri Apr  8 17:59:27.119879    21 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR4.wav
+Fri Apr  8 17:59:27.124952    21 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.125918    22 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr5 entry 21
+Fri Apr  8 17:59:27.126002    22 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR5.wav
+Fri Apr  8 17:59:27.129987    22 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.130135    23 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr6 entry 22
+Fri Apr  8 17:59:27.130193    23 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR6.wav
+Fri Apr  8 17:59:27.139928    23 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.140107    24 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr7 entry 23
+Fri Apr  8 17:59:27.140181    24 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR7.wav
+Fri Apr  8 17:59:27.143845    24 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.143978    25 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr8 entry 24
+Fri Apr  8 17:59:27.144044    25 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR8.wav
+Fri Apr  8 17:59:27.151100    25 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.152102    26 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr8bis entry 25
+Fri Apr  8 17:59:27.152182    26 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR8BIS.wav
+Fri Apr  8 17:59:27.159834    26 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.161349    27 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr9 entry 26
+Fri Apr  8 17:59:27.161414    27 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR9.wav
+Fri Apr  8 17:59:27.164335    27 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.164444    28 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr10 entry 27
+Fri Apr  8 17:59:27.164490    28 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR10.wav
+Fri Apr  8 17:59:27.171538    28 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.172998    29 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr11 entry 28
+Fri Apr  8 17:59:27.173055    29 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR11.wav
+Fri Apr  8 17:59:27.175913    29 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.176034    30 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr12 entry 29
+Fri Apr  8 17:59:27.176091    30 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR12.wav
+Fri Apr  8 17:59:27.180796    30 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.180979    31 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr13 entry 30
+Fri Apr  8 17:59:27.181038    31 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR13.wav
+Fri Apr  8 17:59:27.183755    31 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.183901    32 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr14 entry 31
+Fri Apr  8 17:59:27.183986    32 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR14.wav
+Fri Apr  8 17:59:27.189618    32 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.190467    33 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr15 entry 32
+Fri Apr  8 17:59:27.190542    33 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR15.wav
+Fri Apr  8 17:59:27.194481    33 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.194622    34 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr16 entry 33
+Fri Apr  8 17:59:27.194694    34 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR16.wav
+Fri Apr  8 17:59:27.197336    34 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.197444    35 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|connecting sound class twr17 entry 34
+Fri Apr  8 17:59:27.197499    35 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|Loading file TWR17.wav
+Fri Apr  8 17:59:27.200915    35 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.201041    36 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class twr18 entry 35
+Fri Apr  8 17:59:27.201104    36 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file TWR18.wav
+Fri Apr  8 17:59:27.203286    36 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.203385    37 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class twr19 entry 36
+Fri Apr  8 17:59:27.203438    37 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file TWR19.wav
+Fri Apr  8 17:59:27.209225    37 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.210317    38 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class twr20 entry 37
+Fri Apr  8 17:59:27.210368    38 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file TWR20.wav
+Fri Apr  8 17:59:27.214499    38 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.222188    39 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class gearup entry 38
+Fri Apr  8 17:59:27.222282    39 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_gear_up.wav
+Fri Apr  8 17:59:27.228421    39 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.229234    40 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class geardown entry 39
+Fri Apr  8 17:59:27.229285    40 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_gear_down.wav
+Fri Apr  8 17:59:27.235829    40 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.236546    41 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class flaps entry 40
+Fri Apr  8 17:59:27.236596    41 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_flaps.wav
+Fri Apr  8 17:59:27.238721    41 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.238783    42 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class wind entry 41
+Fri Apr  8 17:59:27.238824    42 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_wind.wav
+Fri Apr  8 17:59:27.242927    42 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.243482    43 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class stall entry 42
+Fri Apr  8 17:59:27.243542    43 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_stall.wav
+Fri Apr  8 17:59:27.245255     1 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit mono format
+Fri Apr  8 17:59:27.245320    44 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class mass entry 43
+Fri Apr  8 17:59:27.245363    44 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_mass.wav
+Fri Apr  8 17:59:27.251582     1 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|OpenAL error 40962 for mass when obtaining source
+Fri Apr  8 17:59:27.251650    45 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class overspeed entry 44
+Fri Apr  8 17:59:27.251751    45 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_overspeed.wav
+Fri Apr  8 17:59:27.256846    43 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.257485    46 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class wheels entry 45
+Fri Apr  8 17:59:27.257546    46 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_groundroll.wav
+Fri Apr  8 17:59:27.261099    44 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.261182    47 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class touchdown entry 46
+Fri Apr  8 17:59:27.261218    47 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_touchdown.wav
+Fri Apr  8 17:59:27.262165    45 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.262206    48 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class gearalert entry 47
+Fri Apr  8 17:59:27.262232    48 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_gearalert.wav
+Fri Apr  8 17:59:27.263116     2 -                     not initialised:0000  0  1 id(0,38)                   run audio feed|16 bit mono format
+Fri Apr  8 17:59:27.263151    49 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class autopilotdisco entry 48
+Fri Apr  8 17:59:27.263182    49 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_autopilot_disco.wav
+Fri Apr  8 17:59:27.264879    46 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.264920    50 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class apbutton entry 49
+Fri Apr  8 17:59:27.264946    50 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_apbutton.wav
+Fri Apr  8 17:59:27.265820    47 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.265859    51 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class rpm1left entry 50
+Fri Apr  8 17:59:27.265880    51 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_rpm1_left.wav
+Fri Apr  8 17:59:27.269209    48 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.269320    52 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class rpm1right entry 51
+Fri Apr  8 17:59:27.269356    52 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_rpm1_right.wav
+Fri Apr  8 17:59:27.272813    49 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.272977    53 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class rpm2left entry 52
+Fri Apr  8 17:59:27.273025    53 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_rpm2_left.wav
+Fri Apr  8 17:59:27.282296    50 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.284062    54 iMOD               OpenALListener.cxx:0158  0  1 id(0,38)                   run audio feed|connecting sound class rpm2right entry 53
+Fri Apr  8 17:59:27.284152    54 iMOD          OpenALBufferManager.cxx:0081  0  1 id(0,38)                   run audio feed|Loading file PA34_rpm2_right.wav
+Fri Apr  8 17:59:27.292855    51 iMOD          OpenALBufferManager.cxx:0040  0  1 id(0,38)                   run audio feed|16 bit stereo format
+Fri Apr  8 17:59:27.295178     2 iMOD                   PA34_model.cxx:0721  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Preparing for mass shift in 1 steps
+Fri Apr  8 17:59:27.295237     2 iMOD                   PA34_model.cxx:0816  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Set control; Aileron power: 1; Rudder power: 1; Rudder fix: 0; Elevator fix: 0
+Fri Apr  8 17:59:27.295303     2 iMOD                   PA34_model.cxx:0851  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Turbulence disabled: K_turb=0
+Fri Apr  8 17:59:27.295329     2 iMOD                   PA34_model.cxx:0856  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model K_shear: 0
+Fri Apr  8 17:59:27.295367     2 iMOD                   PA34_model.cxx:0904  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model: Wind direction changed instantly to 0
+Fri Apr  8 17:59:27.295995     2 iMOD                   PA34_model.cxx:0988  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model updated mass shift in Hold
+Fri Apr  8 17:59:27.298362     2 iMOD                     FGVisual.cxx:0419  0  1 id(0,36)               send to flightgear|READING NEW FG INPUTS
+Fri Apr  8 17:59:27.298583     2 iMOD            CitationNavigator.cxx:0472  0  1 id(0,31)                       navigating|id(0,31) initializing STAR EHRD_lg
+Fri Apr  8 17:59:27.298646     2 dMOD            CitationNavigator.cxx:0883  0  1 id(0,31)                       navigating|id(0,31) ref LNAV: 0, 0, 0
+Fri Apr  8 17:59:27.298684     2 dMOD            CitationNavigator.cxx:0885  0  1 id(0,31)                       navigating|id(0,31) ref HDG: 0, 0, 0
+Fri Apr  8 17:59:27.298706     2 dMOD            CitationNavigator.cxx:0887  0  1 id(0,31)                       navigating|id(0,31) ref LOC: 0, 0, 0
+Fri Apr  8 17:59:27.318091     1 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(135900, 136000)
+Fri Apr  8 17:59:27.318271     2 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(136000, 136100)
+Fri Apr  8 17:59:27.318400     3 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(136100, 136200)
+Fri Apr  8 17:59:27.318528     4 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(136200, 136300)
+Fri Apr  8 17:59:27.318656     5 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(136300, 136400)
+Fri Apr  8 17:59:27.318852     6 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(136400, 136500)
+Fri Apr  8 17:59:27.319015     7 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(136500, 136600)
+Fri Apr  8 17:59:27.319174     8 -                     not initialised:0000  0  0 id(0,32)  Display the primary flight disp|b747-pfd behind @ TimeSpec(136600, 136700)
+Fri Apr  8 17:59:35.463371     2 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for rpm1left when starting
+Fri Apr  8 17:59:43.957507     3 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for phspz5 when single play
+Fri Apr  8 17:59:45.849560     3 iMOD                   PA34_model.cxx:0816  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Set control; Aileron power: 1; Rudder power: 1; Rudder fix: -3; Elevator fix: 0
+Fri Apr  8 17:59:57.348965     4 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for phspz5 when stopping
+Fri Apr  8 18:00:10.937854     4 wMOD                          ECI.cxx:1159  0  0  id(0,3)                  graphics update|st-eci: skipping unknown scenario parameter display_lg_failure
+Fri Apr  8 18:00:10.950746     3 iMOD                   PA34_model.cxx:0721  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Preparing for mass shift in 1 steps
+Fri Apr  8 18:00:10.950791     4 iMOD                   PA34_model.cxx:0816  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Set control; Aileron power: 1; Rudder power: 1; Rudder fix: 0; Elevator fix: 0
+Fri Apr  8 18:00:10.950813     3 iMOD                   PA34_model.cxx:0851  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Turbulence disabled: K_turb=0
+Fri Apr  8 18:00:10.950828     3 iMOD                   PA34_model.cxx:0856  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model K_shear: 0
+Fri Apr  8 18:00:10.950848     3 iMOD                   PA34_model.cxx:0904  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model: Wind direction changed instantly to 0
+Fri Apr  8 18:00:10.950871     2 iMOD                   PA34_model.cxx:0956  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model (trim_inco) gear position: 0
+Fri Apr  8 18:00:10.950890     2 iMOD                   PA34_model.cxx:0957  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model (trim_inco) flap position: 0 deg
+Fri Apr  8 18:00:10.950955     3 iMOD                   PA34_model.cxx:0988  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model updated mass shift in Hold
+Fri Apr  8 18:00:10.951039     3 iMOD            CitationNavigator.cxx:0472  0  1 id(0,31)                       navigating|id(0,31) initializing STAR EHRD_lg
+Fri Apr  8 18:00:10.951074     3 dMOD            CitationNavigator.cxx:0883  0  1 id(0,31)                       navigating|id(0,31) ref LNAV: 0, 0, 0
+Fri Apr  8 18:00:10.951096     3 dMOD            CitationNavigator.cxx:0885  0  1 id(0,31)                       navigating|id(0,31) ref HDG: 0, 0, 0
+Fri Apr  8 18:00:10.951115     3 dMOD            CitationNavigator.cxx:0887  0  1 id(0,31)                       navigating|id(0,31) ref LOC: 0, 0, 0
+Fri Apr  8 18:00:10.951140     3 iMOD                     FGVisual.cxx:0419  0  1 id(0,36)               send to flightgear|READING NEW FG INPUTS
+Fri Apr  8 18:00:16.849178     5 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for rpm1left when starting
+Fri Apr  8 18:00:22.948262     6 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for phspz5 when single play
+Fri Apr  8 18:00:24.848687     5 iMOD                   PA34_model.cxx:0816  0  1 id(0,33)    Calculates aircraft dynamics |pa_34_model Set control; Aileron power: 1; Rudder power: 1; Rudder fix: -3; Elevator fix: 0
+Fri Apr  8 18:00:43.848432     7 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for twr14 when single play
+Fri Apr  8 18:00:46.248303     8 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for twr9 when single play
+Fri Apr  8 18:01:00.849529     9 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for twr12 when single play
+Fri Apr  8 18:01:02.648152    10 wMOD                 OpenALObject.cxx:0041  0  1 id(0,38)                   run audio feed|OpenAL error 40963 for twr17 when single play

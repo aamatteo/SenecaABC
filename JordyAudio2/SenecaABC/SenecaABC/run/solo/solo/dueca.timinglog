@@ -1,37 +1,63 @@
-Dueca timing log, run start at Mon Apr  4 15:11:29 2022
+Dueca timing log, run start at Fri Apr  8 17:58:17 2022
 
                                   activity  strt tim  min st  avg st  max st  min cp  avg cp  max cp warn crit user
-  id(0,25)              send to flightgear         0  -39576  -16762   27934  -39570  -16747   27962    1    6    0
-  id(0,25)              send to flightgear         1  -39604  -17708   10273  -39598  -17693   10317    1    0    0
-  id(0,25)              send to flightgear         2  -39572  -17777   15464  -39556  -17761   15504    0    1    0
-  id(0,25)         driving control loaders         3      29    8988  545728      34    8993  545729   27   54    0
-  id(0,25)              send to flightgear         4  -39248  -16755   23500  -39243  -16739   23537    2    1    0
-  id(0,25)   Calculates aircraft dynamics          5  -39626  -14924  286852  -39608  -14867  286871   11   31    0
-  id(0,25)              send to flightgear         6  -39277  -17376   12296  -39269  -17358   12326    2    0    0
-  id(0,25)              send to flightgear         7  -39357  -17264    9999  -39350  -17249   10036    1    0    0
-  id(0,25) combining input from control lo         8  -39628  -17471   23377  -39627  -17468   23385    6    1    0
-  id(0,25)        Update the G1000 display         9   14749   19137   45530   22127   27434   53559    0  400    0
-  id(0,25)              send to flightgear        10  -39114  -17748    8604  -39104  -17732    8637    0    0    0
-  id(0,25)                                        11  -39575  -17404   23482  -39573  -17398   23493    5    1    0
-  id(0,25)              send to flightgear        12  -39280  -17642   13760  -39269  -17626   13794    3    0    0
-  id(0,25)         driving control loaders        13      26    1262   22338      30    1272   22345   19    2    0
-  id(0,25)             contains comm info         14  -39359  -17373   23493  -39357  -17369   23495    7    1    0
-  id(0,25)              send to flightgear        15  -39280  -16842   13094  -39274  -16827   13124    5    0    0
-  id(0,25)        Update the G1000 display        16     286    2886   19380   14375   19053   35595    7  393    0
-  id(0,25)   Calculates aircraft dynamics         17  -39494  -17378   18556  -39412  -17303   18647   10    0    0
-  id(0,25)              send to flightgear        18  -39405  -16877   18685  -39398  -16861   18718    0    2    0
-  id(0,25)              send to flightgear        19  -39232  -16635   15319  -39226  -16617   15410    4    1    0
-  id(0,25) combining input from control lo        20  -39496  -17214   18548  -39495  -17210   18555   15    0    0
-  id(0,25)        Update the G1000 display        21   14388   19356   39120   22195   27518   48048    0  400    0
-  id(0,25)              send to flightgear        22  -39351  -17113   20338  -39339  -17097   20377    3    1    0
-  id(0,25)                                        23  -39411  -17027   20287  -39408  -17021   20322   18    1    0
-  id(0,25)              send to flightgear        24  -39272  -17512   18125  -39265  -17495   18162    0    1    0
-  id(0,25)         driving control loaders        25      35    1341   27974      40    1359   27979   23    3    0
-  id(0,25)             contains comm info         26  -39407  -17009   20323  -39405  -17001   20333   15    1    0
-  id(0,25)              send to flightgear        27  -39254  -17738   15776  -39243  -17722   15817    0    1    0
-  id(0,25)        Update the G1000 display        28     330    2993   20436   14720   18817   39987    5  395    0
-  id(0,25)   Calculates aircraft dynamics         29  -39439  -17349   20201  -39362  -17271   20285   13    1    0
-  id(0,25)              send to flightgear        30  -39349  -17308   12870  -39342  -17293   12920    3    0    0
-  id(0,25)              send to flightgear        31  -39283  -17068   10704  -39277  -17052   10734    1    0    0
-  id(0,25) combining input from control lo        32  -39440  -17410   20189  -39439  -17406   20197    9    1    0
-  id(0,25)        Update the G1000 display        33   14727   18796   40002   22193   26951   48796    0  400    0
+  id(0,25)              send to flightgear         0  -39521  -17842   12158  -39516  -17822   12196    4    0    0
+  id(0,25)              send to flightgear         1  -39592  -16662   18246  -39586  -16637   18288    5    1    0
+  id(0,25)              send to flightgear         2  -39360  -17160   13975  -39355  -17137   14004    3    0    0
+  id(0,25)              send to flightgear         3  -39301  -17104   15302  -39295  -17083   15341    3    1    0
+  id(0,25)         driving control loaders         4      38    5991  437568      41    6006  437571   16   43    0
+  id(0,25)   Calculates aircraft dynamics          5  -39651  -15978  181885  -39635  -15878  181903   29   20    0
+  id(0,25)              send to flightgear         6  -39179  -14154   29733  -39172  -14128   29775   11   13    0
+  id(0,25) combining input from control lo         7  -39616  -16601   29573  -39615  -16595   29584   34    5    0
+  id(0,25)              send to flightgear         8  -39337  -16460   24096  -39332  -16438   24126    5    4    0
+  id(0,25)        Update the G1000 display         9   14789   23020   63139   22701   31509   73028    0  400    0
+  id(0,25)                                        10  -39363  -15943   33359  -39361  -15929   33372   47    9    0
+  id(0,25)              send to flightgear        11  -39290  -15368   33387  -39283  -15342   33419    7    7    0
+  id(0,25)              send to flightgear        12  -39605  -17980   12583  -39600  -17957   12673    2    0    0
+  id(0,25)             contains comm info         13  -39606  -16264   33372  -39605  -16256   33381   42    9    0
+  id(0,25)              send to flightgear        14  -39555  -14871   32933  -39549  -14850   32965    6   14    0
+  id(0,25)        Update the G1000 display        15     283    4486   34910   14776   25262   67155    3  397    0
+  id(0,25)         driving control loaders        16      36    1008   24356      42    1019   24380   19    2    0
+  id(0,25)   Calculates aircraft dynamics         17  -39623  -16096   33250  -39608  -16006   33356   47   15    0
+  id(0,25)              send to flightgear        18  -39583  -16153   27043  -39578  -16132   27083    4    8    0
+  id(0,25) combining input from control lo        19  -39633  -16322   33237  -39632  -16316   33249   40   17    0
+  id(0,25)              send to flightgear        20  -39667  -17441   24343  -39662  -17419   24376    2    4    0
+  id(0,25)        Update the G1000 display        21   14911   24024   67182   22721   33298   77734    0  400    0
+  id(0,25)                                        22  -39670  -16883   32914  -39668  -16876   32925   29   13    0
+  id(0,25)              send to flightgear        23  -39622  -18044   17513  -39618  -18024   17580    1    1    0
+  id(0,25)              send to flightgear        24  -39580  -18011   14970  -39575  -17992   15037    0    1    0
+  id(0,25)             contains comm info         25  -39668  -16910   32925  -39667  -16908   32927   28   13    0
+  id(0,25)              send to flightgear        26  -39269  -17948   11275  -39264  -17914   11356    1    0    0
+  id(0,25)        Update the G1000 display        27     225    2727   31559   14836   21367   63458    2  398    0
+  id(0,25)         driving control loaders        28      31    1016   24024      37    1026   24048   11    3    0
+  id(0,25)   Calculates aircraft dynamics         29  -39686  -17677   26371  -39670  -17599   26418   17    4    0
+  id(0,25)              send to flightgear        30  -39252  -15956   35720  -39245  -15936   35809    9    6    0
+  id(0,25) combining input from control lo        31  -39687  -17643   34257  -39686  -17638   34289   17    3    0
+  id(0,25)              send to flightgear        32  -39366  -17601   17786  -39360  -17581   17928    2    1    0
+  id(0,25)        Update the G1000 display        33   14854   21373   61333   22461   30266   69141    0  400    0
+  id(0,25)                                        34  -39583  -17379   35645  -39581  -17367   35680   22    3    0
+  id(0,25)              send to flightgear        35  -39296  -17086   18612  -39290  -17067   18648    4    1    0
+  id(0,25)              send to flightgear        36  -39365  -17772   18622  -39359  -17749   18680    1    1    0
+  id(0,25)             contains comm info         37  -39367  -17278   35681  -39366  -17272   35706   23    3    0
+  id(0,25)              send to flightgear        38  -39308  -18002   19811  -39301  -17980   19850    0    1    0
+  id(0,25)        Update the G1000 display        39     326    2897   35713   14783   21086   61314    3  397    0
+  id(0,25)         driving control loaders        40      22    1060   35291      24    1071   35303   11    3    0
+  id(0,25)   Calculates aircraft dynamics         41  -39421  -17532   35311  -39370  -17434   35612   19    3    0
+  id(0,25)              send to flightgear        42  -39220  -17663   17497  -39214  -17646   17536    2    2    0
+  id(0,25) combining input from control lo        43  -39422  -17748   19663  -39421  -17743   19673   14    0    0
+  id(0,25)              send to flightgear        44  -39285  -17237   14595  -39278  -17203   14681    5    0    0
+  id(0,25)        Update the G1000 display        45   14799   20558   52614   22404   29484   61237    0  400    0
+  id(0,25)                                        46  -39369  -17722   19779  -39367  -17714   19794   13    0    0
+  id(0,25)              send to flightgear        47  -39316  -18053   15625  -39267  -18036   15659    0    2    0
+  id(0,25)              send to flightgear        48  -39370  -17389   19274  -39364  -17373   19316    3    1    0
+  id(0,25)             contains comm info         49  -39372  -17672   19794  -39370  -17665   19804   15    0    0
+  id(0,25)              send to flightgear        50  -39156  -13291   34045  -39150  -13269   34086   18    9    0
+  id(0,25)        Update the G1000 display        51     273    3754   37086   14858   22893   62719    1  399    0
+  id(0,25)         driving control loaders        52      40     970   17118      47     978   17123   11    0    0
+  id(0,25)   Calculates aircraft dynamics         53  -39429  -16565   33883  -39375  -16457   34006   39    9    0
+  id(0,25)              send to flightgear        54  -39254  -16189   27182  -39247  -16164   27213    4    6    0
+  id(0,25) generating stick inputs from GU        55      57    2457   33795      75    2477   33813  109   28    0
+  id(0,25) combining input from control lo        56  -39430  -16569   33867  -39429  -16564   33882   37    9    0
+  id(0,25)              send to flightgear        57  -39293  -17774   17493  -39288  -17756   17583    2    1    0
+  id(0,25)        Update the G1000 display        58   14848   23084   62746   22325   32715   73048    0  400    0
+  id(0,25)           logging Citation data        59  -13719   14959   73508  -13715   15059   73633  379  801    0

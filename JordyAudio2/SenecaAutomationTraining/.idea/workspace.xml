@@ -34,7 +34,7 @@
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
     <property name="cmake.loaded.for.project" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SenecaABC" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunManager">
     <configuration name="SenecaAutomationTraining" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SenecaAutomationTraining" TARGET_NAME="SenecaAutomationTraining" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SenecaAutomationTraining" RUN_TARGET_NAME="SenecaAutomationTraining">
@@ -57,6 +57,7 @@
       <workItem from="1647531864102" duration="310000" />
       <workItem from="1647534710004" duration="985000" />
       <workItem from="1647536263891" duration="1220000" />
+      <workItem from="1649175108905" duration="36000" />
     </task>
     <servers />
   </component>

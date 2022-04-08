@@ -9,10 +9,10 @@
 6	-2.444264e-06	PA34-w
 7	-8.939718e-05	PA34-phi
 8	-4.156842e-03	PA34-theta
-9	-3.044485e+00	PA34-psi
-10	2.399547e+02	PA34-X
-11	-1.772010e+03	PA34-Y
-12	-1.187108e+00	PA34-Z
+9	3.141592654	PA34-psi
+10	40000	        PA34-X # the initial position of the aircraft is on RWY 18C EHAM, the origin of the coord system is the thrsld of RWY 24, EHRD
+11	19860	        PA34-Y
+12	-1.187108       	PA34-Z
 13	0.000000e+00	PA34-who knows1 PA34-gust_state_1
 14	0.000000e+00	PA34-who knows2 PA34-gust_state_2
 15	0.000000e+00	PA34-who knows3 PA34-gust_state_3

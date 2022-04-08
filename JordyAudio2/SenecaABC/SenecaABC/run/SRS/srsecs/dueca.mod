@@ -44,7 +44,7 @@
 (define use-sound           #t)
 
 ;; misc
-(define log-aircraft        #f)
+(define log-aircraft        #t)
 (define do-replay           #f)
 (define replay-file "replay_sce102.log")
 

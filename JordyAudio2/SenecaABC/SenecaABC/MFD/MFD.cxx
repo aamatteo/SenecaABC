@@ -457,12 +457,18 @@ void MFD::doCalculation(const TimeSpec& ts)
 
     // landing gear
     // TODO: implement asymmetric and stuck gears
-    int gear = 0;
+    int ngear = 0;
+    int lgear = 0;
+    int rgear = 0;
 
     //display_lg_failure = display_lg_failure;
     //cout << display_lg_failure << endl;
     if(citoutput[Y_gear] == 0.0f){
-      gear = 0;
+
+      //gear = 0;
+      ngear = 0;
+      lgear = 0;
+      rgear = 0;
       //cout << "LG CHECK DEPLOYMENT 0 = UP" << endl;
 
       // test landing gear display
@@ -478,10 +484,22 @@ void MFD::doCalculation(const TimeSpec& ts)
       if (rudder_bias != 0){
 
         //cout << "LG CHECK DEPLOYMENT -1" << endl;
-        gear = -1;
+        //gear = -1;
+        ngear =  1;
+        rgear =  1;
+        lgear = -1;
+
+
         reset_gear = true;
       }
-      else { gear = 1; }
+      else {
+        //gear = 1;
+
+        ngear = 1;
+        lgear = 1;
+        rgear = 1;
+
+        }
 
       }
 
@@ -494,7 +512,16 @@ void MFD::doCalculation(const TimeSpec& ts)
     //}
 
     else if(citoutput[Y_gear] > 0.0f){
-      gear = 2;}
+      //gear = 2;
+      ngear = 2;
+      lgear = 2;
+      rgear = 2;
+
+
+
+
+
+    }
 
 
     if(reset_gear == true && citoutput[Y_gear] < 0.999f){
@@ -504,9 +531,9 @@ void MFD::doCalculation(const TimeSpec& ts)
 
 
 
-    g1000_data.lgear = gear;
-    g1000_data.ngear = gear;
-    g1000_data.rgear = gear;
+    g1000_data.lgear = lgear;
+    g1000_data.ngear = ngear;
+    g1000_data.rgear = rgear;
     
 
     if(ap_targets_read_token_)
